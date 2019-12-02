@@ -8,10 +8,18 @@ This repository contains a FHIR® R4 models for Go. The models consist of Go str
 * unmarshal functions are provided for every resource
 * enums are provided for every ValueSet used in a [required binding][2], has a computer friendly name and refers only to one CodeSystem
 
+## Usage
+
+In your project, import `github.com/samply/golang-fhir-models/fhir-models/fhir` and you are done.
+
 ## TODOs
 
-*  https://github.com/samply/golang-fhir-models/issues/1
-*  https://github.com/samply/golang-fhir-models/issues/2
+* [Support Polymorphic Data Elements](https://github.com/samply/golang-fhir-models/issues/1)
+* [Support ValueSets Referring to Multiple CodeSystems](https://github.com/samply/golang-fhir-models/issues/2)
+
+## Develop
+
+This repository contains two Go modules, the generated models itself and the generator. Both modules use `go generate` to generate the FHIR models. For `go generate` to work, you have to install the generator first. To do that, run `go install` in the `fhir-models-gen` directory. After that, you can regenerate the FHIR Models under `fhir-models` and the subset of FHIR models under `fhir-models-gen`.
 
 ## License
 
