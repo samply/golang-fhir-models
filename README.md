@@ -10,8 +10,8 @@ This repository contains a FHIR® R4 models for Go. The models consist of Go str
 
 ## TODOs
 
-*  #1
-*  #2
+*  https://github.com/samply/golang-fhir-models/issues/1
+*  https://github.com/samply/golang-fhir-models/issues/2
 
 ## License
 
