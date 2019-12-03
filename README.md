@@ -7,6 +7,7 @@ This repository contains a FHIR® R4 models for Go. The models consist of Go str
 * resources implement the [Marshaler][1] interface
 * unmarshal functions are provided for every resource
 * enums are provided for every ValueSet used in a [required binding][2], has a computer friendly name and refers only to one CodeSystem
+* enums implement `Code()`, `Display()` and `Definition()` methods
 
 ## Usage
 
