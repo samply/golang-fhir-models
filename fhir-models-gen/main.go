@@ -14,7 +14,7 @@
 
 package main
 
-import "github.com/Universal-Health-Chain/golang-fhir-models/cmd"
+import "github.com/Universal-Health-Chain/golang-fhir-models/fhir-models-gen/cmd"
 
 func main() {
 	cmd.Execute()

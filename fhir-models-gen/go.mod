@@ -1,4 +1,4 @@
-module github.com/Universal-Health-Chain/golang-fhir-models/fhir-models-gen/fhir
+module github.com/Universal-Health-Chain/golang-fhir-models/fhir-models-gen
 
 go 1.13
 
