@@ -18,7 +18,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/dave/jennifer/jen"
-	"fhir-models-gen/fhir"
+	"github.com/Universal-Health-Chain/golang-fhir-models/fhir-models-gen/fhir"
 	"github.com/spf13/cobra"
 	"io/ioutil"
 	"os"
