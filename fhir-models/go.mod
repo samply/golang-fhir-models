@@ -1,3 +1,3 @@
-module github.com/samply/golang-fhir-models/fhir-models
+module fhir-models
 
 go 1.13
