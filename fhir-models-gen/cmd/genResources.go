@@ -423,9 +423,9 @@ func appendFields(resources ResourceMap, requiredTypes map[string]bool, required
 					}
 
 					if *element.Min == 0 {
-						statement.Tag(map[string]string{"json": pathParts[level] + ",omitempty"})
+						statement.Tag(map[string]string{"json": pathParts[level] + ",omitempty", "bson": pathParts[level] + ",omitempty"})
 					} else {
-						statement.Tag(map[string]string{"json": pathParts[level]})
+						statement.Tag(map[string]string{"json": pathParts[level],  "bson": pathParts[level]})
 					}
 				}
 			}
