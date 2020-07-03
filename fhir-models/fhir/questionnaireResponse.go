@@ -21,40 +21,40 @@ import "encoding/json"
 
 // QuestionnaireResponse is documented here http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse
 type QuestionnaireResponse struct {
-	Id                *string                     `json:"id,omitempty"`
-	Meta              *Meta                       `json:"meta,omitempty"`
-	ImplicitRules     *string                     `json:"implicitRules,omitempty"`
-	Language          *string                     `json:"language,omitempty"`
-	Text              *Narrative                  `json:"text,omitempty"`
-	Extension         []Extension                 `json:"extension,omitempty"`
-	ModifierExtension []Extension                 `json:"modifierExtension,omitempty"`
-	Identifier        *Identifier                 `json:"identifier,omitempty"`
-	BasedOn           []Reference                 `json:"basedOn,omitempty"`
-	PartOf            []Reference                 `json:"partOf,omitempty"`
-	Questionnaire     *string                     `json:"questionnaire,omitempty"`
-	Status            QuestionnaireResponseStatus `json:"status"`
-	Subject           *Reference                  `json:"subject,omitempty"`
-	Encounter         *Reference                  `json:"encounter,omitempty"`
-	Authored          *string                     `json:"authored,omitempty"`
-	Author            *Reference                  `json:"author,omitempty"`
-	Source            *Reference                  `json:"source,omitempty"`
-	Item              []QuestionnaireResponseItem `json:"item,omitempty"`
+	Id                *string                     `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta                       `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string                     `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string                     `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative                  `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension                 `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                 `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        *Identifier                 `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	BasedOn           []Reference                 `bson:"basedOn,omitempty" json:"basedOn,omitempty"`
+	PartOf            []Reference                 `bson:"partOf,omitempty" json:"partOf,omitempty"`
+	Questionnaire     *string                     `bson:"questionnaire,omitempty" json:"questionnaire,omitempty"`
+	Status            QuestionnaireResponseStatus `bson:"status" json:"status"`
+	Subject           *Reference                  `bson:"subject,omitempty" json:"subject,omitempty"`
+	Encounter         *Reference                  `bson:"encounter,omitempty" json:"encounter,omitempty"`
+	Authored          *string                     `bson:"authored,omitempty" json:"authored,omitempty"`
+	Author            *Reference                  `bson:"author,omitempty" json:"author,omitempty"`
+	Source            *Reference                  `bson:"source,omitempty" json:"source,omitempty"`
+	Item              []QuestionnaireResponseItem `bson:"item,omitempty" json:"item,omitempty"`
 }
 type QuestionnaireResponseItem struct {
-	Id                *string                           `json:"id,omitempty"`
-	Extension         []Extension                       `json:"extension,omitempty"`
-	ModifierExtension []Extension                       `json:"modifierExtension,omitempty"`
-	LinkId            string                            `json:"linkId"`
-	Definition        *string                           `json:"definition,omitempty"`
-	Text              *string                           `json:"text,omitempty"`
-	Answer            []QuestionnaireResponseItemAnswer `json:"answer,omitempty"`
-	Item              []QuestionnaireResponseItem       `json:"item,omitempty"`
+	Id                *string                           `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                       `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                       `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	LinkId            string                            `bson:"linkId" json:"linkId"`
+	Definition        *string                           `bson:"definition,omitempty" json:"definition,omitempty"`
+	Text              *string                           `bson:"text,omitempty" json:"text,omitempty"`
+	Answer            []QuestionnaireResponseItemAnswer `bson:"answer,omitempty" json:"answer,omitempty"`
+	Item              []QuestionnaireResponseItem       `bson:"item,omitempty" json:"item,omitempty"`
 }
 type QuestionnaireResponseItemAnswer struct {
-	Id                *string                     `json:"id,omitempty"`
-	Extension         []Extension                 `json:"extension,omitempty"`
-	ModifierExtension []Extension                 `json:"modifierExtension,omitempty"`
-	Item              []QuestionnaireResponseItem `json:"item,omitempty"`
+	Id                *string                     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                 `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                 `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Item              []QuestionnaireResponseItem `bson:"item,omitempty" json:"item,omitempty"`
 }
 type OtherQuestionnaireResponse QuestionnaireResponse
 

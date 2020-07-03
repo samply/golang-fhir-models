@@ -19,13 +19,13 @@ package fhir
 
 // HumanName is documented here http://hl7.org/fhir/StructureDefinition/HumanName
 type HumanName struct {
-	Id        *string     `json:"id,omitempty"`
-	Extension []Extension `json:"extension,omitempty"`
-	Use       *NameUse    `json:"use,omitempty"`
-	Text      *string     `json:"text,omitempty"`
-	Family    *string     `json:"family,omitempty"`
-	Given     []string    `json:"given,omitempty"`
-	Prefix    []string    `json:"prefix,omitempty"`
-	Suffix    []string    `json:"suffix,omitempty"`
-	Period    *Period     `json:"period,omitempty"`
+	Id        *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	Use       *NameUse    `bson:"use,omitempty" json:"use,omitempty"`
+	Text      *string     `bson:"text,omitempty" json:"text,omitempty"`
+	Family    *string     `bson:"family,omitempty" json:"family,omitempty"`
+	Given     []string    `bson:"given,omitempty" json:"given,omitempty"`
+	Prefix    []string    `bson:"prefix,omitempty" json:"prefix,omitempty"`
+	Suffix    []string    `bson:"suffix,omitempty" json:"suffix,omitempty"`
+	Period    *Period     `bson:"period,omitempty" json:"period,omitempty"`
 }

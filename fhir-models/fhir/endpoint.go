@@ -21,24 +21,24 @@ import "encoding/json"
 
 // Endpoint is documented here http://hl7.org/fhir/StructureDefinition/Endpoint
 type Endpoint struct {
-	Id                   *string           `json:"id,omitempty"`
-	Meta                 *Meta             `json:"meta,omitempty"`
-	ImplicitRules        *string           `json:"implicitRules,omitempty"`
-	Language             *string           `json:"language,omitempty"`
-	Text                 *Narrative        `json:"text,omitempty"`
-	Extension            []Extension       `json:"extension,omitempty"`
-	ModifierExtension    []Extension       `json:"modifierExtension,omitempty"`
-	Identifier           []Identifier      `json:"identifier,omitempty"`
-	Status               EndpointStatus    `json:"status"`
-	ConnectionType       Coding            `json:"connectionType"`
-	Name                 *string           `json:"name,omitempty"`
-	ManagingOrganization *Reference        `json:"managingOrganization,omitempty"`
-	Contact              []ContactPoint    `json:"contact,omitempty"`
-	Period               *Period           `json:"period,omitempty"`
-	PayloadType          []CodeableConcept `json:"payloadType"`
-	PayloadMimeType      []string          `json:"payloadMimeType,omitempty"`
-	Address              string            `json:"address"`
-	Header               []string          `json:"header,omitempty"`
+	Id                   *string           `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                 *Meta             `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules        *string           `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language             *string           `bson:"language,omitempty" json:"language,omitempty"`
+	Text                 *Narrative        `bson:"text,omitempty" json:"text,omitempty"`
+	Extension            []Extension       `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension    []Extension       `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier           []Identifier      `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Status               EndpointStatus    `bson:"status" json:"status"`
+	ConnectionType       Coding            `bson:"connectionType" json:"connectionType"`
+	Name                 *string           `bson:"name,omitempty" json:"name,omitempty"`
+	ManagingOrganization *Reference        `bson:"managingOrganization,omitempty" json:"managingOrganization,omitempty"`
+	Contact              []ContactPoint    `bson:"contact,omitempty" json:"contact,omitempty"`
+	Period               *Period           `bson:"period,omitempty" json:"period,omitempty"`
+	PayloadType          []CodeableConcept `bson:"payloadType" json:"payloadType"`
+	PayloadMimeType      []string          `bson:"payloadMimeType,omitempty" json:"payloadMimeType,omitempty"`
+	Address              string            `bson:"address" json:"address"`
+	Header               []string          `bson:"header,omitempty" json:"header,omitempty"`
 }
 type OtherEndpoint Endpoint
 

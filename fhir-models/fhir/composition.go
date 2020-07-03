@@ -21,65 +21,65 @@ import "encoding/json"
 
 // Composition is documented here http://hl7.org/fhir/StructureDefinition/Composition
 type Composition struct {
-	Id                *string                `json:"id,omitempty"`
-	Meta              *Meta                  `json:"meta,omitempty"`
-	ImplicitRules     *string                `json:"implicitRules,omitempty"`
-	Language          *string                `json:"language,omitempty"`
-	Text              *Narrative             `json:"text,omitempty"`
-	Extension         []Extension            `json:"extension,omitempty"`
-	ModifierExtension []Extension            `json:"modifierExtension,omitempty"`
-	Identifier        *Identifier            `json:"identifier,omitempty"`
-	Status            CompositionStatus      `json:"status"`
-	Type              CodeableConcept        `json:"type"`
-	Category          []CodeableConcept      `json:"category,omitempty"`
-	Subject           *Reference             `json:"subject,omitempty"`
-	Encounter         *Reference             `json:"encounter,omitempty"`
-	Date              string                 `json:"date"`
-	Author            []Reference            `json:"author"`
-	Title             string                 `json:"title"`
-	Confidentiality   *string                `json:"confidentiality,omitempty"`
-	Attester          []CompositionAttester  `json:"attester,omitempty"`
-	Custodian         *Reference             `json:"custodian,omitempty"`
-	RelatesTo         []CompositionRelatesTo `json:"relatesTo,omitempty"`
-	Event             []CompositionEvent     `json:"event,omitempty"`
-	Section           []CompositionSection   `json:"section,omitempty"`
+	Id                *string                `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta                  `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string                `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string                `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative             `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension            `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension            `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        *Identifier            `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Status            CompositionStatus      `bson:"status" json:"status"`
+	Type              CodeableConcept        `bson:"type" json:"type"`
+	Category          []CodeableConcept      `bson:"category,omitempty" json:"category,omitempty"`
+	Subject           *Reference             `bson:"subject,omitempty" json:"subject,omitempty"`
+	Encounter         *Reference             `bson:"encounter,omitempty" json:"encounter,omitempty"`
+	Date              string                 `bson:"date" json:"date"`
+	Author            []Reference            `bson:"author" json:"author"`
+	Title             string                 `bson:"title" json:"title"`
+	Confidentiality   *string                `bson:"confidentiality,omitempty" json:"confidentiality,omitempty"`
+	Attester          []CompositionAttester  `bson:"attester,omitempty" json:"attester,omitempty"`
+	Custodian         *Reference             `bson:"custodian,omitempty" json:"custodian,omitempty"`
+	RelatesTo         []CompositionRelatesTo `bson:"relatesTo,omitempty" json:"relatesTo,omitempty"`
+	Event             []CompositionEvent     `bson:"event,omitempty" json:"event,omitempty"`
+	Section           []CompositionSection   `bson:"section,omitempty" json:"section,omitempty"`
 }
 type CompositionAttester struct {
-	Id                *string                    `json:"id,omitempty"`
-	Extension         []Extension                `json:"extension,omitempty"`
-	ModifierExtension []Extension                `json:"modifierExtension,omitempty"`
-	Mode              CompositionAttestationMode `json:"mode"`
-	Time              *string                    `json:"time,omitempty"`
-	Party             *Reference                 `json:"party,omitempty"`
+	Id                *string                    `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Mode              CompositionAttestationMode `bson:"mode" json:"mode"`
+	Time              *string                    `bson:"time,omitempty" json:"time,omitempty"`
+	Party             *Reference                 `bson:"party,omitempty" json:"party,omitempty"`
 }
 type CompositionRelatesTo struct {
-	Id                *string                  `json:"id,omitempty"`
-	Extension         []Extension              `json:"extension,omitempty"`
-	ModifierExtension []Extension              `json:"modifierExtension,omitempty"`
-	Code              DocumentRelationshipType `json:"code"`
+	Id                *string                  `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension              `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension              `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Code              DocumentRelationshipType `bson:"code" json:"code"`
 }
 type CompositionEvent struct {
-	Id                *string           `json:"id,omitempty"`
-	Extension         []Extension       `json:"extension,omitempty"`
-	ModifierExtension []Extension       `json:"modifierExtension,omitempty"`
-	Code              []CodeableConcept `json:"code,omitempty"`
-	Period            *Period           `json:"period,omitempty"`
-	Detail            []Reference       `json:"detail,omitempty"`
+	Id                *string           `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension       `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension       `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Code              []CodeableConcept `bson:"code,omitempty" json:"code,omitempty"`
+	Period            *Period           `bson:"period,omitempty" json:"period,omitempty"`
+	Detail            []Reference       `bson:"detail,omitempty" json:"detail,omitempty"`
 }
 type CompositionSection struct {
-	Id                *string              `json:"id,omitempty"`
-	Extension         []Extension          `json:"extension,omitempty"`
-	ModifierExtension []Extension          `json:"modifierExtension,omitempty"`
-	Title             *string              `json:"title,omitempty"`
-	Code              *CodeableConcept     `json:"code,omitempty"`
-	Author            []Reference          `json:"author,omitempty"`
-	Focus             *Reference           `json:"focus,omitempty"`
-	Text              *Narrative           `json:"text,omitempty"`
-	Mode              *ListMode            `json:"mode,omitempty"`
-	OrderedBy         *CodeableConcept     `json:"orderedBy,omitempty"`
-	Entry             []Reference          `json:"entry,omitempty"`
-	EmptyReason       *CodeableConcept     `json:"emptyReason,omitempty"`
-	Section           []CompositionSection `json:"section,omitempty"`
+	Id                *string              `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension          `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension          `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Title             *string              `bson:"title,omitempty" json:"title,omitempty"`
+	Code              *CodeableConcept     `bson:"code,omitempty" json:"code,omitempty"`
+	Author            []Reference          `bson:"author,omitempty" json:"author,omitempty"`
+	Focus             *Reference           `bson:"focus,omitempty" json:"focus,omitempty"`
+	Text              *Narrative           `bson:"text,omitempty" json:"text,omitempty"`
+	Mode              *ListMode            `bson:"mode,omitempty" json:"mode,omitempty"`
+	OrderedBy         *CodeableConcept     `bson:"orderedBy,omitempty" json:"orderedBy,omitempty"`
+	Entry             []Reference          `bson:"entry,omitempty" json:"entry,omitempty"`
+	EmptyReason       *CodeableConcept     `bson:"emptyReason,omitempty" json:"emptyReason,omitempty"`
+	Section           []CompositionSection `bson:"section,omitempty" json:"section,omitempty"`
 }
 type OtherComposition Composition
 

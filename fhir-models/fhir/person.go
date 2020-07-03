@@ -21,30 +21,30 @@ import "encoding/json"
 
 // Person is documented here http://hl7.org/fhir/StructureDefinition/Person
 type Person struct {
-	Id                   *string               `json:"id,omitempty"`
-	Meta                 *Meta                 `json:"meta,omitempty"`
-	ImplicitRules        *string               `json:"implicitRules,omitempty"`
-	Language             *string               `json:"language,omitempty"`
-	Text                 *Narrative            `json:"text,omitempty"`
-	Extension            []Extension           `json:"extension,omitempty"`
-	ModifierExtension    []Extension           `json:"modifierExtension,omitempty"`
-	Identifier           []Identifier          `json:"identifier,omitempty"`
-	Name                 []HumanName           `json:"name,omitempty"`
-	Telecom              []ContactPoint        `json:"telecom,omitempty"`
-	Gender               *AdministrativeGender `json:"gender,omitempty"`
-	BirthDate            *string               `json:"birthDate,omitempty"`
-	Address              []Address             `json:"address,omitempty"`
-	Photo                *Attachment           `json:"photo,omitempty"`
-	ManagingOrganization *Reference            `json:"managingOrganization,omitempty"`
-	Active               *bool                 `json:"active,omitempty"`
-	Link                 []PersonLink          `json:"link,omitempty"`
+	Id                   *string               `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                 *Meta                 `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules        *string               `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language             *string               `bson:"language,omitempty" json:"language,omitempty"`
+	Text                 *Narrative            `bson:"text,omitempty" json:"text,omitempty"`
+	Extension            []Extension           `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension    []Extension           `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier           []Identifier          `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Name                 []HumanName           `bson:"name,omitempty" json:"name,omitempty"`
+	Telecom              []ContactPoint        `bson:"telecom,omitempty" json:"telecom,omitempty"`
+	Gender               *AdministrativeGender `bson:"gender,omitempty" json:"gender,omitempty"`
+	BirthDate            *string               `bson:"birthDate,omitempty" json:"birthDate,omitempty"`
+	Address              []Address             `bson:"address,omitempty" json:"address,omitempty"`
+	Photo                *Attachment           `bson:"photo,omitempty" json:"photo,omitempty"`
+	ManagingOrganization *Reference            `bson:"managingOrganization,omitempty" json:"managingOrganization,omitempty"`
+	Active               *bool                 `bson:"active,omitempty" json:"active,omitempty"`
+	Link                 []PersonLink          `bson:"link,omitempty" json:"link,omitempty"`
 }
 type PersonLink struct {
-	Id                *string                 `json:"id,omitempty"`
-	Extension         []Extension             `json:"extension,omitempty"`
-	ModifierExtension []Extension             `json:"modifierExtension,omitempty"`
-	Target            Reference               `json:"target"`
-	Assurance         *IdentityAssuranceLevel `json:"assurance,omitempty"`
+	Id                *string                 `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension             `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension             `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Target            Reference               `bson:"target" json:"target"`
+	Assurance         *IdentityAssuranceLevel `bson:"assurance,omitempty" json:"assurance,omitempty"`
 }
 type OtherPerson Person
 

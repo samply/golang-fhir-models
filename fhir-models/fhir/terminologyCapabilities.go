@@ -21,112 +21,112 @@ import "encoding/json"
 
 // TerminologyCapabilities is documented here http://hl7.org/fhir/StructureDefinition/TerminologyCapabilities
 type TerminologyCapabilities struct {
-	Id                *string                                `json:"id,omitempty"`
-	Meta              *Meta                                  `json:"meta,omitempty"`
-	ImplicitRules     *string                                `json:"implicitRules,omitempty"`
-	Language          *string                                `json:"language,omitempty"`
-	Text              *Narrative                             `json:"text,omitempty"`
-	Extension         []Extension                            `json:"extension,omitempty"`
-	ModifierExtension []Extension                            `json:"modifierExtension,omitempty"`
-	Url               *string                                `json:"url,omitempty"`
-	Version           *string                                `json:"version,omitempty"`
-	Name              *string                                `json:"name,omitempty"`
-	Title             *string                                `json:"title,omitempty"`
-	Status            PublicationStatus                      `json:"status"`
-	Experimental      *bool                                  `json:"experimental,omitempty"`
-	Date              string                                 `json:"date"`
-	Publisher         *string                                `json:"publisher,omitempty"`
-	Contact           []ContactDetail                        `json:"contact,omitempty"`
-	Description       *string                                `json:"description,omitempty"`
-	UseContext        []UsageContext                         `json:"useContext,omitempty"`
-	Jurisdiction      []CodeableConcept                      `json:"jurisdiction,omitempty"`
-	Purpose           *string                                `json:"purpose,omitempty"`
-	Copyright         *string                                `json:"copyright,omitempty"`
-	Kind              CapabilityStatementKind                `json:"kind"`
-	Software          *TerminologyCapabilitiesSoftware       `json:"software,omitempty"`
-	Implementation    *TerminologyCapabilitiesImplementation `json:"implementation,omitempty"`
-	LockedDate        *bool                                  `json:"lockedDate,omitempty"`
-	CodeSystem        []TerminologyCapabilitiesCodeSystem    `json:"codeSystem,omitempty"`
-	Expansion         *TerminologyCapabilitiesExpansion      `json:"expansion,omitempty"`
-	CodeSearch        *CodeSearchSupport                     `json:"codeSearch,omitempty"`
-	ValidateCode      *TerminologyCapabilitiesValidateCode   `json:"validateCode,omitempty"`
-	Translation       *TerminologyCapabilitiesTranslation    `json:"translation,omitempty"`
-	Closure           *TerminologyCapabilitiesClosure        `json:"closure,omitempty"`
+	Id                *string                                `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta                                  `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string                                `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string                                `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative                             `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension                            `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                            `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Url               *string                                `bson:"url,omitempty" json:"url,omitempty"`
+	Version           *string                                `bson:"version,omitempty" json:"version,omitempty"`
+	Name              *string                                `bson:"name,omitempty" json:"name,omitempty"`
+	Title             *string                                `bson:"title,omitempty" json:"title,omitempty"`
+	Status            PublicationStatus                      `bson:"status" json:"status"`
+	Experimental      *bool                                  `bson:"experimental,omitempty" json:"experimental,omitempty"`
+	Date              string                                 `bson:"date" json:"date"`
+	Publisher         *string                                `bson:"publisher,omitempty" json:"publisher,omitempty"`
+	Contact           []ContactDetail                        `bson:"contact,omitempty" json:"contact,omitempty"`
+	Description       *string                                `bson:"description,omitempty" json:"description,omitempty"`
+	UseContext        []UsageContext                         `bson:"useContext,omitempty" json:"useContext,omitempty"`
+	Jurisdiction      []CodeableConcept                      `bson:"jurisdiction,omitempty" json:"jurisdiction,omitempty"`
+	Purpose           *string                                `bson:"purpose,omitempty" json:"purpose,omitempty"`
+	Copyright         *string                                `bson:"copyright,omitempty" json:"copyright,omitempty"`
+	Kind              CapabilityStatementKind                `bson:"kind" json:"kind"`
+	Software          *TerminologyCapabilitiesSoftware       `bson:"software,omitempty" json:"software,omitempty"`
+	Implementation    *TerminologyCapabilitiesImplementation `bson:"implementation,omitempty" json:"implementation,omitempty"`
+	LockedDate        *bool                                  `bson:"lockedDate,omitempty" json:"lockedDate,omitempty"`
+	CodeSystem        []TerminologyCapabilitiesCodeSystem    `bson:"codeSystem,omitempty" json:"codeSystem,omitempty"`
+	Expansion         *TerminologyCapabilitiesExpansion      `bson:"expansion,omitempty" json:"expansion,omitempty"`
+	CodeSearch        *CodeSearchSupport                     `bson:"codeSearch,omitempty" json:"codeSearch,omitempty"`
+	ValidateCode      *TerminologyCapabilitiesValidateCode   `bson:"validateCode,omitempty" json:"validateCode,omitempty"`
+	Translation       *TerminologyCapabilitiesTranslation    `bson:"translation,omitempty" json:"translation,omitempty"`
+	Closure           *TerminologyCapabilitiesClosure        `bson:"closure,omitempty" json:"closure,omitempty"`
 }
 type TerminologyCapabilitiesSoftware struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Name              string      `json:"name"`
-	Version           *string     `json:"version,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Name              string      `bson:"name" json:"name"`
+	Version           *string     `bson:"version,omitempty" json:"version,omitempty"`
 }
 type TerminologyCapabilitiesImplementation struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Description       string      `json:"description"`
-	Url               *string     `json:"url,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Description       string      `bson:"description" json:"description"`
+	Url               *string     `bson:"url,omitempty" json:"url,omitempty"`
 }
 type TerminologyCapabilitiesCodeSystem struct {
-	Id                *string                                    `json:"id,omitempty"`
-	Extension         []Extension                                `json:"extension,omitempty"`
-	ModifierExtension []Extension                                `json:"modifierExtension,omitempty"`
-	Uri               *string                                    `json:"uri,omitempty"`
-	Version           []TerminologyCapabilitiesCodeSystemVersion `json:"version,omitempty"`
-	Subsumption       *bool                                      `json:"subsumption,omitempty"`
+	Id                *string                                    `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                                `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                                `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Uri               *string                                    `bson:"uri,omitempty" json:"uri,omitempty"`
+	Version           []TerminologyCapabilitiesCodeSystemVersion `bson:"version,omitempty" json:"version,omitempty"`
+	Subsumption       *bool                                      `bson:"subsumption,omitempty" json:"subsumption,omitempty"`
 }
 type TerminologyCapabilitiesCodeSystemVersion struct {
-	Id                *string                                          `json:"id,omitempty"`
-	Extension         []Extension                                      `json:"extension,omitempty"`
-	ModifierExtension []Extension                                      `json:"modifierExtension,omitempty"`
-	Code              *string                                          `json:"code,omitempty"`
-	IsDefault         *bool                                            `json:"isDefault,omitempty"`
-	Compositional     *bool                                            `json:"compositional,omitempty"`
-	Language          []string                                         `json:"language,omitempty"`
-	Filter            []TerminologyCapabilitiesCodeSystemVersionFilter `json:"filter,omitempty"`
-	Property          []string                                         `json:"property,omitempty"`
+	Id                *string                                          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                                      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                                      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Code              *string                                          `bson:"code,omitempty" json:"code,omitempty"`
+	IsDefault         *bool                                            `bson:"isDefault,omitempty" json:"isDefault,omitempty"`
+	Compositional     *bool                                            `bson:"compositional,omitempty" json:"compositional,omitempty"`
+	Language          []string                                         `bson:"language,omitempty" json:"language,omitempty"`
+	Filter            []TerminologyCapabilitiesCodeSystemVersionFilter `bson:"filter,omitempty" json:"filter,omitempty"`
+	Property          []string                                         `bson:"property,omitempty" json:"property,omitempty"`
 }
 type TerminologyCapabilitiesCodeSystemVersionFilter struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Code              string      `json:"code"`
-	Op                []string    `json:"op"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Code              string      `bson:"code" json:"code"`
+	Op                []string    `bson:"op" json:"op"`
 }
 type TerminologyCapabilitiesExpansion struct {
-	Id                *string                                     `json:"id,omitempty"`
-	Extension         []Extension                                 `json:"extension,omitempty"`
-	ModifierExtension []Extension                                 `json:"modifierExtension,omitempty"`
-	Hierarchical      *bool                                       `json:"hierarchical,omitempty"`
-	Paging            *bool                                       `json:"paging,omitempty"`
-	Incomplete        *bool                                       `json:"incomplete,omitempty"`
-	Parameter         []TerminologyCapabilitiesExpansionParameter `json:"parameter,omitempty"`
-	TextFilter        *string                                     `json:"textFilter,omitempty"`
+	Id                *string                                     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                                 `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                                 `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Hierarchical      *bool                                       `bson:"hierarchical,omitempty" json:"hierarchical,omitempty"`
+	Paging            *bool                                       `bson:"paging,omitempty" json:"paging,omitempty"`
+	Incomplete        *bool                                       `bson:"incomplete,omitempty" json:"incomplete,omitempty"`
+	Parameter         []TerminologyCapabilitiesExpansionParameter `bson:"parameter,omitempty" json:"parameter,omitempty"`
+	TextFilter        *string                                     `bson:"textFilter,omitempty" json:"textFilter,omitempty"`
 }
 type TerminologyCapabilitiesExpansionParameter struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Name              string      `json:"name"`
-	Documentation     *string     `json:"documentation,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Name              string      `bson:"name" json:"name"`
+	Documentation     *string     `bson:"documentation,omitempty" json:"documentation,omitempty"`
 }
 type TerminologyCapabilitiesValidateCode struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Translations      bool        `json:"translations"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Translations      bool        `bson:"translations" json:"translations"`
 }
 type TerminologyCapabilitiesTranslation struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	NeedsMap          bool        `json:"needsMap"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	NeedsMap          bool        `bson:"needsMap" json:"needsMap"`
 }
 type TerminologyCapabilitiesClosure struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Translation       *bool       `json:"translation,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Translation       *bool       `bson:"translation,omitempty" json:"translation,omitempty"`
 }
 type OtherTerminologyCapabilities TerminologyCapabilities
 

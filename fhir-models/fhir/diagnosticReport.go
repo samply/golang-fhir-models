@@ -21,37 +21,37 @@ import "encoding/json"
 
 // DiagnosticReport is documented here http://hl7.org/fhir/StructureDefinition/DiagnosticReport
 type DiagnosticReport struct {
-	Id                 *string                 `json:"id,omitempty"`
-	Meta               *Meta                   `json:"meta,omitempty"`
-	ImplicitRules      *string                 `json:"implicitRules,omitempty"`
-	Language           *string                 `json:"language,omitempty"`
-	Text               *Narrative              `json:"text,omitempty"`
-	Extension          []Extension             `json:"extension,omitempty"`
-	ModifierExtension  []Extension             `json:"modifierExtension,omitempty"`
-	Identifier         []Identifier            `json:"identifier,omitempty"`
-	BasedOn            []Reference             `json:"basedOn,omitempty"`
-	Status             DiagnosticReportStatus  `json:"status"`
-	Category           []CodeableConcept       `json:"category,omitempty"`
-	Code               CodeableConcept         `json:"code"`
-	Subject            *Reference              `json:"subject,omitempty"`
-	Encounter          *Reference              `json:"encounter,omitempty"`
-	Issued             *string                 `json:"issued,omitempty"`
-	Performer          []Reference             `json:"performer,omitempty"`
-	ResultsInterpreter []Reference             `json:"resultsInterpreter,omitempty"`
-	Specimen           []Reference             `json:"specimen,omitempty"`
-	Result             []Reference             `json:"result,omitempty"`
-	ImagingStudy       []Reference             `json:"imagingStudy,omitempty"`
-	Media              []DiagnosticReportMedia `json:"media,omitempty"`
-	Conclusion         *string                 `json:"conclusion,omitempty"`
-	ConclusionCode     []CodeableConcept       `json:"conclusionCode,omitempty"`
-	PresentedForm      []Attachment            `json:"presentedForm,omitempty"`
+	Id                 *string                 `bson:"id,omitempty" json:"id,omitempty"`
+	Meta               *Meta                   `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules      *string                 `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language           *string                 `bson:"language,omitempty" json:"language,omitempty"`
+	Text               *Narrative              `bson:"text,omitempty" json:"text,omitempty"`
+	Extension          []Extension             `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension  []Extension             `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier         []Identifier            `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	BasedOn            []Reference             `bson:"basedOn,omitempty" json:"basedOn,omitempty"`
+	Status             DiagnosticReportStatus  `bson:"status" json:"status"`
+	Category           []CodeableConcept       `bson:"category,omitempty" json:"category,omitempty"`
+	Code               CodeableConcept         `bson:"code" json:"code"`
+	Subject            *Reference              `bson:"subject,omitempty" json:"subject,omitempty"`
+	Encounter          *Reference              `bson:"encounter,omitempty" json:"encounter,omitempty"`
+	Issued             *string                 `bson:"issued,omitempty" json:"issued,omitempty"`
+	Performer          []Reference             `bson:"performer,omitempty" json:"performer,omitempty"`
+	ResultsInterpreter []Reference             `bson:"resultsInterpreter,omitempty" json:"resultsInterpreter,omitempty"`
+	Specimen           []Reference             `bson:"specimen,omitempty" json:"specimen,omitempty"`
+	Result             []Reference             `bson:"result,omitempty" json:"result,omitempty"`
+	ImagingStudy       []Reference             `bson:"imagingStudy,omitempty" json:"imagingStudy,omitempty"`
+	Media              []DiagnosticReportMedia `bson:"media,omitempty" json:"media,omitempty"`
+	Conclusion         *string                 `bson:"conclusion,omitempty" json:"conclusion,omitempty"`
+	ConclusionCode     []CodeableConcept       `bson:"conclusionCode,omitempty" json:"conclusionCode,omitempty"`
+	PresentedForm      []Attachment            `bson:"presentedForm,omitempty" json:"presentedForm,omitempty"`
 }
 type DiagnosticReportMedia struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Comment           *string     `json:"comment,omitempty"`
-	Link              Reference   `json:"link"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Comment           *string     `bson:"comment,omitempty" json:"comment,omitempty"`
+	Link              Reference   `bson:"link" json:"link"`
 }
 type OtherDiagnosticReport DiagnosticReport
 

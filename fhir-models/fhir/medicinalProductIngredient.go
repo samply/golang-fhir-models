@@ -21,57 +21,57 @@ import "encoding/json"
 
 // MedicinalProductIngredient is documented here http://hl7.org/fhir/StructureDefinition/MedicinalProductIngredient
 type MedicinalProductIngredient struct {
-	Id                  *string                                        `json:"id,omitempty"`
-	Meta                *Meta                                          `json:"meta,omitempty"`
-	ImplicitRules       *string                                        `json:"implicitRules,omitempty"`
-	Language            *string                                        `json:"language,omitempty"`
-	Text                *Narrative                                     `json:"text,omitempty"`
-	Extension           []Extension                                    `json:"extension,omitempty"`
-	ModifierExtension   []Extension                                    `json:"modifierExtension,omitempty"`
-	Identifier          *Identifier                                    `json:"identifier,omitempty"`
-	Role                CodeableConcept                                `json:"role"`
-	AllergenicIndicator *bool                                          `json:"allergenicIndicator,omitempty"`
-	Manufacturer        []Reference                                    `json:"manufacturer,omitempty"`
-	SpecifiedSubstance  []MedicinalProductIngredientSpecifiedSubstance `json:"specifiedSubstance,omitempty"`
-	Substance           *MedicinalProductIngredientSubstance           `json:"substance,omitempty"`
+	Id                  *string                                        `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                *Meta                                          `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules       *string                                        `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language            *string                                        `bson:"language,omitempty" json:"language,omitempty"`
+	Text                *Narrative                                     `bson:"text,omitempty" json:"text,omitempty"`
+	Extension           []Extension                                    `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension   []Extension                                    `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier          *Identifier                                    `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Role                CodeableConcept                                `bson:"role" json:"role"`
+	AllergenicIndicator *bool                                          `bson:"allergenicIndicator,omitempty" json:"allergenicIndicator,omitempty"`
+	Manufacturer        []Reference                                    `bson:"manufacturer,omitempty" json:"manufacturer,omitempty"`
+	SpecifiedSubstance  []MedicinalProductIngredientSpecifiedSubstance `bson:"specifiedSubstance,omitempty" json:"specifiedSubstance,omitempty"`
+	Substance           *MedicinalProductIngredientSubstance           `bson:"substance,omitempty" json:"substance,omitempty"`
 }
 type MedicinalProductIngredientSpecifiedSubstance struct {
-	Id                *string                                                `json:"id,omitempty"`
-	Extension         []Extension                                            `json:"extension,omitempty"`
-	ModifierExtension []Extension                                            `json:"modifierExtension,omitempty"`
-	Code              CodeableConcept                                        `json:"code"`
-	Group             CodeableConcept                                        `json:"group"`
-	Confidentiality   *CodeableConcept                                       `json:"confidentiality,omitempty"`
-	Strength          []MedicinalProductIngredientSpecifiedSubstanceStrength `json:"strength,omitempty"`
+	Id                *string                                                `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                                            `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                                            `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Code              CodeableConcept                                        `bson:"code" json:"code"`
+	Group             CodeableConcept                                        `bson:"group" json:"group"`
+	Confidentiality   *CodeableConcept                                       `bson:"confidentiality,omitempty" json:"confidentiality,omitempty"`
+	Strength          []MedicinalProductIngredientSpecifiedSubstanceStrength `bson:"strength,omitempty" json:"strength,omitempty"`
 }
 type MedicinalProductIngredientSpecifiedSubstanceStrength struct {
-	Id                    *string                                                                 `json:"id,omitempty"`
-	Extension             []Extension                                                             `json:"extension,omitempty"`
-	ModifierExtension     []Extension                                                             `json:"modifierExtension,omitempty"`
-	Presentation          Ratio                                                                   `json:"presentation"`
-	PresentationLowLimit  *Ratio                                                                  `json:"presentationLowLimit,omitempty"`
-	Concentration         *Ratio                                                                  `json:"concentration,omitempty"`
-	ConcentrationLowLimit *Ratio                                                                  `json:"concentrationLowLimit,omitempty"`
-	MeasurementPoint      *string                                                                 `json:"measurementPoint,omitempty"`
-	Country               []CodeableConcept                                                       `json:"country,omitempty"`
-	ReferenceStrength     []MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength `json:"referenceStrength,omitempty"`
+	Id                    *string                                                                 `bson:"id,omitempty" json:"id,omitempty"`
+	Extension             []Extension                                                             `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension     []Extension                                                             `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Presentation          Ratio                                                                   `bson:"presentation" json:"presentation"`
+	PresentationLowLimit  *Ratio                                                                  `bson:"presentationLowLimit,omitempty" json:"presentationLowLimit,omitempty"`
+	Concentration         *Ratio                                                                  `bson:"concentration,omitempty" json:"concentration,omitempty"`
+	ConcentrationLowLimit *Ratio                                                                  `bson:"concentrationLowLimit,omitempty" json:"concentrationLowLimit,omitempty"`
+	MeasurementPoint      *string                                                                 `bson:"measurementPoint,omitempty" json:"measurementPoint,omitempty"`
+	Country               []CodeableConcept                                                       `bson:"country,omitempty" json:"country,omitempty"`
+	ReferenceStrength     []MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength `bson:"referenceStrength,omitempty" json:"referenceStrength,omitempty"`
 }
 type MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength struct {
-	Id                *string           `json:"id,omitempty"`
-	Extension         []Extension       `json:"extension,omitempty"`
-	ModifierExtension []Extension       `json:"modifierExtension,omitempty"`
-	Substance         *CodeableConcept  `json:"substance,omitempty"`
-	Strength          Ratio             `json:"strength"`
-	StrengthLowLimit  *Ratio            `json:"strengthLowLimit,omitempty"`
-	MeasurementPoint  *string           `json:"measurementPoint,omitempty"`
-	Country           []CodeableConcept `json:"country,omitempty"`
+	Id                *string           `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension       `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension       `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Substance         *CodeableConcept  `bson:"substance,omitempty" json:"substance,omitempty"`
+	Strength          Ratio             `bson:"strength" json:"strength"`
+	StrengthLowLimit  *Ratio            `bson:"strengthLowLimit,omitempty" json:"strengthLowLimit,omitempty"`
+	MeasurementPoint  *string           `bson:"measurementPoint,omitempty" json:"measurementPoint,omitempty"`
+	Country           []CodeableConcept `bson:"country,omitempty" json:"country,omitempty"`
 }
 type MedicinalProductIngredientSubstance struct {
-	Id                *string                                                `json:"id,omitempty"`
-	Extension         []Extension                                            `json:"extension,omitempty"`
-	ModifierExtension []Extension                                            `json:"modifierExtension,omitempty"`
-	Code              CodeableConcept                                        `json:"code"`
-	Strength          []MedicinalProductIngredientSpecifiedSubstanceStrength `json:"strength,omitempty"`
+	Id                *string                                                `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                                            `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                                            `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Code              CodeableConcept                                        `bson:"code" json:"code"`
+	Strength          []MedicinalProductIngredientSpecifiedSubstanceStrength `bson:"strength,omitempty" json:"strength,omitempty"`
 }
 type OtherMedicinalProductIngredient MedicinalProductIngredient
 

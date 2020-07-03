@@ -21,21 +21,21 @@ import "encoding/json"
 
 // BodyStructure is documented here http://hl7.org/fhir/StructureDefinition/BodyStructure
 type BodyStructure struct {
-	Id                *string           `json:"id,omitempty"`
-	Meta              *Meta             `json:"meta,omitempty"`
-	ImplicitRules     *string           `json:"implicitRules,omitempty"`
-	Language          *string           `json:"language,omitempty"`
-	Text              *Narrative        `json:"text,omitempty"`
-	Extension         []Extension       `json:"extension,omitempty"`
-	ModifierExtension []Extension       `json:"modifierExtension,omitempty"`
-	Identifier        []Identifier      `json:"identifier,omitempty"`
-	Active            *bool             `json:"active,omitempty"`
-	Morphology        *CodeableConcept  `json:"morphology,omitempty"`
-	Location          *CodeableConcept  `json:"location,omitempty"`
-	LocationQualifier []CodeableConcept `json:"locationQualifier,omitempty"`
-	Description       *string           `json:"description,omitempty"`
-	Image             []Attachment      `json:"image,omitempty"`
-	Patient           Reference         `json:"patient"`
+	Id                *string           `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta             `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string           `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string           `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative        `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension       `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension       `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        []Identifier      `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Active            *bool             `bson:"active,omitempty" json:"active,omitempty"`
+	Morphology        *CodeableConcept  `bson:"morphology,omitempty" json:"morphology,omitempty"`
+	Location          *CodeableConcept  `bson:"location,omitempty" json:"location,omitempty"`
+	LocationQualifier []CodeableConcept `bson:"locationQualifier,omitempty" json:"locationQualifier,omitempty"`
+	Description       *string           `bson:"description,omitempty" json:"description,omitempty"`
+	Image             []Attachment      `bson:"image,omitempty" json:"image,omitempty"`
+	Patient           Reference         `bson:"patient" json:"patient"`
 }
 type OtherBodyStructure BodyStructure
 

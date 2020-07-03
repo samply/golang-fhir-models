@@ -21,10 +21,10 @@ import "encoding/json"
 
 // Resource is documented here http://hl7.org/fhir/StructureDefinition/Resource
 type Resource struct {
-	Id            *string `json:"id,omitempty"`
-	Meta          *Meta   `json:"meta,omitempty"`
-	ImplicitRules *string `json:"implicitRules,omitempty"`
-	Language      *string `json:"language,omitempty"`
+	Id            *string `bson:"id,omitempty" json:"id,omitempty"`
+	Meta          *Meta   `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules *string `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language      *string `bson:"language,omitempty" json:"language,omitempty"`
 }
 type OtherResource Resource
 

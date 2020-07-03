@@ -21,13 +21,13 @@ import "encoding/json"
 
 // Binary is documented here http://hl7.org/fhir/StructureDefinition/Binary
 type Binary struct {
-	Id              *string    `json:"id,omitempty"`
-	Meta            *Meta      `json:"meta,omitempty"`
-	ImplicitRules   *string    `json:"implicitRules,omitempty"`
-	Language        *string    `json:"language,omitempty"`
-	ContentType     string     `json:"contentType"`
-	SecurityContext *Reference `json:"securityContext,omitempty"`
-	Data            *string    `json:"data,omitempty"`
+	Id              *string    `bson:"id,omitempty" json:"id,omitempty"`
+	Meta            *Meta      `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules   *string    `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language        *string    `bson:"language,omitempty" json:"language,omitempty"`
+	ContentType     string     `bson:"contentType" json:"contentType"`
+	SecurityContext *Reference `bson:"securityContext,omitempty" json:"securityContext,omitempty"`
+	Data            *string    `bson:"data,omitempty" json:"data,omitempty"`
 }
 type OtherBinary Binary
 

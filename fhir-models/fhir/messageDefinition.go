@@ -21,52 +21,52 @@ import "encoding/json"
 
 // MessageDefinition is documented here http://hl7.org/fhir/StructureDefinition/MessageDefinition
 type MessageDefinition struct {
-	Id                *string                            `json:"id,omitempty"`
-	Meta              *Meta                              `json:"meta,omitempty"`
-	ImplicitRules     *string                            `json:"implicitRules,omitempty"`
-	Language          *string                            `json:"language,omitempty"`
-	Text              *Narrative                         `json:"text,omitempty"`
-	Extension         []Extension                        `json:"extension,omitempty"`
-	ModifierExtension []Extension                        `json:"modifierExtension,omitempty"`
-	Url               *string                            `json:"url,omitempty"`
-	Identifier        []Identifier                       `json:"identifier,omitempty"`
-	Version           *string                            `json:"version,omitempty"`
-	Name              *string                            `json:"name,omitempty"`
-	Title             *string                            `json:"title,omitempty"`
-	Replaces          []string                           `json:"replaces,omitempty"`
-	Status            PublicationStatus                  `json:"status"`
-	Experimental      *bool                              `json:"experimental,omitempty"`
-	Date              string                             `json:"date"`
-	Publisher         *string                            `json:"publisher,omitempty"`
-	Contact           []ContactDetail                    `json:"contact,omitempty"`
-	Description       *string                            `json:"description,omitempty"`
-	UseContext        []UsageContext                     `json:"useContext,omitempty"`
-	Jurisdiction      []CodeableConcept                  `json:"jurisdiction,omitempty"`
-	Purpose           *string                            `json:"purpose,omitempty"`
-	Copyright         *string                            `json:"copyright,omitempty"`
-	Base              *string                            `json:"base,omitempty"`
-	Parent            []string                           `json:"parent,omitempty"`
-	Category          *MessageSignificanceCategory       `json:"category,omitempty"`
-	Focus             []MessageDefinitionFocus           `json:"focus,omitempty"`
-	ResponseRequired  *string                            `json:"responseRequired,omitempty"`
-	AllowedResponse   []MessageDefinitionAllowedResponse `json:"allowedResponse,omitempty"`
-	Graph             []string                           `json:"graph,omitempty"`
+	Id                *string                            `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta                              `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string                            `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string                            `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative                         `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension                        `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                        `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Url               *string                            `bson:"url,omitempty" json:"url,omitempty"`
+	Identifier        []Identifier                       `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Version           *string                            `bson:"version,omitempty" json:"version,omitempty"`
+	Name              *string                            `bson:"name,omitempty" json:"name,omitempty"`
+	Title             *string                            `bson:"title,omitempty" json:"title,omitempty"`
+	Replaces          []string                           `bson:"replaces,omitempty" json:"replaces,omitempty"`
+	Status            PublicationStatus                  `bson:"status" json:"status"`
+	Experimental      *bool                              `bson:"experimental,omitempty" json:"experimental,omitempty"`
+	Date              string                             `bson:"date" json:"date"`
+	Publisher         *string                            `bson:"publisher,omitempty" json:"publisher,omitempty"`
+	Contact           []ContactDetail                    `bson:"contact,omitempty" json:"contact,omitempty"`
+	Description       *string                            `bson:"description,omitempty" json:"description,omitempty"`
+	UseContext        []UsageContext                     `bson:"useContext,omitempty" json:"useContext,omitempty"`
+	Jurisdiction      []CodeableConcept                  `bson:"jurisdiction,omitempty" json:"jurisdiction,omitempty"`
+	Purpose           *string                            `bson:"purpose,omitempty" json:"purpose,omitempty"`
+	Copyright         *string                            `bson:"copyright,omitempty" json:"copyright,omitempty"`
+	Base              *string                            `bson:"base,omitempty" json:"base,omitempty"`
+	Parent            []string                           `bson:"parent,omitempty" json:"parent,omitempty"`
+	Category          *MessageSignificanceCategory       `bson:"category,omitempty" json:"category,omitempty"`
+	Focus             []MessageDefinitionFocus           `bson:"focus,omitempty" json:"focus,omitempty"`
+	ResponseRequired  *string                            `bson:"responseRequired,omitempty" json:"responseRequired,omitempty"`
+	AllowedResponse   []MessageDefinitionAllowedResponse `bson:"allowedResponse,omitempty" json:"allowedResponse,omitempty"`
+	Graph             []string                           `bson:"graph,omitempty" json:"graph,omitempty"`
 }
 type MessageDefinitionFocus struct {
-	Id                *string      `json:"id,omitempty"`
-	Extension         []Extension  `json:"extension,omitempty"`
-	ModifierExtension []Extension  `json:"modifierExtension,omitempty"`
-	Code              ResourceType `json:"code"`
-	Profile           *string      `json:"profile,omitempty"`
-	Min               int          `json:"min"`
-	Max               *string      `json:"max,omitempty"`
+	Id                *string      `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension  `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension  `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Code              ResourceType `bson:"code" json:"code"`
+	Profile           *string      `bson:"profile,omitempty" json:"profile,omitempty"`
+	Min               int          `bson:"min" json:"min"`
+	Max               *string      `bson:"max,omitempty" json:"max,omitempty"`
 }
 type MessageDefinitionAllowedResponse struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Message           string      `json:"message"`
-	Situation         *string     `json:"situation,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Message           string      `bson:"message" json:"message"`
+	Situation         *string     `bson:"situation,omitempty" json:"situation,omitempty"`
 }
 type OtherMessageDefinition MessageDefinition
 

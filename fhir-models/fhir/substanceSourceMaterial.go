@@ -21,79 +21,79 @@ import "encoding/json"
 
 // SubstanceSourceMaterial is documented here http://hl7.org/fhir/StructureDefinition/SubstanceSourceMaterial
 type SubstanceSourceMaterial struct {
-	Id                   *string                                      `json:"id,omitempty"`
-	Meta                 *Meta                                        `json:"meta,omitempty"`
-	ImplicitRules        *string                                      `json:"implicitRules,omitempty"`
-	Language             *string                                      `json:"language,omitempty"`
-	Text                 *Narrative                                   `json:"text,omitempty"`
-	Extension            []Extension                                  `json:"extension,omitempty"`
-	ModifierExtension    []Extension                                  `json:"modifierExtension,omitempty"`
-	SourceMaterialClass  *CodeableConcept                             `json:"sourceMaterialClass,omitempty"`
-	SourceMaterialType   *CodeableConcept                             `json:"sourceMaterialType,omitempty"`
-	SourceMaterialState  *CodeableConcept                             `json:"sourceMaterialState,omitempty"`
-	OrganismId           *Identifier                                  `json:"organismId,omitempty"`
-	OrganismName         *string                                      `json:"organismName,omitempty"`
-	ParentSubstanceId    []Identifier                                 `json:"parentSubstanceId,omitempty"`
-	ParentSubstanceName  []string                                     `json:"parentSubstanceName,omitempty"`
-	CountryOfOrigin      []CodeableConcept                            `json:"countryOfOrigin,omitempty"`
-	GeographicalLocation []string                                     `json:"geographicalLocation,omitempty"`
-	DevelopmentStage     *CodeableConcept                             `json:"developmentStage,omitempty"`
-	FractionDescription  []SubstanceSourceMaterialFractionDescription `json:"fractionDescription,omitempty"`
-	Organism             *SubstanceSourceMaterialOrganism             `json:"organism,omitempty"`
-	PartDescription      []SubstanceSourceMaterialPartDescription     `json:"partDescription,omitempty"`
+	Id                   *string                                      `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                 *Meta                                        `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules        *string                                      `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language             *string                                      `bson:"language,omitempty" json:"language,omitempty"`
+	Text                 *Narrative                                   `bson:"text,omitempty" json:"text,omitempty"`
+	Extension            []Extension                                  `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension    []Extension                                  `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	SourceMaterialClass  *CodeableConcept                             `bson:"sourceMaterialClass,omitempty" json:"sourceMaterialClass,omitempty"`
+	SourceMaterialType   *CodeableConcept                             `bson:"sourceMaterialType,omitempty" json:"sourceMaterialType,omitempty"`
+	SourceMaterialState  *CodeableConcept                             `bson:"sourceMaterialState,omitempty" json:"sourceMaterialState,omitempty"`
+	OrganismId           *Identifier                                  `bson:"organismId,omitempty" json:"organismId,omitempty"`
+	OrganismName         *string                                      `bson:"organismName,omitempty" json:"organismName,omitempty"`
+	ParentSubstanceId    []Identifier                                 `bson:"parentSubstanceId,omitempty" json:"parentSubstanceId,omitempty"`
+	ParentSubstanceName  []string                                     `bson:"parentSubstanceName,omitempty" json:"parentSubstanceName,omitempty"`
+	CountryOfOrigin      []CodeableConcept                            `bson:"countryOfOrigin,omitempty" json:"countryOfOrigin,omitempty"`
+	GeographicalLocation []string                                     `bson:"geographicalLocation,omitempty" json:"geographicalLocation,omitempty"`
+	DevelopmentStage     *CodeableConcept                             `bson:"developmentStage,omitempty" json:"developmentStage,omitempty"`
+	FractionDescription  []SubstanceSourceMaterialFractionDescription `bson:"fractionDescription,omitempty" json:"fractionDescription,omitempty"`
+	Organism             *SubstanceSourceMaterialOrganism             `bson:"organism,omitempty" json:"organism,omitempty"`
+	PartDescription      []SubstanceSourceMaterialPartDescription     `bson:"partDescription,omitempty" json:"partDescription,omitempty"`
 }
 type SubstanceSourceMaterialFractionDescription struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Fraction          *string          `json:"fraction,omitempty"`
-	MaterialType      *CodeableConcept `json:"materialType,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Fraction          *string          `bson:"fraction,omitempty" json:"fraction,omitempty"`
+	MaterialType      *CodeableConcept `bson:"materialType,omitempty" json:"materialType,omitempty"`
 }
 type SubstanceSourceMaterialOrganism struct {
-	Id                       *string                                         `json:"id,omitempty"`
-	Extension                []Extension                                     `json:"extension,omitempty"`
-	ModifierExtension        []Extension                                     `json:"modifierExtension,omitempty"`
-	Family                   *CodeableConcept                                `json:"family,omitempty"`
-	Genus                    *CodeableConcept                                `json:"genus,omitempty"`
-	Species                  *CodeableConcept                                `json:"species,omitempty"`
-	IntraspecificType        *CodeableConcept                                `json:"intraspecificType,omitempty"`
-	IntraspecificDescription *string                                         `json:"intraspecificDescription,omitempty"`
-	Author                   []SubstanceSourceMaterialOrganismAuthor         `json:"author,omitempty"`
-	Hybrid                   *SubstanceSourceMaterialOrganismHybrid          `json:"hybrid,omitempty"`
-	OrganismGeneral          *SubstanceSourceMaterialOrganismOrganismGeneral `json:"organismGeneral,omitempty"`
+	Id                       *string                                         `bson:"id,omitempty" json:"id,omitempty"`
+	Extension                []Extension                                     `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension        []Extension                                     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Family                   *CodeableConcept                                `bson:"family,omitempty" json:"family,omitempty"`
+	Genus                    *CodeableConcept                                `bson:"genus,omitempty" json:"genus,omitempty"`
+	Species                  *CodeableConcept                                `bson:"species,omitempty" json:"species,omitempty"`
+	IntraspecificType        *CodeableConcept                                `bson:"intraspecificType,omitempty" json:"intraspecificType,omitempty"`
+	IntraspecificDescription *string                                         `bson:"intraspecificDescription,omitempty" json:"intraspecificDescription,omitempty"`
+	Author                   []SubstanceSourceMaterialOrganismAuthor         `bson:"author,omitempty" json:"author,omitempty"`
+	Hybrid                   *SubstanceSourceMaterialOrganismHybrid          `bson:"hybrid,omitempty" json:"hybrid,omitempty"`
+	OrganismGeneral          *SubstanceSourceMaterialOrganismOrganismGeneral `bson:"organismGeneral,omitempty" json:"organismGeneral,omitempty"`
 }
 type SubstanceSourceMaterialOrganismAuthor struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	AuthorType        *CodeableConcept `json:"authorType,omitempty"`
-	AuthorDescription *string          `json:"authorDescription,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	AuthorType        *CodeableConcept `bson:"authorType,omitempty" json:"authorType,omitempty"`
+	AuthorDescription *string          `bson:"authorDescription,omitempty" json:"authorDescription,omitempty"`
 }
 type SubstanceSourceMaterialOrganismHybrid struct {
-	Id                   *string          `json:"id,omitempty"`
-	Extension            []Extension      `json:"extension,omitempty"`
-	ModifierExtension    []Extension      `json:"modifierExtension,omitempty"`
-	MaternalOrganismId   *string          `json:"maternalOrganismId,omitempty"`
-	MaternalOrganismName *string          `json:"maternalOrganismName,omitempty"`
-	PaternalOrganismId   *string          `json:"paternalOrganismId,omitempty"`
-	PaternalOrganismName *string          `json:"paternalOrganismName,omitempty"`
-	HybridType           *CodeableConcept `json:"hybridType,omitempty"`
+	Id                   *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension            []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension    []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	MaternalOrganismId   *string          `bson:"maternalOrganismId,omitempty" json:"maternalOrganismId,omitempty"`
+	MaternalOrganismName *string          `bson:"maternalOrganismName,omitempty" json:"maternalOrganismName,omitempty"`
+	PaternalOrganismId   *string          `bson:"paternalOrganismId,omitempty" json:"paternalOrganismId,omitempty"`
+	PaternalOrganismName *string          `bson:"paternalOrganismName,omitempty" json:"paternalOrganismName,omitempty"`
+	HybridType           *CodeableConcept `bson:"hybridType,omitempty" json:"hybridType,omitempty"`
 }
 type SubstanceSourceMaterialOrganismOrganismGeneral struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Kingdom           *CodeableConcept `json:"kingdom,omitempty"`
-	Phylum            *CodeableConcept `json:"phylum,omitempty"`
-	Class             *CodeableConcept `json:"class,omitempty"`
-	Order             *CodeableConcept `json:"order,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Kingdom           *CodeableConcept `bson:"kingdom,omitempty" json:"kingdom,omitempty"`
+	Phylum            *CodeableConcept `bson:"phylum,omitempty" json:"phylum,omitempty"`
+	Class             *CodeableConcept `bson:"class,omitempty" json:"class,omitempty"`
+	Order             *CodeableConcept `bson:"order,omitempty" json:"order,omitempty"`
 }
 type SubstanceSourceMaterialPartDescription struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Part              *CodeableConcept `json:"part,omitempty"`
-	PartLocation      *CodeableConcept `json:"partLocation,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Part              *CodeableConcept `bson:"part,omitempty" json:"part,omitempty"`
+	PartLocation      *CodeableConcept `bson:"partLocation,omitempty" json:"partLocation,omitempty"`
 }
 type OtherSubstanceSourceMaterial SubstanceSourceMaterial
 

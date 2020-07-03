@@ -21,55 +21,55 @@ import "encoding/json"
 
 // Observation is documented here http://hl7.org/fhir/StructureDefinition/Observation
 type Observation struct {
-	Id                *string                     `json:"id,omitempty"`
-	Meta              *Meta                       `json:"meta,omitempty"`
-	ImplicitRules     *string                     `json:"implicitRules,omitempty"`
-	Language          *string                     `json:"language,omitempty"`
-	Text              *Narrative                  `json:"text,omitempty"`
-	Extension         []Extension                 `json:"extension,omitempty"`
-	ModifierExtension []Extension                 `json:"modifierExtension,omitempty"`
-	Identifier        []Identifier                `json:"identifier,omitempty"`
-	BasedOn           []Reference                 `json:"basedOn,omitempty"`
-	PartOf            []Reference                 `json:"partOf,omitempty"`
-	Status            ObservationStatus           `json:"status"`
-	Category          []CodeableConcept           `json:"category,omitempty"`
-	Code              CodeableConcept             `json:"code"`
-	Subject           *Reference                  `json:"subject,omitempty"`
-	Focus             []Reference                 `json:"focus,omitempty"`
-	Encounter         *Reference                  `json:"encounter,omitempty"`
-	Issued            *string                     `json:"issued,omitempty"`
-	Performer         []Reference                 `json:"performer,omitempty"`
-	DataAbsentReason  *CodeableConcept            `json:"dataAbsentReason,omitempty"`
-	Interpretation    []CodeableConcept           `json:"interpretation,omitempty"`
-	Note              []Annotation                `json:"note,omitempty"`
-	BodySite          *CodeableConcept            `json:"bodySite,omitempty"`
-	Method            *CodeableConcept            `json:"method,omitempty"`
-	Specimen          *Reference                  `json:"specimen,omitempty"`
-	Device            *Reference                  `json:"device,omitempty"`
-	ReferenceRange    []ObservationReferenceRange `json:"referenceRange,omitempty"`
-	HasMember         []Reference                 `json:"hasMember,omitempty"`
-	DerivedFrom       []Reference                 `json:"derivedFrom,omitempty"`
-	Component         []ObservationComponent      `json:"component,omitempty"`
+	Id                *string                     `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta                       `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string                     `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string                     `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative                  `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension                 `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                 `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        []Identifier                `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	BasedOn           []Reference                 `bson:"basedOn,omitempty" json:"basedOn,omitempty"`
+	PartOf            []Reference                 `bson:"partOf,omitempty" json:"partOf,omitempty"`
+	Status            ObservationStatus           `bson:"status" json:"status"`
+	Category          []CodeableConcept           `bson:"category,omitempty" json:"category,omitempty"`
+	Code              CodeableConcept             `bson:"code" json:"code"`
+	Subject           *Reference                  `bson:"subject,omitempty" json:"subject,omitempty"`
+	Focus             []Reference                 `bson:"focus,omitempty" json:"focus,omitempty"`
+	Encounter         *Reference                  `bson:"encounter,omitempty" json:"encounter,omitempty"`
+	Issued            *string                     `bson:"issued,omitempty" json:"issued,omitempty"`
+	Performer         []Reference                 `bson:"performer,omitempty" json:"performer,omitempty"`
+	DataAbsentReason  *CodeableConcept            `bson:"dataAbsentReason,omitempty" json:"dataAbsentReason,omitempty"`
+	Interpretation    []CodeableConcept           `bson:"interpretation,omitempty" json:"interpretation,omitempty"`
+	Note              []Annotation                `bson:"note,omitempty" json:"note,omitempty"`
+	BodySite          *CodeableConcept            `bson:"bodySite,omitempty" json:"bodySite,omitempty"`
+	Method            *CodeableConcept            `bson:"method,omitempty" json:"method,omitempty"`
+	Specimen          *Reference                  `bson:"specimen,omitempty" json:"specimen,omitempty"`
+	Device            *Reference                  `bson:"device,omitempty" json:"device,omitempty"`
+	ReferenceRange    []ObservationReferenceRange `bson:"referenceRange,omitempty" json:"referenceRange,omitempty"`
+	HasMember         []Reference                 `bson:"hasMember,omitempty" json:"hasMember,omitempty"`
+	DerivedFrom       []Reference                 `bson:"derivedFrom,omitempty" json:"derivedFrom,omitempty"`
+	Component         []ObservationComponent      `bson:"component,omitempty" json:"component,omitempty"`
 }
 type ObservationReferenceRange struct {
-	Id                *string           `json:"id,omitempty"`
-	Extension         []Extension       `json:"extension,omitempty"`
-	ModifierExtension []Extension       `json:"modifierExtension,omitempty"`
-	Low               *Quantity         `json:"low,omitempty"`
-	High              *Quantity         `json:"high,omitempty"`
-	Type              *CodeableConcept  `json:"type,omitempty"`
-	AppliesTo         []CodeableConcept `json:"appliesTo,omitempty"`
-	Age               *Range            `json:"age,omitempty"`
-	Text              *string           `json:"text,omitempty"`
+	Id                *string           `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension       `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension       `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Low               *Quantity         `bson:"low,omitempty" json:"low,omitempty"`
+	High              *Quantity         `bson:"high,omitempty" json:"high,omitempty"`
+	Type              *CodeableConcept  `bson:"type,omitempty" json:"type,omitempty"`
+	AppliesTo         []CodeableConcept `bson:"appliesTo,omitempty" json:"appliesTo,omitempty"`
+	Age               *Range            `bson:"age,omitempty" json:"age,omitempty"`
+	Text              *string           `bson:"text,omitempty" json:"text,omitempty"`
 }
 type ObservationComponent struct {
-	Id                *string                     `json:"id,omitempty"`
-	Extension         []Extension                 `json:"extension,omitempty"`
-	ModifierExtension []Extension                 `json:"modifierExtension,omitempty"`
-	Code              CodeableConcept             `json:"code"`
-	DataAbsentReason  *CodeableConcept            `json:"dataAbsentReason,omitempty"`
-	Interpretation    []CodeableConcept           `json:"interpretation,omitempty"`
-	ReferenceRange    []ObservationReferenceRange `json:"referenceRange,omitempty"`
+	Id                *string                     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                 `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                 `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Code              CodeableConcept             `bson:"code" json:"code"`
+	DataAbsentReason  *CodeableConcept            `bson:"dataAbsentReason,omitempty" json:"dataAbsentReason,omitempty"`
+	Interpretation    []CodeableConcept           `bson:"interpretation,omitempty" json:"interpretation,omitempty"`
+	ReferenceRange    []ObservationReferenceRange `bson:"referenceRange,omitempty" json:"referenceRange,omitempty"`
 }
 type OtherObservation Observation
 

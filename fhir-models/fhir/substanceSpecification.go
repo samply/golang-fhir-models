@@ -21,134 +21,134 @@ import "encoding/json"
 
 // SubstanceSpecification is documented here http://hl7.org/fhir/StructureDefinition/SubstanceSpecification
 type SubstanceSpecification struct {
-	Id                   *string                                                 `json:"id,omitempty"`
-	Meta                 *Meta                                                   `json:"meta,omitempty"`
-	ImplicitRules        *string                                                 `json:"implicitRules,omitempty"`
-	Language             *string                                                 `json:"language,omitempty"`
-	Text                 *Narrative                                              `json:"text,omitempty"`
-	Extension            []Extension                                             `json:"extension,omitempty"`
-	ModifierExtension    []Extension                                             `json:"modifierExtension,omitempty"`
-	Identifier           *Identifier                                             `json:"identifier,omitempty"`
-	Type                 *CodeableConcept                                        `json:"type,omitempty"`
-	Status               *CodeableConcept                                        `json:"status,omitempty"`
-	Domain               *CodeableConcept                                        `json:"domain,omitempty"`
-	Description          *string                                                 `json:"description,omitempty"`
-	Source               []Reference                                             `json:"source,omitempty"`
-	Comment              *string                                                 `json:"comment,omitempty"`
-	Moiety               []SubstanceSpecificationMoiety                          `json:"moiety,omitempty"`
-	Property             []SubstanceSpecificationProperty                        `json:"property,omitempty"`
-	ReferenceInformation *Reference                                              `json:"referenceInformation,omitempty"`
-	Structure            *SubstanceSpecificationStructure                        `json:"structure,omitempty"`
-	Code                 []SubstanceSpecificationCode                            `json:"code,omitempty"`
-	Name                 []SubstanceSpecificationName                            `json:"name,omitempty"`
-	MolecularWeight      []SubstanceSpecificationStructureIsotopeMolecularWeight `json:"molecularWeight,omitempty"`
-	Relationship         []SubstanceSpecificationRelationship                    `json:"relationship,omitempty"`
-	NucleicAcid          *Reference                                              `json:"nucleicAcid,omitempty"`
-	Polymer              *Reference                                              `json:"polymer,omitempty"`
-	Protein              *Reference                                              `json:"protein,omitempty"`
-	SourceMaterial       *Reference                                              `json:"sourceMaterial,omitempty"`
+	Id                   *string                                                 `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                 *Meta                                                   `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules        *string                                                 `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language             *string                                                 `bson:"language,omitempty" json:"language,omitempty"`
+	Text                 *Narrative                                              `bson:"text,omitempty" json:"text,omitempty"`
+	Extension            []Extension                                             `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension    []Extension                                             `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier           *Identifier                                             `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Type                 *CodeableConcept                                        `bson:"type,omitempty" json:"type,omitempty"`
+	Status               *CodeableConcept                                        `bson:"status,omitempty" json:"status,omitempty"`
+	Domain               *CodeableConcept                                        `bson:"domain,omitempty" json:"domain,omitempty"`
+	Description          *string                                                 `bson:"description,omitempty" json:"description,omitempty"`
+	Source               []Reference                                             `bson:"source,omitempty" json:"source,omitempty"`
+	Comment              *string                                                 `bson:"comment,omitempty" json:"comment,omitempty"`
+	Moiety               []SubstanceSpecificationMoiety                          `bson:"moiety,omitempty" json:"moiety,omitempty"`
+	Property             []SubstanceSpecificationProperty                        `bson:"property,omitempty" json:"property,omitempty"`
+	ReferenceInformation *Reference                                              `bson:"referenceInformation,omitempty" json:"referenceInformation,omitempty"`
+	Structure            *SubstanceSpecificationStructure                        `bson:"structure,omitempty" json:"structure,omitempty"`
+	Code                 []SubstanceSpecificationCode                            `bson:"code,omitempty" json:"code,omitempty"`
+	Name                 []SubstanceSpecificationName                            `bson:"name,omitempty" json:"name,omitempty"`
+	MolecularWeight      []SubstanceSpecificationStructureIsotopeMolecularWeight `bson:"molecularWeight,omitempty" json:"molecularWeight,omitempty"`
+	Relationship         []SubstanceSpecificationRelationship                    `bson:"relationship,omitempty" json:"relationship,omitempty"`
+	NucleicAcid          *Reference                                              `bson:"nucleicAcid,omitempty" json:"nucleicAcid,omitempty"`
+	Polymer              *Reference                                              `bson:"polymer,omitempty" json:"polymer,omitempty"`
+	Protein              *Reference                                              `bson:"protein,omitempty" json:"protein,omitempty"`
+	SourceMaterial       *Reference                                              `bson:"sourceMaterial,omitempty" json:"sourceMaterial,omitempty"`
 }
 type SubstanceSpecificationMoiety struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Role              *CodeableConcept `json:"role,omitempty"`
-	Identifier        *Identifier      `json:"identifier,omitempty"`
-	Name              *string          `json:"name,omitempty"`
-	Stereochemistry   *CodeableConcept `json:"stereochemistry,omitempty"`
-	OpticalActivity   *CodeableConcept `json:"opticalActivity,omitempty"`
-	MolecularFormula  *string          `json:"molecularFormula,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Role              *CodeableConcept `bson:"role,omitempty" json:"role,omitempty"`
+	Identifier        *Identifier      `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Name              *string          `bson:"name,omitempty" json:"name,omitempty"`
+	Stereochemistry   *CodeableConcept `bson:"stereochemistry,omitempty" json:"stereochemistry,omitempty"`
+	OpticalActivity   *CodeableConcept `bson:"opticalActivity,omitempty" json:"opticalActivity,omitempty"`
+	MolecularFormula  *string          `bson:"molecularFormula,omitempty" json:"molecularFormula,omitempty"`
 }
 type SubstanceSpecificationProperty struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Category          *CodeableConcept `json:"category,omitempty"`
-	Code              *CodeableConcept `json:"code,omitempty"`
-	Parameters        *string          `json:"parameters,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Category          *CodeableConcept `bson:"category,omitempty" json:"category,omitempty"`
+	Code              *CodeableConcept `bson:"code,omitempty" json:"code,omitempty"`
+	Parameters        *string          `bson:"parameters,omitempty" json:"parameters,omitempty"`
 }
 type SubstanceSpecificationStructure struct {
-	Id                       *string                                                `json:"id,omitempty"`
-	Extension                []Extension                                            `json:"extension,omitempty"`
-	ModifierExtension        []Extension                                            `json:"modifierExtension,omitempty"`
-	Stereochemistry          *CodeableConcept                                       `json:"stereochemistry,omitempty"`
-	OpticalActivity          *CodeableConcept                                       `json:"opticalActivity,omitempty"`
-	MolecularFormula         *string                                                `json:"molecularFormula,omitempty"`
-	MolecularFormulaByMoiety *string                                                `json:"molecularFormulaByMoiety,omitempty"`
-	Isotope                  []SubstanceSpecificationStructureIsotope               `json:"isotope,omitempty"`
-	MolecularWeight          *SubstanceSpecificationStructureIsotopeMolecularWeight `json:"molecularWeight,omitempty"`
-	Source                   []Reference                                            `json:"source,omitempty"`
-	Representation           []SubstanceSpecificationStructureRepresentation        `json:"representation,omitempty"`
+	Id                       *string                                                `bson:"id,omitempty" json:"id,omitempty"`
+	Extension                []Extension                                            `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension        []Extension                                            `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Stereochemistry          *CodeableConcept                                       `bson:"stereochemistry,omitempty" json:"stereochemistry,omitempty"`
+	OpticalActivity          *CodeableConcept                                       `bson:"opticalActivity,omitempty" json:"opticalActivity,omitempty"`
+	MolecularFormula         *string                                                `bson:"molecularFormula,omitempty" json:"molecularFormula,omitempty"`
+	MolecularFormulaByMoiety *string                                                `bson:"molecularFormulaByMoiety,omitempty" json:"molecularFormulaByMoiety,omitempty"`
+	Isotope                  []SubstanceSpecificationStructureIsotope               `bson:"isotope,omitempty" json:"isotope,omitempty"`
+	MolecularWeight          *SubstanceSpecificationStructureIsotopeMolecularWeight `bson:"molecularWeight,omitempty" json:"molecularWeight,omitempty"`
+	Source                   []Reference                                            `bson:"source,omitempty" json:"source,omitempty"`
+	Representation           []SubstanceSpecificationStructureRepresentation        `bson:"representation,omitempty" json:"representation,omitempty"`
 }
 type SubstanceSpecificationStructureIsotope struct {
-	Id                *string                                                `json:"id,omitempty"`
-	Extension         []Extension                                            `json:"extension,omitempty"`
-	ModifierExtension []Extension                                            `json:"modifierExtension,omitempty"`
-	Identifier        *Identifier                                            `json:"identifier,omitempty"`
-	Name              *CodeableConcept                                       `json:"name,omitempty"`
-	Substitution      *CodeableConcept                                       `json:"substitution,omitempty"`
-	HalfLife          *Quantity                                              `json:"halfLife,omitempty"`
-	MolecularWeight   *SubstanceSpecificationStructureIsotopeMolecularWeight `json:"molecularWeight,omitempty"`
+	Id                *string                                                `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                                            `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                                            `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        *Identifier                                            `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Name              *CodeableConcept                                       `bson:"name,omitempty" json:"name,omitempty"`
+	Substitution      *CodeableConcept                                       `bson:"substitution,omitempty" json:"substitution,omitempty"`
+	HalfLife          *Quantity                                              `bson:"halfLife,omitempty" json:"halfLife,omitempty"`
+	MolecularWeight   *SubstanceSpecificationStructureIsotopeMolecularWeight `bson:"molecularWeight,omitempty" json:"molecularWeight,omitempty"`
 }
 type SubstanceSpecificationStructureIsotopeMolecularWeight struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Method            *CodeableConcept `json:"method,omitempty"`
-	Type              *CodeableConcept `json:"type,omitempty"`
-	Amount            *Quantity        `json:"amount,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Method            *CodeableConcept `bson:"method,omitempty" json:"method,omitempty"`
+	Type              *CodeableConcept `bson:"type,omitempty" json:"type,omitempty"`
+	Amount            *Quantity        `bson:"amount,omitempty" json:"amount,omitempty"`
 }
 type SubstanceSpecificationStructureRepresentation struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Type              *CodeableConcept `json:"type,omitempty"`
-	Representation    *string          `json:"representation,omitempty"`
-	Attachment        *Attachment      `json:"attachment,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Type              *CodeableConcept `bson:"type,omitempty" json:"type,omitempty"`
+	Representation    *string          `bson:"representation,omitempty" json:"representation,omitempty"`
+	Attachment        *Attachment      `bson:"attachment,omitempty" json:"attachment,omitempty"`
 }
 type SubstanceSpecificationCode struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Code              *CodeableConcept `json:"code,omitempty"`
-	Status            *CodeableConcept `json:"status,omitempty"`
-	StatusDate        *string          `json:"statusDate,omitempty"`
-	Comment           *string          `json:"comment,omitempty"`
-	Source            []Reference      `json:"source,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Code              *CodeableConcept `bson:"code,omitempty" json:"code,omitempty"`
+	Status            *CodeableConcept `bson:"status,omitempty" json:"status,omitempty"`
+	StatusDate        *string          `bson:"statusDate,omitempty" json:"statusDate,omitempty"`
+	Comment           *string          `bson:"comment,omitempty" json:"comment,omitempty"`
+	Source            []Reference      `bson:"source,omitempty" json:"source,omitempty"`
 }
 type SubstanceSpecificationName struct {
-	Id                *string                              `json:"id,omitempty"`
-	Extension         []Extension                          `json:"extension,omitempty"`
-	ModifierExtension []Extension                          `json:"modifierExtension,omitempty"`
-	Name              string                               `json:"name"`
-	Type              *CodeableConcept                     `json:"type,omitempty"`
-	Status            *CodeableConcept                     `json:"status,omitempty"`
-	Preferred         *bool                                `json:"preferred,omitempty"`
-	Language          []CodeableConcept                    `json:"language,omitempty"`
-	Domain            []CodeableConcept                    `json:"domain,omitempty"`
-	Jurisdiction      []CodeableConcept                    `json:"jurisdiction,omitempty"`
-	Synonym           []SubstanceSpecificationName         `json:"synonym,omitempty"`
-	Translation       []SubstanceSpecificationName         `json:"translation,omitempty"`
-	Official          []SubstanceSpecificationNameOfficial `json:"official,omitempty"`
-	Source            []Reference                          `json:"source,omitempty"`
+	Id                *string                              `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                          `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                          `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Name              string                               `bson:"name" json:"name"`
+	Type              *CodeableConcept                     `bson:"type,omitempty" json:"type,omitempty"`
+	Status            *CodeableConcept                     `bson:"status,omitempty" json:"status,omitempty"`
+	Preferred         *bool                                `bson:"preferred,omitempty" json:"preferred,omitempty"`
+	Language          []CodeableConcept                    `bson:"language,omitempty" json:"language,omitempty"`
+	Domain            []CodeableConcept                    `bson:"domain,omitempty" json:"domain,omitempty"`
+	Jurisdiction      []CodeableConcept                    `bson:"jurisdiction,omitempty" json:"jurisdiction,omitempty"`
+	Synonym           []SubstanceSpecificationName         `bson:"synonym,omitempty" json:"synonym,omitempty"`
+	Translation       []SubstanceSpecificationName         `bson:"translation,omitempty" json:"translation,omitempty"`
+	Official          []SubstanceSpecificationNameOfficial `bson:"official,omitempty" json:"official,omitempty"`
+	Source            []Reference                          `bson:"source,omitempty" json:"source,omitempty"`
 }
 type SubstanceSpecificationNameOfficial struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Authority         *CodeableConcept `json:"authority,omitempty"`
-	Status            *CodeableConcept `json:"status,omitempty"`
-	Date              *string          `json:"date,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Authority         *CodeableConcept `bson:"authority,omitempty" json:"authority,omitempty"`
+	Status            *CodeableConcept `bson:"status,omitempty" json:"status,omitempty"`
+	Date              *string          `bson:"date,omitempty" json:"date,omitempty"`
 }
 type SubstanceSpecificationRelationship struct {
-	Id                  *string          `json:"id,omitempty"`
-	Extension           []Extension      `json:"extension,omitempty"`
-	ModifierExtension   []Extension      `json:"modifierExtension,omitempty"`
-	Relationship        *CodeableConcept `json:"relationship,omitempty"`
-	IsDefining          *bool            `json:"isDefining,omitempty"`
-	AmountRatioLowLimit *Ratio           `json:"amountRatioLowLimit,omitempty"`
-	AmountType          *CodeableConcept `json:"amountType,omitempty"`
-	Source              []Reference      `json:"source,omitempty"`
+	Id                  *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension           []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension   []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Relationship        *CodeableConcept `bson:"relationship,omitempty" json:"relationship,omitempty"`
+	IsDefining          *bool            `bson:"isDefining,omitempty" json:"isDefining,omitempty"`
+	AmountRatioLowLimit *Ratio           `bson:"amountRatioLowLimit,omitempty" json:"amountRatioLowLimit,omitempty"`
+	AmountType          *CodeableConcept `bson:"amountType,omitempty" json:"amountType,omitempty"`
+	Source              []Reference      `bson:"source,omitempty" json:"source,omitempty"`
 }
 type OtherSubstanceSpecification SubstanceSpecification
 

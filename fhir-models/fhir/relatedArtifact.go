@@ -19,13 +19,13 @@ package fhir
 
 // RelatedArtifact is documented here http://hl7.org/fhir/StructureDefinition/RelatedArtifact
 type RelatedArtifact struct {
-	Id        *string             `json:"id,omitempty"`
-	Extension []Extension         `json:"extension,omitempty"`
-	Type      RelatedArtifactType `json:"type"`
-	Label     *string             `json:"label,omitempty"`
-	Display   *string             `json:"display,omitempty"`
-	Citation  *string             `json:"citation,omitempty"`
-	Url       *string             `json:"url,omitempty"`
-	Document  *Attachment         `json:"document,omitempty"`
-	Resource  *string             `json:"resource,omitempty"`
+	Id        *string             `bson:"id,omitempty" json:"id,omitempty"`
+	Extension []Extension         `bson:"extension,omitempty" json:"extension,omitempty"`
+	Type      RelatedArtifactType `bson:"type" json:"type"`
+	Label     *string             `bson:"label,omitempty" json:"label,omitempty"`
+	Display   *string             `bson:"display,omitempty" json:"display,omitempty"`
+	Citation  *string             `bson:"citation,omitempty" json:"citation,omitempty"`
+	Url       *string             `bson:"url,omitempty" json:"url,omitempty"`
+	Document  *Attachment         `bson:"document,omitempty" json:"document,omitempty"`
+	Resource  *string             `bson:"resource,omitempty" json:"resource,omitempty"`
 }

@@ -21,38 +21,38 @@ import "encoding/json"
 
 // RiskAssessment is documented here http://hl7.org/fhir/StructureDefinition/RiskAssessment
 type RiskAssessment struct {
-	Id                *string                    `json:"id,omitempty"`
-	Meta              *Meta                      `json:"meta,omitempty"`
-	ImplicitRules     *string                    `json:"implicitRules,omitempty"`
-	Language          *string                    `json:"language,omitempty"`
-	Text              *Narrative                 `json:"text,omitempty"`
-	Extension         []Extension                `json:"extension,omitempty"`
-	ModifierExtension []Extension                `json:"modifierExtension,omitempty"`
-	Identifier        []Identifier               `json:"identifier,omitempty"`
-	BasedOn           *Reference                 `json:"basedOn,omitempty"`
-	Parent            *Reference                 `json:"parent,omitempty"`
-	Status            ObservationStatus          `json:"status"`
-	Method            *CodeableConcept           `json:"method,omitempty"`
-	Code              *CodeableConcept           `json:"code,omitempty"`
-	Subject           Reference                  `json:"subject"`
-	Encounter         *Reference                 `json:"encounter,omitempty"`
-	Condition         *Reference                 `json:"condition,omitempty"`
-	Performer         *Reference                 `json:"performer,omitempty"`
-	ReasonCode        []CodeableConcept          `json:"reasonCode,omitempty"`
-	ReasonReference   []Reference                `json:"reasonReference,omitempty"`
-	Basis             []Reference                `json:"basis,omitempty"`
-	Prediction        []RiskAssessmentPrediction `json:"prediction,omitempty"`
-	Mitigation        *string                    `json:"mitigation,omitempty"`
-	Note              []Annotation               `json:"note,omitempty"`
+	Id                *string                    `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta                      `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string                    `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string                    `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative                 `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension                `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        []Identifier               `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	BasedOn           *Reference                 `bson:"basedOn,omitempty" json:"basedOn,omitempty"`
+	Parent            *Reference                 `bson:"parent,omitempty" json:"parent,omitempty"`
+	Status            ObservationStatus          `bson:"status" json:"status"`
+	Method            *CodeableConcept           `bson:"method,omitempty" json:"method,omitempty"`
+	Code              *CodeableConcept           `bson:"code,omitempty" json:"code,omitempty"`
+	Subject           Reference                  `bson:"subject" json:"subject"`
+	Encounter         *Reference                 `bson:"encounter,omitempty" json:"encounter,omitempty"`
+	Condition         *Reference                 `bson:"condition,omitempty" json:"condition,omitempty"`
+	Performer         *Reference                 `bson:"performer,omitempty" json:"performer,omitempty"`
+	ReasonCode        []CodeableConcept          `bson:"reasonCode,omitempty" json:"reasonCode,omitempty"`
+	ReasonReference   []Reference                `bson:"reasonReference,omitempty" json:"reasonReference,omitempty"`
+	Basis             []Reference                `bson:"basis,omitempty" json:"basis,omitempty"`
+	Prediction        []RiskAssessmentPrediction `bson:"prediction,omitempty" json:"prediction,omitempty"`
+	Mitigation        *string                    `bson:"mitigation,omitempty" json:"mitigation,omitempty"`
+	Note              []Annotation               `bson:"note,omitempty" json:"note,omitempty"`
 }
 type RiskAssessmentPrediction struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Outcome           *CodeableConcept `json:"outcome,omitempty"`
-	QualitativeRisk   *CodeableConcept `json:"qualitativeRisk,omitempty"`
-	RelativeRisk      *string          `json:"relativeRisk,omitempty"`
-	Rationale         *string          `json:"rationale,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Outcome           *CodeableConcept `bson:"outcome,omitempty" json:"outcome,omitempty"`
+	QualitativeRisk   *CodeableConcept `bson:"qualitativeRisk,omitempty" json:"qualitativeRisk,omitempty"`
+	RelativeRisk      *string          `bson:"relativeRisk,omitempty" json:"relativeRisk,omitempty"`
+	Rationale         *string          `bson:"rationale,omitempty" json:"rationale,omitempty"`
 }
 type OtherRiskAssessment RiskAssessment
 

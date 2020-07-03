@@ -19,13 +19,13 @@ package fhir
 
 // ParameterDefinition is documented here http://hl7.org/fhir/StructureDefinition/ParameterDefinition
 type ParameterDefinition struct {
-	Id            *string               `json:"id,omitempty"`
-	Extension     []Extension           `json:"extension,omitempty"`
-	Name          *string               `json:"name,omitempty"`
-	Use           OperationParameterUse `json:"use"`
-	Min           *int                  `json:"min,omitempty"`
-	Max           *string               `json:"max,omitempty"`
-	Documentation *string               `json:"documentation,omitempty"`
-	Type          string                `json:"type"`
-	Profile       *string               `json:"profile,omitempty"`
+	Id            *string               `bson:"id,omitempty" json:"id,omitempty"`
+	Extension     []Extension           `bson:"extension,omitempty" json:"extension,omitempty"`
+	Name          *string               `bson:"name,omitempty" json:"name,omitempty"`
+	Use           OperationParameterUse `bson:"use" json:"use"`
+	Min           *int                  `bson:"min,omitempty" json:"min,omitempty"`
+	Max           *string               `bson:"max,omitempty" json:"max,omitempty"`
+	Documentation *string               `bson:"documentation,omitempty" json:"documentation,omitempty"`
+	Type          string                `bson:"type" json:"type"`
+	Profile       *string               `bson:"profile,omitempty" json:"profile,omitempty"`
 }

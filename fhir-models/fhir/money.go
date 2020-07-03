@@ -19,8 +19,8 @@ package fhir
 
 // Money is documented here http://hl7.org/fhir/StructureDefinition/Money
 type Money struct {
-	Id        *string     `json:"id,omitempty"`
-	Extension []Extension `json:"extension,omitempty"`
-	Value     *string     `json:"value,omitempty"`
-	Currency  *string     `json:"currency,omitempty"`
+	Id        *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	Value     *string     `bson:"value,omitempty" json:"value,omitempty"`
+	Currency  *string     `bson:"currency,omitempty" json:"currency,omitempty"`
 }

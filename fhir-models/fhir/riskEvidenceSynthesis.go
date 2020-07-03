@@ -21,89 +21,89 @@ import "encoding/json"
 
 // RiskEvidenceSynthesis is documented here http://hl7.org/fhir/StructureDefinition/RiskEvidenceSynthesis
 type RiskEvidenceSynthesis struct {
-	Id                *string                            `json:"id,omitempty"`
-	Meta              *Meta                              `json:"meta,omitempty"`
-	ImplicitRules     *string                            `json:"implicitRules,omitempty"`
-	Language          *string                            `json:"language,omitempty"`
-	Text              *Narrative                         `json:"text,omitempty"`
-	Extension         []Extension                        `json:"extension,omitempty"`
-	ModifierExtension []Extension                        `json:"modifierExtension,omitempty"`
-	Url               *string                            `json:"url,omitempty"`
-	Identifier        []Identifier                       `json:"identifier,omitempty"`
-	Version           *string                            `json:"version,omitempty"`
-	Name              *string                            `json:"name,omitempty"`
-	Title             *string                            `json:"title,omitempty"`
-	Status            PublicationStatus                  `json:"status"`
-	Date              *string                            `json:"date,omitempty"`
-	Publisher         *string                            `json:"publisher,omitempty"`
-	Contact           []ContactDetail                    `json:"contact,omitempty"`
-	Description       *string                            `json:"description,omitempty"`
-	Note              []Annotation                       `json:"note,omitempty"`
-	UseContext        []UsageContext                     `json:"useContext,omitempty"`
-	Jurisdiction      []CodeableConcept                  `json:"jurisdiction,omitempty"`
-	Copyright         *string                            `json:"copyright,omitempty"`
-	ApprovalDate      *string                            `json:"approvalDate,omitempty"`
-	LastReviewDate    *string                            `json:"lastReviewDate,omitempty"`
-	EffectivePeriod   *Period                            `json:"effectivePeriod,omitempty"`
-	Topic             []CodeableConcept                  `json:"topic,omitempty"`
-	Author            []ContactDetail                    `json:"author,omitempty"`
-	Editor            []ContactDetail                    `json:"editor,omitempty"`
-	Reviewer          []ContactDetail                    `json:"reviewer,omitempty"`
-	Endorser          []ContactDetail                    `json:"endorser,omitempty"`
-	RelatedArtifact   []RelatedArtifact                  `json:"relatedArtifact,omitempty"`
-	SynthesisType     *CodeableConcept                   `json:"synthesisType,omitempty"`
-	StudyType         *CodeableConcept                   `json:"studyType,omitempty"`
-	Population        Reference                          `json:"population"`
-	Exposure          *Reference                         `json:"exposure,omitempty"`
-	Outcome           Reference                          `json:"outcome"`
-	SampleSize        *RiskEvidenceSynthesisSampleSize   `json:"sampleSize,omitempty"`
-	RiskEstimate      *RiskEvidenceSynthesisRiskEstimate `json:"riskEstimate,omitempty"`
-	Certainty         []RiskEvidenceSynthesisCertainty   `json:"certainty,omitempty"`
+	Id                *string                            `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta                              `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string                            `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string                            `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative                         `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension                        `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                        `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Url               *string                            `bson:"url,omitempty" json:"url,omitempty"`
+	Identifier        []Identifier                       `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Version           *string                            `bson:"version,omitempty" json:"version,omitempty"`
+	Name              *string                            `bson:"name,omitempty" json:"name,omitempty"`
+	Title             *string                            `bson:"title,omitempty" json:"title,omitempty"`
+	Status            PublicationStatus                  `bson:"status" json:"status"`
+	Date              *string                            `bson:"date,omitempty" json:"date,omitempty"`
+	Publisher         *string                            `bson:"publisher,omitempty" json:"publisher,omitempty"`
+	Contact           []ContactDetail                    `bson:"contact,omitempty" json:"contact,omitempty"`
+	Description       *string                            `bson:"description,omitempty" json:"description,omitempty"`
+	Note              []Annotation                       `bson:"note,omitempty" json:"note,omitempty"`
+	UseContext        []UsageContext                     `bson:"useContext,omitempty" json:"useContext,omitempty"`
+	Jurisdiction      []CodeableConcept                  `bson:"jurisdiction,omitempty" json:"jurisdiction,omitempty"`
+	Copyright         *string                            `bson:"copyright,omitempty" json:"copyright,omitempty"`
+	ApprovalDate      *string                            `bson:"approvalDate,omitempty" json:"approvalDate,omitempty"`
+	LastReviewDate    *string                            `bson:"lastReviewDate,omitempty" json:"lastReviewDate,omitempty"`
+	EffectivePeriod   *Period                            `bson:"effectivePeriod,omitempty" json:"effectivePeriod,omitempty"`
+	Topic             []CodeableConcept                  `bson:"topic,omitempty" json:"topic,omitempty"`
+	Author            []ContactDetail                    `bson:"author,omitempty" json:"author,omitempty"`
+	Editor            []ContactDetail                    `bson:"editor,omitempty" json:"editor,omitempty"`
+	Reviewer          []ContactDetail                    `bson:"reviewer,omitempty" json:"reviewer,omitempty"`
+	Endorser          []ContactDetail                    `bson:"endorser,omitempty" json:"endorser,omitempty"`
+	RelatedArtifact   []RelatedArtifact                  `bson:"relatedArtifact,omitempty" json:"relatedArtifact,omitempty"`
+	SynthesisType     *CodeableConcept                   `bson:"synthesisType,omitempty" json:"synthesisType,omitempty"`
+	StudyType         *CodeableConcept                   `bson:"studyType,omitempty" json:"studyType,omitempty"`
+	Population        Reference                          `bson:"population" json:"population"`
+	Exposure          *Reference                         `bson:"exposure,omitempty" json:"exposure,omitempty"`
+	Outcome           Reference                          `bson:"outcome" json:"outcome"`
+	SampleSize        *RiskEvidenceSynthesisSampleSize   `bson:"sampleSize,omitempty" json:"sampleSize,omitempty"`
+	RiskEstimate      *RiskEvidenceSynthesisRiskEstimate `bson:"riskEstimate,omitempty" json:"riskEstimate,omitempty"`
+	Certainty         []RiskEvidenceSynthesisCertainty   `bson:"certainty,omitempty" json:"certainty,omitempty"`
 }
 type RiskEvidenceSynthesisSampleSize struct {
-	Id                   *string     `json:"id,omitempty"`
-	Extension            []Extension `json:"extension,omitempty"`
-	ModifierExtension    []Extension `json:"modifierExtension,omitempty"`
-	Description          *string     `json:"description,omitempty"`
-	NumberOfStudies      *int        `json:"numberOfStudies,omitempty"`
-	NumberOfParticipants *int        `json:"numberOfParticipants,omitempty"`
+	Id                   *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension            []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension    []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Description          *string     `bson:"description,omitempty" json:"description,omitempty"`
+	NumberOfStudies      *int        `bson:"numberOfStudies,omitempty" json:"numberOfStudies,omitempty"`
+	NumberOfParticipants *int        `bson:"numberOfParticipants,omitempty" json:"numberOfParticipants,omitempty"`
 }
 type RiskEvidenceSynthesisRiskEstimate struct {
-	Id                *string                                              `json:"id,omitempty"`
-	Extension         []Extension                                          `json:"extension,omitempty"`
-	ModifierExtension []Extension                                          `json:"modifierExtension,omitempty"`
-	Description       *string                                              `json:"description,omitempty"`
-	Type              *CodeableConcept                                     `json:"type,omitempty"`
-	Value             *string                                              `json:"value,omitempty"`
-	UnitOfMeasure     *CodeableConcept                                     `json:"unitOfMeasure,omitempty"`
-	DenominatorCount  *int                                                 `json:"denominatorCount,omitempty"`
-	NumeratorCount    *int                                                 `json:"numeratorCount,omitempty"`
-	PrecisionEstimate []RiskEvidenceSynthesisRiskEstimatePrecisionEstimate `json:"precisionEstimate,omitempty"`
+	Id                *string                                              `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                                          `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                                          `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Description       *string                                              `bson:"description,omitempty" json:"description,omitempty"`
+	Type              *CodeableConcept                                     `bson:"type,omitempty" json:"type,omitempty"`
+	Value             *string                                              `bson:"value,omitempty" json:"value,omitempty"`
+	UnitOfMeasure     *CodeableConcept                                     `bson:"unitOfMeasure,omitempty" json:"unitOfMeasure,omitempty"`
+	DenominatorCount  *int                                                 `bson:"denominatorCount,omitempty" json:"denominatorCount,omitempty"`
+	NumeratorCount    *int                                                 `bson:"numeratorCount,omitempty" json:"numeratorCount,omitempty"`
+	PrecisionEstimate []RiskEvidenceSynthesisRiskEstimatePrecisionEstimate `bson:"precisionEstimate,omitempty" json:"precisionEstimate,omitempty"`
 }
 type RiskEvidenceSynthesisRiskEstimatePrecisionEstimate struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Type              *CodeableConcept `json:"type,omitempty"`
-	Level             *string          `json:"level,omitempty"`
-	From              *string          `json:"from,omitempty"`
-	To                *string          `json:"to,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Type              *CodeableConcept `bson:"type,omitempty" json:"type,omitempty"`
+	Level             *string          `bson:"level,omitempty" json:"level,omitempty"`
+	From              *string          `bson:"from,omitempty" json:"from,omitempty"`
+	To                *string          `bson:"to,omitempty" json:"to,omitempty"`
 }
 type RiskEvidenceSynthesisCertainty struct {
-	Id                    *string                                               `json:"id,omitempty"`
-	Extension             []Extension                                           `json:"extension,omitempty"`
-	ModifierExtension     []Extension                                           `json:"modifierExtension,omitempty"`
-	Rating                []CodeableConcept                                     `json:"rating,omitempty"`
-	Note                  []Annotation                                          `json:"note,omitempty"`
-	CertaintySubcomponent []RiskEvidenceSynthesisCertaintyCertaintySubcomponent `json:"certaintySubcomponent,omitempty"`
+	Id                    *string                                               `bson:"id,omitempty" json:"id,omitempty"`
+	Extension             []Extension                                           `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension     []Extension                                           `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Rating                []CodeableConcept                                     `bson:"rating,omitempty" json:"rating,omitempty"`
+	Note                  []Annotation                                          `bson:"note,omitempty" json:"note,omitempty"`
+	CertaintySubcomponent []RiskEvidenceSynthesisCertaintyCertaintySubcomponent `bson:"certaintySubcomponent,omitempty" json:"certaintySubcomponent,omitempty"`
 }
 type RiskEvidenceSynthesisCertaintyCertaintySubcomponent struct {
-	Id                *string           `json:"id,omitempty"`
-	Extension         []Extension       `json:"extension,omitempty"`
-	ModifierExtension []Extension       `json:"modifierExtension,omitempty"`
-	Type              *CodeableConcept  `json:"type,omitempty"`
-	Rating            []CodeableConcept `json:"rating,omitempty"`
-	Note              []Annotation      `json:"note,omitempty"`
+	Id                *string           `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension       `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension       `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Type              *CodeableConcept  `bson:"type,omitempty" json:"type,omitempty"`
+	Rating            []CodeableConcept `bson:"rating,omitempty" json:"rating,omitempty"`
+	Note              []Annotation      `bson:"note,omitempty" json:"note,omitempty"`
 }
 type OtherRiskEvidenceSynthesis RiskEvidenceSynthesis
 

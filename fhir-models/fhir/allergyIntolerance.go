@@ -21,40 +21,40 @@ import "encoding/json"
 
 // AllergyIntolerance is documented here http://hl7.org/fhir/StructureDefinition/AllergyIntolerance
 type AllergyIntolerance struct {
-	Id                 *string                        `json:"id,omitempty"`
-	Meta               *Meta                          `json:"meta,omitempty"`
-	ImplicitRules      *string                        `json:"implicitRules,omitempty"`
-	Language           *string                        `json:"language,omitempty"`
-	Text               *Narrative                     `json:"text,omitempty"`
-	Extension          []Extension                    `json:"extension,omitempty"`
-	ModifierExtension  []Extension                    `json:"modifierExtension,omitempty"`
-	Identifier         []Identifier                   `json:"identifier,omitempty"`
-	ClinicalStatus     *CodeableConcept               `json:"clinicalStatus,omitempty"`
-	VerificationStatus *CodeableConcept               `json:"verificationStatus,omitempty"`
-	Type               *AllergyIntoleranceType        `json:"type,omitempty"`
-	Category           []AllergyIntoleranceCategory   `json:"category,omitempty"`
-	Criticality        *AllergyIntoleranceCriticality `json:"criticality,omitempty"`
-	Code               *CodeableConcept               `json:"code,omitempty"`
-	Patient            Reference                      `json:"patient"`
-	Encounter          *Reference                     `json:"encounter,omitempty"`
-	RecordedDate       *string                        `json:"recordedDate,omitempty"`
-	Recorder           *Reference                     `json:"recorder,omitempty"`
-	Asserter           *Reference                     `json:"asserter,omitempty"`
-	LastOccurrence     *string                        `json:"lastOccurrence,omitempty"`
-	Note               []Annotation                   `json:"note,omitempty"`
-	Reaction           []AllergyIntoleranceReaction   `json:"reaction,omitempty"`
+	Id                 *string                        `bson:"id,omitempty" json:"id,omitempty"`
+	Meta               *Meta                          `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules      *string                        `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language           *string                        `bson:"language,omitempty" json:"language,omitempty"`
+	Text               *Narrative                     `bson:"text,omitempty" json:"text,omitempty"`
+	Extension          []Extension                    `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension  []Extension                    `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier         []Identifier                   `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	ClinicalStatus     *CodeableConcept               `bson:"clinicalStatus,omitempty" json:"clinicalStatus,omitempty"`
+	VerificationStatus *CodeableConcept               `bson:"verificationStatus,omitempty" json:"verificationStatus,omitempty"`
+	Type               *AllergyIntoleranceType        `bson:"type,omitempty" json:"type,omitempty"`
+	Category           []AllergyIntoleranceCategory   `bson:"category,omitempty" json:"category,omitempty"`
+	Criticality        *AllergyIntoleranceCriticality `bson:"criticality,omitempty" json:"criticality,omitempty"`
+	Code               *CodeableConcept               `bson:"code,omitempty" json:"code,omitempty"`
+	Patient            Reference                      `bson:"patient" json:"patient"`
+	Encounter          *Reference                     `bson:"encounter,omitempty" json:"encounter,omitempty"`
+	RecordedDate       *string                        `bson:"recordedDate,omitempty" json:"recordedDate,omitempty"`
+	Recorder           *Reference                     `bson:"recorder,omitempty" json:"recorder,omitempty"`
+	Asserter           *Reference                     `bson:"asserter,omitempty" json:"asserter,omitempty"`
+	LastOccurrence     *string                        `bson:"lastOccurrence,omitempty" json:"lastOccurrence,omitempty"`
+	Note               []Annotation                   `bson:"note,omitempty" json:"note,omitempty"`
+	Reaction           []AllergyIntoleranceReaction   `bson:"reaction,omitempty" json:"reaction,omitempty"`
 }
 type AllergyIntoleranceReaction struct {
-	Id                *string                     `json:"id,omitempty"`
-	Extension         []Extension                 `json:"extension,omitempty"`
-	ModifierExtension []Extension                 `json:"modifierExtension,omitempty"`
-	Substance         *CodeableConcept            `json:"substance,omitempty"`
-	Manifestation     []CodeableConcept           `json:"manifestation"`
-	Description       *string                     `json:"description,omitempty"`
-	Onset             *string                     `json:"onset,omitempty"`
-	Severity          *AllergyIntoleranceSeverity `json:"severity,omitempty"`
-	ExposureRoute     *CodeableConcept            `json:"exposureRoute,omitempty"`
-	Note              []Annotation                `json:"note,omitempty"`
+	Id                *string                     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                 `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                 `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Substance         *CodeableConcept            `bson:"substance,omitempty" json:"substance,omitempty"`
+	Manifestation     []CodeableConcept           `bson:"manifestation" json:"manifestation"`
+	Description       *string                     `bson:"description,omitempty" json:"description,omitempty"`
+	Onset             *string                     `bson:"onset,omitempty" json:"onset,omitempty"`
+	Severity          *AllergyIntoleranceSeverity `bson:"severity,omitempty" json:"severity,omitempty"`
+	ExposureRoute     *CodeableConcept            `bson:"exposureRoute,omitempty" json:"exposureRoute,omitempty"`
+	Note              []Annotation                `bson:"note,omitempty" json:"note,omitempty"`
 }
 type OtherAllergyIntolerance AllergyIntolerance
 

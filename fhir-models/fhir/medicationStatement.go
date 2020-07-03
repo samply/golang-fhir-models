@@ -21,28 +21,28 @@ import "encoding/json"
 
 // MedicationStatement is documented here http://hl7.org/fhir/StructureDefinition/MedicationStatement
 type MedicationStatement struct {
-	Id                *string           `json:"id,omitempty"`
-	Meta              *Meta             `json:"meta,omitempty"`
-	ImplicitRules     *string           `json:"implicitRules,omitempty"`
-	Language          *string           `json:"language,omitempty"`
-	Text              *Narrative        `json:"text,omitempty"`
-	Extension         []Extension       `json:"extension,omitempty"`
-	ModifierExtension []Extension       `json:"modifierExtension,omitempty"`
-	Identifier        []Identifier      `json:"identifier,omitempty"`
-	BasedOn           []Reference       `json:"basedOn,omitempty"`
-	PartOf            []Reference       `json:"partOf,omitempty"`
-	Status            string            `json:"status"`
-	StatusReason      []CodeableConcept `json:"statusReason,omitempty"`
-	Category          *CodeableConcept  `json:"category,omitempty"`
-	Subject           Reference         `json:"subject"`
-	Context           *Reference        `json:"context,omitempty"`
-	DateAsserted      *string           `json:"dateAsserted,omitempty"`
-	InformationSource *Reference        `json:"informationSource,omitempty"`
-	DerivedFrom       []Reference       `json:"derivedFrom,omitempty"`
-	ReasonCode        []CodeableConcept `json:"reasonCode,omitempty"`
-	ReasonReference   []Reference       `json:"reasonReference,omitempty"`
-	Note              []Annotation      `json:"note,omitempty"`
-	Dosage            []Dosage          `json:"dosage,omitempty"`
+	Id                *string           `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta             `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string           `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string           `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative        `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension       `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension       `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        []Identifier      `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	BasedOn           []Reference       `bson:"basedOn,omitempty" json:"basedOn,omitempty"`
+	PartOf            []Reference       `bson:"partOf,omitempty" json:"partOf,omitempty"`
+	Status            string            `bson:"status" json:"status"`
+	StatusReason      []CodeableConcept `bson:"statusReason,omitempty" json:"statusReason,omitempty"`
+	Category          *CodeableConcept  `bson:"category,omitempty" json:"category,omitempty"`
+	Subject           Reference         `bson:"subject" json:"subject"`
+	Context           *Reference        `bson:"context,omitempty" json:"context,omitempty"`
+	DateAsserted      *string           `bson:"dateAsserted,omitempty" json:"dateAsserted,omitempty"`
+	InformationSource *Reference        `bson:"informationSource,omitempty" json:"informationSource,omitempty"`
+	DerivedFrom       []Reference       `bson:"derivedFrom,omitempty" json:"derivedFrom,omitempty"`
+	ReasonCode        []CodeableConcept `bson:"reasonCode,omitempty" json:"reasonCode,omitempty"`
+	ReasonReference   []Reference       `bson:"reasonReference,omitempty" json:"reasonReference,omitempty"`
+	Note              []Annotation      `bson:"note,omitempty" json:"note,omitempty"`
+	Dosage            []Dosage          `bson:"dosage,omitempty" json:"dosage,omitempty"`
 }
 type OtherMedicationStatement MedicationStatement
 

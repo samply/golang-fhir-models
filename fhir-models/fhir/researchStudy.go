@@ -21,52 +21,52 @@ import "encoding/json"
 
 // ResearchStudy is documented here http://hl7.org/fhir/StructureDefinition/ResearchStudy
 type ResearchStudy struct {
-	Id                    *string                  `json:"id,omitempty"`
-	Meta                  *Meta                    `json:"meta,omitempty"`
-	ImplicitRules         *string                  `json:"implicitRules,omitempty"`
-	Language              *string                  `json:"language,omitempty"`
-	Text                  *Narrative               `json:"text,omitempty"`
-	Extension             []Extension              `json:"extension,omitempty"`
-	ModifierExtension     []Extension              `json:"modifierExtension,omitempty"`
-	Identifier            []Identifier             `json:"identifier,omitempty"`
-	Title                 *string                  `json:"title,omitempty"`
-	Protocol              []Reference              `json:"protocol,omitempty"`
-	PartOf                []Reference              `json:"partOf,omitempty"`
-	Status                ResearchStudyStatus      `json:"status"`
-	PrimaryPurposeType    *CodeableConcept         `json:"primaryPurposeType,omitempty"`
-	Phase                 *CodeableConcept         `json:"phase,omitempty"`
-	Category              []CodeableConcept        `json:"category,omitempty"`
-	Focus                 []CodeableConcept        `json:"focus,omitempty"`
-	Condition             []CodeableConcept        `json:"condition,omitempty"`
-	Contact               []ContactDetail          `json:"contact,omitempty"`
-	RelatedArtifact       []RelatedArtifact        `json:"relatedArtifact,omitempty"`
-	Keyword               []CodeableConcept        `json:"keyword,omitempty"`
-	Location              []CodeableConcept        `json:"location,omitempty"`
-	Description           *string                  `json:"description,omitempty"`
-	Enrollment            []Reference              `json:"enrollment,omitempty"`
-	Period                *Period                  `json:"period,omitempty"`
-	Sponsor               *Reference               `json:"sponsor,omitempty"`
-	PrincipalInvestigator *Reference               `json:"principalInvestigator,omitempty"`
-	Site                  []Reference              `json:"site,omitempty"`
-	ReasonStopped         *CodeableConcept         `json:"reasonStopped,omitempty"`
-	Note                  []Annotation             `json:"note,omitempty"`
-	Arm                   []ResearchStudyArm       `json:"arm,omitempty"`
-	Objective             []ResearchStudyObjective `json:"objective,omitempty"`
+	Id                    *string                  `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                  *Meta                    `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules         *string                  `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language              *string                  `bson:"language,omitempty" json:"language,omitempty"`
+	Text                  *Narrative               `bson:"text,omitempty" json:"text,omitempty"`
+	Extension             []Extension              `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension     []Extension              `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier            []Identifier             `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Title                 *string                  `bson:"title,omitempty" json:"title,omitempty"`
+	Protocol              []Reference              `bson:"protocol,omitempty" json:"protocol,omitempty"`
+	PartOf                []Reference              `bson:"partOf,omitempty" json:"partOf,omitempty"`
+	Status                ResearchStudyStatus      `bson:"status" json:"status"`
+	PrimaryPurposeType    *CodeableConcept         `bson:"primaryPurposeType,omitempty" json:"primaryPurposeType,omitempty"`
+	Phase                 *CodeableConcept         `bson:"phase,omitempty" json:"phase,omitempty"`
+	Category              []CodeableConcept        `bson:"category,omitempty" json:"category,omitempty"`
+	Focus                 []CodeableConcept        `bson:"focus,omitempty" json:"focus,omitempty"`
+	Condition             []CodeableConcept        `bson:"condition,omitempty" json:"condition,omitempty"`
+	Contact               []ContactDetail          `bson:"contact,omitempty" json:"contact,omitempty"`
+	RelatedArtifact       []RelatedArtifact        `bson:"relatedArtifact,omitempty" json:"relatedArtifact,omitempty"`
+	Keyword               []CodeableConcept        `bson:"keyword,omitempty" json:"keyword,omitempty"`
+	Location              []CodeableConcept        `bson:"location,omitempty" json:"location,omitempty"`
+	Description           *string                  `bson:"description,omitempty" json:"description,omitempty"`
+	Enrollment            []Reference              `bson:"enrollment,omitempty" json:"enrollment,omitempty"`
+	Period                *Period                  `bson:"period,omitempty" json:"period,omitempty"`
+	Sponsor               *Reference               `bson:"sponsor,omitempty" json:"sponsor,omitempty"`
+	PrincipalInvestigator *Reference               `bson:"principalInvestigator,omitempty" json:"principalInvestigator,omitempty"`
+	Site                  []Reference              `bson:"site,omitempty" json:"site,omitempty"`
+	ReasonStopped         *CodeableConcept         `bson:"reasonStopped,omitempty" json:"reasonStopped,omitempty"`
+	Note                  []Annotation             `bson:"note,omitempty" json:"note,omitempty"`
+	Arm                   []ResearchStudyArm       `bson:"arm,omitempty" json:"arm,omitempty"`
+	Objective             []ResearchStudyObjective `bson:"objective,omitempty" json:"objective,omitempty"`
 }
 type ResearchStudyArm struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Name              string           `json:"name"`
-	Type              *CodeableConcept `json:"type,omitempty"`
-	Description       *string          `json:"description,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Name              string           `bson:"name" json:"name"`
+	Type              *CodeableConcept `bson:"type,omitempty" json:"type,omitempty"`
+	Description       *string          `bson:"description,omitempty" json:"description,omitempty"`
 }
 type ResearchStudyObjective struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Name              *string          `json:"name,omitempty"`
-	Type              *CodeableConcept `json:"type,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Name              *string          `bson:"name,omitempty" json:"name,omitempty"`
+	Type              *CodeableConcept `bson:"type,omitempty" json:"type,omitempty"`
 }
 type OtherResearchStudy ResearchStudy
 

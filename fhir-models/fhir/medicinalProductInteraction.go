@@ -21,25 +21,25 @@ import "encoding/json"
 
 // MedicinalProductInteraction is documented here http://hl7.org/fhir/StructureDefinition/MedicinalProductInteraction
 type MedicinalProductInteraction struct {
-	Id                *string                                  `json:"id,omitempty"`
-	Meta              *Meta                                    `json:"meta,omitempty"`
-	ImplicitRules     *string                                  `json:"implicitRules,omitempty"`
-	Language          *string                                  `json:"language,omitempty"`
-	Text              *Narrative                               `json:"text,omitempty"`
-	Extension         []Extension                              `json:"extension,omitempty"`
-	ModifierExtension []Extension                              `json:"modifierExtension,omitempty"`
-	Subject           []Reference                              `json:"subject,omitempty"`
-	Description       *string                                  `json:"description,omitempty"`
-	Interactant       []MedicinalProductInteractionInteractant `json:"interactant,omitempty"`
-	Type              *CodeableConcept                         `json:"type,omitempty"`
-	Effect            *CodeableConcept                         `json:"effect,omitempty"`
-	Incidence         *CodeableConcept                         `json:"incidence,omitempty"`
-	Management        *CodeableConcept                         `json:"management,omitempty"`
+	Id                *string                                  `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta                                    `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string                                  `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string                                  `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative                               `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension                              `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                              `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Subject           []Reference                              `bson:"subject,omitempty" json:"subject,omitempty"`
+	Description       *string                                  `bson:"description,omitempty" json:"description,omitempty"`
+	Interactant       []MedicinalProductInteractionInteractant `bson:"interactant,omitempty" json:"interactant,omitempty"`
+	Type              *CodeableConcept                         `bson:"type,omitempty" json:"type,omitempty"`
+	Effect            *CodeableConcept                         `bson:"effect,omitempty" json:"effect,omitempty"`
+	Incidence         *CodeableConcept                         `bson:"incidence,omitempty" json:"incidence,omitempty"`
+	Management        *CodeableConcept                         `bson:"management,omitempty" json:"management,omitempty"`
 }
 type MedicinalProductInteractionInteractant struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 }
 type OtherMedicinalProductInteraction MedicinalProductInteraction
 

@@ -21,19 +21,19 @@ import "encoding/json"
 
 // Parameters is documented here http://hl7.org/fhir/StructureDefinition/Parameters
 type Parameters struct {
-	Id            *string               `json:"id,omitempty"`
-	Meta          *Meta                 `json:"meta,omitempty"`
-	ImplicitRules *string               `json:"implicitRules,omitempty"`
-	Language      *string               `json:"language,omitempty"`
-	Parameter     []ParametersParameter `json:"parameter,omitempty"`
+	Id            *string               `bson:"id,omitempty" json:"id,omitempty"`
+	Meta          *Meta                 `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules *string               `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language      *string               `bson:"language,omitempty" json:"language,omitempty"`
+	Parameter     []ParametersParameter `bson:"parameter,omitempty" json:"parameter,omitempty"`
 }
 type ParametersParameter struct {
-	Id                *string               `json:"id,omitempty"`
-	Extension         []Extension           `json:"extension,omitempty"`
-	ModifierExtension []Extension           `json:"modifierExtension,omitempty"`
-	Name              string                `json:"name"`
-	Resource          json.RawMessage       `json:"resource,omitempty"`
-	Part              []ParametersParameter `json:"part,omitempty"`
+	Id                *string               `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension           `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension           `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Name              string                `bson:"name" json:"name"`
+	Resource          json.RawMessage       `bson:"resource,omitempty" json:"resource,omitempty"`
+	Part              []ParametersParameter `bson:"part,omitempty" json:"part,omitempty"`
 }
 type OtherParameters Parameters
 

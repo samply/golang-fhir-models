@@ -21,26 +21,26 @@ import "encoding/json"
 
 // MedicinalProductContraindication is documented here http://hl7.org/fhir/StructureDefinition/MedicinalProductContraindication
 type MedicinalProductContraindication struct {
-	Id                    *string                                        `json:"id,omitempty"`
-	Meta                  *Meta                                          `json:"meta,omitempty"`
-	ImplicitRules         *string                                        `json:"implicitRules,omitempty"`
-	Language              *string                                        `json:"language,omitempty"`
-	Text                  *Narrative                                     `json:"text,omitempty"`
-	Extension             []Extension                                    `json:"extension,omitempty"`
-	ModifierExtension     []Extension                                    `json:"modifierExtension,omitempty"`
-	Subject               []Reference                                    `json:"subject,omitempty"`
-	Disease               *CodeableConcept                               `json:"disease,omitempty"`
-	DiseaseStatus         *CodeableConcept                               `json:"diseaseStatus,omitempty"`
-	Comorbidity           []CodeableConcept                              `json:"comorbidity,omitempty"`
-	TherapeuticIndication []Reference                                    `json:"therapeuticIndication,omitempty"`
-	OtherTherapy          []MedicinalProductContraindicationOtherTherapy `json:"otherTherapy,omitempty"`
-	Population            []Population                                   `json:"population,omitempty"`
+	Id                    *string                                        `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                  *Meta                                          `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules         *string                                        `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language              *string                                        `bson:"language,omitempty" json:"language,omitempty"`
+	Text                  *Narrative                                     `bson:"text,omitempty" json:"text,omitempty"`
+	Extension             []Extension                                    `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension     []Extension                                    `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Subject               []Reference                                    `bson:"subject,omitempty" json:"subject,omitempty"`
+	Disease               *CodeableConcept                               `bson:"disease,omitempty" json:"disease,omitempty"`
+	DiseaseStatus         *CodeableConcept                               `bson:"diseaseStatus,omitempty" json:"diseaseStatus,omitempty"`
+	Comorbidity           []CodeableConcept                              `bson:"comorbidity,omitempty" json:"comorbidity,omitempty"`
+	TherapeuticIndication []Reference                                    `bson:"therapeuticIndication,omitempty" json:"therapeuticIndication,omitempty"`
+	OtherTherapy          []MedicinalProductContraindicationOtherTherapy `bson:"otherTherapy,omitempty" json:"otherTherapy,omitempty"`
+	Population            []Population                                   `bson:"population,omitempty" json:"population,omitempty"`
 }
 type MedicinalProductContraindicationOtherTherapy struct {
-	Id                      *string         `json:"id,omitempty"`
-	Extension               []Extension     `json:"extension,omitempty"`
-	ModifierExtension       []Extension     `json:"modifierExtension,omitempty"`
-	TherapyRelationshipType CodeableConcept `json:"therapyRelationshipType"`
+	Id                      *string         `bson:"id,omitempty" json:"id,omitempty"`
+	Extension               []Extension     `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension       []Extension     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	TherapyRelationshipType CodeableConcept `bson:"therapyRelationshipType" json:"therapyRelationshipType"`
 }
 type OtherMedicinalProductContraindication MedicinalProductContraindication
 

@@ -21,47 +21,47 @@ import "encoding/json"
 
 // VisionPrescription is documented here http://hl7.org/fhir/StructureDefinition/VisionPrescription
 type VisionPrescription struct {
-	Id                *string                               `json:"id,omitempty"`
-	Meta              *Meta                                 `json:"meta,omitempty"`
-	ImplicitRules     *string                               `json:"implicitRules,omitempty"`
-	Language          *string                               `json:"language,omitempty"`
-	Text              *Narrative                            `json:"text,omitempty"`
-	Extension         []Extension                           `json:"extension,omitempty"`
-	ModifierExtension []Extension                           `json:"modifierExtension,omitempty"`
-	Identifier        []Identifier                          `json:"identifier,omitempty"`
-	Status            FinancialResourceStatusCodes          `json:"status"`
-	Created           string                                `json:"created"`
-	Patient           Reference                             `json:"patient"`
-	Encounter         *Reference                            `json:"encounter,omitempty"`
-	DateWritten       string                                `json:"dateWritten"`
-	Prescriber        Reference                             `json:"prescriber"`
-	LensSpecification []VisionPrescriptionLensSpecification `json:"lensSpecification"`
+	Id                *string                               `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta                                 `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string                               `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string                               `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative                            `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension                           `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                           `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        []Identifier                          `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Status            FinancialResourceStatusCodes          `bson:"status" json:"status"`
+	Created           string                                `bson:"created" json:"created"`
+	Patient           Reference                             `bson:"patient" json:"patient"`
+	Encounter         *Reference                            `bson:"encounter,omitempty" json:"encounter,omitempty"`
+	DateWritten       string                                `bson:"dateWritten" json:"dateWritten"`
+	Prescriber        Reference                             `bson:"prescriber" json:"prescriber"`
+	LensSpecification []VisionPrescriptionLensSpecification `bson:"lensSpecification" json:"lensSpecification"`
 }
 type VisionPrescriptionLensSpecification struct {
-	Id                *string                                    `json:"id,omitempty"`
-	Extension         []Extension                                `json:"extension,omitempty"`
-	ModifierExtension []Extension                                `json:"modifierExtension,omitempty"`
-	Product           CodeableConcept                            `json:"product"`
-	Eye               VisionEyes                                 `json:"eye"`
-	Sphere            *string                                    `json:"sphere,omitempty"`
-	Cylinder          *string                                    `json:"cylinder,omitempty"`
-	Axis              *int                                       `json:"axis,omitempty"`
-	Prism             []VisionPrescriptionLensSpecificationPrism `json:"prism,omitempty"`
-	Add               *string                                    `json:"add,omitempty"`
-	Power             *string                                    `json:"power,omitempty"`
-	BackCurve         *string                                    `json:"backCurve,omitempty"`
-	Diameter          *string                                    `json:"diameter,omitempty"`
-	Duration          *Quantity                                  `json:"duration,omitempty"`
-	Color             *string                                    `json:"color,omitempty"`
-	Brand             *string                                    `json:"brand,omitempty"`
-	Note              []Annotation                               `json:"note,omitempty"`
+	Id                *string                                    `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                                `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                                `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Product           CodeableConcept                            `bson:"product" json:"product"`
+	Eye               VisionEyes                                 `bson:"eye" json:"eye"`
+	Sphere            *string                                    `bson:"sphere,omitempty" json:"sphere,omitempty"`
+	Cylinder          *string                                    `bson:"cylinder,omitempty" json:"cylinder,omitempty"`
+	Axis              *int                                       `bson:"axis,omitempty" json:"axis,omitempty"`
+	Prism             []VisionPrescriptionLensSpecificationPrism `bson:"prism,omitempty" json:"prism,omitempty"`
+	Add               *string                                    `bson:"add,omitempty" json:"add,omitempty"`
+	Power             *string                                    `bson:"power,omitempty" json:"power,omitempty"`
+	BackCurve         *string                                    `bson:"backCurve,omitempty" json:"backCurve,omitempty"`
+	Diameter          *string                                    `bson:"diameter,omitempty" json:"diameter,omitempty"`
+	Duration          *Quantity                                  `bson:"duration,omitempty" json:"duration,omitempty"`
+	Color             *string                                    `bson:"color,omitempty" json:"color,omitempty"`
+	Brand             *string                                    `bson:"brand,omitempty" json:"brand,omitempty"`
+	Note              []Annotation                               `bson:"note,omitempty" json:"note,omitempty"`
 }
 type VisionPrescriptionLensSpecificationPrism struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Amount            string      `json:"amount"`
-	Base              VisionBase  `json:"base"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Amount            string      `bson:"amount" json:"amount"`
+	Base              VisionBase  `bson:"base" json:"base"`
 }
 type OtherVisionPrescription VisionPrescription
 

@@ -21,46 +21,46 @@ import "encoding/json"
 
 // MedicinalProductPackaged is documented here http://hl7.org/fhir/StructureDefinition/MedicinalProductPackaged
 type MedicinalProductPackaged struct {
-	Id                     *string                                   `json:"id,omitempty"`
-	Meta                   *Meta                                     `json:"meta,omitempty"`
-	ImplicitRules          *string                                   `json:"implicitRules,omitempty"`
-	Language               *string                                   `json:"language,omitempty"`
-	Text                   *Narrative                                `json:"text,omitempty"`
-	Extension              []Extension                               `json:"extension,omitempty"`
-	ModifierExtension      []Extension                               `json:"modifierExtension,omitempty"`
-	Identifier             []Identifier                              `json:"identifier,omitempty"`
-	Subject                []Reference                               `json:"subject,omitempty"`
-	Description            *string                                   `json:"description,omitempty"`
-	LegalStatusOfSupply    *CodeableConcept                          `json:"legalStatusOfSupply,omitempty"`
-	MarketingStatus        []MarketingStatus                         `json:"marketingStatus,omitempty"`
-	MarketingAuthorization *Reference                                `json:"marketingAuthorization,omitempty"`
-	Manufacturer           []Reference                               `json:"manufacturer,omitempty"`
-	BatchIdentifier        []MedicinalProductPackagedBatchIdentifier `json:"batchIdentifier,omitempty"`
-	PackageItem            []MedicinalProductPackagedPackageItem     `json:"packageItem"`
+	Id                     *string                                   `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                   *Meta                                     `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules          *string                                   `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language               *string                                   `bson:"language,omitempty" json:"language,omitempty"`
+	Text                   *Narrative                                `bson:"text,omitempty" json:"text,omitempty"`
+	Extension              []Extension                               `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension      []Extension                               `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier             []Identifier                              `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Subject                []Reference                               `bson:"subject,omitempty" json:"subject,omitempty"`
+	Description            *string                                   `bson:"description,omitempty" json:"description,omitempty"`
+	LegalStatusOfSupply    *CodeableConcept                          `bson:"legalStatusOfSupply,omitempty" json:"legalStatusOfSupply,omitempty"`
+	MarketingStatus        []MarketingStatus                         `bson:"marketingStatus,omitempty" json:"marketingStatus,omitempty"`
+	MarketingAuthorization *Reference                                `bson:"marketingAuthorization,omitempty" json:"marketingAuthorization,omitempty"`
+	Manufacturer           []Reference                               `bson:"manufacturer,omitempty" json:"manufacturer,omitempty"`
+	BatchIdentifier        []MedicinalProductPackagedBatchIdentifier `bson:"batchIdentifier,omitempty" json:"batchIdentifier,omitempty"`
+	PackageItem            []MedicinalProductPackagedPackageItem     `bson:"packageItem" json:"packageItem"`
 }
 type MedicinalProductPackagedBatchIdentifier struct {
-	Id                 *string     `json:"id,omitempty"`
-	Extension          []Extension `json:"extension,omitempty"`
-	ModifierExtension  []Extension `json:"modifierExtension,omitempty"`
-	OuterPackaging     Identifier  `json:"outerPackaging"`
-	ImmediatePackaging *Identifier `json:"immediatePackaging,omitempty"`
+	Id                 *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension          []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension  []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	OuterPackaging     Identifier  `bson:"outerPackaging" json:"outerPackaging"`
+	ImmediatePackaging *Identifier `bson:"immediatePackaging,omitempty" json:"immediatePackaging,omitempty"`
 }
 type MedicinalProductPackagedPackageItem struct {
-	Id                      *string                               `json:"id,omitempty"`
-	Extension               []Extension                           `json:"extension,omitempty"`
-	ModifierExtension       []Extension                           `json:"modifierExtension,omitempty"`
-	Identifier              []Identifier                          `json:"identifier,omitempty"`
-	Type                    CodeableConcept                       `json:"type"`
-	Quantity                Quantity                              `json:"quantity"`
-	Material                []CodeableConcept                     `json:"material,omitempty"`
-	AlternateMaterial       []CodeableConcept                     `json:"alternateMaterial,omitempty"`
-	Device                  []Reference                           `json:"device,omitempty"`
-	ManufacturedItem        []Reference                           `json:"manufacturedItem,omitempty"`
-	PackageItem             []MedicinalProductPackagedPackageItem `json:"packageItem,omitempty"`
-	PhysicalCharacteristics *ProdCharacteristic                   `json:"physicalCharacteristics,omitempty"`
-	OtherCharacteristics    []CodeableConcept                     `json:"otherCharacteristics,omitempty"`
-	ShelfLifeStorage        []ProductShelfLife                    `json:"shelfLifeStorage,omitempty"`
-	Manufacturer            []Reference                           `json:"manufacturer,omitempty"`
+	Id                      *string                               `bson:"id,omitempty" json:"id,omitempty"`
+	Extension               []Extension                           `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension       []Extension                           `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier              []Identifier                          `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Type                    CodeableConcept                       `bson:"type" json:"type"`
+	Quantity                Quantity                              `bson:"quantity" json:"quantity"`
+	Material                []CodeableConcept                     `bson:"material,omitempty" json:"material,omitempty"`
+	AlternateMaterial       []CodeableConcept                     `bson:"alternateMaterial,omitempty" json:"alternateMaterial,omitempty"`
+	Device                  []Reference                           `bson:"device,omitempty" json:"device,omitempty"`
+	ManufacturedItem        []Reference                           `bson:"manufacturedItem,omitempty" json:"manufacturedItem,omitempty"`
+	PackageItem             []MedicinalProductPackagedPackageItem `bson:"packageItem,omitempty" json:"packageItem,omitempty"`
+	PhysicalCharacteristics *ProdCharacteristic                   `bson:"physicalCharacteristics,omitempty" json:"physicalCharacteristics,omitempty"`
+	OtherCharacteristics    []CodeableConcept                     `bson:"otherCharacteristics,omitempty" json:"otherCharacteristics,omitempty"`
+	ShelfLifeStorage        []ProductShelfLife                    `bson:"shelfLifeStorage,omitempty" json:"shelfLifeStorage,omitempty"`
+	Manufacturer            []Reference                           `bson:"manufacturer,omitempty" json:"manufacturer,omitempty"`
 }
 type OtherMedicinalProductPackaged MedicinalProductPackaged
 

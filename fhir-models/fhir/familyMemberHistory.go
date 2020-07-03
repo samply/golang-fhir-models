@@ -21,37 +21,37 @@ import "encoding/json"
 
 // FamilyMemberHistory is documented here http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory
 type FamilyMemberHistory struct {
-	Id                    *string                        `json:"id,omitempty"`
-	Meta                  *Meta                          `json:"meta,omitempty"`
-	ImplicitRules         *string                        `json:"implicitRules,omitempty"`
-	Language              *string                        `json:"language,omitempty"`
-	Text                  *Narrative                     `json:"text,omitempty"`
-	Extension             []Extension                    `json:"extension,omitempty"`
-	ModifierExtension     []Extension                    `json:"modifierExtension,omitempty"`
-	Identifier            []Identifier                   `json:"identifier,omitempty"`
-	InstantiatesCanonical []string                       `json:"instantiatesCanonical,omitempty"`
-	InstantiatesUri       []string                       `json:"instantiatesUri,omitempty"`
-	Status                FamilyHistoryStatus            `json:"status"`
-	DataAbsentReason      *CodeableConcept               `json:"dataAbsentReason,omitempty"`
-	Patient               Reference                      `json:"patient"`
-	Date                  *string                        `json:"date,omitempty"`
-	Name                  *string                        `json:"name,omitempty"`
-	Relationship          CodeableConcept                `json:"relationship"`
-	Sex                   *CodeableConcept               `json:"sex,omitempty"`
-	EstimatedAge          *bool                          `json:"estimatedAge,omitempty"`
-	ReasonCode            []CodeableConcept              `json:"reasonCode,omitempty"`
-	ReasonReference       []Reference                    `json:"reasonReference,omitempty"`
-	Note                  []Annotation                   `json:"note,omitempty"`
-	Condition             []FamilyMemberHistoryCondition `json:"condition,omitempty"`
+	Id                    *string                        `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                  *Meta                          `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules         *string                        `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language              *string                        `bson:"language,omitempty" json:"language,omitempty"`
+	Text                  *Narrative                     `bson:"text,omitempty" json:"text,omitempty"`
+	Extension             []Extension                    `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension     []Extension                    `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier            []Identifier                   `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	InstantiatesCanonical []string                       `bson:"instantiatesCanonical,omitempty" json:"instantiatesCanonical,omitempty"`
+	InstantiatesUri       []string                       `bson:"instantiatesUri,omitempty" json:"instantiatesUri,omitempty"`
+	Status                FamilyHistoryStatus            `bson:"status" json:"status"`
+	DataAbsentReason      *CodeableConcept               `bson:"dataAbsentReason,omitempty" json:"dataAbsentReason,omitempty"`
+	Patient               Reference                      `bson:"patient" json:"patient"`
+	Date                  *string                        `bson:"date,omitempty" json:"date,omitempty"`
+	Name                  *string                        `bson:"name,omitempty" json:"name,omitempty"`
+	Relationship          CodeableConcept                `bson:"relationship" json:"relationship"`
+	Sex                   *CodeableConcept               `bson:"sex,omitempty" json:"sex,omitempty"`
+	EstimatedAge          *bool                          `bson:"estimatedAge,omitempty" json:"estimatedAge,omitempty"`
+	ReasonCode            []CodeableConcept              `bson:"reasonCode,omitempty" json:"reasonCode,omitempty"`
+	ReasonReference       []Reference                    `bson:"reasonReference,omitempty" json:"reasonReference,omitempty"`
+	Note                  []Annotation                   `bson:"note,omitempty" json:"note,omitempty"`
+	Condition             []FamilyMemberHistoryCondition `bson:"condition,omitempty" json:"condition,omitempty"`
 }
 type FamilyMemberHistoryCondition struct {
-	Id                 *string          `json:"id,omitempty"`
-	Extension          []Extension      `json:"extension,omitempty"`
-	ModifierExtension  []Extension      `json:"modifierExtension,omitempty"`
-	Code               CodeableConcept  `json:"code"`
-	Outcome            *CodeableConcept `json:"outcome,omitempty"`
-	ContributedToDeath *bool            `json:"contributedToDeath,omitempty"`
-	Note               []Annotation     `json:"note,omitempty"`
+	Id                 *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension          []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension  []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Code               CodeableConcept  `bson:"code" json:"code"`
+	Outcome            *CodeableConcept `bson:"outcome,omitempty" json:"outcome,omitempty"`
+	ContributedToDeath *bool            `bson:"contributedToDeath,omitempty" json:"contributedToDeath,omitempty"`
+	Note               []Annotation     `bson:"note,omitempty" json:"note,omitempty"`
 }
 type OtherFamilyMemberHistory FamilyMemberHistory
 

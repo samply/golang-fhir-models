@@ -19,24 +19,24 @@ package fhir
 
 // Dosage is documented here http://hl7.org/fhir/StructureDefinition/Dosage
 type Dosage struct {
-	Id                       *string             `json:"id,omitempty"`
-	Extension                []Extension         `json:"extension,omitempty"`
-	ModifierExtension        []Extension         `json:"modifierExtension,omitempty"`
-	Sequence                 *int                `json:"sequence,omitempty"`
-	Text                     *string             `json:"text,omitempty"`
-	AdditionalInstruction    []CodeableConcept   `json:"additionalInstruction,omitempty"`
-	PatientInstruction       *string             `json:"patientInstruction,omitempty"`
-	Timing                   *Timing             `json:"timing,omitempty"`
-	Site                     *CodeableConcept    `json:"site,omitempty"`
-	Route                    *CodeableConcept    `json:"route,omitempty"`
-	Method                   *CodeableConcept    `json:"method,omitempty"`
-	DoseAndRate              []DosageDoseAndRate `json:"doseAndRate,omitempty"`
-	MaxDosePerPeriod         *Ratio              `json:"maxDosePerPeriod,omitempty"`
-	MaxDosePerAdministration *Quantity           `json:"maxDosePerAdministration,omitempty"`
-	MaxDosePerLifetime       *Quantity           `json:"maxDosePerLifetime,omitempty"`
+	Id                       *string             `bson:"id,omitempty" json:"id,omitempty"`
+	Extension                []Extension         `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension        []Extension         `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Sequence                 *int                `bson:"sequence,omitempty" json:"sequence,omitempty"`
+	Text                     *string             `bson:"text,omitempty" json:"text,omitempty"`
+	AdditionalInstruction    []CodeableConcept   `bson:"additionalInstruction,omitempty" json:"additionalInstruction,omitempty"`
+	PatientInstruction       *string             `bson:"patientInstruction,omitempty" json:"patientInstruction,omitempty"`
+	Timing                   *Timing             `bson:"timing,omitempty" json:"timing,omitempty"`
+	Site                     *CodeableConcept    `bson:"site,omitempty" json:"site,omitempty"`
+	Route                    *CodeableConcept    `bson:"route,omitempty" json:"route,omitempty"`
+	Method                   *CodeableConcept    `bson:"method,omitempty" json:"method,omitempty"`
+	DoseAndRate              []DosageDoseAndRate `bson:"doseAndRate,omitempty" json:"doseAndRate,omitempty"`
+	MaxDosePerPeriod         *Ratio              `bson:"maxDosePerPeriod,omitempty" json:"maxDosePerPeriod,omitempty"`
+	MaxDosePerAdministration *Quantity           `bson:"maxDosePerAdministration,omitempty" json:"maxDosePerAdministration,omitempty"`
+	MaxDosePerLifetime       *Quantity           `bson:"maxDosePerLifetime,omitempty" json:"maxDosePerLifetime,omitempty"`
 }
 type DosageDoseAndRate struct {
-	Id        *string          `json:"id,omitempty"`
-	Extension []Extension      `json:"extension,omitempty"`
-	Type      *CodeableConcept `json:"type,omitempty"`
+	Id        *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	Type      *CodeableConcept `bson:"type,omitempty" json:"type,omitempty"`
 }

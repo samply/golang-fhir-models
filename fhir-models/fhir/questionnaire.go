@@ -21,74 +21,74 @@ import "encoding/json"
 
 // Questionnaire is documented here http://hl7.org/fhir/StructureDefinition/Questionnaire
 type Questionnaire struct {
-	Id                *string             `json:"id,omitempty"`
-	Meta              *Meta               `json:"meta,omitempty"`
-	ImplicitRules     *string             `json:"implicitRules,omitempty"`
-	Language          *string             `json:"language,omitempty"`
-	Text              *Narrative          `json:"text,omitempty"`
-	Extension         []Extension         `json:"extension,omitempty"`
-	ModifierExtension []Extension         `json:"modifierExtension,omitempty"`
-	Url               *string             `json:"url,omitempty"`
-	Identifier        []Identifier        `json:"identifier,omitempty"`
-	Version           *string             `json:"version,omitempty"`
-	Name              *string             `json:"name,omitempty"`
-	Title             *string             `json:"title,omitempty"`
-	DerivedFrom       []string            `json:"derivedFrom,omitempty"`
-	Status            PublicationStatus   `json:"status"`
-	Experimental      *bool               `json:"experimental,omitempty"`
-	SubjectType       []ResourceType      `json:"subjectType,omitempty"`
-	Date              *string             `json:"date,omitempty"`
-	Publisher         *string             `json:"publisher,omitempty"`
-	Contact           []ContactDetail     `json:"contact,omitempty"`
-	Description       *string             `json:"description,omitempty"`
-	UseContext        []UsageContext      `json:"useContext,omitempty"`
-	Jurisdiction      []CodeableConcept   `json:"jurisdiction,omitempty"`
-	Purpose           *string             `json:"purpose,omitempty"`
-	Copyright         *string             `json:"copyright,omitempty"`
-	ApprovalDate      *string             `json:"approvalDate,omitempty"`
-	LastReviewDate    *string             `json:"lastReviewDate,omitempty"`
-	EffectivePeriod   *Period             `json:"effectivePeriod,omitempty"`
-	Code              []Coding            `json:"code,omitempty"`
-	Item              []QuestionnaireItem `json:"item,omitempty"`
+	Id                *string             `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta               `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string             `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string             `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative          `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension         `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension         `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Url               *string             `bson:"url,omitempty" json:"url,omitempty"`
+	Identifier        []Identifier        `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Version           *string             `bson:"version,omitempty" json:"version,omitempty"`
+	Name              *string             `bson:"name,omitempty" json:"name,omitempty"`
+	Title             *string             `bson:"title,omitempty" json:"title,omitempty"`
+	DerivedFrom       []string            `bson:"derivedFrom,omitempty" json:"derivedFrom,omitempty"`
+	Status            PublicationStatus   `bson:"status" json:"status"`
+	Experimental      *bool               `bson:"experimental,omitempty" json:"experimental,omitempty"`
+	SubjectType       []ResourceType      `bson:"subjectType,omitempty" json:"subjectType,omitempty"`
+	Date              *string             `bson:"date,omitempty" json:"date,omitempty"`
+	Publisher         *string             `bson:"publisher,omitempty" json:"publisher,omitempty"`
+	Contact           []ContactDetail     `bson:"contact,omitempty" json:"contact,omitempty"`
+	Description       *string             `bson:"description,omitempty" json:"description,omitempty"`
+	UseContext        []UsageContext      `bson:"useContext,omitempty" json:"useContext,omitempty"`
+	Jurisdiction      []CodeableConcept   `bson:"jurisdiction,omitempty" json:"jurisdiction,omitempty"`
+	Purpose           *string             `bson:"purpose,omitempty" json:"purpose,omitempty"`
+	Copyright         *string             `bson:"copyright,omitempty" json:"copyright,omitempty"`
+	ApprovalDate      *string             `bson:"approvalDate,omitempty" json:"approvalDate,omitempty"`
+	LastReviewDate    *string             `bson:"lastReviewDate,omitempty" json:"lastReviewDate,omitempty"`
+	EffectivePeriod   *Period             `bson:"effectivePeriod,omitempty" json:"effectivePeriod,omitempty"`
+	Code              []Coding            `bson:"code,omitempty" json:"code,omitempty"`
+	Item              []QuestionnaireItem `bson:"item,omitempty" json:"item,omitempty"`
 }
 type QuestionnaireItem struct {
-	Id                *string                         `json:"id,omitempty"`
-	Extension         []Extension                     `json:"extension,omitempty"`
-	ModifierExtension []Extension                     `json:"modifierExtension,omitempty"`
-	LinkId            string                          `json:"linkId"`
-	Definition        *string                         `json:"definition,omitempty"`
-	Code              []Coding                        `json:"code,omitempty"`
-	Prefix            *string                         `json:"prefix,omitempty"`
-	Text              *string                         `json:"text,omitempty"`
-	Type              QuestionnaireItemType           `json:"type"`
-	EnableWhen        []QuestionnaireItemEnableWhen   `json:"enableWhen,omitempty"`
-	EnableBehavior    *EnableWhenBehavior             `json:"enableBehavior,omitempty"`
-	Required          *bool                           `json:"required,omitempty"`
-	Repeats           *bool                           `json:"repeats,omitempty"`
-	ReadOnly          *bool                           `json:"readOnly,omitempty"`
-	MaxLength         *int                            `json:"maxLength,omitempty"`
-	AnswerValueSet    *string                         `json:"answerValueSet,omitempty"`
-	AnswerOption      []QuestionnaireItemAnswerOption `json:"answerOption,omitempty"`
-	Initial           []QuestionnaireItemInitial      `json:"initial,omitempty"`
-	Item              []QuestionnaireItem             `json:"item,omitempty"`
+	Id                *string                         `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                     `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	LinkId            string                          `bson:"linkId" json:"linkId"`
+	Definition        *string                         `bson:"definition,omitempty" json:"definition,omitempty"`
+	Code              []Coding                        `bson:"code,omitempty" json:"code,omitempty"`
+	Prefix            *string                         `bson:"prefix,omitempty" json:"prefix,omitempty"`
+	Text              *string                         `bson:"text,omitempty" json:"text,omitempty"`
+	Type              QuestionnaireItemType           `bson:"type" json:"type"`
+	EnableWhen        []QuestionnaireItemEnableWhen   `bson:"enableWhen,omitempty" json:"enableWhen,omitempty"`
+	EnableBehavior    *EnableWhenBehavior             `bson:"enableBehavior,omitempty" json:"enableBehavior,omitempty"`
+	Required          *bool                           `bson:"required,omitempty" json:"required,omitempty"`
+	Repeats           *bool                           `bson:"repeats,omitempty" json:"repeats,omitempty"`
+	ReadOnly          *bool                           `bson:"readOnly,omitempty" json:"readOnly,omitempty"`
+	MaxLength         *int                            `bson:"maxLength,omitempty" json:"maxLength,omitempty"`
+	AnswerValueSet    *string                         `bson:"answerValueSet,omitempty" json:"answerValueSet,omitempty"`
+	AnswerOption      []QuestionnaireItemAnswerOption `bson:"answerOption,omitempty" json:"answerOption,omitempty"`
+	Initial           []QuestionnaireItemInitial      `bson:"initial,omitempty" json:"initial,omitempty"`
+	Item              []QuestionnaireItem             `bson:"item,omitempty" json:"item,omitempty"`
 }
 type QuestionnaireItemEnableWhen struct {
-	Id                *string                   `json:"id,omitempty"`
-	Extension         []Extension               `json:"extension,omitempty"`
-	ModifierExtension []Extension               `json:"modifierExtension,omitempty"`
-	Question          string                    `json:"question"`
-	Operator          QuestionnaireItemOperator `json:"operator"`
+	Id                *string                   `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension               `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension               `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Question          string                    `bson:"question" json:"question"`
+	Operator          QuestionnaireItemOperator `bson:"operator" json:"operator"`
 }
 type QuestionnaireItemAnswerOption struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	InitialSelected   *bool       `json:"initialSelected,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	InitialSelected   *bool       `bson:"initialSelected,omitempty" json:"initialSelected,omitempty"`
 }
 type QuestionnaireItemInitial struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 }
 type OtherQuestionnaire Questionnaire
 

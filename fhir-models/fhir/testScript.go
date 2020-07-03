@@ -21,194 +21,194 @@ import "encoding/json"
 
 // TestScript is documented here http://hl7.org/fhir/StructureDefinition/TestScript
 type TestScript struct {
-	Id                *string                 `json:"id,omitempty"`
-	Meta              *Meta                   `json:"meta,omitempty"`
-	ImplicitRules     *string                 `json:"implicitRules,omitempty"`
-	Language          *string                 `json:"language,omitempty"`
-	Text              *Narrative              `json:"text,omitempty"`
-	Extension         []Extension             `json:"extension,omitempty"`
-	ModifierExtension []Extension             `json:"modifierExtension,omitempty"`
-	Url               string                  `json:"url"`
-	Identifier        *Identifier             `json:"identifier,omitempty"`
-	Version           *string                 `json:"version,omitempty"`
-	Name              string                  `json:"name"`
-	Title             *string                 `json:"title,omitempty"`
-	Status            PublicationStatus       `json:"status"`
-	Experimental      *bool                   `json:"experimental,omitempty"`
-	Date              *string                 `json:"date,omitempty"`
-	Publisher         *string                 `json:"publisher,omitempty"`
-	Contact           []ContactDetail         `json:"contact,omitempty"`
-	Description       *string                 `json:"description,omitempty"`
-	UseContext        []UsageContext          `json:"useContext,omitempty"`
-	Jurisdiction      []CodeableConcept       `json:"jurisdiction,omitempty"`
-	Purpose           *string                 `json:"purpose,omitempty"`
-	Copyright         *string                 `json:"copyright,omitempty"`
-	Origin            []TestScriptOrigin      `json:"origin,omitempty"`
-	Destination       []TestScriptDestination `json:"destination,omitempty"`
-	Metadata          *TestScriptMetadata     `json:"metadata,omitempty"`
-	Fixture           []TestScriptFixture     `json:"fixture,omitempty"`
-	Profile           []Reference             `json:"profile,omitempty"`
-	Variable          []TestScriptVariable    `json:"variable,omitempty"`
-	Setup             *TestScriptSetup        `json:"setup,omitempty"`
-	Test              []TestScriptTest        `json:"test,omitempty"`
-	Teardown          *TestScriptTeardown     `json:"teardown,omitempty"`
+	Id                *string                 `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta                   `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string                 `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string                 `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative              `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension             `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension             `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Url               string                  `bson:"url" json:"url"`
+	Identifier        *Identifier             `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Version           *string                 `bson:"version,omitempty" json:"version,omitempty"`
+	Name              string                  `bson:"name" json:"name"`
+	Title             *string                 `bson:"title,omitempty" json:"title,omitempty"`
+	Status            PublicationStatus       `bson:"status" json:"status"`
+	Experimental      *bool                   `bson:"experimental,omitempty" json:"experimental,omitempty"`
+	Date              *string                 `bson:"date,omitempty" json:"date,omitempty"`
+	Publisher         *string                 `bson:"publisher,omitempty" json:"publisher,omitempty"`
+	Contact           []ContactDetail         `bson:"contact,omitempty" json:"contact,omitempty"`
+	Description       *string                 `bson:"description,omitempty" json:"description,omitempty"`
+	UseContext        []UsageContext          `bson:"useContext,omitempty" json:"useContext,omitempty"`
+	Jurisdiction      []CodeableConcept       `bson:"jurisdiction,omitempty" json:"jurisdiction,omitempty"`
+	Purpose           *string                 `bson:"purpose,omitempty" json:"purpose,omitempty"`
+	Copyright         *string                 `bson:"copyright,omitempty" json:"copyright,omitempty"`
+	Origin            []TestScriptOrigin      `bson:"origin,omitempty" json:"origin,omitempty"`
+	Destination       []TestScriptDestination `bson:"destination,omitempty" json:"destination,omitempty"`
+	Metadata          *TestScriptMetadata     `bson:"metadata,omitempty" json:"metadata,omitempty"`
+	Fixture           []TestScriptFixture     `bson:"fixture,omitempty" json:"fixture,omitempty"`
+	Profile           []Reference             `bson:"profile,omitempty" json:"profile,omitempty"`
+	Variable          []TestScriptVariable    `bson:"variable,omitempty" json:"variable,omitempty"`
+	Setup             *TestScriptSetup        `bson:"setup,omitempty" json:"setup,omitempty"`
+	Test              []TestScriptTest        `bson:"test,omitempty" json:"test,omitempty"`
+	Teardown          *TestScriptTeardown     `bson:"teardown,omitempty" json:"teardown,omitempty"`
 }
 type TestScriptOrigin struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Index             int         `json:"index"`
-	Profile           Coding      `json:"profile"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Index             int         `bson:"index" json:"index"`
+	Profile           Coding      `bson:"profile" json:"profile"`
 }
 type TestScriptDestination struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Index             int         `json:"index"`
-	Profile           Coding      `json:"profile"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Index             int         `bson:"index" json:"index"`
+	Profile           Coding      `bson:"profile" json:"profile"`
 }
 type TestScriptMetadata struct {
-	Id                *string                        `json:"id,omitempty"`
-	Extension         []Extension                    `json:"extension,omitempty"`
-	ModifierExtension []Extension                    `json:"modifierExtension,omitempty"`
-	Link              []TestScriptMetadataLink       `json:"link,omitempty"`
-	Capability        []TestScriptMetadataCapability `json:"capability"`
+	Id                *string                        `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                    `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                    `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Link              []TestScriptMetadataLink       `bson:"link,omitempty" json:"link,omitempty"`
+	Capability        []TestScriptMetadataCapability `bson:"capability" json:"capability"`
 }
 type TestScriptMetadataLink struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Url               string      `json:"url"`
-	Description       *string     `json:"description,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Url               string      `bson:"url" json:"url"`
+	Description       *string     `bson:"description,omitempty" json:"description,omitempty"`
 }
 type TestScriptMetadataCapability struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Required          bool        `json:"required"`
-	Validated         bool        `json:"validated"`
-	Description       *string     `json:"description,omitempty"`
-	Origin            []int       `json:"origin,omitempty"`
-	Destination       *int        `json:"destination,omitempty"`
-	Link              []string    `json:"link,omitempty"`
-	Capabilities      string      `json:"capabilities"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Required          bool        `bson:"required" json:"required"`
+	Validated         bool        `bson:"validated" json:"validated"`
+	Description       *string     `bson:"description,omitempty" json:"description,omitempty"`
+	Origin            []int       `bson:"origin,omitempty" json:"origin,omitempty"`
+	Destination       *int        `bson:"destination,omitempty" json:"destination,omitempty"`
+	Link              []string    `bson:"link,omitempty" json:"link,omitempty"`
+	Capabilities      string      `bson:"capabilities" json:"capabilities"`
 }
 type TestScriptFixture struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Autocreate        bool        `json:"autocreate"`
-	Autodelete        bool        `json:"autodelete"`
-	Resource          *Reference  `json:"resource,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Autocreate        bool        `bson:"autocreate" json:"autocreate"`
+	Autodelete        bool        `bson:"autodelete" json:"autodelete"`
+	Resource          *Reference  `bson:"resource,omitempty" json:"resource,omitempty"`
 }
 type TestScriptVariable struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Name              string      `json:"name"`
-	DefaultValue      *string     `json:"defaultValue,omitempty"`
-	Description       *string     `json:"description,omitempty"`
-	Expression        *string     `json:"expression,omitempty"`
-	HeaderField       *string     `json:"headerField,omitempty"`
-	Hint              *string     `json:"hint,omitempty"`
-	Path              *string     `json:"path,omitempty"`
-	SourceId          *string     `json:"sourceId,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Name              string      `bson:"name" json:"name"`
+	DefaultValue      *string     `bson:"defaultValue,omitempty" json:"defaultValue,omitempty"`
+	Description       *string     `bson:"description,omitempty" json:"description,omitempty"`
+	Expression        *string     `bson:"expression,omitempty" json:"expression,omitempty"`
+	HeaderField       *string     `bson:"headerField,omitempty" json:"headerField,omitempty"`
+	Hint              *string     `bson:"hint,omitempty" json:"hint,omitempty"`
+	Path              *string     `bson:"path,omitempty" json:"path,omitempty"`
+	SourceId          *string     `bson:"sourceId,omitempty" json:"sourceId,omitempty"`
 }
 type TestScriptSetup struct {
-	Id                *string                 `json:"id,omitempty"`
-	Extension         []Extension             `json:"extension,omitempty"`
-	ModifierExtension []Extension             `json:"modifierExtension,omitempty"`
-	Action            []TestScriptSetupAction `json:"action"`
+	Id                *string                 `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension             `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension             `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Action            []TestScriptSetupAction `bson:"action" json:"action"`
 }
 type TestScriptSetupAction struct {
-	Id                *string                         `json:"id,omitempty"`
-	Extension         []Extension                     `json:"extension,omitempty"`
-	ModifierExtension []Extension                     `json:"modifierExtension,omitempty"`
-	Operation         *TestScriptSetupActionOperation `json:"operation,omitempty"`
-	Assert            *TestScriptSetupActionAssert    `json:"assert,omitempty"`
+	Id                *string                         `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                     `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Operation         *TestScriptSetupActionOperation `bson:"operation,omitempty" json:"operation,omitempty"`
+	Assert            *TestScriptSetupActionAssert    `bson:"assert,omitempty" json:"assert,omitempty"`
 }
 type TestScriptSetupActionOperation struct {
-	Id                *string                                       `json:"id,omitempty"`
-	Extension         []Extension                                   `json:"extension,omitempty"`
-	ModifierExtension []Extension                                   `json:"modifierExtension,omitempty"`
-	Type              *Coding                                       `json:"type,omitempty"`
-	Resource          *string                                       `json:"resource,omitempty"`
-	Label             *string                                       `json:"label,omitempty"`
-	Description       *string                                       `json:"description,omitempty"`
-	Accept            *string                                       `json:"accept,omitempty"`
-	ContentType       *string                                       `json:"contentType,omitempty"`
-	Destination       *int                                          `json:"destination,omitempty"`
-	EncodeRequestUrl  bool                                          `json:"encodeRequestUrl"`
-	Method            *TestScriptRequestMethodCode                  `json:"method,omitempty"`
-	Origin            *int                                          `json:"origin,omitempty"`
-	Params            *string                                       `json:"params,omitempty"`
-	RequestHeader     []TestScriptSetupActionOperationRequestHeader `json:"requestHeader,omitempty"`
-	RequestId         *string                                       `json:"requestId,omitempty"`
-	ResponseId        *string                                       `json:"responseId,omitempty"`
-	SourceId          *string                                       `json:"sourceId,omitempty"`
-	TargetId          *string                                       `json:"targetId,omitempty"`
-	Url               *string                                       `json:"url,omitempty"`
+	Id                *string                                       `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                                   `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                                   `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Type              *Coding                                       `bson:"type,omitempty" json:"type,omitempty"`
+	Resource          *string                                       `bson:"resource,omitempty" json:"resource,omitempty"`
+	Label             *string                                       `bson:"label,omitempty" json:"label,omitempty"`
+	Description       *string                                       `bson:"description,omitempty" json:"description,omitempty"`
+	Accept            *string                                       `bson:"accept,omitempty" json:"accept,omitempty"`
+	ContentType       *string                                       `bson:"contentType,omitempty" json:"contentType,omitempty"`
+	Destination       *int                                          `bson:"destination,omitempty" json:"destination,omitempty"`
+	EncodeRequestUrl  bool                                          `bson:"encodeRequestUrl" json:"encodeRequestUrl"`
+	Method            *TestScriptRequestMethodCode                  `bson:"method,omitempty" json:"method,omitempty"`
+	Origin            *int                                          `bson:"origin,omitempty" json:"origin,omitempty"`
+	Params            *string                                       `bson:"params,omitempty" json:"params,omitempty"`
+	RequestHeader     []TestScriptSetupActionOperationRequestHeader `bson:"requestHeader,omitempty" json:"requestHeader,omitempty"`
+	RequestId         *string                                       `bson:"requestId,omitempty" json:"requestId,omitempty"`
+	ResponseId        *string                                       `bson:"responseId,omitempty" json:"responseId,omitempty"`
+	SourceId          *string                                       `bson:"sourceId,omitempty" json:"sourceId,omitempty"`
+	TargetId          *string                                       `bson:"targetId,omitempty" json:"targetId,omitempty"`
+	Url               *string                                       `bson:"url,omitempty" json:"url,omitempty"`
 }
 type TestScriptSetupActionOperationRequestHeader struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Field             string      `json:"field"`
-	Value             string      `json:"value"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Field             string      `bson:"field" json:"field"`
+	Value             string      `bson:"value" json:"value"`
 }
 type TestScriptSetupActionAssert struct {
-	Id                        *string                      `json:"id,omitempty"`
-	Extension                 []Extension                  `json:"extension,omitempty"`
-	ModifierExtension         []Extension                  `json:"modifierExtension,omitempty"`
-	Label                     *string                      `json:"label,omitempty"`
-	Description               *string                      `json:"description,omitempty"`
-	Direction                 *AssertionDirectionType      `json:"direction,omitempty"`
-	CompareToSourceId         *string                      `json:"compareToSourceId,omitempty"`
-	CompareToSourceExpression *string                      `json:"compareToSourceExpression,omitempty"`
-	CompareToSourcePath       *string                      `json:"compareToSourcePath,omitempty"`
-	ContentType               *string                      `json:"contentType,omitempty"`
-	Expression                *string                      `json:"expression,omitempty"`
-	HeaderField               *string                      `json:"headerField,omitempty"`
-	MinimumId                 *string                      `json:"minimumId,omitempty"`
-	NavigationLinks           *bool                        `json:"navigationLinks,omitempty"`
-	Operator                  *AssertionOperatorType       `json:"operator,omitempty"`
-	Path                      *string                      `json:"path,omitempty"`
-	RequestMethod             *TestScriptRequestMethodCode `json:"requestMethod,omitempty"`
-	RequestURL                *string                      `json:"requestURL,omitempty"`
-	Resource                  *string                      `json:"resource,omitempty"`
-	Response                  *AssertionResponseTypes      `json:"response,omitempty"`
-	ResponseCode              *string                      `json:"responseCode,omitempty"`
-	SourceId                  *string                      `json:"sourceId,omitempty"`
-	ValidateProfileId         *string                      `json:"validateProfileId,omitempty"`
-	Value                     *string                      `json:"value,omitempty"`
-	WarningOnly               bool                         `json:"warningOnly"`
+	Id                        *string                      `bson:"id,omitempty" json:"id,omitempty"`
+	Extension                 []Extension                  `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension         []Extension                  `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Label                     *string                      `bson:"label,omitempty" json:"label,omitempty"`
+	Description               *string                      `bson:"description,omitempty" json:"description,omitempty"`
+	Direction                 *AssertionDirectionType      `bson:"direction,omitempty" json:"direction,omitempty"`
+	CompareToSourceId         *string                      `bson:"compareToSourceId,omitempty" json:"compareToSourceId,omitempty"`
+	CompareToSourceExpression *string                      `bson:"compareToSourceExpression,omitempty" json:"compareToSourceExpression,omitempty"`
+	CompareToSourcePath       *string                      `bson:"compareToSourcePath,omitempty" json:"compareToSourcePath,omitempty"`
+	ContentType               *string                      `bson:"contentType,omitempty" json:"contentType,omitempty"`
+	Expression                *string                      `bson:"expression,omitempty" json:"expression,omitempty"`
+	HeaderField               *string                      `bson:"headerField,omitempty" json:"headerField,omitempty"`
+	MinimumId                 *string                      `bson:"minimumId,omitempty" json:"minimumId,omitempty"`
+	NavigationLinks           *bool                        `bson:"navigationLinks,omitempty" json:"navigationLinks,omitempty"`
+	Operator                  *AssertionOperatorType       `bson:"operator,omitempty" json:"operator,omitempty"`
+	Path                      *string                      `bson:"path,omitempty" json:"path,omitempty"`
+	RequestMethod             *TestScriptRequestMethodCode `bson:"requestMethod,omitempty" json:"requestMethod,omitempty"`
+	RequestURL                *string                      `bson:"requestURL,omitempty" json:"requestURL,omitempty"`
+	Resource                  *string                      `bson:"resource,omitempty" json:"resource,omitempty"`
+	Response                  *AssertionResponseTypes      `bson:"response,omitempty" json:"response,omitempty"`
+	ResponseCode              *string                      `bson:"responseCode,omitempty" json:"responseCode,omitempty"`
+	SourceId                  *string                      `bson:"sourceId,omitempty" json:"sourceId,omitempty"`
+	ValidateProfileId         *string                      `bson:"validateProfileId,omitempty" json:"validateProfileId,omitempty"`
+	Value                     *string                      `bson:"value,omitempty" json:"value,omitempty"`
+	WarningOnly               bool                         `bson:"warningOnly" json:"warningOnly"`
 }
 type TestScriptTest struct {
-	Id                *string                `json:"id,omitempty"`
-	Extension         []Extension            `json:"extension,omitempty"`
-	ModifierExtension []Extension            `json:"modifierExtension,omitempty"`
-	Name              *string                `json:"name,omitempty"`
-	Description       *string                `json:"description,omitempty"`
-	Action            []TestScriptTestAction `json:"action"`
+	Id                *string                `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension            `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension            `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Name              *string                `bson:"name,omitempty" json:"name,omitempty"`
+	Description       *string                `bson:"description,omitempty" json:"description,omitempty"`
+	Action            []TestScriptTestAction `bson:"action" json:"action"`
 }
 type TestScriptTestAction struct {
-	Id                *string                         `json:"id,omitempty"`
-	Extension         []Extension                     `json:"extension,omitempty"`
-	ModifierExtension []Extension                     `json:"modifierExtension,omitempty"`
-	Operation         *TestScriptSetupActionOperation `json:"operation,omitempty"`
-	Assert            *TestScriptSetupActionAssert    `json:"assert,omitempty"`
+	Id                *string                         `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                     `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Operation         *TestScriptSetupActionOperation `bson:"operation,omitempty" json:"operation,omitempty"`
+	Assert            *TestScriptSetupActionAssert    `bson:"assert,omitempty" json:"assert,omitempty"`
 }
 type TestScriptTeardown struct {
-	Id                *string                    `json:"id,omitempty"`
-	Extension         []Extension                `json:"extension,omitempty"`
-	ModifierExtension []Extension                `json:"modifierExtension,omitempty"`
-	Action            []TestScriptTeardownAction `json:"action"`
+	Id                *string                    `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Action            []TestScriptTeardownAction `bson:"action" json:"action"`
 }
 type TestScriptTeardownAction struct {
-	Id                *string                        `json:"id,omitempty"`
-	Extension         []Extension                    `json:"extension,omitempty"`
-	ModifierExtension []Extension                    `json:"modifierExtension,omitempty"`
-	Operation         TestScriptSetupActionOperation `json:"operation,omitempty"`
+	Id                *string                        `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                    `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                    `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Operation         TestScriptSetupActionOperation `bson:"operation,omitempty" json:"operation,omitempty"`
 }
 type OtherTestScript TestScript
 
