@@ -343,7 +343,7 @@ func appendFields(resources ResourceMap, requiredTypes map[string]bool, required
 						for _, pathPart := range Split((*element.ContentReference)[1:], ".") {
 							typeIdentifier = typeIdentifier + Title(pathPart)
 						}
-						statement.Id(typeIdentifier).Tag(map[string]string{"json": pathParts[level] + ",omitempty"})
+						statement.Id(typeIdentifier).Tag(map[string]string{"json": pathParts[level] + ",omitempty", "bson": pathParts[level] + ",omitempty"})
 					}
 				// support polymorphic elements later
 				case 1:
