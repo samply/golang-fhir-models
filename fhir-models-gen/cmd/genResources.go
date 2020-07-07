@@ -17,15 +17,16 @@ package cmd
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/dave/jennifer/jen"
-	"github.com/samply/golang-fhir-models/fhir-models-gen/fhir"
-	"github.com/spf13/cobra"
 	"io/ioutil"
 	"os"
 	"path/filepath"
 	"regexp"
 	. "strings"
 	"unicode"
+
+	"github.com/dave/jennifer/jen"
+	"github.com/samply/golang-fhir-models/fhir-models-gen/fhir"
+	"github.com/spf13/cobra"
 )
 
 type Resource struct {
@@ -343,7 +344,7 @@ func appendFields(resources ResourceMap, requiredTypes map[string]bool, required
 						for _, pathPart := range Split((*element.ContentReference)[1:], ".") {
 							typeIdentifier = typeIdentifier + Title(pathPart)
 						}
-						statement.Id(typeIdentifier).Tag(map[string]string{"json": pathParts[level] + ",omitempty"})
+						statement.Id(typeIdentifier).Tag(map[string]string{"json": pathParts[level] + ",omitempty", "bson": pathParts[level] + ",omitempty"})
 					}
 				// support polymorphic elements later
 				case 1:
@@ -423,9 +424,9 @@ func appendFields(resources ResourceMap, requiredTypes map[string]bool, required
 					}
 
 					if *element.Min == 0 {
-						statement.Tag(map[string]string{"json": pathParts[level] + ",omitempty"})
+						statement.Tag(map[string]string{"json": pathParts[level] + ",omitempty", "bson": pathParts[level] + ",omitempty"})
 					} else {
-						statement.Tag(map[string]string{"json": pathParts[level]})
+						statement.Tag(map[string]string{"json": pathParts[level], "bson": pathParts[level]})
 					}
 				}
 			}

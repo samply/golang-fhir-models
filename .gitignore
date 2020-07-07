@@ -1,2 +1,6 @@
 /fhir-models/fhir/*.json
 /fhir-models-gen/fhir/*.json
+.vscode
+.idea
+.vscode/
+.idea/
