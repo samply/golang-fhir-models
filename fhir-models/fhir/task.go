@@ -21,64 +21,64 @@ import "encoding/json"
 
 // Task is documented here http://hl7.org/fhir/StructureDefinition/Task
 type Task struct {
-	Id                    *string           `json:"id,omitempty"`
-	Meta                  *Meta             `json:"meta,omitempty"`
-	ImplicitRules         *string           `json:"implicitRules,omitempty"`
-	Language              *string           `json:"language,omitempty"`
-	Text                  *Narrative        `json:"text,omitempty"`
-	Extension             []Extension       `json:"extension,omitempty"`
-	ModifierExtension     []Extension       `json:"modifierExtension,omitempty"`
-	Identifier            []Identifier      `json:"identifier,omitempty"`
-	InstantiatesCanonical *string           `json:"instantiatesCanonical,omitempty"`
-	InstantiatesUri       *string           `json:"instantiatesUri,omitempty"`
-	BasedOn               []Reference       `json:"basedOn,omitempty"`
-	GroupIdentifier       *Identifier       `json:"groupIdentifier,omitempty"`
-	PartOf                []Reference       `json:"partOf,omitempty"`
-	Status                TaskStatus        `json:"status"`
-	StatusReason          *CodeableConcept  `json:"statusReason,omitempty"`
-	BusinessStatus        *CodeableConcept  `json:"businessStatus,omitempty"`
-	Intent                string            `json:"intent"`
-	Priority              *RequestPriority  `json:"priority,omitempty"`
-	Code                  *CodeableConcept  `json:"code,omitempty"`
-	Description           *string           `json:"description,omitempty"`
-	Focus                 *Reference        `json:"focus,omitempty"`
-	For                   *Reference        `json:"for,omitempty"`
-	Encounter             *Reference        `json:"encounter,omitempty"`
-	ExecutionPeriod       *Period           `json:"executionPeriod,omitempty"`
-	AuthoredOn            *string           `json:"authoredOn,omitempty"`
-	LastModified          *string           `json:"lastModified,omitempty"`
-	Requester             *Reference        `json:"requester,omitempty"`
-	PerformerType         []CodeableConcept `json:"performerType,omitempty"`
-	Owner                 *Reference        `json:"owner,omitempty"`
-	Location              *Reference        `json:"location,omitempty"`
-	ReasonCode            *CodeableConcept  `json:"reasonCode,omitempty"`
-	ReasonReference       *Reference        `json:"reasonReference,omitempty"`
-	Insurance             []Reference       `json:"insurance,omitempty"`
-	Note                  []Annotation      `json:"note,omitempty"`
-	RelevantHistory       []Reference       `json:"relevantHistory,omitempty"`
-	Restriction           *TaskRestriction  `json:"restriction,omitempty"`
-	Input                 []TaskInput       `json:"input,omitempty"`
-	Output                []TaskOutput      `json:"output,omitempty"`
+	Id                    *string           `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                  *Meta             `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules         *string           `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language              *string           `bson:"language,omitempty" json:"language,omitempty"`
+	Text                  *Narrative        `bson:"text,omitempty" json:"text,omitempty"`
+	Extension             []Extension       `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension     []Extension       `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier            []Identifier      `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	InstantiatesCanonical *string           `bson:"instantiatesCanonical,omitempty" json:"instantiatesCanonical,omitempty"`
+	InstantiatesUri       *string           `bson:"instantiatesUri,omitempty" json:"instantiatesUri,omitempty"`
+	BasedOn               []Reference       `bson:"basedOn,omitempty" json:"basedOn,omitempty"`
+	GroupIdentifier       *Identifier       `bson:"groupIdentifier,omitempty" json:"groupIdentifier,omitempty"`
+	PartOf                []Reference       `bson:"partOf,omitempty" json:"partOf,omitempty"`
+	Status                TaskStatus        `bson:"status" json:"status"`
+	StatusReason          *CodeableConcept  `bson:"statusReason,omitempty" json:"statusReason,omitempty"`
+	BusinessStatus        *CodeableConcept  `bson:"businessStatus,omitempty" json:"businessStatus,omitempty"`
+	Intent                string            `bson:"intent" json:"intent"`
+	Priority              *RequestPriority  `bson:"priority,omitempty" json:"priority,omitempty"`
+	Code                  *CodeableConcept  `bson:"code,omitempty" json:"code,omitempty"`
+	Description           *string           `bson:"description,omitempty" json:"description,omitempty"`
+	Focus                 *Reference        `bson:"focus,omitempty" json:"focus,omitempty"`
+	For                   *Reference        `bson:"for,omitempty" json:"for,omitempty"`
+	Encounter             *Reference        `bson:"encounter,omitempty" json:"encounter,omitempty"`
+	ExecutionPeriod       *Period           `bson:"executionPeriod,omitempty" json:"executionPeriod,omitempty"`
+	AuthoredOn            *string           `bson:"authoredOn,omitempty" json:"authoredOn,omitempty"`
+	LastModified          *string           `bson:"lastModified,omitempty" json:"lastModified,omitempty"`
+	Requester             *Reference        `bson:"requester,omitempty" json:"requester,omitempty"`
+	PerformerType         []CodeableConcept `bson:"performerType,omitempty" json:"performerType,omitempty"`
+	Owner                 *Reference        `bson:"owner,omitempty" json:"owner,omitempty"`
+	Location              *Reference        `bson:"location,omitempty" json:"location,omitempty"`
+	ReasonCode            *CodeableConcept  `bson:"reasonCode,omitempty" json:"reasonCode,omitempty"`
+	ReasonReference       *Reference        `bson:"reasonReference,omitempty" json:"reasonReference,omitempty"`
+	Insurance             []Reference       `bson:"insurance,omitempty" json:"insurance,omitempty"`
+	Note                  []Annotation      `bson:"note,omitempty" json:"note,omitempty"`
+	RelevantHistory       []Reference       `bson:"relevantHistory,omitempty" json:"relevantHistory,omitempty"`
+	Restriction           *TaskRestriction  `bson:"restriction,omitempty" json:"restriction,omitempty"`
+	Input                 []TaskInput       `bson:"input,omitempty" json:"input,omitempty"`
+	Output                []TaskOutput      `bson:"output,omitempty" json:"output,omitempty"`
 }
 type TaskRestriction struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Repetitions       *int        `json:"repetitions,omitempty"`
-	Period            *Period     `json:"period,omitempty"`
-	Recipient         []Reference `json:"recipient,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Repetitions       *int        `bson:"repetitions,omitempty" json:"repetitions,omitempty"`
+	Period            *Period     `bson:"period,omitempty" json:"period,omitempty"`
+	Recipient         []Reference `bson:"recipient,omitempty" json:"recipient,omitempty"`
 }
 type TaskInput struct {
-	Id                *string         `json:"id,omitempty"`
-	Extension         []Extension     `json:"extension,omitempty"`
-	ModifierExtension []Extension     `json:"modifierExtension,omitempty"`
-	Type              CodeableConcept `json:"type"`
+	Id                *string         `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension     `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Type              CodeableConcept `bson:"type" json:"type"`
 }
 type TaskOutput struct {
-	Id                *string         `json:"id,omitempty"`
-	Extension         []Extension     `json:"extension,omitempty"`
-	ModifierExtension []Extension     `json:"modifierExtension,omitempty"`
-	Type              CodeableConcept `json:"type"`
+	Id                *string         `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension     `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Type              CodeableConcept `bson:"type" json:"type"`
 }
 type OtherTask Task
 

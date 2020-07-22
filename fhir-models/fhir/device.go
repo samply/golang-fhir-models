@@ -21,80 +21,80 @@ import "encoding/json"
 
 // Device is documented here http://hl7.org/fhir/StructureDefinition/Device
 type Device struct {
-	Id                 *string                `json:"id,omitempty"`
-	Meta               *Meta                  `json:"meta,omitempty"`
-	ImplicitRules      *string                `json:"implicitRules,omitempty"`
-	Language           *string                `json:"language,omitempty"`
-	Text               *Narrative             `json:"text,omitempty"`
-	Extension          []Extension            `json:"extension,omitempty"`
-	ModifierExtension  []Extension            `json:"modifierExtension,omitempty"`
-	Identifier         []Identifier           `json:"identifier,omitempty"`
-	Definition         *Reference             `json:"definition,omitempty"`
-	UdiCarrier         []DeviceUdiCarrier     `json:"udiCarrier,omitempty"`
-	Status             *FHIRDeviceStatus      `json:"status,omitempty"`
-	StatusReason       []CodeableConcept      `json:"statusReason,omitempty"`
-	DistinctIdentifier *string                `json:"distinctIdentifier,omitempty"`
-	Manufacturer       *string                `json:"manufacturer,omitempty"`
-	ManufactureDate    *string                `json:"manufactureDate,omitempty"`
-	ExpirationDate     *string                `json:"expirationDate,omitempty"`
-	LotNumber          *string                `json:"lotNumber,omitempty"`
-	SerialNumber       *string                `json:"serialNumber,omitempty"`
-	DeviceName         []DeviceDeviceName     `json:"deviceName,omitempty"`
-	ModelNumber        *string                `json:"modelNumber,omitempty"`
-	PartNumber         *string                `json:"partNumber,omitempty"`
-	Type               *CodeableConcept       `json:"type,omitempty"`
-	Specialization     []DeviceSpecialization `json:"specialization,omitempty"`
-	Version            []DeviceVersion        `json:"version,omitempty"`
-	Property           []DeviceProperty       `json:"property,omitempty"`
-	Patient            *Reference             `json:"patient,omitempty"`
-	Owner              *Reference             `json:"owner,omitempty"`
-	Contact            []ContactPoint         `json:"contact,omitempty"`
-	Location           *Reference             `json:"location,omitempty"`
-	Url                *string                `json:"url,omitempty"`
-	Note               []Annotation           `json:"note,omitempty"`
-	Safety             []CodeableConcept      `json:"safety,omitempty"`
-	Parent             *Reference             `json:"parent,omitempty"`
+	Id                 *string                `bson:"id,omitempty" json:"id,omitempty"`
+	Meta               *Meta                  `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules      *string                `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language           *string                `bson:"language,omitempty" json:"language,omitempty"`
+	Text               *Narrative             `bson:"text,omitempty" json:"text,omitempty"`
+	Extension          []Extension            `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension  []Extension            `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier         []Identifier           `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Definition         *Reference             `bson:"definition,omitempty" json:"definition,omitempty"`
+	UdiCarrier         []DeviceUdiCarrier     `bson:"udiCarrier,omitempty" json:"udiCarrier,omitempty"`
+	Status             *FHIRDeviceStatus      `bson:"status,omitempty" json:"status,omitempty"`
+	StatusReason       []CodeableConcept      `bson:"statusReason,omitempty" json:"statusReason,omitempty"`
+	DistinctIdentifier *string                `bson:"distinctIdentifier,omitempty" json:"distinctIdentifier,omitempty"`
+	Manufacturer       *string                `bson:"manufacturer,omitempty" json:"manufacturer,omitempty"`
+	ManufactureDate    *string                `bson:"manufactureDate,omitempty" json:"manufactureDate,omitempty"`
+	ExpirationDate     *string                `bson:"expirationDate,omitempty" json:"expirationDate,omitempty"`
+	LotNumber          *string                `bson:"lotNumber,omitempty" json:"lotNumber,omitempty"`
+	SerialNumber       *string                `bson:"serialNumber,omitempty" json:"serialNumber,omitempty"`
+	DeviceName         []DeviceDeviceName     `bson:"deviceName,omitempty" json:"deviceName,omitempty"`
+	ModelNumber        *string                `bson:"modelNumber,omitempty" json:"modelNumber,omitempty"`
+	PartNumber         *string                `bson:"partNumber,omitempty" json:"partNumber,omitempty"`
+	Type               *CodeableConcept       `bson:"type,omitempty" json:"type,omitempty"`
+	Specialization     []DeviceSpecialization `bson:"specialization,omitempty" json:"specialization,omitempty"`
+	Version            []DeviceVersion        `bson:"version,omitempty" json:"version,omitempty"`
+	Property           []DeviceProperty       `bson:"property,omitempty" json:"property,omitempty"`
+	Patient            *Reference             `bson:"patient,omitempty" json:"patient,omitempty"`
+	Owner              *Reference             `bson:"owner,omitempty" json:"owner,omitempty"`
+	Contact            []ContactPoint         `bson:"contact,omitempty" json:"contact,omitempty"`
+	Location           *Reference             `bson:"location,omitempty" json:"location,omitempty"`
+	Url                *string                `bson:"url,omitempty" json:"url,omitempty"`
+	Note               []Annotation           `bson:"note,omitempty" json:"note,omitempty"`
+	Safety             []CodeableConcept      `bson:"safety,omitempty" json:"safety,omitempty"`
+	Parent             *Reference             `bson:"parent,omitempty" json:"parent,omitempty"`
 }
 type DeviceUdiCarrier struct {
-	Id                *string       `json:"id,omitempty"`
-	Extension         []Extension   `json:"extension,omitempty"`
-	ModifierExtension []Extension   `json:"modifierExtension,omitempty"`
-	DeviceIdentifier  *string       `json:"deviceIdentifier,omitempty"`
-	Issuer            *string       `json:"issuer,omitempty"`
-	Jurisdiction      *string       `json:"jurisdiction,omitempty"`
-	CarrierAIDC       *string       `json:"carrierAIDC,omitempty"`
-	CarrierHRF        *string       `json:"carrierHRF,omitempty"`
-	EntryType         *UDIEntryType `json:"entryType,omitempty"`
+	Id                *string       `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension   `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension   `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	DeviceIdentifier  *string       `bson:"deviceIdentifier,omitempty" json:"deviceIdentifier,omitempty"`
+	Issuer            *string       `bson:"issuer,omitempty" json:"issuer,omitempty"`
+	Jurisdiction      *string       `bson:"jurisdiction,omitempty" json:"jurisdiction,omitempty"`
+	CarrierAIDC       *string       `bson:"carrierAIDC,omitempty" json:"carrierAIDC,omitempty"`
+	CarrierHRF        *string       `bson:"carrierHRF,omitempty" json:"carrierHRF,omitempty"`
+	EntryType         *UDIEntryType `bson:"entryType,omitempty" json:"entryType,omitempty"`
 }
 type DeviceDeviceName struct {
-	Id                *string        `json:"id,omitempty"`
-	Extension         []Extension    `json:"extension,omitempty"`
-	ModifierExtension []Extension    `json:"modifierExtension,omitempty"`
-	Name              string         `json:"name"`
-	Type              DeviceNameType `json:"type"`
+	Id                *string        `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension    `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension    `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Name              string         `bson:"name" json:"name"`
+	Type              DeviceNameType `bson:"type" json:"type"`
 }
 type DeviceSpecialization struct {
-	Id                *string         `json:"id,omitempty"`
-	Extension         []Extension     `json:"extension,omitempty"`
-	ModifierExtension []Extension     `json:"modifierExtension,omitempty"`
-	SystemType        CodeableConcept `json:"systemType"`
-	Version           *string         `json:"version,omitempty"`
+	Id                *string         `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension     `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	SystemType        CodeableConcept `bson:"systemType" json:"systemType"`
+	Version           *string         `bson:"version,omitempty" json:"version,omitempty"`
 }
 type DeviceVersion struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Type              *CodeableConcept `json:"type,omitempty"`
-	Component         *Identifier      `json:"component,omitempty"`
-	Value             string           `json:"value"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Type              *CodeableConcept `bson:"type,omitempty" json:"type,omitempty"`
+	Component         *Identifier      `bson:"component,omitempty" json:"component,omitempty"`
+	Value             string           `bson:"value" json:"value"`
 }
 type DeviceProperty struct {
-	Id                *string           `json:"id,omitempty"`
-	Extension         []Extension       `json:"extension,omitempty"`
-	ModifierExtension []Extension       `json:"modifierExtension,omitempty"`
-	Type              CodeableConcept   `json:"type"`
-	ValueQuantity     []Quantity        `json:"valueQuantity,omitempty"`
-	ValueCode         []CodeableConcept `json:"valueCode,omitempty"`
+	Id                *string           `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension       `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension       `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Type              CodeableConcept   `bson:"type" json:"type"`
+	ValueQuantity     []Quantity        `bson:"valueQuantity,omitempty" json:"valueQuantity,omitempty"`
+	ValueCode         []CodeableConcept `bson:"valueCode,omitempty" json:"valueCode,omitempty"`
 }
 type OtherDevice Device
 

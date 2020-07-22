@@ -21,45 +21,45 @@ import "encoding/json"
 
 // Appointment is documented here http://hl7.org/fhir/StructureDefinition/Appointment
 type Appointment struct {
-	Id                    *string                  `json:"id,omitempty"`
-	Meta                  *Meta                    `json:"meta,omitempty"`
-	ImplicitRules         *string                  `json:"implicitRules,omitempty"`
-	Language              *string                  `json:"language,omitempty"`
-	Text                  *Narrative               `json:"text,omitempty"`
-	Extension             []Extension              `json:"extension,omitempty"`
-	ModifierExtension     []Extension              `json:"modifierExtension,omitempty"`
-	Identifier            []Identifier             `json:"identifier,omitempty"`
-	Status                AppointmentStatus        `json:"status"`
-	CancelationReason     *CodeableConcept         `json:"cancelationReason,omitempty"`
-	ServiceCategory       []CodeableConcept        `json:"serviceCategory,omitempty"`
-	ServiceType           []CodeableConcept        `json:"serviceType,omitempty"`
-	Specialty             []CodeableConcept        `json:"specialty,omitempty"`
-	AppointmentType       *CodeableConcept         `json:"appointmentType,omitempty"`
-	ReasonCode            []CodeableConcept        `json:"reasonCode,omitempty"`
-	ReasonReference       []Reference              `json:"reasonReference,omitempty"`
-	Priority              *int                     `json:"priority,omitempty"`
-	Description           *string                  `json:"description,omitempty"`
-	SupportingInformation []Reference              `json:"supportingInformation,omitempty"`
-	Start                 *string                  `json:"start,omitempty"`
-	End                   *string                  `json:"end,omitempty"`
-	MinutesDuration       *int                     `json:"minutesDuration,omitempty"`
-	Slot                  []Reference              `json:"slot,omitempty"`
-	Created               *string                  `json:"created,omitempty"`
-	Comment               *string                  `json:"comment,omitempty"`
-	PatientInstruction    *string                  `json:"patientInstruction,omitempty"`
-	BasedOn               []Reference              `json:"basedOn,omitempty"`
-	Participant           []AppointmentParticipant `json:"participant"`
-	RequestedPeriod       []Period                 `json:"requestedPeriod,omitempty"`
+	Id                    *string                  `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                  *Meta                    `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules         *string                  `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language              *string                  `bson:"language,omitempty" json:"language,omitempty"`
+	Text                  *Narrative               `bson:"text,omitempty" json:"text,omitempty"`
+	Extension             []Extension              `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension     []Extension              `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier            []Identifier             `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Status                AppointmentStatus        `bson:"status" json:"status"`
+	CancelationReason     *CodeableConcept         `bson:"cancelationReason,omitempty" json:"cancelationReason,omitempty"`
+	ServiceCategory       []CodeableConcept        `bson:"serviceCategory,omitempty" json:"serviceCategory,omitempty"`
+	ServiceType           []CodeableConcept        `bson:"serviceType,omitempty" json:"serviceType,omitempty"`
+	Specialty             []CodeableConcept        `bson:"specialty,omitempty" json:"specialty,omitempty"`
+	AppointmentType       *CodeableConcept         `bson:"appointmentType,omitempty" json:"appointmentType,omitempty"`
+	ReasonCode            []CodeableConcept        `bson:"reasonCode,omitempty" json:"reasonCode,omitempty"`
+	ReasonReference       []Reference              `bson:"reasonReference,omitempty" json:"reasonReference,omitempty"`
+	Priority              *int                     `bson:"priority,omitempty" json:"priority,omitempty"`
+	Description           *string                  `bson:"description,omitempty" json:"description,omitempty"`
+	SupportingInformation []Reference              `bson:"supportingInformation,omitempty" json:"supportingInformation,omitempty"`
+	Start                 *string                  `bson:"start,omitempty" json:"start,omitempty"`
+	End                   *string                  `bson:"end,omitempty" json:"end,omitempty"`
+	MinutesDuration       *int                     `bson:"minutesDuration,omitempty" json:"minutesDuration,omitempty"`
+	Slot                  []Reference              `bson:"slot,omitempty" json:"slot,omitempty"`
+	Created               *string                  `bson:"created,omitempty" json:"created,omitempty"`
+	Comment               *string                  `bson:"comment,omitempty" json:"comment,omitempty"`
+	PatientInstruction    *string                  `bson:"patientInstruction,omitempty" json:"patientInstruction,omitempty"`
+	BasedOn               []Reference              `bson:"basedOn,omitempty" json:"basedOn,omitempty"`
+	Participant           []AppointmentParticipant `bson:"participant" json:"participant"`
+	RequestedPeriod       []Period                 `bson:"requestedPeriod,omitempty" json:"requestedPeriod,omitempty"`
 }
 type AppointmentParticipant struct {
-	Id                *string              `json:"id,omitempty"`
-	Extension         []Extension          `json:"extension,omitempty"`
-	ModifierExtension []Extension          `json:"modifierExtension,omitempty"`
-	Type              []CodeableConcept    `json:"type,omitempty"`
-	Actor             *Reference           `json:"actor,omitempty"`
-	Required          *ParticipantRequired `json:"required,omitempty"`
-	Status            ParticipationStatus  `json:"status"`
-	Period            *Period              `json:"period,omitempty"`
+	Id                *string              `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension          `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension          `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Type              []CodeableConcept    `bson:"type,omitempty" json:"type,omitempty"`
+	Actor             *Reference           `bson:"actor,omitempty" json:"actor,omitempty"`
+	Required          *ParticipantRequired `bson:"required,omitempty" json:"required,omitempty"`
+	Status            ParticipationStatus  `bson:"status" json:"status"`
+	Period            *Period              `bson:"period,omitempty" json:"period,omitempty"`
 }
 type OtherAppointment Appointment
 

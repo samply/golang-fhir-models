@@ -19,13 +19,13 @@ package fhir
 
 // Signature is documented here http://hl7.org/fhir/StructureDefinition/Signature
 type Signature struct {
-	Id           *string     `json:"id,omitempty"`
-	Extension    []Extension `json:"extension,omitempty"`
-	Type         []Coding    `json:"type"`
-	When         string      `json:"when"`
-	Who          Reference   `json:"who"`
-	OnBehalfOf   *Reference  `json:"onBehalfOf,omitempty"`
-	TargetFormat *string     `json:"targetFormat,omitempty"`
-	SigFormat    *string     `json:"sigFormat,omitempty"`
-	Data         *string     `json:"data,omitempty"`
+	Id           *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension    []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	Type         []Coding    `bson:"type" json:"type"`
+	When         string      `bson:"when" json:"when"`
+	Who          Reference   `bson:"who" json:"who"`
+	OnBehalfOf   *Reference  `bson:"onBehalfOf,omitempty" json:"onBehalfOf,omitempty"`
+	TargetFormat *string     `bson:"targetFormat,omitempty" json:"targetFormat,omitempty"`
+	SigFormat    *string     `bson:"sigFormat,omitempty" json:"sigFormat,omitempty"`
+	Data         *string     `bson:"data,omitempty" json:"data,omitempty"`
 }

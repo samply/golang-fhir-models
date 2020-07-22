@@ -21,34 +21,34 @@ import "encoding/json"
 
 // Goal is documented here http://hl7.org/fhir/StructureDefinition/Goal
 type Goal struct {
-	Id                *string             `json:"id,omitempty"`
-	Meta              *Meta               `json:"meta,omitempty"`
-	ImplicitRules     *string             `json:"implicitRules,omitempty"`
-	Language          *string             `json:"language,omitempty"`
-	Text              *Narrative          `json:"text,omitempty"`
-	Extension         []Extension         `json:"extension,omitempty"`
-	ModifierExtension []Extension         `json:"modifierExtension,omitempty"`
-	Identifier        []Identifier        `json:"identifier,omitempty"`
-	LifecycleStatus   GoalLifecycleStatus `json:"lifecycleStatus"`
-	AchievementStatus *CodeableConcept    `json:"achievementStatus,omitempty"`
-	Category          []CodeableConcept   `json:"category,omitempty"`
-	Priority          *CodeableConcept    `json:"priority,omitempty"`
-	Description       CodeableConcept     `json:"description"`
-	Subject           Reference           `json:"subject"`
-	Target            []GoalTarget        `json:"target,omitempty"`
-	StatusDate        *string             `json:"statusDate,omitempty"`
-	StatusReason      *string             `json:"statusReason,omitempty"`
-	ExpressedBy       *Reference          `json:"expressedBy,omitempty"`
-	Addresses         []Reference         `json:"addresses,omitempty"`
-	Note              []Annotation        `json:"note,omitempty"`
-	OutcomeCode       []CodeableConcept   `json:"outcomeCode,omitempty"`
-	OutcomeReference  []Reference         `json:"outcomeReference,omitempty"`
+	Id                *string             `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta               `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string             `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string             `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative          `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension         `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension         `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        []Identifier        `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	LifecycleStatus   GoalLifecycleStatus `bson:"lifecycleStatus" json:"lifecycleStatus"`
+	AchievementStatus *CodeableConcept    `bson:"achievementStatus,omitempty" json:"achievementStatus,omitempty"`
+	Category          []CodeableConcept   `bson:"category,omitempty" json:"category,omitempty"`
+	Priority          *CodeableConcept    `bson:"priority,omitempty" json:"priority,omitempty"`
+	Description       CodeableConcept     `bson:"description" json:"description"`
+	Subject           Reference           `bson:"subject" json:"subject"`
+	Target            []GoalTarget        `bson:"target,omitempty" json:"target,omitempty"`
+	StatusDate        *string             `bson:"statusDate,omitempty" json:"statusDate,omitempty"`
+	StatusReason      *string             `bson:"statusReason,omitempty" json:"statusReason,omitempty"`
+	ExpressedBy       *Reference          `bson:"expressedBy,omitempty" json:"expressedBy,omitempty"`
+	Addresses         []Reference         `bson:"addresses,omitempty" json:"addresses,omitempty"`
+	Note              []Annotation        `bson:"note,omitempty" json:"note,omitempty"`
+	OutcomeCode       []CodeableConcept   `bson:"outcomeCode,omitempty" json:"outcomeCode,omitempty"`
+	OutcomeReference  []Reference         `bson:"outcomeReference,omitempty" json:"outcomeReference,omitempty"`
 }
 type GoalTarget struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Measure           *CodeableConcept `json:"measure,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Measure           *CodeableConcept `bson:"measure,omitempty" json:"measure,omitempty"`
 }
 type OtherGoal Goal
 

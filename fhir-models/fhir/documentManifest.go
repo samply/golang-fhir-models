@@ -21,32 +21,32 @@ import "encoding/json"
 
 // DocumentManifest is documented here http://hl7.org/fhir/StructureDefinition/DocumentManifest
 type DocumentManifest struct {
-	Id                *string                   `json:"id,omitempty"`
-	Meta              *Meta                     `json:"meta,omitempty"`
-	ImplicitRules     *string                   `json:"implicitRules,omitempty"`
-	Language          *string                   `json:"language,omitempty"`
-	Text              *Narrative                `json:"text,omitempty"`
-	Extension         []Extension               `json:"extension,omitempty"`
-	ModifierExtension []Extension               `json:"modifierExtension,omitempty"`
-	MasterIdentifier  *Identifier               `json:"masterIdentifier,omitempty"`
-	Identifier        []Identifier              `json:"identifier,omitempty"`
-	Status            DocumentReferenceStatus   `json:"status"`
-	Type              *CodeableConcept          `json:"type,omitempty"`
-	Subject           *Reference                `json:"subject,omitempty"`
-	Created           *string                   `json:"created,omitempty"`
-	Author            []Reference               `json:"author,omitempty"`
-	Recipient         []Reference               `json:"recipient,omitempty"`
-	Source            *string                   `json:"source,omitempty"`
-	Description       *string                   `json:"description,omitempty"`
-	Content           []Reference               `json:"content"`
-	Related           []DocumentManifestRelated `json:"related,omitempty"`
+	Id                *string                   `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta                     `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string                   `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string                   `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative                `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension               `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension               `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	MasterIdentifier  *Identifier               `bson:"masterIdentifier,omitempty" json:"masterIdentifier,omitempty"`
+	Identifier        []Identifier              `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Status            DocumentReferenceStatus   `bson:"status" json:"status"`
+	Type              *CodeableConcept          `bson:"type,omitempty" json:"type,omitempty"`
+	Subject           *Reference                `bson:"subject,omitempty" json:"subject,omitempty"`
+	Created           *string                   `bson:"created,omitempty" json:"created,omitempty"`
+	Author            []Reference               `bson:"author,omitempty" json:"author,omitempty"`
+	Recipient         []Reference               `bson:"recipient,omitempty" json:"recipient,omitempty"`
+	Source            *string                   `bson:"source,omitempty" json:"source,omitempty"`
+	Description       *string                   `bson:"description,omitempty" json:"description,omitempty"`
+	Content           []Reference               `bson:"content" json:"content"`
+	Related           []DocumentManifestRelated `bson:"related,omitempty" json:"related,omitempty"`
 }
 type DocumentManifestRelated struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Identifier        *Identifier `json:"identifier,omitempty"`
-	Ref               *Reference  `json:"ref,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        *Identifier `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Ref               *Reference  `bson:"ref,omitempty" json:"ref,omitempty"`
 }
 type OtherDocumentManifest DocumentManifest
 

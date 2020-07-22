@@ -21,18 +21,18 @@ import "encoding/json"
 
 // MedicinalProductUndesirableEffect is documented here http://hl7.org/fhir/StructureDefinition/MedicinalProductUndesirableEffect
 type MedicinalProductUndesirableEffect struct {
-	Id                     *string          `json:"id,omitempty"`
-	Meta                   *Meta            `json:"meta,omitempty"`
-	ImplicitRules          *string          `json:"implicitRules,omitempty"`
-	Language               *string          `json:"language,omitempty"`
-	Text                   *Narrative       `json:"text,omitempty"`
-	Extension              []Extension      `json:"extension,omitempty"`
-	ModifierExtension      []Extension      `json:"modifierExtension,omitempty"`
-	Subject                []Reference      `json:"subject,omitempty"`
-	SymptomConditionEffect *CodeableConcept `json:"symptomConditionEffect,omitempty"`
-	Classification         *CodeableConcept `json:"classification,omitempty"`
-	FrequencyOfOccurrence  *CodeableConcept `json:"frequencyOfOccurrence,omitempty"`
-	Population             []Population     `json:"population,omitempty"`
+	Id                     *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                   *Meta            `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules          *string          `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language               *string          `bson:"language,omitempty" json:"language,omitempty"`
+	Text                   *Narrative       `bson:"text,omitempty" json:"text,omitempty"`
+	Extension              []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension      []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Subject                []Reference      `bson:"subject,omitempty" json:"subject,omitempty"`
+	SymptomConditionEffect *CodeableConcept `bson:"symptomConditionEffect,omitempty" json:"symptomConditionEffect,omitempty"`
+	Classification         *CodeableConcept `bson:"classification,omitempty" json:"classification,omitempty"`
+	FrequencyOfOccurrence  *CodeableConcept `bson:"frequencyOfOccurrence,omitempty" json:"frequencyOfOccurrence,omitempty"`
+	Population             []Population     `bson:"population,omitempty" json:"population,omitempty"`
 }
 type OtherMedicinalProductUndesirableEffect MedicinalProductUndesirableEffect
 

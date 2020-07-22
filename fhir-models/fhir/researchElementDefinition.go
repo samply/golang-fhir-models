@@ -21,59 +21,59 @@ import "encoding/json"
 
 // ResearchElementDefinition is documented here http://hl7.org/fhir/StructureDefinition/ResearchElementDefinition
 type ResearchElementDefinition struct {
-	Id                *string                                   `json:"id,omitempty"`
-	Meta              *Meta                                     `json:"meta,omitempty"`
-	ImplicitRules     *string                                   `json:"implicitRules,omitempty"`
-	Language          *string                                   `json:"language,omitempty"`
-	Text              *Narrative                                `json:"text,omitempty"`
-	Extension         []Extension                               `json:"extension,omitempty"`
-	ModifierExtension []Extension                               `json:"modifierExtension,omitempty"`
-	Url               *string                                   `json:"url,omitempty"`
-	Identifier        []Identifier                              `json:"identifier,omitempty"`
-	Version           *string                                   `json:"version,omitempty"`
-	Name              *string                                   `json:"name,omitempty"`
-	Title             *string                                   `json:"title,omitempty"`
-	ShortTitle        *string                                   `json:"shortTitle,omitempty"`
-	Subtitle          *string                                   `json:"subtitle,omitempty"`
-	Status            PublicationStatus                         `json:"status"`
-	Experimental      *bool                                     `json:"experimental,omitempty"`
-	Date              *string                                   `json:"date,omitempty"`
-	Publisher         *string                                   `json:"publisher,omitempty"`
-	Contact           []ContactDetail                           `json:"contact,omitempty"`
-	Description       *string                                   `json:"description,omitempty"`
-	Comment           []string                                  `json:"comment,omitempty"`
-	UseContext        []UsageContext                            `json:"useContext,omitempty"`
-	Jurisdiction      []CodeableConcept                         `json:"jurisdiction,omitempty"`
-	Purpose           *string                                   `json:"purpose,omitempty"`
-	Usage             *string                                   `json:"usage,omitempty"`
-	Copyright         *string                                   `json:"copyright,omitempty"`
-	ApprovalDate      *string                                   `json:"approvalDate,omitempty"`
-	LastReviewDate    *string                                   `json:"lastReviewDate,omitempty"`
-	EffectivePeriod   *Period                                   `json:"effectivePeriod,omitempty"`
-	Topic             []CodeableConcept                         `json:"topic,omitempty"`
-	Author            []ContactDetail                           `json:"author,omitempty"`
-	Editor            []ContactDetail                           `json:"editor,omitempty"`
-	Reviewer          []ContactDetail                           `json:"reviewer,omitempty"`
-	Endorser          []ContactDetail                           `json:"endorser,omitempty"`
-	RelatedArtifact   []RelatedArtifact                         `json:"relatedArtifact,omitempty"`
-	Library           []string                                  `json:"library,omitempty"`
-	Type              ResearchElementType                       `json:"type"`
-	VariableType      *EvidenceVariableType                     `json:"variableType,omitempty"`
-	Characteristic    []ResearchElementDefinitionCharacteristic `json:"characteristic"`
+	Id                *string                                   `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta                                     `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string                                   `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string                                   `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative                                `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension                               `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                               `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Url               *string                                   `bson:"url,omitempty" json:"url,omitempty"`
+	Identifier        []Identifier                              `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Version           *string                                   `bson:"version,omitempty" json:"version,omitempty"`
+	Name              *string                                   `bson:"name,omitempty" json:"name,omitempty"`
+	Title             *string                                   `bson:"title,omitempty" json:"title,omitempty"`
+	ShortTitle        *string                                   `bson:"shortTitle,omitempty" json:"shortTitle,omitempty"`
+	Subtitle          *string                                   `bson:"subtitle,omitempty" json:"subtitle,omitempty"`
+	Status            PublicationStatus                         `bson:"status" json:"status"`
+	Experimental      *bool                                     `bson:"experimental,omitempty" json:"experimental,omitempty"`
+	Date              *string                                   `bson:"date,omitempty" json:"date,omitempty"`
+	Publisher         *string                                   `bson:"publisher,omitempty" json:"publisher,omitempty"`
+	Contact           []ContactDetail                           `bson:"contact,omitempty" json:"contact,omitempty"`
+	Description       *string                                   `bson:"description,omitempty" json:"description,omitempty"`
+	Comment           []string                                  `bson:"comment,omitempty" json:"comment,omitempty"`
+	UseContext        []UsageContext                            `bson:"useContext,omitempty" json:"useContext,omitempty"`
+	Jurisdiction      []CodeableConcept                         `bson:"jurisdiction,omitempty" json:"jurisdiction,omitempty"`
+	Purpose           *string                                   `bson:"purpose,omitempty" json:"purpose,omitempty"`
+	Usage             *string                                   `bson:"usage,omitempty" json:"usage,omitempty"`
+	Copyright         *string                                   `bson:"copyright,omitempty" json:"copyright,omitempty"`
+	ApprovalDate      *string                                   `bson:"approvalDate,omitempty" json:"approvalDate,omitempty"`
+	LastReviewDate    *string                                   `bson:"lastReviewDate,omitempty" json:"lastReviewDate,omitempty"`
+	EffectivePeriod   *Period                                   `bson:"effectivePeriod,omitempty" json:"effectivePeriod,omitempty"`
+	Topic             []CodeableConcept                         `bson:"topic,omitempty" json:"topic,omitempty"`
+	Author            []ContactDetail                           `bson:"author,omitempty" json:"author,omitempty"`
+	Editor            []ContactDetail                           `bson:"editor,omitempty" json:"editor,omitempty"`
+	Reviewer          []ContactDetail                           `bson:"reviewer,omitempty" json:"reviewer,omitempty"`
+	Endorser          []ContactDetail                           `bson:"endorser,omitempty" json:"endorser,omitempty"`
+	RelatedArtifact   []RelatedArtifact                         `bson:"relatedArtifact,omitempty" json:"relatedArtifact,omitempty"`
+	Library           []string                                  `bson:"library,omitempty" json:"library,omitempty"`
+	Type              ResearchElementType                       `bson:"type" json:"type"`
+	VariableType      *EvidenceVariableType                     `bson:"variableType,omitempty" json:"variableType,omitempty"`
+	Characteristic    []ResearchElementDefinitionCharacteristic `bson:"characteristic" json:"characteristic"`
 }
 type ResearchElementDefinitionCharacteristic struct {
-	Id                                *string          `json:"id,omitempty"`
-	Extension                         []Extension      `json:"extension,omitempty"`
-	ModifierExtension                 []Extension      `json:"modifierExtension,omitempty"`
-	UsageContext                      []UsageContext   `json:"usageContext,omitempty"`
-	Exclude                           *bool            `json:"exclude,omitempty"`
-	UnitOfMeasure                     *CodeableConcept `json:"unitOfMeasure,omitempty"`
-	StudyEffectiveDescription         *string          `json:"studyEffectiveDescription,omitempty"`
-	StudyEffectiveTimeFromStart       *Duration        `json:"studyEffectiveTimeFromStart,omitempty"`
-	StudyEffectiveGroupMeasure        *GroupMeasure    `json:"studyEffectiveGroupMeasure,omitempty"`
-	ParticipantEffectiveDescription   *string          `json:"participantEffectiveDescription,omitempty"`
-	ParticipantEffectiveTimeFromStart *Duration        `json:"participantEffectiveTimeFromStart,omitempty"`
-	ParticipantEffectiveGroupMeasure  *GroupMeasure    `json:"participantEffectiveGroupMeasure,omitempty"`
+	Id                                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension                         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension                 []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	UsageContext                      []UsageContext   `bson:"usageContext,omitempty" json:"usageContext,omitempty"`
+	Exclude                           *bool            `bson:"exclude,omitempty" json:"exclude,omitempty"`
+	UnitOfMeasure                     *CodeableConcept `bson:"unitOfMeasure,omitempty" json:"unitOfMeasure,omitempty"`
+	StudyEffectiveDescription         *string          `bson:"studyEffectiveDescription,omitempty" json:"studyEffectiveDescription,omitempty"`
+	StudyEffectiveTimeFromStart       *Duration        `bson:"studyEffectiveTimeFromStart,omitempty" json:"studyEffectiveTimeFromStart,omitempty"`
+	StudyEffectiveGroupMeasure        *GroupMeasure    `bson:"studyEffectiveGroupMeasure,omitempty" json:"studyEffectiveGroupMeasure,omitempty"`
+	ParticipantEffectiveDescription   *string          `bson:"participantEffectiveDescription,omitempty" json:"participantEffectiveDescription,omitempty"`
+	ParticipantEffectiveTimeFromStart *Duration        `bson:"participantEffectiveTimeFromStart,omitempty" json:"participantEffectiveTimeFromStart,omitempty"`
+	ParticipantEffectiveGroupMeasure  *GroupMeasure    `bson:"participantEffectiveGroupMeasure,omitempty" json:"participantEffectiveGroupMeasure,omitempty"`
 }
 type OtherResearchElementDefinition ResearchElementDefinition
 

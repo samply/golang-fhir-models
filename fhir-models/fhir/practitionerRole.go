@@ -21,43 +21,43 @@ import "encoding/json"
 
 // PractitionerRole is documented here http://hl7.org/fhir/StructureDefinition/PractitionerRole
 type PractitionerRole struct {
-	Id                     *string                         `json:"id,omitempty"`
-	Meta                   *Meta                           `json:"meta,omitempty"`
-	ImplicitRules          *string                         `json:"implicitRules,omitempty"`
-	Language               *string                         `json:"language,omitempty"`
-	Text                   *Narrative                      `json:"text,omitempty"`
-	Extension              []Extension                     `json:"extension,omitempty"`
-	ModifierExtension      []Extension                     `json:"modifierExtension,omitempty"`
-	Identifier             []Identifier                    `json:"identifier,omitempty"`
-	Active                 *bool                           `json:"active,omitempty"`
-	Period                 *Period                         `json:"period,omitempty"`
-	Practitioner           *Reference                      `json:"practitioner,omitempty"`
-	Organization           *Reference                      `json:"organization,omitempty"`
-	Code                   []CodeableConcept               `json:"code,omitempty"`
-	Specialty              []CodeableConcept               `json:"specialty,omitempty"`
-	Location               []Reference                     `json:"location,omitempty"`
-	HealthcareService      []Reference                     `json:"healthcareService,omitempty"`
-	Telecom                []ContactPoint                  `json:"telecom,omitempty"`
-	AvailableTime          []PractitionerRoleAvailableTime `json:"availableTime,omitempty"`
-	NotAvailable           []PractitionerRoleNotAvailable  `json:"notAvailable,omitempty"`
-	AvailabilityExceptions *string                         `json:"availabilityExceptions,omitempty"`
-	Endpoint               []Reference                     `json:"endpoint,omitempty"`
+	Id                     *string                         `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                   *Meta                           `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules          *string                         `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language               *string                         `bson:"language,omitempty" json:"language,omitempty"`
+	Text                   *Narrative                      `bson:"text,omitempty" json:"text,omitempty"`
+	Extension              []Extension                     `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension      []Extension                     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier             []Identifier                    `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Active                 *bool                           `bson:"active,omitempty" json:"active,omitempty"`
+	Period                 *Period                         `bson:"period,omitempty" json:"period,omitempty"`
+	Practitioner           *Reference                      `bson:"practitioner,omitempty" json:"practitioner,omitempty"`
+	Organization           *Reference                      `bson:"organization,omitempty" json:"organization,omitempty"`
+	Code                   []CodeableConcept               `bson:"code,omitempty" json:"code,omitempty"`
+	Specialty              []CodeableConcept               `bson:"specialty,omitempty" json:"specialty,omitempty"`
+	Location               []Reference                     `bson:"location,omitempty" json:"location,omitempty"`
+	HealthcareService      []Reference                     `bson:"healthcareService,omitempty" json:"healthcareService,omitempty"`
+	Telecom                []ContactPoint                  `bson:"telecom,omitempty" json:"telecom,omitempty"`
+	AvailableTime          []PractitionerRoleAvailableTime `bson:"availableTime,omitempty" json:"availableTime,omitempty"`
+	NotAvailable           []PractitionerRoleNotAvailable  `bson:"notAvailable,omitempty" json:"notAvailable,omitempty"`
+	AvailabilityExceptions *string                         `bson:"availabilityExceptions,omitempty" json:"availabilityExceptions,omitempty"`
+	Endpoint               []Reference                     `bson:"endpoint,omitempty" json:"endpoint,omitempty"`
 }
 type PractitionerRoleAvailableTime struct {
-	Id                 *string      `json:"id,omitempty"`
-	Extension          []Extension  `json:"extension,omitempty"`
-	ModifierExtension  []Extension  `json:"modifierExtension,omitempty"`
-	DaysOfWeek         []DaysOfWeek `json:"daysOfWeek,omitempty"`
-	AllDay             *bool        `json:"allDay,omitempty"`
-	AvailableStartTime *string      `json:"availableStartTime,omitempty"`
-	AvailableEndTime   *string      `json:"availableEndTime,omitempty"`
+	Id                 *string      `bson:"id,omitempty" json:"id,omitempty"`
+	Extension          []Extension  `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension  []Extension  `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	DaysOfWeek         []DaysOfWeek `bson:"daysOfWeek,omitempty" json:"daysOfWeek,omitempty"`
+	AllDay             *bool        `bson:"allDay,omitempty" json:"allDay,omitempty"`
+	AvailableStartTime *string      `bson:"availableStartTime,omitempty" json:"availableStartTime,omitempty"`
+	AvailableEndTime   *string      `bson:"availableEndTime,omitempty" json:"availableEndTime,omitempty"`
 }
 type PractitionerRoleNotAvailable struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Description       string      `json:"description"`
-	During            *Period     `json:"during,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Description       string      `bson:"description" json:"description"`
+	During            *Period     `bson:"during,omitempty" json:"during,omitempty"`
 }
 type OtherPractitionerRole PractitionerRole
 

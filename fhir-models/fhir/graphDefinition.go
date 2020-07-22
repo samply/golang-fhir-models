@@ -21,59 +21,59 @@ import "encoding/json"
 
 // GraphDefinition is documented here http://hl7.org/fhir/StructureDefinition/GraphDefinition
 type GraphDefinition struct {
-	Id                *string               `json:"id,omitempty"`
-	Meta              *Meta                 `json:"meta,omitempty"`
-	ImplicitRules     *string               `json:"implicitRules,omitempty"`
-	Language          *string               `json:"language,omitempty"`
-	Text              *Narrative            `json:"text,omitempty"`
-	Extension         []Extension           `json:"extension,omitempty"`
-	ModifierExtension []Extension           `json:"modifierExtension,omitempty"`
-	Url               *string               `json:"url,omitempty"`
-	Version           *string               `json:"version,omitempty"`
-	Name              string                `json:"name"`
-	Status            PublicationStatus     `json:"status"`
-	Experimental      *bool                 `json:"experimental,omitempty"`
-	Date              *string               `json:"date,omitempty"`
-	Publisher         *string               `json:"publisher,omitempty"`
-	Contact           []ContactDetail       `json:"contact,omitempty"`
-	Description       *string               `json:"description,omitempty"`
-	UseContext        []UsageContext        `json:"useContext,omitempty"`
-	Jurisdiction      []CodeableConcept     `json:"jurisdiction,omitempty"`
-	Purpose           *string               `json:"purpose,omitempty"`
-	Start             ResourceType          `json:"start"`
-	Profile           *string               `json:"profile,omitempty"`
-	Link              []GraphDefinitionLink `json:"link,omitempty"`
+	Id                *string               `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta                 `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string               `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string               `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative            `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension           `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension           `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Url               *string               `bson:"url,omitempty" json:"url,omitempty"`
+	Version           *string               `bson:"version,omitempty" json:"version,omitempty"`
+	Name              string                `bson:"name" json:"name"`
+	Status            PublicationStatus     `bson:"status" json:"status"`
+	Experimental      *bool                 `bson:"experimental,omitempty" json:"experimental,omitempty"`
+	Date              *string               `bson:"date,omitempty" json:"date,omitempty"`
+	Publisher         *string               `bson:"publisher,omitempty" json:"publisher,omitempty"`
+	Contact           []ContactDetail       `bson:"contact,omitempty" json:"contact,omitempty"`
+	Description       *string               `bson:"description,omitempty" json:"description,omitempty"`
+	UseContext        []UsageContext        `bson:"useContext,omitempty" json:"useContext,omitempty"`
+	Jurisdiction      []CodeableConcept     `bson:"jurisdiction,omitempty" json:"jurisdiction,omitempty"`
+	Purpose           *string               `bson:"purpose,omitempty" json:"purpose,omitempty"`
+	Start             ResourceType          `bson:"start" json:"start"`
+	Profile           *string               `bson:"profile,omitempty" json:"profile,omitempty"`
+	Link              []GraphDefinitionLink `bson:"link,omitempty" json:"link,omitempty"`
 }
 type GraphDefinitionLink struct {
-	Id                *string                     `json:"id,omitempty"`
-	Extension         []Extension                 `json:"extension,omitempty"`
-	ModifierExtension []Extension                 `json:"modifierExtension,omitempty"`
-	Path              *string                     `json:"path,omitempty"`
-	SliceName         *string                     `json:"sliceName,omitempty"`
-	Min               *int                        `json:"min,omitempty"`
-	Max               *string                     `json:"max,omitempty"`
-	Description       *string                     `json:"description,omitempty"`
-	Target            []GraphDefinitionLinkTarget `json:"target,omitempty"`
+	Id                *string                     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                 `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                 `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Path              *string                     `bson:"path,omitempty" json:"path,omitempty"`
+	SliceName         *string                     `bson:"sliceName,omitempty" json:"sliceName,omitempty"`
+	Min               *int                        `bson:"min,omitempty" json:"min,omitempty"`
+	Max               *string                     `bson:"max,omitempty" json:"max,omitempty"`
+	Description       *string                     `bson:"description,omitempty" json:"description,omitempty"`
+	Target            []GraphDefinitionLinkTarget `bson:"target,omitempty" json:"target,omitempty"`
 }
 type GraphDefinitionLinkTarget struct {
-	Id                *string                                `json:"id,omitempty"`
-	Extension         []Extension                            `json:"extension,omitempty"`
-	ModifierExtension []Extension                            `json:"modifierExtension,omitempty"`
-	Type              ResourceType                           `json:"type"`
-	Params            *string                                `json:"params,omitempty"`
-	Profile           *string                                `json:"profile,omitempty"`
-	Compartment       []GraphDefinitionLinkTargetCompartment `json:"compartment,omitempty"`
-	Link              []GraphDefinitionLink                  `json:"link,omitempty"`
+	Id                *string                                `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                            `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                            `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Type              ResourceType                           `bson:"type" json:"type"`
+	Params            *string                                `bson:"params,omitempty" json:"params,omitempty"`
+	Profile           *string                                `bson:"profile,omitempty" json:"profile,omitempty"`
+	Compartment       []GraphDefinitionLinkTargetCompartment `bson:"compartment,omitempty" json:"compartment,omitempty"`
+	Link              []GraphDefinitionLink                  `bson:"link,omitempty" json:"link,omitempty"`
 }
 type GraphDefinitionLinkTargetCompartment struct {
-	Id                *string              `json:"id,omitempty"`
-	Extension         []Extension          `json:"extension,omitempty"`
-	ModifierExtension []Extension          `json:"modifierExtension,omitempty"`
-	Use               GraphCompartmentUse  `json:"use"`
-	Code              CompartmentType      `json:"code"`
-	Rule              GraphCompartmentRule `json:"rule"`
-	Expression        *string              `json:"expression,omitempty"`
-	Description       *string              `json:"description,omitempty"`
+	Id                *string              `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension          `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension          `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Use               GraphCompartmentUse  `bson:"use" json:"use"`
+	Code              CompartmentType      `bson:"code" json:"code"`
+	Rule              GraphCompartmentRule `bson:"rule" json:"rule"`
+	Expression        *string              `bson:"expression,omitempty" json:"expression,omitempty"`
+	Description       *string              `bson:"description,omitempty" json:"description,omitempty"`
 }
 type OtherGraphDefinition GraphDefinition
 

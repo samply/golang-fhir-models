@@ -21,54 +21,54 @@ import "encoding/json"
 
 // Specimen is documented here http://hl7.org/fhir/StructureDefinition/Specimen
 type Specimen struct {
-	Id                  *string              `json:"id,omitempty"`
-	Meta                *Meta                `json:"meta,omitempty"`
-	ImplicitRules       *string              `json:"implicitRules,omitempty"`
-	Language            *string              `json:"language,omitempty"`
-	Text                *Narrative           `json:"text,omitempty"`
-	Extension           []Extension          `json:"extension,omitempty"`
-	ModifierExtension   []Extension          `json:"modifierExtension,omitempty"`
-	Identifier          []Identifier         `json:"identifier,omitempty"`
-	AccessionIdentifier *Identifier          `json:"accessionIdentifier,omitempty"`
-	Status              *SpecimenStatus      `json:"status,omitempty"`
-	Type                *CodeableConcept     `json:"type,omitempty"`
-	Subject             *Reference           `json:"subject,omitempty"`
-	ReceivedTime        *string              `json:"receivedTime,omitempty"`
-	Parent              []Reference          `json:"parent,omitempty"`
-	Request             []Reference          `json:"request,omitempty"`
-	Collection          *SpecimenCollection  `json:"collection,omitempty"`
-	Processing          []SpecimenProcessing `json:"processing,omitempty"`
-	Container           []SpecimenContainer  `json:"container,omitempty"`
-	Condition           []CodeableConcept    `json:"condition,omitempty"`
-	Note                []Annotation         `json:"note,omitempty"`
+	Id                  *string              `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                *Meta                `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules       *string              `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language            *string              `bson:"language,omitempty" json:"language,omitempty"`
+	Text                *Narrative           `bson:"text,omitempty" json:"text,omitempty"`
+	Extension           []Extension          `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension   []Extension          `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier          []Identifier         `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	AccessionIdentifier *Identifier          `bson:"accessionIdentifier,omitempty" json:"accessionIdentifier,omitempty"`
+	Status              *SpecimenStatus      `bson:"status,omitempty" json:"status,omitempty"`
+	Type                *CodeableConcept     `bson:"type,omitempty" json:"type,omitempty"`
+	Subject             *Reference           `bson:"subject,omitempty" json:"subject,omitempty"`
+	ReceivedTime        *string              `bson:"receivedTime,omitempty" json:"receivedTime,omitempty"`
+	Parent              []Reference          `bson:"parent,omitempty" json:"parent,omitempty"`
+	Request             []Reference          `bson:"request,omitempty" json:"request,omitempty"`
+	Collection          *SpecimenCollection  `bson:"collection,omitempty" json:"collection,omitempty"`
+	Processing          []SpecimenProcessing `bson:"processing,omitempty" json:"processing,omitempty"`
+	Container           []SpecimenContainer  `bson:"container,omitempty" json:"container,omitempty"`
+	Condition           []CodeableConcept    `bson:"condition,omitempty" json:"condition,omitempty"`
+	Note                []Annotation         `bson:"note,omitempty" json:"note,omitempty"`
 }
 type SpecimenCollection struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Collector         *Reference       `json:"collector,omitempty"`
-	Duration          *Duration        `json:"duration,omitempty"`
-	Quantity          *Quantity        `json:"quantity,omitempty"`
-	Method            *CodeableConcept `json:"method,omitempty"`
-	BodySite          *CodeableConcept `json:"bodySite,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Collector         *Reference       `bson:"collector,omitempty" json:"collector,omitempty"`
+	Duration          *Duration        `bson:"duration,omitempty" json:"duration,omitempty"`
+	Quantity          *Quantity        `bson:"quantity,omitempty" json:"quantity,omitempty"`
+	Method            *CodeableConcept `bson:"method,omitempty" json:"method,omitempty"`
+	BodySite          *CodeableConcept `bson:"bodySite,omitempty" json:"bodySite,omitempty"`
 }
 type SpecimenProcessing struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Description       *string          `json:"description,omitempty"`
-	Procedure         *CodeableConcept `json:"procedure,omitempty"`
-	Additive          []Reference      `json:"additive,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Description       *string          `bson:"description,omitempty" json:"description,omitempty"`
+	Procedure         *CodeableConcept `bson:"procedure,omitempty" json:"procedure,omitempty"`
+	Additive          []Reference      `bson:"additive,omitempty" json:"additive,omitempty"`
 }
 type SpecimenContainer struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Identifier        []Identifier     `json:"identifier,omitempty"`
-	Description       *string          `json:"description,omitempty"`
-	Type              *CodeableConcept `json:"type,omitempty"`
-	Capacity          *Quantity        `json:"capacity,omitempty"`
-	SpecimenQuantity  *Quantity        `json:"specimenQuantity,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        []Identifier     `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Description       *string          `bson:"description,omitempty" json:"description,omitempty"`
+	Type              *CodeableConcept `bson:"type,omitempty" json:"type,omitempty"`
+	Capacity          *Quantity        `bson:"capacity,omitempty" json:"capacity,omitempty"`
+	SpecimenQuantity  *Quantity        `bson:"specimenQuantity,omitempty" json:"specimenQuantity,omitempty"`
 }
 type OtherSpecimen Specimen
 

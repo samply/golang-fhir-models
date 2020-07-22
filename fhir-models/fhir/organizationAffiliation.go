@@ -21,25 +21,25 @@ import "encoding/json"
 
 // OrganizationAffiliation is documented here http://hl7.org/fhir/StructureDefinition/OrganizationAffiliation
 type OrganizationAffiliation struct {
-	Id                        *string           `json:"id,omitempty"`
-	Meta                      *Meta             `json:"meta,omitempty"`
-	ImplicitRules             *string           `json:"implicitRules,omitempty"`
-	Language                  *string           `json:"language,omitempty"`
-	Text                      *Narrative        `json:"text,omitempty"`
-	Extension                 []Extension       `json:"extension,omitempty"`
-	ModifierExtension         []Extension       `json:"modifierExtension,omitempty"`
-	Identifier                []Identifier      `json:"identifier,omitempty"`
-	Active                    *bool             `json:"active,omitempty"`
-	Period                    *Period           `json:"period,omitempty"`
-	Organization              *Reference        `json:"organization,omitempty"`
-	ParticipatingOrganization *Reference        `json:"participatingOrganization,omitempty"`
-	Network                   []Reference       `json:"network,omitempty"`
-	Code                      []CodeableConcept `json:"code,omitempty"`
-	Specialty                 []CodeableConcept `json:"specialty,omitempty"`
-	Location                  []Reference       `json:"location,omitempty"`
-	HealthcareService         []Reference       `json:"healthcareService,omitempty"`
-	Telecom                   []ContactPoint    `json:"telecom,omitempty"`
-	Endpoint                  []Reference       `json:"endpoint,omitempty"`
+	Id                        *string           `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                      *Meta             `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules             *string           `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language                  *string           `bson:"language,omitempty" json:"language,omitempty"`
+	Text                      *Narrative        `bson:"text,omitempty" json:"text,omitempty"`
+	Extension                 []Extension       `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension         []Extension       `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier                []Identifier      `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Active                    *bool             `bson:"active,omitempty" json:"active,omitempty"`
+	Period                    *Period           `bson:"period,omitempty" json:"period,omitempty"`
+	Organization              *Reference        `bson:"organization,omitempty" json:"organization,omitempty"`
+	ParticipatingOrganization *Reference        `bson:"participatingOrganization,omitempty" json:"participatingOrganization,omitempty"`
+	Network                   []Reference       `bson:"network,omitempty" json:"network,omitempty"`
+	Code                      []CodeableConcept `bson:"code,omitempty" json:"code,omitempty"`
+	Specialty                 []CodeableConcept `bson:"specialty,omitempty" json:"specialty,omitempty"`
+	Location                  []Reference       `bson:"location,omitempty" json:"location,omitempty"`
+	HealthcareService         []Reference       `bson:"healthcareService,omitempty" json:"healthcareService,omitempty"`
+	Telecom                   []ContactPoint    `bson:"telecom,omitempty" json:"telecom,omitempty"`
+	Endpoint                  []Reference       `bson:"endpoint,omitempty" json:"endpoint,omitempty"`
 }
 type OtherOrganizationAffiliation OrganizationAffiliation
 

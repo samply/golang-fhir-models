@@ -21,208 +21,208 @@ import "encoding/json"
 
 // Contract is documented here http://hl7.org/fhir/StructureDefinition/Contract
 type Contract struct {
-	Id                    *string                      `json:"id,omitempty"`
-	Meta                  *Meta                        `json:"meta,omitempty"`
-	ImplicitRules         *string                      `json:"implicitRules,omitempty"`
-	Language              *string                      `json:"language,omitempty"`
-	Text                  *Narrative                   `json:"text,omitempty"`
-	Extension             []Extension                  `json:"extension,omitempty"`
-	ModifierExtension     []Extension                  `json:"modifierExtension,omitempty"`
-	Identifier            []Identifier                 `json:"identifier,omitempty"`
-	Url                   *string                      `json:"url,omitempty"`
-	Version               *string                      `json:"version,omitempty"`
-	Status                *ContractResourceStatusCodes `json:"status,omitempty"`
-	LegalState            *CodeableConcept             `json:"legalState,omitempty"`
-	InstantiatesCanonical *Reference                   `json:"instantiatesCanonical,omitempty"`
-	InstantiatesUri       *string                      `json:"instantiatesUri,omitempty"`
-	ContentDerivative     *CodeableConcept             `json:"contentDerivative,omitempty"`
-	Issued                *string                      `json:"issued,omitempty"`
-	Applies               *Period                      `json:"applies,omitempty"`
-	ExpirationType        *CodeableConcept             `json:"expirationType,omitempty"`
-	Subject               []Reference                  `json:"subject,omitempty"`
-	Authority             []Reference                  `json:"authority,omitempty"`
-	Domain                []Reference                  `json:"domain,omitempty"`
-	Site                  []Reference                  `json:"site,omitempty"`
-	Name                  *string                      `json:"name,omitempty"`
-	Title                 *string                      `json:"title,omitempty"`
-	Subtitle              *string                      `json:"subtitle,omitempty"`
-	Alias                 []string                     `json:"alias,omitempty"`
-	Author                *Reference                   `json:"author,omitempty"`
-	Scope                 *CodeableConcept             `json:"scope,omitempty"`
-	Type                  *CodeableConcept             `json:"type,omitempty"`
-	SubType               []CodeableConcept            `json:"subType,omitempty"`
-	ContentDefinition     *ContractContentDefinition   `json:"contentDefinition,omitempty"`
-	Term                  []ContractTerm               `json:"term,omitempty"`
-	SupportingInfo        []Reference                  `json:"supportingInfo,omitempty"`
-	RelevantHistory       []Reference                  `json:"relevantHistory,omitempty"`
-	Signer                []ContractSigner             `json:"signer,omitempty"`
-	Friendly              []ContractFriendly           `json:"friendly,omitempty"`
-	Legal                 []ContractLegal              `json:"legal,omitempty"`
-	Rule                  []ContractRule               `json:"rule,omitempty"`
+	Id                    *string                      `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                  *Meta                        `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules         *string                      `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language              *string                      `bson:"language,omitempty" json:"language,omitempty"`
+	Text                  *Narrative                   `bson:"text,omitempty" json:"text,omitempty"`
+	Extension             []Extension                  `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension     []Extension                  `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier            []Identifier                 `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Url                   *string                      `bson:"url,omitempty" json:"url,omitempty"`
+	Version               *string                      `bson:"version,omitempty" json:"version,omitempty"`
+	Status                *ContractResourceStatusCodes `bson:"status,omitempty" json:"status,omitempty"`
+	LegalState            *CodeableConcept             `bson:"legalState,omitempty" json:"legalState,omitempty"`
+	InstantiatesCanonical *Reference                   `bson:"instantiatesCanonical,omitempty" json:"instantiatesCanonical,omitempty"`
+	InstantiatesUri       *string                      `bson:"instantiatesUri,omitempty" json:"instantiatesUri,omitempty"`
+	ContentDerivative     *CodeableConcept             `bson:"contentDerivative,omitempty" json:"contentDerivative,omitempty"`
+	Issued                *string                      `bson:"issued,omitempty" json:"issued,omitempty"`
+	Applies               *Period                      `bson:"applies,omitempty" json:"applies,omitempty"`
+	ExpirationType        *CodeableConcept             `bson:"expirationType,omitempty" json:"expirationType,omitempty"`
+	Subject               []Reference                  `bson:"subject,omitempty" json:"subject,omitempty"`
+	Authority             []Reference                  `bson:"authority,omitempty" json:"authority,omitempty"`
+	Domain                []Reference                  `bson:"domain,omitempty" json:"domain,omitempty"`
+	Site                  []Reference                  `bson:"site,omitempty" json:"site,omitempty"`
+	Name                  *string                      `bson:"name,omitempty" json:"name,omitempty"`
+	Title                 *string                      `bson:"title,omitempty" json:"title,omitempty"`
+	Subtitle              *string                      `bson:"subtitle,omitempty" json:"subtitle,omitempty"`
+	Alias                 []string                     `bson:"alias,omitempty" json:"alias,omitempty"`
+	Author                *Reference                   `bson:"author,omitempty" json:"author,omitempty"`
+	Scope                 *CodeableConcept             `bson:"scope,omitempty" json:"scope,omitempty"`
+	Type                  *CodeableConcept             `bson:"type,omitempty" json:"type,omitempty"`
+	SubType               []CodeableConcept            `bson:"subType,omitempty" json:"subType,omitempty"`
+	ContentDefinition     *ContractContentDefinition   `bson:"contentDefinition,omitempty" json:"contentDefinition,omitempty"`
+	Term                  []ContractTerm               `bson:"term,omitempty" json:"term,omitempty"`
+	SupportingInfo        []Reference                  `bson:"supportingInfo,omitempty" json:"supportingInfo,omitempty"`
+	RelevantHistory       []Reference                  `bson:"relevantHistory,omitempty" json:"relevantHistory,omitempty"`
+	Signer                []ContractSigner             `bson:"signer,omitempty" json:"signer,omitempty"`
+	Friendly              []ContractFriendly           `bson:"friendly,omitempty" json:"friendly,omitempty"`
+	Legal                 []ContractLegal              `bson:"legal,omitempty" json:"legal,omitempty"`
+	Rule                  []ContractRule               `bson:"rule,omitempty" json:"rule,omitempty"`
 }
 type ContractContentDefinition struct {
-	Id                *string                                `json:"id,omitempty"`
-	Extension         []Extension                            `json:"extension,omitempty"`
-	ModifierExtension []Extension                            `json:"modifierExtension,omitempty"`
-	Type              CodeableConcept                        `json:"type"`
-	SubType           *CodeableConcept                       `json:"subType,omitempty"`
-	Publisher         *Reference                             `json:"publisher,omitempty"`
-	PublicationDate   *string                                `json:"publicationDate,omitempty"`
-	PublicationStatus ContractResourcePublicationStatusCodes `json:"publicationStatus"`
-	Copyright         *string                                `json:"copyright,omitempty"`
+	Id                *string                                `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                            `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                            `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Type              CodeableConcept                        `bson:"type" json:"type"`
+	SubType           *CodeableConcept                       `bson:"subType,omitempty" json:"subType,omitempty"`
+	Publisher         *Reference                             `bson:"publisher,omitempty" json:"publisher,omitempty"`
+	PublicationDate   *string                                `bson:"publicationDate,omitempty" json:"publicationDate,omitempty"`
+	PublicationStatus ContractResourcePublicationStatusCodes `bson:"publicationStatus" json:"publicationStatus"`
+	Copyright         *string                                `bson:"copyright,omitempty" json:"copyright,omitempty"`
 }
 type ContractTerm struct {
-	Id                *string                     `json:"id,omitempty"`
-	Extension         []Extension                 `json:"extension,omitempty"`
-	ModifierExtension []Extension                 `json:"modifierExtension,omitempty"`
-	Identifier        *Identifier                 `json:"identifier,omitempty"`
-	Issued            *string                     `json:"issued,omitempty"`
-	Applies           *Period                     `json:"applies,omitempty"`
-	Type              *CodeableConcept            `json:"type,omitempty"`
-	SubType           *CodeableConcept            `json:"subType,omitempty"`
-	Text              *string                     `json:"text,omitempty"`
-	SecurityLabel     []ContractTermSecurityLabel `json:"securityLabel,omitempty"`
-	Offer             ContractTermOffer           `json:"offer"`
-	Asset             []ContractTermAsset         `json:"asset,omitempty"`
-	Action            []ContractTermAction        `json:"action,omitempty"`
-	Group             []ContractTerm              `json:"group,omitempty"`
+	Id                *string                     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                 `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                 `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        *Identifier                 `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Issued            *string                     `bson:"issued,omitempty" json:"issued,omitempty"`
+	Applies           *Period                     `bson:"applies,omitempty" json:"applies,omitempty"`
+	Type              *CodeableConcept            `bson:"type,omitempty" json:"type,omitempty"`
+	SubType           *CodeableConcept            `bson:"subType,omitempty" json:"subType,omitempty"`
+	Text              *string                     `bson:"text,omitempty" json:"text,omitempty"`
+	SecurityLabel     []ContractTermSecurityLabel `bson:"securityLabel,omitempty" json:"securityLabel,omitempty"`
+	Offer             ContractTermOffer           `bson:"offer" json:"offer"`
+	Asset             []ContractTermAsset         `bson:"asset,omitempty" json:"asset,omitempty"`
+	Action            []ContractTermAction        `bson:"action,omitempty" json:"action,omitempty"`
+	Group             []ContractTerm              `bson:"group,omitempty" json:"group,omitempty"`
 }
 type ContractTermSecurityLabel struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Number            []int       `json:"number,omitempty"`
-	Classification    Coding      `json:"classification"`
-	Category          []Coding    `json:"category,omitempty"`
-	Control           []Coding    `json:"control,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Number            []int       `bson:"number,omitempty" json:"number,omitempty"`
+	Classification    Coding      `bson:"classification" json:"classification"`
+	Category          []Coding    `bson:"category,omitempty" json:"category,omitempty"`
+	Control           []Coding    `bson:"control,omitempty" json:"control,omitempty"`
 }
 type ContractTermOffer struct {
-	Id                  *string                   `json:"id,omitempty"`
-	Extension           []Extension               `json:"extension,omitempty"`
-	ModifierExtension   []Extension               `json:"modifierExtension,omitempty"`
-	Identifier          []Identifier              `json:"identifier,omitempty"`
-	Party               []ContractTermOfferParty  `json:"party,omitempty"`
-	Topic               *Reference                `json:"topic,omitempty"`
-	Type                *CodeableConcept          `json:"type,omitempty"`
-	Decision            *CodeableConcept          `json:"decision,omitempty"`
-	DecisionMode        []CodeableConcept         `json:"decisionMode,omitempty"`
-	Answer              []ContractTermOfferAnswer `json:"answer,omitempty"`
-	Text                *string                   `json:"text,omitempty"`
-	LinkId              []string                  `json:"linkId,omitempty"`
-	SecurityLabelNumber []int                     `json:"securityLabelNumber,omitempty"`
+	Id                  *string                   `bson:"id,omitempty" json:"id,omitempty"`
+	Extension           []Extension               `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension   []Extension               `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier          []Identifier              `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Party               []ContractTermOfferParty  `bson:"party,omitempty" json:"party,omitempty"`
+	Topic               *Reference                `bson:"topic,omitempty" json:"topic,omitempty"`
+	Type                *CodeableConcept          `bson:"type,omitempty" json:"type,omitempty"`
+	Decision            *CodeableConcept          `bson:"decision,omitempty" json:"decision,omitempty"`
+	DecisionMode        []CodeableConcept         `bson:"decisionMode,omitempty" json:"decisionMode,omitempty"`
+	Answer              []ContractTermOfferAnswer `bson:"answer,omitempty" json:"answer,omitempty"`
+	Text                *string                   `bson:"text,omitempty" json:"text,omitempty"`
+	LinkId              []string                  `bson:"linkId,omitempty" json:"linkId,omitempty"`
+	SecurityLabelNumber []int                     `bson:"securityLabelNumber,omitempty" json:"securityLabelNumber,omitempty"`
 }
 type ContractTermOfferParty struct {
-	Id                *string         `json:"id,omitempty"`
-	Extension         []Extension     `json:"extension,omitempty"`
-	ModifierExtension []Extension     `json:"modifierExtension,omitempty"`
-	Reference         []Reference     `json:"reference"`
-	Role              CodeableConcept `json:"role"`
+	Id                *string         `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension     `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Reference         []Reference     `bson:"reference" json:"reference"`
+	Role              CodeableConcept `bson:"role" json:"role"`
 }
 type ContractTermOfferAnswer struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 }
 type ContractTermAsset struct {
-	Id                  *string                       `json:"id,omitempty"`
-	Extension           []Extension                   `json:"extension,omitempty"`
-	ModifierExtension   []Extension                   `json:"modifierExtension,omitempty"`
-	Scope               *CodeableConcept              `json:"scope,omitempty"`
-	Type                []CodeableConcept             `json:"type,omitempty"`
-	TypeReference       []Reference                   `json:"typeReference,omitempty"`
-	Subtype             []CodeableConcept             `json:"subtype,omitempty"`
-	Relationship        *Coding                       `json:"relationship,omitempty"`
-	Context             []ContractTermAssetContext    `json:"context,omitempty"`
-	Condition           *string                       `json:"condition,omitempty"`
-	PeriodType          []CodeableConcept             `json:"periodType,omitempty"`
-	Period              []Period                      `json:"period,omitempty"`
-	UsePeriod           []Period                      `json:"usePeriod,omitempty"`
-	Text                *string                       `json:"text,omitempty"`
-	LinkId              []string                      `json:"linkId,omitempty"`
-	Answer              []ContractTermOfferAnswer     `json:"answer,omitempty"`
-	SecurityLabelNumber []int                         `json:"securityLabelNumber,omitempty"`
-	ValuedItem          []ContractTermAssetValuedItem `json:"valuedItem,omitempty"`
+	Id                  *string                       `bson:"id,omitempty" json:"id,omitempty"`
+	Extension           []Extension                   `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension   []Extension                   `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Scope               *CodeableConcept              `bson:"scope,omitempty" json:"scope,omitempty"`
+	Type                []CodeableConcept             `bson:"type,omitempty" json:"type,omitempty"`
+	TypeReference       []Reference                   `bson:"typeReference,omitempty" json:"typeReference,omitempty"`
+	Subtype             []CodeableConcept             `bson:"subtype,omitempty" json:"subtype,omitempty"`
+	Relationship        *Coding                       `bson:"relationship,omitempty" json:"relationship,omitempty"`
+	Context             []ContractTermAssetContext    `bson:"context,omitempty" json:"context,omitempty"`
+	Condition           *string                       `bson:"condition,omitempty" json:"condition,omitempty"`
+	PeriodType          []CodeableConcept             `bson:"periodType,omitempty" json:"periodType,omitempty"`
+	Period              []Period                      `bson:"period,omitempty" json:"period,omitempty"`
+	UsePeriod           []Period                      `bson:"usePeriod,omitempty" json:"usePeriod,omitempty"`
+	Text                *string                       `bson:"text,omitempty" json:"text,omitempty"`
+	LinkId              []string                      `bson:"linkId,omitempty" json:"linkId,omitempty"`
+	Answer              []ContractTermOfferAnswer     `bson:"answer,omitempty" json:"answer,omitempty"`
+	SecurityLabelNumber []int                         `bson:"securityLabelNumber,omitempty" json:"securityLabelNumber,omitempty"`
+	ValuedItem          []ContractTermAssetValuedItem `bson:"valuedItem,omitempty" json:"valuedItem,omitempty"`
 }
 type ContractTermAssetContext struct {
-	Id                *string           `json:"id,omitempty"`
-	Extension         []Extension       `json:"extension,omitempty"`
-	ModifierExtension []Extension       `json:"modifierExtension,omitempty"`
-	Reference         *Reference        `json:"reference,omitempty"`
-	Code              []CodeableConcept `json:"code,omitempty"`
-	Text              *string           `json:"text,omitempty"`
+	Id                *string           `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension       `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension       `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Reference         *Reference        `bson:"reference,omitempty" json:"reference,omitempty"`
+	Code              []CodeableConcept `bson:"code,omitempty" json:"code,omitempty"`
+	Text              *string           `bson:"text,omitempty" json:"text,omitempty"`
 }
 type ContractTermAssetValuedItem struct {
-	Id                  *string     `json:"id,omitempty"`
-	Extension           []Extension `json:"extension,omitempty"`
-	ModifierExtension   []Extension `json:"modifierExtension,omitempty"`
-	Identifier          *Identifier `json:"identifier,omitempty"`
-	EffectiveTime       *string     `json:"effectiveTime,omitempty"`
-	Quantity            *Quantity   `json:"quantity,omitempty"`
-	UnitPrice           *Money      `json:"unitPrice,omitempty"`
-	Factor              *string     `json:"factor,omitempty"`
-	Points              *string     `json:"points,omitempty"`
-	Net                 *Money      `json:"net,omitempty"`
-	Payment             *string     `json:"payment,omitempty"`
-	PaymentDate         *string     `json:"paymentDate,omitempty"`
-	Responsible         *Reference  `json:"responsible,omitempty"`
-	Recipient           *Reference  `json:"recipient,omitempty"`
-	LinkId              []string    `json:"linkId,omitempty"`
-	SecurityLabelNumber []int       `json:"securityLabelNumber,omitempty"`
+	Id                  *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension           []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension   []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier          *Identifier `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	EffectiveTime       *string     `bson:"effectiveTime,omitempty" json:"effectiveTime,omitempty"`
+	Quantity            *Quantity   `bson:"quantity,omitempty" json:"quantity,omitempty"`
+	UnitPrice           *Money      `bson:"unitPrice,omitempty" json:"unitPrice,omitempty"`
+	Factor              *string     `bson:"factor,omitempty" json:"factor,omitempty"`
+	Points              *string     `bson:"points,omitempty" json:"points,omitempty"`
+	Net                 *Money      `bson:"net,omitempty" json:"net,omitempty"`
+	Payment             *string     `bson:"payment,omitempty" json:"payment,omitempty"`
+	PaymentDate         *string     `bson:"paymentDate,omitempty" json:"paymentDate,omitempty"`
+	Responsible         *Reference  `bson:"responsible,omitempty" json:"responsible,omitempty"`
+	Recipient           *Reference  `bson:"recipient,omitempty" json:"recipient,omitempty"`
+	LinkId              []string    `bson:"linkId,omitempty" json:"linkId,omitempty"`
+	SecurityLabelNumber []int       `bson:"securityLabelNumber,omitempty" json:"securityLabelNumber,omitempty"`
 }
 type ContractTermAction struct {
-	Id                  *string                     `json:"id,omitempty"`
-	Extension           []Extension                 `json:"extension,omitempty"`
-	ModifierExtension   []Extension                 `json:"modifierExtension,omitempty"`
-	DoNotPerform        *bool                       `json:"doNotPerform,omitempty"`
-	Type                CodeableConcept             `json:"type"`
-	Subject             []ContractTermActionSubject `json:"subject,omitempty"`
-	Intent              CodeableConcept             `json:"intent"`
-	LinkId              []string                    `json:"linkId,omitempty"`
-	Status              CodeableConcept             `json:"status"`
-	Context             *Reference                  `json:"context,omitempty"`
-	ContextLinkId       []string                    `json:"contextLinkId,omitempty"`
-	Requester           []Reference                 `json:"requester,omitempty"`
-	RequesterLinkId     []string                    `json:"requesterLinkId,omitempty"`
-	PerformerType       []CodeableConcept           `json:"performerType,omitempty"`
-	PerformerRole       *CodeableConcept            `json:"performerRole,omitempty"`
-	Performer           *Reference                  `json:"performer,omitempty"`
-	PerformerLinkId     []string                    `json:"performerLinkId,omitempty"`
-	ReasonCode          []CodeableConcept           `json:"reasonCode,omitempty"`
-	ReasonReference     []Reference                 `json:"reasonReference,omitempty"`
-	Reason              []string                    `json:"reason,omitempty"`
-	ReasonLinkId        []string                    `json:"reasonLinkId,omitempty"`
-	Note                []Annotation                `json:"note,omitempty"`
-	SecurityLabelNumber []int                       `json:"securityLabelNumber,omitempty"`
+	Id                  *string                     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension           []Extension                 `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension   []Extension                 `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	DoNotPerform        *bool                       `bson:"doNotPerform,omitempty" json:"doNotPerform,omitempty"`
+	Type                CodeableConcept             `bson:"type" json:"type"`
+	Subject             []ContractTermActionSubject `bson:"subject,omitempty" json:"subject,omitempty"`
+	Intent              CodeableConcept             `bson:"intent" json:"intent"`
+	LinkId              []string                    `bson:"linkId,omitempty" json:"linkId,omitempty"`
+	Status              CodeableConcept             `bson:"status" json:"status"`
+	Context             *Reference                  `bson:"context,omitempty" json:"context,omitempty"`
+	ContextLinkId       []string                    `bson:"contextLinkId,omitempty" json:"contextLinkId,omitempty"`
+	Requester           []Reference                 `bson:"requester,omitempty" json:"requester,omitempty"`
+	RequesterLinkId     []string                    `bson:"requesterLinkId,omitempty" json:"requesterLinkId,omitempty"`
+	PerformerType       []CodeableConcept           `bson:"performerType,omitempty" json:"performerType,omitempty"`
+	PerformerRole       *CodeableConcept            `bson:"performerRole,omitempty" json:"performerRole,omitempty"`
+	Performer           *Reference                  `bson:"performer,omitempty" json:"performer,omitempty"`
+	PerformerLinkId     []string                    `bson:"performerLinkId,omitempty" json:"performerLinkId,omitempty"`
+	ReasonCode          []CodeableConcept           `bson:"reasonCode,omitempty" json:"reasonCode,omitempty"`
+	ReasonReference     []Reference                 `bson:"reasonReference,omitempty" json:"reasonReference,omitempty"`
+	Reason              []string                    `bson:"reason,omitempty" json:"reason,omitempty"`
+	ReasonLinkId        []string                    `bson:"reasonLinkId,omitempty" json:"reasonLinkId,omitempty"`
+	Note                []Annotation                `bson:"note,omitempty" json:"note,omitempty"`
+	SecurityLabelNumber []int                       `bson:"securityLabelNumber,omitempty" json:"securityLabelNumber,omitempty"`
 }
 type ContractTermActionSubject struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Reference         []Reference      `json:"reference"`
-	Role              *CodeableConcept `json:"role,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Reference         []Reference      `bson:"reference" json:"reference"`
+	Role              *CodeableConcept `bson:"role,omitempty" json:"role,omitempty"`
 }
 type ContractSigner struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Type              Coding      `json:"type"`
-	Party             Reference   `json:"party"`
-	Signature         []Signature `json:"signature"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Type              Coding      `bson:"type" json:"type"`
+	Party             Reference   `bson:"party" json:"party"`
+	Signature         []Signature `bson:"signature" json:"signature"`
 }
 type ContractFriendly struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 }
 type ContractLegal struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 }
 type ContractRule struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 }
 type OtherContract Contract
 

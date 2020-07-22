@@ -19,16 +19,16 @@ package fhir
 
 // SubstanceAmount is documented here http://hl7.org/fhir/StructureDefinition/SubstanceAmount
 type SubstanceAmount struct {
-	Id                *string                        `json:"id,omitempty"`
-	Extension         []Extension                    `json:"extension,omitempty"`
-	ModifierExtension []Extension                    `json:"modifierExtension,omitempty"`
-	AmountType        *CodeableConcept               `json:"amountType,omitempty"`
-	AmountText        *string                        `json:"amountText,omitempty"`
-	ReferenceRange    *SubstanceAmountReferenceRange `json:"referenceRange,omitempty"`
+	Id                *string                        `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                    `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                    `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	AmountType        *CodeableConcept               `bson:"amountType,omitempty" json:"amountType,omitempty"`
+	AmountText        *string                        `bson:"amountText,omitempty" json:"amountText,omitempty"`
+	ReferenceRange    *SubstanceAmountReferenceRange `bson:"referenceRange,omitempty" json:"referenceRange,omitempty"`
 }
 type SubstanceAmountReferenceRange struct {
-	Id        *string     `json:"id,omitempty"`
-	Extension []Extension `json:"extension,omitempty"`
-	LowLimit  *Quantity   `json:"lowLimit,omitempty"`
-	HighLimit *Quantity   `json:"highLimit,omitempty"`
+	Id        *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	LowLimit  *Quantity   `bson:"lowLimit,omitempty" json:"lowLimit,omitempty"`
+	HighLimit *Quantity   `bson:"highLimit,omitempty" json:"highLimit,omitempty"`
 }

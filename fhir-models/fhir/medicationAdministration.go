@@ -21,47 +21,47 @@ import "encoding/json"
 
 // MedicationAdministration is documented here http://hl7.org/fhir/StructureDefinition/MedicationAdministration
 type MedicationAdministration struct {
-	Id                    *string                             `json:"id,omitempty"`
-	Meta                  *Meta                               `json:"meta,omitempty"`
-	ImplicitRules         *string                             `json:"implicitRules,omitempty"`
-	Language              *string                             `json:"language,omitempty"`
-	Text                  *Narrative                          `json:"text,omitempty"`
-	Extension             []Extension                         `json:"extension,omitempty"`
-	ModifierExtension     []Extension                         `json:"modifierExtension,omitempty"`
-	Identifier            []Identifier                        `json:"identifier,omitempty"`
-	Instantiates          []string                            `json:"instantiates,omitempty"`
-	PartOf                []Reference                         `json:"partOf,omitempty"`
-	Status                string                              `json:"status"`
-	StatusReason          []CodeableConcept                   `json:"statusReason,omitempty"`
-	Category              *CodeableConcept                    `json:"category,omitempty"`
-	Subject               Reference                           `json:"subject"`
-	Context               *Reference                          `json:"context,omitempty"`
-	SupportingInformation []Reference                         `json:"supportingInformation,omitempty"`
-	Performer             []MedicationAdministrationPerformer `json:"performer,omitempty"`
-	ReasonCode            []CodeableConcept                   `json:"reasonCode,omitempty"`
-	ReasonReference       []Reference                         `json:"reasonReference,omitempty"`
-	Request               *Reference                          `json:"request,omitempty"`
-	Device                []Reference                         `json:"device,omitempty"`
-	Note                  []Annotation                        `json:"note,omitempty"`
-	Dosage                *MedicationAdministrationDosage     `json:"dosage,omitempty"`
-	EventHistory          []Reference                         `json:"eventHistory,omitempty"`
+	Id                    *string                             `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                  *Meta                               `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules         *string                             `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language              *string                             `bson:"language,omitempty" json:"language,omitempty"`
+	Text                  *Narrative                          `bson:"text,omitempty" json:"text,omitempty"`
+	Extension             []Extension                         `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension     []Extension                         `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier            []Identifier                        `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Instantiates          []string                            `bson:"instantiates,omitempty" json:"instantiates,omitempty"`
+	PartOf                []Reference                         `bson:"partOf,omitempty" json:"partOf,omitempty"`
+	Status                string                              `bson:"status" json:"status"`
+	StatusReason          []CodeableConcept                   `bson:"statusReason,omitempty" json:"statusReason,omitempty"`
+	Category              *CodeableConcept                    `bson:"category,omitempty" json:"category,omitempty"`
+	Subject               Reference                           `bson:"subject" json:"subject"`
+	Context               *Reference                          `bson:"context,omitempty" json:"context,omitempty"`
+	SupportingInformation []Reference                         `bson:"supportingInformation,omitempty" json:"supportingInformation,omitempty"`
+	Performer             []MedicationAdministrationPerformer `bson:"performer,omitempty" json:"performer,omitempty"`
+	ReasonCode            []CodeableConcept                   `bson:"reasonCode,omitempty" json:"reasonCode,omitempty"`
+	ReasonReference       []Reference                         `bson:"reasonReference,omitempty" json:"reasonReference,omitempty"`
+	Request               *Reference                          `bson:"request,omitempty" json:"request,omitempty"`
+	Device                []Reference                         `bson:"device,omitempty" json:"device,omitempty"`
+	Note                  []Annotation                        `bson:"note,omitempty" json:"note,omitempty"`
+	Dosage                *MedicationAdministrationDosage     `bson:"dosage,omitempty" json:"dosage,omitempty"`
+	EventHistory          []Reference                         `bson:"eventHistory,omitempty" json:"eventHistory,omitempty"`
 }
 type MedicationAdministrationPerformer struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Function          *CodeableConcept `json:"function,omitempty"`
-	Actor             Reference        `json:"actor"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Function          *CodeableConcept `bson:"function,omitempty" json:"function,omitempty"`
+	Actor             Reference        `bson:"actor" json:"actor"`
 }
 type MedicationAdministrationDosage struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Text              *string          `json:"text,omitempty"`
-	Site              *CodeableConcept `json:"site,omitempty"`
-	Route             *CodeableConcept `json:"route,omitempty"`
-	Method            *CodeableConcept `json:"method,omitempty"`
-	Dose              *Quantity        `json:"dose,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Text              *string          `bson:"text,omitempty" json:"text,omitempty"`
+	Site              *CodeableConcept `bson:"site,omitempty" json:"site,omitempty"`
+	Route             *CodeableConcept `bson:"route,omitempty" json:"route,omitempty"`
+	Method            *CodeableConcept `bson:"method,omitempty" json:"method,omitempty"`
+	Dose              *Quantity        `bson:"dose,omitempty" json:"dose,omitempty"`
 }
 type OtherMedicationAdministration MedicationAdministration
 

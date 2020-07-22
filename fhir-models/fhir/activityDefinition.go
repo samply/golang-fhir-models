@@ -21,70 +21,70 @@ import "encoding/json"
 
 // ActivityDefinition is documented here http://hl7.org/fhir/StructureDefinition/ActivityDefinition
 type ActivityDefinition struct {
-	Id                           *string                          `json:"id,omitempty"`
-	Meta                         *Meta                            `json:"meta,omitempty"`
-	ImplicitRules                *string                          `json:"implicitRules,omitempty"`
-	Language                     *string                          `json:"language,omitempty"`
-	Text                         *Narrative                       `json:"text,omitempty"`
-	Extension                    []Extension                      `json:"extension,omitempty"`
-	ModifierExtension            []Extension                      `json:"modifierExtension,omitempty"`
-	Url                          *string                          `json:"url,omitempty"`
-	Identifier                   []Identifier                     `json:"identifier,omitempty"`
-	Version                      *string                          `json:"version,omitempty"`
-	Name                         *string                          `json:"name,omitempty"`
-	Title                        *string                          `json:"title,omitempty"`
-	Subtitle                     *string                          `json:"subtitle,omitempty"`
-	Status                       PublicationStatus                `json:"status"`
-	Experimental                 *bool                            `json:"experimental,omitempty"`
-	Date                         *string                          `json:"date,omitempty"`
-	Publisher                    *string                          `json:"publisher,omitempty"`
-	Contact                      []ContactDetail                  `json:"contact,omitempty"`
-	Description                  *string                          `json:"description,omitempty"`
-	UseContext                   []UsageContext                   `json:"useContext,omitempty"`
-	Jurisdiction                 []CodeableConcept                `json:"jurisdiction,omitempty"`
-	Purpose                      *string                          `json:"purpose,omitempty"`
-	Usage                        *string                          `json:"usage,omitempty"`
-	Copyright                    *string                          `json:"copyright,omitempty"`
-	ApprovalDate                 *string                          `json:"approvalDate,omitempty"`
-	LastReviewDate               *string                          `json:"lastReviewDate,omitempty"`
-	EffectivePeriod              *Period                          `json:"effectivePeriod,omitempty"`
-	Topic                        []CodeableConcept                `json:"topic,omitempty"`
-	Author                       []ContactDetail                  `json:"author,omitempty"`
-	Editor                       []ContactDetail                  `json:"editor,omitempty"`
-	Reviewer                     []ContactDetail                  `json:"reviewer,omitempty"`
-	Endorser                     []ContactDetail                  `json:"endorser,omitempty"`
-	RelatedArtifact              []RelatedArtifact                `json:"relatedArtifact,omitempty"`
-	Library                      []string                         `json:"library,omitempty"`
-	Kind                         *RequestResourceType             `json:"kind,omitempty"`
-	Profile                      *string                          `json:"profile,omitempty"`
-	Code                         *CodeableConcept                 `json:"code,omitempty"`
-	Intent                       *RequestIntent                   `json:"intent,omitempty"`
-	Priority                     *RequestPriority                 `json:"priority,omitempty"`
-	DoNotPerform                 *bool                            `json:"doNotPerform,omitempty"`
-	Location                     *Reference                       `json:"location,omitempty"`
-	Participant                  []ActivityDefinitionParticipant  `json:"participant,omitempty"`
-	Quantity                     *Quantity                        `json:"quantity,omitempty"`
-	Dosage                       []Dosage                         `json:"dosage,omitempty"`
-	BodySite                     []CodeableConcept                `json:"bodySite,omitempty"`
-	SpecimenRequirement          []Reference                      `json:"specimenRequirement,omitempty"`
-	ObservationRequirement       []Reference                      `json:"observationRequirement,omitempty"`
-	ObservationResultRequirement []Reference                      `json:"observationResultRequirement,omitempty"`
-	Transform                    *string                          `json:"transform,omitempty"`
-	DynamicValue                 []ActivityDefinitionDynamicValue `json:"dynamicValue,omitempty"`
+	Id                           *string                          `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                         *Meta                            `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules                *string                          `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language                     *string                          `bson:"language,omitempty" json:"language,omitempty"`
+	Text                         *Narrative                       `bson:"text,omitempty" json:"text,omitempty"`
+	Extension                    []Extension                      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension            []Extension                      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Url                          *string                          `bson:"url,omitempty" json:"url,omitempty"`
+	Identifier                   []Identifier                     `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Version                      *string                          `bson:"version,omitempty" json:"version,omitempty"`
+	Name                         *string                          `bson:"name,omitempty" json:"name,omitempty"`
+	Title                        *string                          `bson:"title,omitempty" json:"title,omitempty"`
+	Subtitle                     *string                          `bson:"subtitle,omitempty" json:"subtitle,omitempty"`
+	Status                       PublicationStatus                `bson:"status" json:"status"`
+	Experimental                 *bool                            `bson:"experimental,omitempty" json:"experimental,omitempty"`
+	Date                         *string                          `bson:"date,omitempty" json:"date,omitempty"`
+	Publisher                    *string                          `bson:"publisher,omitempty" json:"publisher,omitempty"`
+	Contact                      []ContactDetail                  `bson:"contact,omitempty" json:"contact,omitempty"`
+	Description                  *string                          `bson:"description,omitempty" json:"description,omitempty"`
+	UseContext                   []UsageContext                   `bson:"useContext,omitempty" json:"useContext,omitempty"`
+	Jurisdiction                 []CodeableConcept                `bson:"jurisdiction,omitempty" json:"jurisdiction,omitempty"`
+	Purpose                      *string                          `bson:"purpose,omitempty" json:"purpose,omitempty"`
+	Usage                        *string                          `bson:"usage,omitempty" json:"usage,omitempty"`
+	Copyright                    *string                          `bson:"copyright,omitempty" json:"copyright,omitempty"`
+	ApprovalDate                 *string                          `bson:"approvalDate,omitempty" json:"approvalDate,omitempty"`
+	LastReviewDate               *string                          `bson:"lastReviewDate,omitempty" json:"lastReviewDate,omitempty"`
+	EffectivePeriod              *Period                          `bson:"effectivePeriod,omitempty" json:"effectivePeriod,omitempty"`
+	Topic                        []CodeableConcept                `bson:"topic,omitempty" json:"topic,omitempty"`
+	Author                       []ContactDetail                  `bson:"author,omitempty" json:"author,omitempty"`
+	Editor                       []ContactDetail                  `bson:"editor,omitempty" json:"editor,omitempty"`
+	Reviewer                     []ContactDetail                  `bson:"reviewer,omitempty" json:"reviewer,omitempty"`
+	Endorser                     []ContactDetail                  `bson:"endorser,omitempty" json:"endorser,omitempty"`
+	RelatedArtifact              []RelatedArtifact                `bson:"relatedArtifact,omitempty" json:"relatedArtifact,omitempty"`
+	Library                      []string                         `bson:"library,omitempty" json:"library,omitempty"`
+	Kind                         *RequestResourceType             `bson:"kind,omitempty" json:"kind,omitempty"`
+	Profile                      *string                          `bson:"profile,omitempty" json:"profile,omitempty"`
+	Code                         *CodeableConcept                 `bson:"code,omitempty" json:"code,omitempty"`
+	Intent                       *RequestIntent                   `bson:"intent,omitempty" json:"intent,omitempty"`
+	Priority                     *RequestPriority                 `bson:"priority,omitempty" json:"priority,omitempty"`
+	DoNotPerform                 *bool                            `bson:"doNotPerform,omitempty" json:"doNotPerform,omitempty"`
+	Location                     *Reference                       `bson:"location,omitempty" json:"location,omitempty"`
+	Participant                  []ActivityDefinitionParticipant  `bson:"participant,omitempty" json:"participant,omitempty"`
+	Quantity                     *Quantity                        `bson:"quantity,omitempty" json:"quantity,omitempty"`
+	Dosage                       []Dosage                         `bson:"dosage,omitempty" json:"dosage,omitempty"`
+	BodySite                     []CodeableConcept                `bson:"bodySite,omitempty" json:"bodySite,omitempty"`
+	SpecimenRequirement          []Reference                      `bson:"specimenRequirement,omitempty" json:"specimenRequirement,omitempty"`
+	ObservationRequirement       []Reference                      `bson:"observationRequirement,omitempty" json:"observationRequirement,omitempty"`
+	ObservationResultRequirement []Reference                      `bson:"observationResultRequirement,omitempty" json:"observationResultRequirement,omitempty"`
+	Transform                    *string                          `bson:"transform,omitempty" json:"transform,omitempty"`
+	DynamicValue                 []ActivityDefinitionDynamicValue `bson:"dynamicValue,omitempty" json:"dynamicValue,omitempty"`
 }
 type ActivityDefinitionParticipant struct {
-	Id                *string               `json:"id,omitempty"`
-	Extension         []Extension           `json:"extension,omitempty"`
-	ModifierExtension []Extension           `json:"modifierExtension,omitempty"`
-	Type              ActionParticipantType `json:"type"`
-	Role              *CodeableConcept      `json:"role,omitempty"`
+	Id                *string               `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension           `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension           `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Type              ActionParticipantType `bson:"type" json:"type"`
+	Role              *CodeableConcept      `bson:"role,omitempty" json:"role,omitempty"`
 }
 type ActivityDefinitionDynamicValue struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Path              string      `json:"path"`
-	Expression        Expression  `json:"expression"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Path              string      `bson:"path" json:"path"`
+	Expression        Expression  `bson:"expression" json:"expression"`
 }
 type OtherActivityDefinition ActivityDefinition
 

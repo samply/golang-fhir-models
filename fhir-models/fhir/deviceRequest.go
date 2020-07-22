@@ -21,41 +21,41 @@ import "encoding/json"
 
 // DeviceRequest is documented here http://hl7.org/fhir/StructureDefinition/DeviceRequest
 type DeviceRequest struct {
-	Id                    *string                  `json:"id,omitempty"`
-	Meta                  *Meta                    `json:"meta,omitempty"`
-	ImplicitRules         *string                  `json:"implicitRules,omitempty"`
-	Language              *string                  `json:"language,omitempty"`
-	Text                  *Narrative               `json:"text,omitempty"`
-	Extension             []Extension              `json:"extension,omitempty"`
-	ModifierExtension     []Extension              `json:"modifierExtension,omitempty"`
-	Identifier            []Identifier             `json:"identifier,omitempty"`
-	InstantiatesCanonical []string                 `json:"instantiatesCanonical,omitempty"`
-	InstantiatesUri       []string                 `json:"instantiatesUri,omitempty"`
-	BasedOn               []Reference              `json:"basedOn,omitempty"`
-	PriorRequest          []Reference              `json:"priorRequest,omitempty"`
-	GroupIdentifier       *Identifier              `json:"groupIdentifier,omitempty"`
-	Status                *RequestStatus           `json:"status,omitempty"`
-	Intent                RequestIntent            `json:"intent"`
-	Priority              *RequestPriority         `json:"priority,omitempty"`
-	Parameter             []DeviceRequestParameter `json:"parameter,omitempty"`
-	Subject               Reference                `json:"subject"`
-	Encounter             *Reference               `json:"encounter,omitempty"`
-	AuthoredOn            *string                  `json:"authoredOn,omitempty"`
-	Requester             *Reference               `json:"requester,omitempty"`
-	PerformerType         *CodeableConcept         `json:"performerType,omitempty"`
-	Performer             *Reference               `json:"performer,omitempty"`
-	ReasonCode            []CodeableConcept        `json:"reasonCode,omitempty"`
-	ReasonReference       []Reference              `json:"reasonReference,omitempty"`
-	Insurance             []Reference              `json:"insurance,omitempty"`
-	SupportingInfo        []Reference              `json:"supportingInfo,omitempty"`
-	Note                  []Annotation             `json:"note,omitempty"`
-	RelevantHistory       []Reference              `json:"relevantHistory,omitempty"`
+	Id                    *string                  `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                  *Meta                    `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules         *string                  `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language              *string                  `bson:"language,omitempty" json:"language,omitempty"`
+	Text                  *Narrative               `bson:"text,omitempty" json:"text,omitempty"`
+	Extension             []Extension              `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension     []Extension              `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier            []Identifier             `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	InstantiatesCanonical []string                 `bson:"instantiatesCanonical,omitempty" json:"instantiatesCanonical,omitempty"`
+	InstantiatesUri       []string                 `bson:"instantiatesUri,omitempty" json:"instantiatesUri,omitempty"`
+	BasedOn               []Reference              `bson:"basedOn,omitempty" json:"basedOn,omitempty"`
+	PriorRequest          []Reference              `bson:"priorRequest,omitempty" json:"priorRequest,omitempty"`
+	GroupIdentifier       *Identifier              `bson:"groupIdentifier,omitempty" json:"groupIdentifier,omitempty"`
+	Status                *RequestStatus           `bson:"status,omitempty" json:"status,omitempty"`
+	Intent                RequestIntent            `bson:"intent" json:"intent"`
+	Priority              *RequestPriority         `bson:"priority,omitempty" json:"priority,omitempty"`
+	Parameter             []DeviceRequestParameter `bson:"parameter,omitempty" json:"parameter,omitempty"`
+	Subject               Reference                `bson:"subject" json:"subject"`
+	Encounter             *Reference               `bson:"encounter,omitempty" json:"encounter,omitempty"`
+	AuthoredOn            *string                  `bson:"authoredOn,omitempty" json:"authoredOn,omitempty"`
+	Requester             *Reference               `bson:"requester,omitempty" json:"requester,omitempty"`
+	PerformerType         *CodeableConcept         `bson:"performerType,omitempty" json:"performerType,omitempty"`
+	Performer             *Reference               `bson:"performer,omitempty" json:"performer,omitempty"`
+	ReasonCode            []CodeableConcept        `bson:"reasonCode,omitempty" json:"reasonCode,omitempty"`
+	ReasonReference       []Reference              `bson:"reasonReference,omitempty" json:"reasonReference,omitempty"`
+	Insurance             []Reference              `bson:"insurance,omitempty" json:"insurance,omitempty"`
+	SupportingInfo        []Reference              `bson:"supportingInfo,omitempty" json:"supportingInfo,omitempty"`
+	Note                  []Annotation             `bson:"note,omitempty" json:"note,omitempty"`
+	RelevantHistory       []Reference              `bson:"relevantHistory,omitempty" json:"relevantHistory,omitempty"`
 }
 type DeviceRequestParameter struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Code              *CodeableConcept `json:"code,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Code              *CodeableConcept `bson:"code,omitempty" json:"code,omitempty"`
 }
 type OtherDeviceRequest DeviceRequest
 

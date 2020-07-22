@@ -19,10 +19,10 @@ package fhir
 
 // Population is documented here http://hl7.org/fhir/StructureDefinition/Population
 type Population struct {
-	Id                     *string          `json:"id,omitempty"`
-	Extension              []Extension      `json:"extension,omitempty"`
-	ModifierExtension      []Extension      `json:"modifierExtension,omitempty"`
-	Gender                 *CodeableConcept `json:"gender,omitempty"`
-	Race                   *CodeableConcept `json:"race,omitempty"`
-	PhysiologicalCondition *CodeableConcept `json:"physiologicalCondition,omitempty"`
+	Id                     *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension              []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension      []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Gender                 *CodeableConcept `bson:"gender,omitempty" json:"gender,omitempty"`
+	Race                   *CodeableConcept `bson:"race,omitempty" json:"race,omitempty"`
+	PhysiologicalCondition *CodeableConcept `bson:"physiologicalCondition,omitempty" json:"physiologicalCondition,omitempty"`
 }

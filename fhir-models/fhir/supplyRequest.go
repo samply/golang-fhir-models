@@ -21,32 +21,32 @@ import "encoding/json"
 
 // SupplyRequest is documented here http://hl7.org/fhir/StructureDefinition/SupplyRequest
 type SupplyRequest struct {
-	Id                *string                  `json:"id,omitempty"`
-	Meta              *Meta                    `json:"meta,omitempty"`
-	ImplicitRules     *string                  `json:"implicitRules,omitempty"`
-	Language          *string                  `json:"language,omitempty"`
-	Text              *Narrative               `json:"text,omitempty"`
-	Extension         []Extension              `json:"extension,omitempty"`
-	ModifierExtension []Extension              `json:"modifierExtension,omitempty"`
-	Identifier        []Identifier             `json:"identifier,omitempty"`
-	Status            *SupplyRequestStatus     `json:"status,omitempty"`
-	Category          *CodeableConcept         `json:"category,omitempty"`
-	Priority          *RequestPriority         `json:"priority,omitempty"`
-	Quantity          Quantity                 `json:"quantity"`
-	Parameter         []SupplyRequestParameter `json:"parameter,omitempty"`
-	AuthoredOn        *string                  `json:"authoredOn,omitempty"`
-	Requester         *Reference               `json:"requester,omitempty"`
-	Supplier          []Reference              `json:"supplier,omitempty"`
-	ReasonCode        []CodeableConcept        `json:"reasonCode,omitempty"`
-	ReasonReference   []Reference              `json:"reasonReference,omitempty"`
-	DeliverFrom       *Reference               `json:"deliverFrom,omitempty"`
-	DeliverTo         *Reference               `json:"deliverTo,omitempty"`
+	Id                *string                  `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta                    `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string                  `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string                  `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative               `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension              `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension              `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        []Identifier             `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Status            *SupplyRequestStatus     `bson:"status,omitempty" json:"status,omitempty"`
+	Category          *CodeableConcept         `bson:"category,omitempty" json:"category,omitempty"`
+	Priority          *RequestPriority         `bson:"priority,omitempty" json:"priority,omitempty"`
+	Quantity          Quantity                 `bson:"quantity" json:"quantity"`
+	Parameter         []SupplyRequestParameter `bson:"parameter,omitempty" json:"parameter,omitempty"`
+	AuthoredOn        *string                  `bson:"authoredOn,omitempty" json:"authoredOn,omitempty"`
+	Requester         *Reference               `bson:"requester,omitempty" json:"requester,omitempty"`
+	Supplier          []Reference              `bson:"supplier,omitempty" json:"supplier,omitempty"`
+	ReasonCode        []CodeableConcept        `bson:"reasonCode,omitempty" json:"reasonCode,omitempty"`
+	ReasonReference   []Reference              `bson:"reasonReference,omitempty" json:"reasonReference,omitempty"`
+	DeliverFrom       *Reference               `bson:"deliverFrom,omitempty" json:"deliverFrom,omitempty"`
+	DeliverTo         *Reference               `bson:"deliverTo,omitempty" json:"deliverTo,omitempty"`
 }
 type SupplyRequestParameter struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Code              *CodeableConcept `json:"code,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Code              *CodeableConcept `bson:"code,omitempty" json:"code,omitempty"`
 }
 type OtherSupplyRequest SupplyRequest
 

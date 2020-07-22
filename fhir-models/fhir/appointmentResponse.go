@@ -21,21 +21,21 @@ import "encoding/json"
 
 // AppointmentResponse is documented here http://hl7.org/fhir/StructureDefinition/AppointmentResponse
 type AppointmentResponse struct {
-	Id                *string             `json:"id,omitempty"`
-	Meta              *Meta               `json:"meta,omitempty"`
-	ImplicitRules     *string             `json:"implicitRules,omitempty"`
-	Language          *string             `json:"language,omitempty"`
-	Text              *Narrative          `json:"text,omitempty"`
-	Extension         []Extension         `json:"extension,omitempty"`
-	ModifierExtension []Extension         `json:"modifierExtension,omitempty"`
-	Identifier        []Identifier        `json:"identifier,omitempty"`
-	Appointment       Reference           `json:"appointment"`
-	Start             *string             `json:"start,omitempty"`
-	End               *string             `json:"end,omitempty"`
-	ParticipantType   []CodeableConcept   `json:"participantType,omitempty"`
-	Actor             *Reference          `json:"actor,omitempty"`
-	ParticipantStatus ParticipationStatus `json:"participantStatus"`
-	Comment           *string             `json:"comment,omitempty"`
+	Id                *string             `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta               `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string             `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string             `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative          `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension         `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension         `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        []Identifier        `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Appointment       Reference           `bson:"appointment" json:"appointment"`
+	Start             *string             `bson:"start,omitempty" json:"start,omitempty"`
+	End               *string             `bson:"end,omitempty" json:"end,omitempty"`
+	ParticipantType   []CodeableConcept   `bson:"participantType,omitempty" json:"participantType,omitempty"`
+	Actor             *Reference          `bson:"actor,omitempty" json:"actor,omitempty"`
+	ParticipantStatus ParticipationStatus `bson:"participantStatus" json:"participantStatus"`
+	Comment           *string             `bson:"comment,omitempty" json:"comment,omitempty"`
 }
 type OtherAppointmentResponse AppointmentResponse
 

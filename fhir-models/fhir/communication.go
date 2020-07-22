@@ -21,41 +21,41 @@ import "encoding/json"
 
 // Communication is documented here http://hl7.org/fhir/StructureDefinition/Communication
 type Communication struct {
-	Id                    *string                `json:"id,omitempty"`
-	Meta                  *Meta                  `json:"meta,omitempty"`
-	ImplicitRules         *string                `json:"implicitRules,omitempty"`
-	Language              *string                `json:"language,omitempty"`
-	Text                  *Narrative             `json:"text,omitempty"`
-	Extension             []Extension            `json:"extension,omitempty"`
-	ModifierExtension     []Extension            `json:"modifierExtension,omitempty"`
-	Identifier            []Identifier           `json:"identifier,omitempty"`
-	InstantiatesCanonical []string               `json:"instantiatesCanonical,omitempty"`
-	InstantiatesUri       []string               `json:"instantiatesUri,omitempty"`
-	BasedOn               []Reference            `json:"basedOn,omitempty"`
-	PartOf                []Reference            `json:"partOf,omitempty"`
-	InResponseTo          []Reference            `json:"inResponseTo,omitempty"`
-	Status                EventStatus            `json:"status"`
-	StatusReason          *CodeableConcept       `json:"statusReason,omitempty"`
-	Category              []CodeableConcept      `json:"category,omitempty"`
-	Priority              *RequestPriority       `json:"priority,omitempty"`
-	Medium                []CodeableConcept      `json:"medium,omitempty"`
-	Subject               *Reference             `json:"subject,omitempty"`
-	Topic                 *CodeableConcept       `json:"topic,omitempty"`
-	About                 []Reference            `json:"about,omitempty"`
-	Encounter             *Reference             `json:"encounter,omitempty"`
-	Sent                  *string                `json:"sent,omitempty"`
-	Received              *string                `json:"received,omitempty"`
-	Recipient             []Reference            `json:"recipient,omitempty"`
-	Sender                *Reference             `json:"sender,omitempty"`
-	ReasonCode            []CodeableConcept      `json:"reasonCode,omitempty"`
-	ReasonReference       []Reference            `json:"reasonReference,omitempty"`
-	Payload               []CommunicationPayload `json:"payload,omitempty"`
-	Note                  []Annotation           `json:"note,omitempty"`
+	Id                    *string                `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                  *Meta                  `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules         *string                `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language              *string                `bson:"language,omitempty" json:"language,omitempty"`
+	Text                  *Narrative             `bson:"text,omitempty" json:"text,omitempty"`
+	Extension             []Extension            `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension     []Extension            `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier            []Identifier           `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	InstantiatesCanonical []string               `bson:"instantiatesCanonical,omitempty" json:"instantiatesCanonical,omitempty"`
+	InstantiatesUri       []string               `bson:"instantiatesUri,omitempty" json:"instantiatesUri,omitempty"`
+	BasedOn               []Reference            `bson:"basedOn,omitempty" json:"basedOn,omitempty"`
+	PartOf                []Reference            `bson:"partOf,omitempty" json:"partOf,omitempty"`
+	InResponseTo          []Reference            `bson:"inResponseTo,omitempty" json:"inResponseTo,omitempty"`
+	Status                EventStatus            `bson:"status" json:"status"`
+	StatusReason          *CodeableConcept       `bson:"statusReason,omitempty" json:"statusReason,omitempty"`
+	Category              []CodeableConcept      `bson:"category,omitempty" json:"category,omitempty"`
+	Priority              *RequestPriority       `bson:"priority,omitempty" json:"priority,omitempty"`
+	Medium                []CodeableConcept      `bson:"medium,omitempty" json:"medium,omitempty"`
+	Subject               *Reference             `bson:"subject,omitempty" json:"subject,omitempty"`
+	Topic                 *CodeableConcept       `bson:"topic,omitempty" json:"topic,omitempty"`
+	About                 []Reference            `bson:"about,omitempty" json:"about,omitempty"`
+	Encounter             *Reference             `bson:"encounter,omitempty" json:"encounter,omitempty"`
+	Sent                  *string                `bson:"sent,omitempty" json:"sent,omitempty"`
+	Received              *string                `bson:"received,omitempty" json:"received,omitempty"`
+	Recipient             []Reference            `bson:"recipient,omitempty" json:"recipient,omitempty"`
+	Sender                *Reference             `bson:"sender,omitempty" json:"sender,omitempty"`
+	ReasonCode            []CodeableConcept      `bson:"reasonCode,omitempty" json:"reasonCode,omitempty"`
+	ReasonReference       []Reference            `bson:"reasonReference,omitempty" json:"reasonReference,omitempty"`
+	Payload               []CommunicationPayload `bson:"payload,omitempty" json:"payload,omitempty"`
+	Note                  []Annotation           `bson:"note,omitempty" json:"note,omitempty"`
 }
 type CommunicationPayload struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 }
 type OtherCommunication Communication
 

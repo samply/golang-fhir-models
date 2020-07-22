@@ -21,21 +21,21 @@ import "encoding/json"
 
 // Schedule is documented here http://hl7.org/fhir/StructureDefinition/Schedule
 type Schedule struct {
-	Id                *string           `json:"id,omitempty"`
-	Meta              *Meta             `json:"meta,omitempty"`
-	ImplicitRules     *string           `json:"implicitRules,omitempty"`
-	Language          *string           `json:"language,omitempty"`
-	Text              *Narrative        `json:"text,omitempty"`
-	Extension         []Extension       `json:"extension,omitempty"`
-	ModifierExtension []Extension       `json:"modifierExtension,omitempty"`
-	Identifier        []Identifier      `json:"identifier,omitempty"`
-	Active            *bool             `json:"active,omitempty"`
-	ServiceCategory   []CodeableConcept `json:"serviceCategory,omitempty"`
-	ServiceType       []CodeableConcept `json:"serviceType,omitempty"`
-	Specialty         []CodeableConcept `json:"specialty,omitempty"`
-	Actor             []Reference       `json:"actor"`
-	PlanningHorizon   *Period           `json:"planningHorizon,omitempty"`
-	Comment           *string           `json:"comment,omitempty"`
+	Id                *string           `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta             `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string           `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string           `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative        `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension       `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension       `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        []Identifier      `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Active            *bool             `bson:"active,omitempty" json:"active,omitempty"`
+	ServiceCategory   []CodeableConcept `bson:"serviceCategory,omitempty" json:"serviceCategory,omitempty"`
+	ServiceType       []CodeableConcept `bson:"serviceType,omitempty" json:"serviceType,omitempty"`
+	Specialty         []CodeableConcept `bson:"specialty,omitempty" json:"specialty,omitempty"`
+	Actor             []Reference       `bson:"actor" json:"actor"`
+	PlanningHorizon   *Period           `bson:"planningHorizon,omitempty" json:"planningHorizon,omitempty"`
+	Comment           *string           `bson:"comment,omitempty" json:"comment,omitempty"`
 }
 type OtherSchedule Schedule
 

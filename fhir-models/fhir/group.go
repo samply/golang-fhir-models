@@ -21,39 +21,39 @@ import "encoding/json"
 
 // Group is documented here http://hl7.org/fhir/StructureDefinition/Group
 type Group struct {
-	Id                *string               `json:"id,omitempty"`
-	Meta              *Meta                 `json:"meta,omitempty"`
-	ImplicitRules     *string               `json:"implicitRules,omitempty"`
-	Language          *string               `json:"language,omitempty"`
-	Text              *Narrative            `json:"text,omitempty"`
-	Extension         []Extension           `json:"extension,omitempty"`
-	ModifierExtension []Extension           `json:"modifierExtension,omitempty"`
-	Identifier        []Identifier          `json:"identifier,omitempty"`
-	Active            *bool                 `json:"active,omitempty"`
-	Type              GroupType             `json:"type"`
-	Actual            bool                  `json:"actual"`
-	Code              *CodeableConcept      `json:"code,omitempty"`
-	Name              *string               `json:"name,omitempty"`
-	Quantity          *int                  `json:"quantity,omitempty"`
-	ManagingEntity    *Reference            `json:"managingEntity,omitempty"`
-	Characteristic    []GroupCharacteristic `json:"characteristic,omitempty"`
-	Member            []GroupMember         `json:"member,omitempty"`
+	Id                *string               `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta                 `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string               `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string               `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative            `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension           `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension           `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        []Identifier          `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Active            *bool                 `bson:"active,omitempty" json:"active,omitempty"`
+	Type              GroupType             `bson:"type" json:"type"`
+	Actual            bool                  `bson:"actual" json:"actual"`
+	Code              *CodeableConcept      `bson:"code,omitempty" json:"code,omitempty"`
+	Name              *string               `bson:"name,omitempty" json:"name,omitempty"`
+	Quantity          *int                  `bson:"quantity,omitempty" json:"quantity,omitempty"`
+	ManagingEntity    *Reference            `bson:"managingEntity,omitempty" json:"managingEntity,omitempty"`
+	Characteristic    []GroupCharacteristic `bson:"characteristic,omitempty" json:"characteristic,omitempty"`
+	Member            []GroupMember         `bson:"member,omitempty" json:"member,omitempty"`
 }
 type GroupCharacteristic struct {
-	Id                *string         `json:"id,omitempty"`
-	Extension         []Extension     `json:"extension,omitempty"`
-	ModifierExtension []Extension     `json:"modifierExtension,omitempty"`
-	Code              CodeableConcept `json:"code"`
-	Exclude           bool            `json:"exclude"`
-	Period            *Period         `json:"period,omitempty"`
+	Id                *string         `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension     `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Code              CodeableConcept `bson:"code" json:"code"`
+	Exclude           bool            `bson:"exclude" json:"exclude"`
+	Period            *Period         `bson:"period,omitempty" json:"period,omitempty"`
 }
 type GroupMember struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Entity            Reference   `json:"entity"`
-	Period            *Period     `json:"period,omitempty"`
-	Inactive          *bool       `json:"inactive,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Entity            Reference   `bson:"entity" json:"entity"`
+	Period            *Period     `bson:"period,omitempty" json:"period,omitempty"`
+	Inactive          *bool       `bson:"inactive,omitempty" json:"inactive,omitempty"`
 }
 type OtherGroup Group
 

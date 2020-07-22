@@ -21,24 +21,24 @@ import "encoding/json"
 
 // Slot is documented here http://hl7.org/fhir/StructureDefinition/Slot
 type Slot struct {
-	Id                *string           `json:"id,omitempty"`
-	Meta              *Meta             `json:"meta,omitempty"`
-	ImplicitRules     *string           `json:"implicitRules,omitempty"`
-	Language          *string           `json:"language,omitempty"`
-	Text              *Narrative        `json:"text,omitempty"`
-	Extension         []Extension       `json:"extension,omitempty"`
-	ModifierExtension []Extension       `json:"modifierExtension,omitempty"`
-	Identifier        []Identifier      `json:"identifier,omitempty"`
-	ServiceCategory   []CodeableConcept `json:"serviceCategory,omitempty"`
-	ServiceType       []CodeableConcept `json:"serviceType,omitempty"`
-	Specialty         []CodeableConcept `json:"specialty,omitempty"`
-	AppointmentType   *CodeableConcept  `json:"appointmentType,omitempty"`
-	Schedule          Reference         `json:"schedule"`
-	Status            SlotStatus        `json:"status"`
-	Start             string            `json:"start"`
-	End               string            `json:"end"`
-	Overbooked        *bool             `json:"overbooked,omitempty"`
-	Comment           *string           `json:"comment,omitempty"`
+	Id                *string           `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta             `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string           `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string           `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative        `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension       `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension       `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        []Identifier      `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	ServiceCategory   []CodeableConcept `bson:"serviceCategory,omitempty" json:"serviceCategory,omitempty"`
+	ServiceType       []CodeableConcept `bson:"serviceType,omitempty" json:"serviceType,omitempty"`
+	Specialty         []CodeableConcept `bson:"specialty,omitempty" json:"specialty,omitempty"`
+	AppointmentType   *CodeableConcept  `bson:"appointmentType,omitempty" json:"appointmentType,omitempty"`
+	Schedule          Reference         `bson:"schedule" json:"schedule"`
+	Status            SlotStatus        `bson:"status" json:"status"`
+	Start             string            `bson:"start" json:"start"`
+	End               string            `bson:"end" json:"end"`
+	Overbooked        *bool             `bson:"overbooked,omitempty" json:"overbooked,omitempty"`
+	Comment           *string           `bson:"comment,omitempty" json:"comment,omitempty"`
 }
 type OtherSlot Slot
 

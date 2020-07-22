@@ -21,77 +21,77 @@ import "encoding/json"
 
 // ConceptMap is documented here http://hl7.org/fhir/StructureDefinition/ConceptMap
 type ConceptMap struct {
-	Id                *string           `json:"id,omitempty"`
-	Meta              *Meta             `json:"meta,omitempty"`
-	ImplicitRules     *string           `json:"implicitRules,omitempty"`
-	Language          *string           `json:"language,omitempty"`
-	Text              *Narrative        `json:"text,omitempty"`
-	Extension         []Extension       `json:"extension,omitempty"`
-	ModifierExtension []Extension       `json:"modifierExtension,omitempty"`
-	Url               *string           `json:"url,omitempty"`
-	Identifier        *Identifier       `json:"identifier,omitempty"`
-	Version           *string           `json:"version,omitempty"`
-	Name              *string           `json:"name,omitempty"`
-	Title             *string           `json:"title,omitempty"`
-	Status            PublicationStatus `json:"status"`
-	Experimental      *bool             `json:"experimental,omitempty"`
-	Date              *string           `json:"date,omitempty"`
-	Publisher         *string           `json:"publisher,omitempty"`
-	Contact           []ContactDetail   `json:"contact,omitempty"`
-	Description       *string           `json:"description,omitempty"`
-	UseContext        []UsageContext    `json:"useContext,omitempty"`
-	Jurisdiction      []CodeableConcept `json:"jurisdiction,omitempty"`
-	Purpose           *string           `json:"purpose,omitempty"`
-	Copyright         *string           `json:"copyright,omitempty"`
-	Group             []ConceptMapGroup `json:"group,omitempty"`
+	Id                *string           `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta             `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string           `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string           `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative        `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension       `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension       `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Url               *string           `bson:"url,omitempty" json:"url,omitempty"`
+	Identifier        *Identifier       `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Version           *string           `bson:"version,omitempty" json:"version,omitempty"`
+	Name              *string           `bson:"name,omitempty" json:"name,omitempty"`
+	Title             *string           `bson:"title,omitempty" json:"title,omitempty"`
+	Status            PublicationStatus `bson:"status" json:"status"`
+	Experimental      *bool             `bson:"experimental,omitempty" json:"experimental,omitempty"`
+	Date              *string           `bson:"date,omitempty" json:"date,omitempty"`
+	Publisher         *string           `bson:"publisher,omitempty" json:"publisher,omitempty"`
+	Contact           []ContactDetail   `bson:"contact,omitempty" json:"contact,omitempty"`
+	Description       *string           `bson:"description,omitempty" json:"description,omitempty"`
+	UseContext        []UsageContext    `bson:"useContext,omitempty" json:"useContext,omitempty"`
+	Jurisdiction      []CodeableConcept `bson:"jurisdiction,omitempty" json:"jurisdiction,omitempty"`
+	Purpose           *string           `bson:"purpose,omitempty" json:"purpose,omitempty"`
+	Copyright         *string           `bson:"copyright,omitempty" json:"copyright,omitempty"`
+	Group             []ConceptMapGroup `bson:"group,omitempty" json:"group,omitempty"`
 }
 type ConceptMapGroup struct {
-	Id                *string                  `json:"id,omitempty"`
-	Extension         []Extension              `json:"extension,omitempty"`
-	ModifierExtension []Extension              `json:"modifierExtension,omitempty"`
-	Source            *string                  `json:"source,omitempty"`
-	SourceVersion     *string                  `json:"sourceVersion,omitempty"`
-	Target            *string                  `json:"target,omitempty"`
-	TargetVersion     *string                  `json:"targetVersion,omitempty"`
-	Element           []ConceptMapGroupElement `json:"element"`
-	Unmapped          *ConceptMapGroupUnmapped `json:"unmapped,omitempty"`
+	Id                *string                  `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension              `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension              `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Source            *string                  `bson:"source,omitempty" json:"source,omitempty"`
+	SourceVersion     *string                  `bson:"sourceVersion,omitempty" json:"sourceVersion,omitempty"`
+	Target            *string                  `bson:"target,omitempty" json:"target,omitempty"`
+	TargetVersion     *string                  `bson:"targetVersion,omitempty" json:"targetVersion,omitempty"`
+	Element           []ConceptMapGroupElement `bson:"element" json:"element"`
+	Unmapped          *ConceptMapGroupUnmapped `bson:"unmapped,omitempty" json:"unmapped,omitempty"`
 }
 type ConceptMapGroupElement struct {
-	Id                *string                        `json:"id,omitempty"`
-	Extension         []Extension                    `json:"extension,omitempty"`
-	ModifierExtension []Extension                    `json:"modifierExtension,omitempty"`
-	Code              *string                        `json:"code,omitempty"`
-	Display           *string                        `json:"display,omitempty"`
-	Target            []ConceptMapGroupElementTarget `json:"target,omitempty"`
+	Id                *string                        `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                    `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                    `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Code              *string                        `bson:"code,omitempty" json:"code,omitempty"`
+	Display           *string                        `bson:"display,omitempty" json:"display,omitempty"`
+	Target            []ConceptMapGroupElementTarget `bson:"target,omitempty" json:"target,omitempty"`
 }
 type ConceptMapGroupElementTarget struct {
-	Id                *string                                 `json:"id,omitempty"`
-	Extension         []Extension                             `json:"extension,omitempty"`
-	ModifierExtension []Extension                             `json:"modifierExtension,omitempty"`
-	Code              *string                                 `json:"code,omitempty"`
-	Display           *string                                 `json:"display,omitempty"`
-	Equivalence       ConceptMapEquivalence                   `json:"equivalence"`
-	Comment           *string                                 `json:"comment,omitempty"`
-	DependsOn         []ConceptMapGroupElementTargetDependsOn `json:"dependsOn,omitempty"`
-	Product           []ConceptMapGroupElementTargetDependsOn `json:"product,omitempty"`
+	Id                *string                                 `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                             `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                             `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Code              *string                                 `bson:"code,omitempty" json:"code,omitempty"`
+	Display           *string                                 `bson:"display,omitempty" json:"display,omitempty"`
+	Equivalence       ConceptMapEquivalence                   `bson:"equivalence" json:"equivalence"`
+	Comment           *string                                 `bson:"comment,omitempty" json:"comment,omitempty"`
+	DependsOn         []ConceptMapGroupElementTargetDependsOn `bson:"dependsOn,omitempty" json:"dependsOn,omitempty"`
+	Product           []ConceptMapGroupElementTargetDependsOn `bson:"product,omitempty" json:"product,omitempty"`
 }
 type ConceptMapGroupElementTargetDependsOn struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Property          string      `json:"property"`
-	System            *string     `json:"system,omitempty"`
-	Value             string      `json:"value"`
-	Display           *string     `json:"display,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Property          string      `bson:"property" json:"property"`
+	System            *string     `bson:"system,omitempty" json:"system,omitempty"`
+	Value             string      `bson:"value" json:"value"`
+	Display           *string     `bson:"display,omitempty" json:"display,omitempty"`
 }
 type ConceptMapGroupUnmapped struct {
-	Id                *string                     `json:"id,omitempty"`
-	Extension         []Extension                 `json:"extension,omitempty"`
-	ModifierExtension []Extension                 `json:"modifierExtension,omitempty"`
-	Mode              ConceptMapGroupUnmappedMode `json:"mode"`
-	Code              *string                     `json:"code,omitempty"`
-	Display           *string                     `json:"display,omitempty"`
-	Url               *string                     `json:"url,omitempty"`
+	Id                *string                     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                 `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                 `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Mode              ConceptMapGroupUnmappedMode `bson:"mode" json:"mode"`
+	Code              *string                     `bson:"code,omitempty" json:"code,omitempty"`
+	Display           *string                     `bson:"display,omitempty" json:"display,omitempty"`
+	Url               *string                     `bson:"url,omitempty" json:"url,omitempty"`
 }
 type OtherConceptMap ConceptMap
 

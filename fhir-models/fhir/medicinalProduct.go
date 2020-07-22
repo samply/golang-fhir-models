@@ -21,78 +21,78 @@ import "encoding/json"
 
 // MedicinalProduct is documented here http://hl7.org/fhir/StructureDefinition/MedicinalProduct
 type MedicinalProduct struct {
-	Id                             *string                                          `json:"id,omitempty"`
-	Meta                           *Meta                                            `json:"meta,omitempty"`
-	ImplicitRules                  *string                                          `json:"implicitRules,omitempty"`
-	Language                       *string                                          `json:"language,omitempty"`
-	Text                           *Narrative                                       `json:"text,omitempty"`
-	Extension                      []Extension                                      `json:"extension,omitempty"`
-	ModifierExtension              []Extension                                      `json:"modifierExtension,omitempty"`
-	Identifier                     []Identifier                                     `json:"identifier,omitempty"`
-	Type                           *CodeableConcept                                 `json:"type,omitempty"`
-	Domain                         *Coding                                          `json:"domain,omitempty"`
-	CombinedPharmaceuticalDoseForm *CodeableConcept                                 `json:"combinedPharmaceuticalDoseForm,omitempty"`
-	LegalStatusOfSupply            *CodeableConcept                                 `json:"legalStatusOfSupply,omitempty"`
-	AdditionalMonitoringIndicator  *CodeableConcept                                 `json:"additionalMonitoringIndicator,omitempty"`
-	SpecialMeasures                []string                                         `json:"specialMeasures,omitempty"`
-	PaediatricUseIndicator         *CodeableConcept                                 `json:"paediatricUseIndicator,omitempty"`
-	ProductClassification          []CodeableConcept                                `json:"productClassification,omitempty"`
-	MarketingStatus                []MarketingStatus                                `json:"marketingStatus,omitempty"`
-	PharmaceuticalProduct          []Reference                                      `json:"pharmaceuticalProduct,omitempty"`
-	PackagedMedicinalProduct       []Reference                                      `json:"packagedMedicinalProduct,omitempty"`
-	AttachedDocument               []Reference                                      `json:"attachedDocument,omitempty"`
-	MasterFile                     []Reference                                      `json:"masterFile,omitempty"`
-	Contact                        []Reference                                      `json:"contact,omitempty"`
-	ClinicalTrial                  []Reference                                      `json:"clinicalTrial,omitempty"`
-	Name                           []MedicinalProductName                           `json:"name"`
-	CrossReference                 []Identifier                                     `json:"crossReference,omitempty"`
-	ManufacturingBusinessOperation []MedicinalProductManufacturingBusinessOperation `json:"manufacturingBusinessOperation,omitempty"`
-	SpecialDesignation             []MedicinalProductSpecialDesignation             `json:"specialDesignation,omitempty"`
+	Id                             *string                                          `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                           *Meta                                            `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules                  *string                                          `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language                       *string                                          `bson:"language,omitempty" json:"language,omitempty"`
+	Text                           *Narrative                                       `bson:"text,omitempty" json:"text,omitempty"`
+	Extension                      []Extension                                      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension              []Extension                                      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier                     []Identifier                                     `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Type                           *CodeableConcept                                 `bson:"type,omitempty" json:"type,omitempty"`
+	Domain                         *Coding                                          `bson:"domain,omitempty" json:"domain,omitempty"`
+	CombinedPharmaceuticalDoseForm *CodeableConcept                                 `bson:"combinedPharmaceuticalDoseForm,omitempty" json:"combinedPharmaceuticalDoseForm,omitempty"`
+	LegalStatusOfSupply            *CodeableConcept                                 `bson:"legalStatusOfSupply,omitempty" json:"legalStatusOfSupply,omitempty"`
+	AdditionalMonitoringIndicator  *CodeableConcept                                 `bson:"additionalMonitoringIndicator,omitempty" json:"additionalMonitoringIndicator,omitempty"`
+	SpecialMeasures                []string                                         `bson:"specialMeasures,omitempty" json:"specialMeasures,omitempty"`
+	PaediatricUseIndicator         *CodeableConcept                                 `bson:"paediatricUseIndicator,omitempty" json:"paediatricUseIndicator,omitempty"`
+	ProductClassification          []CodeableConcept                                `bson:"productClassification,omitempty" json:"productClassification,omitempty"`
+	MarketingStatus                []MarketingStatus                                `bson:"marketingStatus,omitempty" json:"marketingStatus,omitempty"`
+	PharmaceuticalProduct          []Reference                                      `bson:"pharmaceuticalProduct,omitempty" json:"pharmaceuticalProduct,omitempty"`
+	PackagedMedicinalProduct       []Reference                                      `bson:"packagedMedicinalProduct,omitempty" json:"packagedMedicinalProduct,omitempty"`
+	AttachedDocument               []Reference                                      `bson:"attachedDocument,omitempty" json:"attachedDocument,omitempty"`
+	MasterFile                     []Reference                                      `bson:"masterFile,omitempty" json:"masterFile,omitempty"`
+	Contact                        []Reference                                      `bson:"contact,omitempty" json:"contact,omitempty"`
+	ClinicalTrial                  []Reference                                      `bson:"clinicalTrial,omitempty" json:"clinicalTrial,omitempty"`
+	Name                           []MedicinalProductName                           `bson:"name" json:"name"`
+	CrossReference                 []Identifier                                     `bson:"crossReference,omitempty" json:"crossReference,omitempty"`
+	ManufacturingBusinessOperation []MedicinalProductManufacturingBusinessOperation `bson:"manufacturingBusinessOperation,omitempty" json:"manufacturingBusinessOperation,omitempty"`
+	SpecialDesignation             []MedicinalProductSpecialDesignation             `bson:"specialDesignation,omitempty" json:"specialDesignation,omitempty"`
 }
 type MedicinalProductName struct {
-	Id                *string                               `json:"id,omitempty"`
-	Extension         []Extension                           `json:"extension,omitempty"`
-	ModifierExtension []Extension                           `json:"modifierExtension,omitempty"`
-	ProductName       string                                `json:"productName"`
-	NamePart          []MedicinalProductNameNamePart        `json:"namePart,omitempty"`
-	CountryLanguage   []MedicinalProductNameCountryLanguage `json:"countryLanguage,omitempty"`
+	Id                *string                               `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                           `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                           `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	ProductName       string                                `bson:"productName" json:"productName"`
+	NamePart          []MedicinalProductNameNamePart        `bson:"namePart,omitempty" json:"namePart,omitempty"`
+	CountryLanguage   []MedicinalProductNameCountryLanguage `bson:"countryLanguage,omitempty" json:"countryLanguage,omitempty"`
 }
 type MedicinalProductNameNamePart struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Part              string      `json:"part"`
-	Type              Coding      `json:"type"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Part              string      `bson:"part" json:"part"`
+	Type              Coding      `bson:"type" json:"type"`
 }
 type MedicinalProductNameCountryLanguage struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Country           CodeableConcept  `json:"country"`
-	Jurisdiction      *CodeableConcept `json:"jurisdiction,omitempty"`
-	Language          CodeableConcept  `json:"language"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Country           CodeableConcept  `bson:"country" json:"country"`
+	Jurisdiction      *CodeableConcept `bson:"jurisdiction,omitempty" json:"jurisdiction,omitempty"`
+	Language          CodeableConcept  `bson:"language" json:"language"`
 }
 type MedicinalProductManufacturingBusinessOperation struct {
-	Id                           *string          `json:"id,omitempty"`
-	Extension                    []Extension      `json:"extension,omitempty"`
-	ModifierExtension            []Extension      `json:"modifierExtension,omitempty"`
-	OperationType                *CodeableConcept `json:"operationType,omitempty"`
-	AuthorisationReferenceNumber *Identifier      `json:"authorisationReferenceNumber,omitempty"`
-	EffectiveDate                *string          `json:"effectiveDate,omitempty"`
-	ConfidentialityIndicator     *CodeableConcept `json:"confidentialityIndicator,omitempty"`
-	Manufacturer                 []Reference      `json:"manufacturer,omitempty"`
-	Regulator                    *Reference       `json:"regulator,omitempty"`
+	Id                           *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension                    []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension            []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	OperationType                *CodeableConcept `bson:"operationType,omitempty" json:"operationType,omitempty"`
+	AuthorisationReferenceNumber *Identifier      `bson:"authorisationReferenceNumber,omitempty" json:"authorisationReferenceNumber,omitempty"`
+	EffectiveDate                *string          `bson:"effectiveDate,omitempty" json:"effectiveDate,omitempty"`
+	ConfidentialityIndicator     *CodeableConcept `bson:"confidentialityIndicator,omitempty" json:"confidentialityIndicator,omitempty"`
+	Manufacturer                 []Reference      `bson:"manufacturer,omitempty" json:"manufacturer,omitempty"`
+	Regulator                    *Reference       `bson:"regulator,omitempty" json:"regulator,omitempty"`
 }
 type MedicinalProductSpecialDesignation struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Identifier        []Identifier     `json:"identifier,omitempty"`
-	Type              *CodeableConcept `json:"type,omitempty"`
-	IntendedUse       *CodeableConcept `json:"intendedUse,omitempty"`
-	Status            *CodeableConcept `json:"status,omitempty"`
-	Date              *string          `json:"date,omitempty"`
-	Species           *CodeableConcept `json:"species,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        []Identifier     `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Type              *CodeableConcept `bson:"type,omitempty" json:"type,omitempty"`
+	IntendedUse       *CodeableConcept `bson:"intendedUse,omitempty" json:"intendedUse,omitempty"`
+	Status            *CodeableConcept `bson:"status,omitempty" json:"status,omitempty"`
+	Date              *string          `bson:"date,omitempty" json:"date,omitempty"`
+	Species           *CodeableConcept `bson:"species,omitempty" json:"species,omitempty"`
 }
 type OtherMedicinalProduct MedicinalProduct
 

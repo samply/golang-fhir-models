@@ -21,20 +21,20 @@ import "encoding/json"
 
 // MedicinalProductManufactured is documented here http://hl7.org/fhir/StructureDefinition/MedicinalProductManufactured
 type MedicinalProductManufactured struct {
-	Id                      *string             `json:"id,omitempty"`
-	Meta                    *Meta               `json:"meta,omitempty"`
-	ImplicitRules           *string             `json:"implicitRules,omitempty"`
-	Language                *string             `json:"language,omitempty"`
-	Text                    *Narrative          `json:"text,omitempty"`
-	Extension               []Extension         `json:"extension,omitempty"`
-	ModifierExtension       []Extension         `json:"modifierExtension,omitempty"`
-	ManufacturedDoseForm    CodeableConcept     `json:"manufacturedDoseForm"`
-	UnitOfPresentation      *CodeableConcept    `json:"unitOfPresentation,omitempty"`
-	Quantity                Quantity            `json:"quantity"`
-	Manufacturer            []Reference         `json:"manufacturer,omitempty"`
-	Ingredient              []Reference         `json:"ingredient,omitempty"`
-	PhysicalCharacteristics *ProdCharacteristic `json:"physicalCharacteristics,omitempty"`
-	OtherCharacteristics    []CodeableConcept   `json:"otherCharacteristics,omitempty"`
+	Id                      *string             `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                    *Meta               `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules           *string             `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language                *string             `bson:"language,omitempty" json:"language,omitempty"`
+	Text                    *Narrative          `bson:"text,omitempty" json:"text,omitempty"`
+	Extension               []Extension         `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension       []Extension         `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	ManufacturedDoseForm    CodeableConcept     `bson:"manufacturedDoseForm" json:"manufacturedDoseForm"`
+	UnitOfPresentation      *CodeableConcept    `bson:"unitOfPresentation,omitempty" json:"unitOfPresentation,omitempty"`
+	Quantity                Quantity            `bson:"quantity" json:"quantity"`
+	Manufacturer            []Reference         `bson:"manufacturer,omitempty" json:"manufacturer,omitempty"`
+	Ingredient              []Reference         `bson:"ingredient,omitempty" json:"ingredient,omitempty"`
+	PhysicalCharacteristics *ProdCharacteristic `bson:"physicalCharacteristics,omitempty" json:"physicalCharacteristics,omitempty"`
+	OtherCharacteristics    []CodeableConcept   `bson:"otherCharacteristics,omitempty" json:"otherCharacteristics,omitempty"`
 }
 type OtherMedicinalProductManufactured MedicinalProductManufactured
 

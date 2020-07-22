@@ -21,25 +21,25 @@ import "encoding/json"
 
 // DeviceUseStatement is documented here http://hl7.org/fhir/StructureDefinition/DeviceUseStatement
 type DeviceUseStatement struct {
-	Id                *string                  `json:"id,omitempty"`
-	Meta              *Meta                    `json:"meta,omitempty"`
-	ImplicitRules     *string                  `json:"implicitRules,omitempty"`
-	Language          *string                  `json:"language,omitempty"`
-	Text              *Narrative               `json:"text,omitempty"`
-	Extension         []Extension              `json:"extension,omitempty"`
-	ModifierExtension []Extension              `json:"modifierExtension,omitempty"`
-	Identifier        []Identifier             `json:"identifier,omitempty"`
-	BasedOn           []Reference              `json:"basedOn,omitempty"`
-	Status            DeviceUseStatementStatus `json:"status"`
-	Subject           Reference                `json:"subject"`
-	DerivedFrom       []Reference              `json:"derivedFrom,omitempty"`
-	RecordedOn        *string                  `json:"recordedOn,omitempty"`
-	Source            *Reference               `json:"source,omitempty"`
-	Device            Reference                `json:"device"`
-	ReasonCode        []CodeableConcept        `json:"reasonCode,omitempty"`
-	ReasonReference   []Reference              `json:"reasonReference,omitempty"`
-	BodySite          *CodeableConcept         `json:"bodySite,omitempty"`
-	Note              []Annotation             `json:"note,omitempty"`
+	Id                *string                  `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta                    `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string                  `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string                  `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative               `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension              `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension              `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        []Identifier             `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	BasedOn           []Reference              `bson:"basedOn,omitempty" json:"basedOn,omitempty"`
+	Status            DeviceUseStatementStatus `bson:"status" json:"status"`
+	Subject           Reference                `bson:"subject" json:"subject"`
+	DerivedFrom       []Reference              `bson:"derivedFrom,omitempty" json:"derivedFrom,omitempty"`
+	RecordedOn        *string                  `bson:"recordedOn,omitempty" json:"recordedOn,omitempty"`
+	Source            *Reference               `bson:"source,omitempty" json:"source,omitempty"`
+	Device            Reference                `bson:"device" json:"device"`
+	ReasonCode        []CodeableConcept        `bson:"reasonCode,omitempty" json:"reasonCode,omitempty"`
+	ReasonReference   []Reference              `bson:"reasonReference,omitempty" json:"reasonReference,omitempty"`
+	BodySite          *CodeableConcept         `bson:"bodySite,omitempty" json:"bodySite,omitempty"`
+	Note              []Annotation             `bson:"note,omitempty" json:"note,omitempty"`
 }
 type OtherDeviceUseStatement DeviceUseStatement
 

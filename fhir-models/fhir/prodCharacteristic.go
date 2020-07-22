@@ -19,18 +19,18 @@ package fhir
 
 // ProdCharacteristic is documented here http://hl7.org/fhir/StructureDefinition/ProdCharacteristic
 type ProdCharacteristic struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Height            *Quantity        `json:"height,omitempty"`
-	Width             *Quantity        `json:"width,omitempty"`
-	Depth             *Quantity        `json:"depth,omitempty"`
-	Weight            *Quantity        `json:"weight,omitempty"`
-	NominalVolume     *Quantity        `json:"nominalVolume,omitempty"`
-	ExternalDiameter  *Quantity        `json:"externalDiameter,omitempty"`
-	Shape             *string          `json:"shape,omitempty"`
-	Color             []string         `json:"color,omitempty"`
-	Imprint           []string         `json:"imprint,omitempty"`
-	Image             []Attachment     `json:"image,omitempty"`
-	Scoring           *CodeableConcept `json:"scoring,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Height            *Quantity        `bson:"height,omitempty" json:"height,omitempty"`
+	Width             *Quantity        `bson:"width,omitempty" json:"width,omitempty"`
+	Depth             *Quantity        `bson:"depth,omitempty" json:"depth,omitempty"`
+	Weight            *Quantity        `bson:"weight,omitempty" json:"weight,omitempty"`
+	NominalVolume     *Quantity        `bson:"nominalVolume,omitempty" json:"nominalVolume,omitempty"`
+	ExternalDiameter  *Quantity        `bson:"externalDiameter,omitempty" json:"externalDiameter,omitempty"`
+	Shape             *string          `bson:"shape,omitempty" json:"shape,omitempty"`
+	Color             []string         `bson:"color,omitempty" json:"color,omitempty"`
+	Imprint           []string         `bson:"imprint,omitempty" json:"imprint,omitempty"`
+	Image             []Attachment     `bson:"image,omitempty" json:"image,omitempty"`
+	Scoring           *CodeableConcept `bson:"scoring,omitempty" json:"scoring,omitempty"`
 }

@@ -21,44 +21,44 @@ import "encoding/json"
 
 // ChargeItem is documented here http://hl7.org/fhir/StructureDefinition/ChargeItem
 type ChargeItem struct {
-	Id                     *string               `json:"id,omitempty"`
-	Meta                   *Meta                 `json:"meta,omitempty"`
-	ImplicitRules          *string               `json:"implicitRules,omitempty"`
-	Language               *string               `json:"language,omitempty"`
-	Text                   *Narrative            `json:"text,omitempty"`
-	Extension              []Extension           `json:"extension,omitempty"`
-	ModifierExtension      []Extension           `json:"modifierExtension,omitempty"`
-	Identifier             []Identifier          `json:"identifier,omitempty"`
-	DefinitionUri          []string              `json:"definitionUri,omitempty"`
-	DefinitionCanonical    []string              `json:"definitionCanonical,omitempty"`
-	Status                 ChargeItemStatus      `json:"status"`
-	PartOf                 []Reference           `json:"partOf,omitempty"`
-	Code                   CodeableConcept       `json:"code"`
-	Subject                Reference             `json:"subject"`
-	Context                *Reference            `json:"context,omitempty"`
-	Performer              []ChargeItemPerformer `json:"performer,omitempty"`
-	PerformingOrganization *Reference            `json:"performingOrganization,omitempty"`
-	RequestingOrganization *Reference            `json:"requestingOrganization,omitempty"`
-	CostCenter             *Reference            `json:"costCenter,omitempty"`
-	Quantity               *Quantity             `json:"quantity,omitempty"`
-	Bodysite               []CodeableConcept     `json:"bodysite,omitempty"`
-	FactorOverride         *string               `json:"factorOverride,omitempty"`
-	PriceOverride          *Money                `json:"priceOverride,omitempty"`
-	OverrideReason         *string               `json:"overrideReason,omitempty"`
-	Enterer                *Reference            `json:"enterer,omitempty"`
-	EnteredDate            *string               `json:"enteredDate,omitempty"`
-	Reason                 []CodeableConcept     `json:"reason,omitempty"`
-	Service                []Reference           `json:"service,omitempty"`
-	Account                []Reference           `json:"account,omitempty"`
-	Note                   []Annotation          `json:"note,omitempty"`
-	SupportingInformation  []Reference           `json:"supportingInformation,omitempty"`
+	Id                     *string               `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                   *Meta                 `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules          *string               `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language               *string               `bson:"language,omitempty" json:"language,omitempty"`
+	Text                   *Narrative            `bson:"text,omitempty" json:"text,omitempty"`
+	Extension              []Extension           `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension      []Extension           `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier             []Identifier          `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	DefinitionUri          []string              `bson:"definitionUri,omitempty" json:"definitionUri,omitempty"`
+	DefinitionCanonical    []string              `bson:"definitionCanonical,omitempty" json:"definitionCanonical,omitempty"`
+	Status                 ChargeItemStatus      `bson:"status" json:"status"`
+	PartOf                 []Reference           `bson:"partOf,omitempty" json:"partOf,omitempty"`
+	Code                   CodeableConcept       `bson:"code" json:"code"`
+	Subject                Reference             `bson:"subject" json:"subject"`
+	Context                *Reference            `bson:"context,omitempty" json:"context,omitempty"`
+	Performer              []ChargeItemPerformer `bson:"performer,omitempty" json:"performer,omitempty"`
+	PerformingOrganization *Reference            `bson:"performingOrganization,omitempty" json:"performingOrganization,omitempty"`
+	RequestingOrganization *Reference            `bson:"requestingOrganization,omitempty" json:"requestingOrganization,omitempty"`
+	CostCenter             *Reference            `bson:"costCenter,omitempty" json:"costCenter,omitempty"`
+	Quantity               *Quantity             `bson:"quantity,omitempty" json:"quantity,omitempty"`
+	Bodysite               []CodeableConcept     `bson:"bodysite,omitempty" json:"bodysite,omitempty"`
+	FactorOverride         *string               `bson:"factorOverride,omitempty" json:"factorOverride,omitempty"`
+	PriceOverride          *Money                `bson:"priceOverride,omitempty" json:"priceOverride,omitempty"`
+	OverrideReason         *string               `bson:"overrideReason,omitempty" json:"overrideReason,omitempty"`
+	Enterer                *Reference            `bson:"enterer,omitempty" json:"enterer,omitempty"`
+	EnteredDate            *string               `bson:"enteredDate,omitempty" json:"enteredDate,omitempty"`
+	Reason                 []CodeableConcept     `bson:"reason,omitempty" json:"reason,omitempty"`
+	Service                []Reference           `bson:"service,omitempty" json:"service,omitempty"`
+	Account                []Reference           `bson:"account,omitempty" json:"account,omitempty"`
+	Note                   []Annotation          `bson:"note,omitempty" json:"note,omitempty"`
+	SupportingInformation  []Reference           `bson:"supportingInformation,omitempty" json:"supportingInformation,omitempty"`
 }
 type ChargeItemPerformer struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Function          *CodeableConcept `json:"function,omitempty"`
-	Actor             Reference        `json:"actor"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Function          *CodeableConcept `bson:"function,omitempty" json:"function,omitempty"`
+	Actor             Reference        `bson:"actor" json:"actor"`
 }
 type OtherChargeItem ChargeItem
 

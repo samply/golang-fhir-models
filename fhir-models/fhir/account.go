@@ -21,39 +21,39 @@ import "encoding/json"
 
 // Account is documented here http://hl7.org/fhir/StructureDefinition/Account
 type Account struct {
-	Id                *string            `json:"id,omitempty"`
-	Meta              *Meta              `json:"meta,omitempty"`
-	ImplicitRules     *string            `json:"implicitRules,omitempty"`
-	Language          *string            `json:"language,omitempty"`
-	Text              *Narrative         `json:"text,omitempty"`
-	Extension         []Extension        `json:"extension,omitempty"`
-	ModifierExtension []Extension        `json:"modifierExtension,omitempty"`
-	Identifier        []Identifier       `json:"identifier,omitempty"`
-	Status            AccountStatus      `json:"status"`
-	Type              *CodeableConcept   `json:"type,omitempty"`
-	Name              *string            `json:"name,omitempty"`
-	Subject           []Reference        `json:"subject,omitempty"`
-	ServicePeriod     *Period            `json:"servicePeriod,omitempty"`
-	Coverage          []AccountCoverage  `json:"coverage,omitempty"`
-	Owner             *Reference         `json:"owner,omitempty"`
-	Description       *string            `json:"description,omitempty"`
-	Guarantor         []AccountGuarantor `json:"guarantor,omitempty"`
-	PartOf            *Reference         `json:"partOf,omitempty"`
+	Id                *string            `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta              `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string            `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string            `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative         `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension        `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension        `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        []Identifier       `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Status            AccountStatus      `bson:"status" json:"status"`
+	Type              *CodeableConcept   `bson:"type,omitempty" json:"type,omitempty"`
+	Name              *string            `bson:"name,omitempty" json:"name,omitempty"`
+	Subject           []Reference        `bson:"subject,omitempty" json:"subject,omitempty"`
+	ServicePeriod     *Period            `bson:"servicePeriod,omitempty" json:"servicePeriod,omitempty"`
+	Coverage          []AccountCoverage  `bson:"coverage,omitempty" json:"coverage,omitempty"`
+	Owner             *Reference         `bson:"owner,omitempty" json:"owner,omitempty"`
+	Description       *string            `bson:"description,omitempty" json:"description,omitempty"`
+	Guarantor         []AccountGuarantor `bson:"guarantor,omitempty" json:"guarantor,omitempty"`
+	PartOf            *Reference         `bson:"partOf,omitempty" json:"partOf,omitempty"`
 }
 type AccountCoverage struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Coverage          Reference   `json:"coverage"`
-	Priority          *int        `json:"priority,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Coverage          Reference   `bson:"coverage" json:"coverage"`
+	Priority          *int        `bson:"priority,omitempty" json:"priority,omitempty"`
 }
 type AccountGuarantor struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Party             Reference   `json:"party"`
-	OnHold            *bool       `json:"onHold,omitempty"`
-	Period            *Period     `json:"period,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Party             Reference   `bson:"party" json:"party"`
+	OnHold            *bool       `bson:"onHold,omitempty" json:"onHold,omitempty"`
+	Period            *Period     `bson:"period,omitempty" json:"period,omitempty"`
 }
 type OtherAccount Account
 

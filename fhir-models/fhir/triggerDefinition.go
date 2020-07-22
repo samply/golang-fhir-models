@@ -19,10 +19,10 @@ package fhir
 
 // TriggerDefinition is documented here http://hl7.org/fhir/StructureDefinition/TriggerDefinition
 type TriggerDefinition struct {
-	Id        *string           `json:"id,omitempty"`
-	Extension []Extension       `json:"extension,omitempty"`
-	Type      TriggerType       `json:"type"`
-	Name      *string           `json:"name,omitempty"`
-	Data      []DataRequirement `json:"data,omitempty"`
-	Condition *Expression       `json:"condition,omitempty"`
+	Id        *string           `bson:"id,omitempty" json:"id,omitempty"`
+	Extension []Extension       `bson:"extension,omitempty" json:"extension,omitempty"`
+	Type      TriggerType       `bson:"type" json:"type"`
+	Name      *string           `bson:"name,omitempty" json:"name,omitempty"`
+	Data      []DataRequirement `bson:"data,omitempty" json:"data,omitempty"`
+	Condition *Expression       `bson:"condition,omitempty" json:"condition,omitempty"`
 }

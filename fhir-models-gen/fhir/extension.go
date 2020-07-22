@@ -19,7 +19,7 @@ package fhir
 
 // Extension is documented here http://hl7.org/fhir/StructureDefinition/Extension
 type Extension struct {
-	Id        *string     `json:"id,omitempty"`
-	Extension []Extension `json:"extension,omitempty"`
-	Url       string      `json:"url"`
+	Id        *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	Url       string      `bson:"url" json:"url"`
 }

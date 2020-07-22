@@ -21,41 +21,41 @@ import "encoding/json"
 
 // Evidence is documented here http://hl7.org/fhir/StructureDefinition/Evidence
 type Evidence struct {
-	Id                 *string           `json:"id,omitempty"`
-	Meta               *Meta             `json:"meta,omitempty"`
-	ImplicitRules      *string           `json:"implicitRules,omitempty"`
-	Language           *string           `json:"language,omitempty"`
-	Text               *Narrative        `json:"text,omitempty"`
-	Extension          []Extension       `json:"extension,omitempty"`
-	ModifierExtension  []Extension       `json:"modifierExtension,omitempty"`
-	Url                *string           `json:"url,omitempty"`
-	Identifier         []Identifier      `json:"identifier,omitempty"`
-	Version            *string           `json:"version,omitempty"`
-	Name               *string           `json:"name,omitempty"`
-	Title              *string           `json:"title,omitempty"`
-	ShortTitle         *string           `json:"shortTitle,omitempty"`
-	Subtitle           *string           `json:"subtitle,omitempty"`
-	Status             PublicationStatus `json:"status"`
-	Date               *string           `json:"date,omitempty"`
-	Publisher          *string           `json:"publisher,omitempty"`
-	Contact            []ContactDetail   `json:"contact,omitempty"`
-	Description        *string           `json:"description,omitempty"`
-	Note               []Annotation      `json:"note,omitempty"`
-	UseContext         []UsageContext    `json:"useContext,omitempty"`
-	Jurisdiction       []CodeableConcept `json:"jurisdiction,omitempty"`
-	Copyright          *string           `json:"copyright,omitempty"`
-	ApprovalDate       *string           `json:"approvalDate,omitempty"`
-	LastReviewDate     *string           `json:"lastReviewDate,omitempty"`
-	EffectivePeriod    *Period           `json:"effectivePeriod,omitempty"`
-	Topic              []CodeableConcept `json:"topic,omitempty"`
-	Author             []ContactDetail   `json:"author,omitempty"`
-	Editor             []ContactDetail   `json:"editor,omitempty"`
-	Reviewer           []ContactDetail   `json:"reviewer,omitempty"`
-	Endorser           []ContactDetail   `json:"endorser,omitempty"`
-	RelatedArtifact    []RelatedArtifact `json:"relatedArtifact,omitempty"`
-	ExposureBackground Reference         `json:"exposureBackground"`
-	ExposureVariant    []Reference       `json:"exposureVariant,omitempty"`
-	Outcome            []Reference       `json:"outcome,omitempty"`
+	Id                 *string           `bson:"id,omitempty" json:"id,omitempty"`
+	Meta               *Meta             `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules      *string           `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language           *string           `bson:"language,omitempty" json:"language,omitempty"`
+	Text               *Narrative        `bson:"text,omitempty" json:"text,omitempty"`
+	Extension          []Extension       `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension  []Extension       `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Url                *string           `bson:"url,omitempty" json:"url,omitempty"`
+	Identifier         []Identifier      `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Version            *string           `bson:"version,omitempty" json:"version,omitempty"`
+	Name               *string           `bson:"name,omitempty" json:"name,omitempty"`
+	Title              *string           `bson:"title,omitempty" json:"title,omitempty"`
+	ShortTitle         *string           `bson:"shortTitle,omitempty" json:"shortTitle,omitempty"`
+	Subtitle           *string           `bson:"subtitle,omitempty" json:"subtitle,omitempty"`
+	Status             PublicationStatus `bson:"status" json:"status"`
+	Date               *string           `bson:"date,omitempty" json:"date,omitempty"`
+	Publisher          *string           `bson:"publisher,omitempty" json:"publisher,omitempty"`
+	Contact            []ContactDetail   `bson:"contact,omitempty" json:"contact,omitempty"`
+	Description        *string           `bson:"description,omitempty" json:"description,omitempty"`
+	Note               []Annotation      `bson:"note,omitempty" json:"note,omitempty"`
+	UseContext         []UsageContext    `bson:"useContext,omitempty" json:"useContext,omitempty"`
+	Jurisdiction       []CodeableConcept `bson:"jurisdiction,omitempty" json:"jurisdiction,omitempty"`
+	Copyright          *string           `bson:"copyright,omitempty" json:"copyright,omitempty"`
+	ApprovalDate       *string           `bson:"approvalDate,omitempty" json:"approvalDate,omitempty"`
+	LastReviewDate     *string           `bson:"lastReviewDate,omitempty" json:"lastReviewDate,omitempty"`
+	EffectivePeriod    *Period           `bson:"effectivePeriod,omitempty" json:"effectivePeriod,omitempty"`
+	Topic              []CodeableConcept `bson:"topic,omitempty" json:"topic,omitempty"`
+	Author             []ContactDetail   `bson:"author,omitempty" json:"author,omitempty"`
+	Editor             []ContactDetail   `bson:"editor,omitempty" json:"editor,omitempty"`
+	Reviewer           []ContactDetail   `bson:"reviewer,omitempty" json:"reviewer,omitempty"`
+	Endorser           []ContactDetail   `bson:"endorser,omitempty" json:"endorser,omitempty"`
+	RelatedArtifact    []RelatedArtifact `bson:"relatedArtifact,omitempty" json:"relatedArtifact,omitempty"`
+	ExposureBackground Reference         `bson:"exposureBackground" json:"exposureBackground"`
+	ExposureVariant    []Reference       `bson:"exposureVariant,omitempty" json:"exposureVariant,omitempty"`
+	Outcome            []Reference       `bson:"outcome,omitempty" json:"outcome,omitempty"`
 }
 type OtherEvidence Evidence
 

@@ -21,55 +21,55 @@ import "encoding/json"
 
 // SubstanceReferenceInformation is documented here http://hl7.org/fhir/StructureDefinition/SubstanceReferenceInformation
 type SubstanceReferenceInformation struct {
-	Id                *string                                       `json:"id,omitempty"`
-	Meta              *Meta                                         `json:"meta,omitempty"`
-	ImplicitRules     *string                                       `json:"implicitRules,omitempty"`
-	Language          *string                                       `json:"language,omitempty"`
-	Text              *Narrative                                    `json:"text,omitempty"`
-	Extension         []Extension                                   `json:"extension,omitempty"`
-	ModifierExtension []Extension                                   `json:"modifierExtension,omitempty"`
-	Comment           *string                                       `json:"comment,omitempty"`
-	Gene              []SubstanceReferenceInformationGene           `json:"gene,omitempty"`
-	GeneElement       []SubstanceReferenceInformationGeneElement    `json:"geneElement,omitempty"`
-	Classification    []SubstanceReferenceInformationClassification `json:"classification,omitempty"`
-	Target            []SubstanceReferenceInformationTarget         `json:"target,omitempty"`
+	Id                *string                                       `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta                                         `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string                                       `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string                                       `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative                                    `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension                                   `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                                   `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Comment           *string                                       `bson:"comment,omitempty" json:"comment,omitempty"`
+	Gene              []SubstanceReferenceInformationGene           `bson:"gene,omitempty" json:"gene,omitempty"`
+	GeneElement       []SubstanceReferenceInformationGeneElement    `bson:"geneElement,omitempty" json:"geneElement,omitempty"`
+	Classification    []SubstanceReferenceInformationClassification `bson:"classification,omitempty" json:"classification,omitempty"`
+	Target            []SubstanceReferenceInformationTarget         `bson:"target,omitempty" json:"target,omitempty"`
 }
 type SubstanceReferenceInformationGene struct {
-	Id                 *string          `json:"id,omitempty"`
-	Extension          []Extension      `json:"extension,omitempty"`
-	ModifierExtension  []Extension      `json:"modifierExtension,omitempty"`
-	GeneSequenceOrigin *CodeableConcept `json:"geneSequenceOrigin,omitempty"`
-	Gene               *CodeableConcept `json:"gene,omitempty"`
-	Source             []Reference      `json:"source,omitempty"`
+	Id                 *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension          []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension  []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	GeneSequenceOrigin *CodeableConcept `bson:"geneSequenceOrigin,omitempty" json:"geneSequenceOrigin,omitempty"`
+	Gene               *CodeableConcept `bson:"gene,omitempty" json:"gene,omitempty"`
+	Source             []Reference      `bson:"source,omitempty" json:"source,omitempty"`
 }
 type SubstanceReferenceInformationGeneElement struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Type              *CodeableConcept `json:"type,omitempty"`
-	Element           *Identifier      `json:"element,omitempty"`
-	Source            []Reference      `json:"source,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Type              *CodeableConcept `bson:"type,omitempty" json:"type,omitempty"`
+	Element           *Identifier      `bson:"element,omitempty" json:"element,omitempty"`
+	Source            []Reference      `bson:"source,omitempty" json:"source,omitempty"`
 }
 type SubstanceReferenceInformationClassification struct {
-	Id                *string           `json:"id,omitempty"`
-	Extension         []Extension       `json:"extension,omitempty"`
-	ModifierExtension []Extension       `json:"modifierExtension,omitempty"`
-	Domain            *CodeableConcept  `json:"domain,omitempty"`
-	Classification    *CodeableConcept  `json:"classification,omitempty"`
-	Subtype           []CodeableConcept `json:"subtype,omitempty"`
-	Source            []Reference       `json:"source,omitempty"`
+	Id                *string           `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension       `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension       `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Domain            *CodeableConcept  `bson:"domain,omitempty" json:"domain,omitempty"`
+	Classification    *CodeableConcept  `bson:"classification,omitempty" json:"classification,omitempty"`
+	Subtype           []CodeableConcept `bson:"subtype,omitempty" json:"subtype,omitempty"`
+	Source            []Reference       `bson:"source,omitempty" json:"source,omitempty"`
 }
 type SubstanceReferenceInformationTarget struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Target            *Identifier      `json:"target,omitempty"`
-	Type              *CodeableConcept `json:"type,omitempty"`
-	Interaction       *CodeableConcept `json:"interaction,omitempty"`
-	Organism          *CodeableConcept `json:"organism,omitempty"`
-	OrganismType      *CodeableConcept `json:"organismType,omitempty"`
-	AmountType        *CodeableConcept `json:"amountType,omitempty"`
-	Source            []Reference      `json:"source,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Target            *Identifier      `bson:"target,omitempty" json:"target,omitempty"`
+	Type              *CodeableConcept `bson:"type,omitempty" json:"type,omitempty"`
+	Interaction       *CodeableConcept `bson:"interaction,omitempty" json:"interaction,omitempty"`
+	Organism          *CodeableConcept `bson:"organism,omitempty" json:"organism,omitempty"`
+	OrganismType      *CodeableConcept `bson:"organismType,omitempty" json:"organismType,omitempty"`
+	AmountType        *CodeableConcept `bson:"amountType,omitempty" json:"amountType,omitempty"`
+	Source            []Reference      `bson:"source,omitempty" json:"source,omitempty"`
 }
 type OtherSubstanceReferenceInformation SubstanceReferenceInformation
 

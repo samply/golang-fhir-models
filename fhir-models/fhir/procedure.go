@@ -21,55 +21,55 @@ import "encoding/json"
 
 // Procedure is documented here http://hl7.org/fhir/StructureDefinition/Procedure
 type Procedure struct {
-	Id                    *string                `json:"id,omitempty"`
-	Meta                  *Meta                  `json:"meta,omitempty"`
-	ImplicitRules         *string                `json:"implicitRules,omitempty"`
-	Language              *string                `json:"language,omitempty"`
-	Text                  *Narrative             `json:"text,omitempty"`
-	Extension             []Extension            `json:"extension,omitempty"`
-	ModifierExtension     []Extension            `json:"modifierExtension,omitempty"`
-	Identifier            []Identifier           `json:"identifier,omitempty"`
-	InstantiatesCanonical []string               `json:"instantiatesCanonical,omitempty"`
-	InstantiatesUri       []string               `json:"instantiatesUri,omitempty"`
-	BasedOn               []Reference            `json:"basedOn,omitempty"`
-	PartOf                []Reference            `json:"partOf,omitempty"`
-	Status                EventStatus            `json:"status"`
-	StatusReason          *CodeableConcept       `json:"statusReason,omitempty"`
-	Category              *CodeableConcept       `json:"category,omitempty"`
-	Code                  *CodeableConcept       `json:"code,omitempty"`
-	Subject               Reference              `json:"subject"`
-	Encounter             *Reference             `json:"encounter,omitempty"`
-	Recorder              *Reference             `json:"recorder,omitempty"`
-	Asserter              *Reference             `json:"asserter,omitempty"`
-	Performer             []ProcedurePerformer   `json:"performer,omitempty"`
-	Location              *Reference             `json:"location,omitempty"`
-	ReasonCode            []CodeableConcept      `json:"reasonCode,omitempty"`
-	ReasonReference       []Reference            `json:"reasonReference,omitempty"`
-	BodySite              []CodeableConcept      `json:"bodySite,omitempty"`
-	Outcome               *CodeableConcept       `json:"outcome,omitempty"`
-	Report                []Reference            `json:"report,omitempty"`
-	Complication          []CodeableConcept      `json:"complication,omitempty"`
-	ComplicationDetail    []Reference            `json:"complicationDetail,omitempty"`
-	FollowUp              []CodeableConcept      `json:"followUp,omitempty"`
-	Note                  []Annotation           `json:"note,omitempty"`
-	FocalDevice           []ProcedureFocalDevice `json:"focalDevice,omitempty"`
-	UsedReference         []Reference            `json:"usedReference,omitempty"`
-	UsedCode              []CodeableConcept      `json:"usedCode,omitempty"`
+	Id                    *string                `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                  *Meta                  `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules         *string                `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language              *string                `bson:"language,omitempty" json:"language,omitempty"`
+	Text                  *Narrative             `bson:"text,omitempty" json:"text,omitempty"`
+	Extension             []Extension            `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension     []Extension            `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier            []Identifier           `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	InstantiatesCanonical []string               `bson:"instantiatesCanonical,omitempty" json:"instantiatesCanonical,omitempty"`
+	InstantiatesUri       []string               `bson:"instantiatesUri,omitempty" json:"instantiatesUri,omitempty"`
+	BasedOn               []Reference            `bson:"basedOn,omitempty" json:"basedOn,omitempty"`
+	PartOf                []Reference            `bson:"partOf,omitempty" json:"partOf,omitempty"`
+	Status                EventStatus            `bson:"status" json:"status"`
+	StatusReason          *CodeableConcept       `bson:"statusReason,omitempty" json:"statusReason,omitempty"`
+	Category              *CodeableConcept       `bson:"category,omitempty" json:"category,omitempty"`
+	Code                  *CodeableConcept       `bson:"code,omitempty" json:"code,omitempty"`
+	Subject               Reference              `bson:"subject" json:"subject"`
+	Encounter             *Reference             `bson:"encounter,omitempty" json:"encounter,omitempty"`
+	Recorder              *Reference             `bson:"recorder,omitempty" json:"recorder,omitempty"`
+	Asserter              *Reference             `bson:"asserter,omitempty" json:"asserter,omitempty"`
+	Performer             []ProcedurePerformer   `bson:"performer,omitempty" json:"performer,omitempty"`
+	Location              *Reference             `bson:"location,omitempty" json:"location,omitempty"`
+	ReasonCode            []CodeableConcept      `bson:"reasonCode,omitempty" json:"reasonCode,omitempty"`
+	ReasonReference       []Reference            `bson:"reasonReference,omitempty" json:"reasonReference,omitempty"`
+	BodySite              []CodeableConcept      `bson:"bodySite,omitempty" json:"bodySite,omitempty"`
+	Outcome               *CodeableConcept       `bson:"outcome,omitempty" json:"outcome,omitempty"`
+	Report                []Reference            `bson:"report,omitempty" json:"report,omitempty"`
+	Complication          []CodeableConcept      `bson:"complication,omitempty" json:"complication,omitempty"`
+	ComplicationDetail    []Reference            `bson:"complicationDetail,omitempty" json:"complicationDetail,omitempty"`
+	FollowUp              []CodeableConcept      `bson:"followUp,omitempty" json:"followUp,omitempty"`
+	Note                  []Annotation           `bson:"note,omitempty" json:"note,omitempty"`
+	FocalDevice           []ProcedureFocalDevice `bson:"focalDevice,omitempty" json:"focalDevice,omitempty"`
+	UsedReference         []Reference            `bson:"usedReference,omitempty" json:"usedReference,omitempty"`
+	UsedCode              []CodeableConcept      `bson:"usedCode,omitempty" json:"usedCode,omitempty"`
 }
 type ProcedurePerformer struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Function          *CodeableConcept `json:"function,omitempty"`
-	Actor             Reference        `json:"actor"`
-	OnBehalfOf        *Reference       `json:"onBehalfOf,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Function          *CodeableConcept `bson:"function,omitempty" json:"function,omitempty"`
+	Actor             Reference        `bson:"actor" json:"actor"`
+	OnBehalfOf        *Reference       `bson:"onBehalfOf,omitempty" json:"onBehalfOf,omitempty"`
 }
 type ProcedureFocalDevice struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Action            *CodeableConcept `json:"action,omitempty"`
-	Manipulated       Reference        `json:"manipulated"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Action            *CodeableConcept `bson:"action,omitempty" json:"action,omitempty"`
+	Manipulated       Reference        `bson:"manipulated" json:"manipulated"`
 }
 type OtherProcedure Procedure
 

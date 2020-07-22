@@ -21,21 +21,21 @@ import "encoding/json"
 
 // Flag is documented here http://hl7.org/fhir/StructureDefinition/Flag
 type Flag struct {
-	Id                *string           `json:"id,omitempty"`
-	Meta              *Meta             `json:"meta,omitempty"`
-	ImplicitRules     *string           `json:"implicitRules,omitempty"`
-	Language          *string           `json:"language,omitempty"`
-	Text              *Narrative        `json:"text,omitempty"`
-	Extension         []Extension       `json:"extension,omitempty"`
-	ModifierExtension []Extension       `json:"modifierExtension,omitempty"`
-	Identifier        []Identifier      `json:"identifier,omitempty"`
-	Status            FlagStatus        `json:"status"`
-	Category          []CodeableConcept `json:"category,omitempty"`
-	Code              CodeableConcept   `json:"code"`
-	Subject           Reference         `json:"subject"`
-	Period            *Period           `json:"period,omitempty"`
-	Encounter         *Reference        `json:"encounter,omitempty"`
-	Author            *Reference        `json:"author,omitempty"`
+	Id                *string           `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta             `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string           `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string           `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative        `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension       `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension       `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        []Identifier      `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Status            FlagStatus        `bson:"status" json:"status"`
+	Category          []CodeableConcept `bson:"category,omitempty" json:"category,omitempty"`
+	Code              CodeableConcept   `bson:"code" json:"code"`
+	Subject           Reference         `bson:"subject" json:"subject"`
+	Period            *Period           `bson:"period,omitempty" json:"period,omitempty"`
+	Encounter         *Reference        `bson:"encounter,omitempty" json:"encounter,omitempty"`
+	Author            *Reference        `bson:"author,omitempty" json:"author,omitempty"`
 }
 type OtherFlag Flag
 

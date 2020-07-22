@@ -21,106 +21,106 @@ import "encoding/json"
 
 // ExampleScenario is documented here http://hl7.org/fhir/StructureDefinition/ExampleScenario
 type ExampleScenario struct {
-	Id                *string                   `json:"id,omitempty"`
-	Meta              *Meta                     `json:"meta,omitempty"`
-	ImplicitRules     *string                   `json:"implicitRules,omitempty"`
-	Language          *string                   `json:"language,omitempty"`
-	Text              *Narrative                `json:"text,omitempty"`
-	Extension         []Extension               `json:"extension,omitempty"`
-	ModifierExtension []Extension               `json:"modifierExtension,omitempty"`
-	Url               *string                   `json:"url,omitempty"`
-	Identifier        []Identifier              `json:"identifier,omitempty"`
-	Version           *string                   `json:"version,omitempty"`
-	Name              *string                   `json:"name,omitempty"`
-	Status            PublicationStatus         `json:"status"`
-	Experimental      *bool                     `json:"experimental,omitempty"`
-	Date              *string                   `json:"date,omitempty"`
-	Publisher         *string                   `json:"publisher,omitempty"`
-	Contact           []ContactDetail           `json:"contact,omitempty"`
-	UseContext        []UsageContext            `json:"useContext,omitempty"`
-	Jurisdiction      []CodeableConcept         `json:"jurisdiction,omitempty"`
-	Copyright         *string                   `json:"copyright,omitempty"`
-	Purpose           *string                   `json:"purpose,omitempty"`
-	Actor             []ExampleScenarioActor    `json:"actor,omitempty"`
-	Instance          []ExampleScenarioInstance `json:"instance,omitempty"`
-	Process           []ExampleScenarioProcess  `json:"process,omitempty"`
-	Workflow          []string                  `json:"workflow,omitempty"`
+	Id                *string                   `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta                     `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string                   `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string                   `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative                `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension               `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension               `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Url               *string                   `bson:"url,omitempty" json:"url,omitempty"`
+	Identifier        []Identifier              `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Version           *string                   `bson:"version,omitempty" json:"version,omitempty"`
+	Name              *string                   `bson:"name,omitempty" json:"name,omitempty"`
+	Status            PublicationStatus         `bson:"status" json:"status"`
+	Experimental      *bool                     `bson:"experimental,omitempty" json:"experimental,omitempty"`
+	Date              *string                   `bson:"date,omitempty" json:"date,omitempty"`
+	Publisher         *string                   `bson:"publisher,omitempty" json:"publisher,omitempty"`
+	Contact           []ContactDetail           `bson:"contact,omitempty" json:"contact,omitempty"`
+	UseContext        []UsageContext            `bson:"useContext,omitempty" json:"useContext,omitempty"`
+	Jurisdiction      []CodeableConcept         `bson:"jurisdiction,omitempty" json:"jurisdiction,omitempty"`
+	Copyright         *string                   `bson:"copyright,omitempty" json:"copyright,omitempty"`
+	Purpose           *string                   `bson:"purpose,omitempty" json:"purpose,omitempty"`
+	Actor             []ExampleScenarioActor    `bson:"actor,omitempty" json:"actor,omitempty"`
+	Instance          []ExampleScenarioInstance `bson:"instance,omitempty" json:"instance,omitempty"`
+	Process           []ExampleScenarioProcess  `bson:"process,omitempty" json:"process,omitempty"`
+	Workflow          []string                  `bson:"workflow,omitempty" json:"workflow,omitempty"`
 }
 type ExampleScenarioActor struct {
-	Id                *string                  `json:"id,omitempty"`
-	Extension         []Extension              `json:"extension,omitempty"`
-	ModifierExtension []Extension              `json:"modifierExtension,omitempty"`
-	ActorId           string                   `json:"actorId"`
-	Type              ExampleScenarioActorType `json:"type"`
-	Name              *string                  `json:"name,omitempty"`
-	Description       *string                  `json:"description,omitempty"`
+	Id                *string                  `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension              `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension              `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	ActorId           string                   `bson:"actorId" json:"actorId"`
+	Type              ExampleScenarioActorType `bson:"type" json:"type"`
+	Name              *string                  `bson:"name,omitempty" json:"name,omitempty"`
+	Description       *string                  `bson:"description,omitempty" json:"description,omitempty"`
 }
 type ExampleScenarioInstance struct {
-	Id                *string                                    `json:"id,omitempty"`
-	Extension         []Extension                                `json:"extension,omitempty"`
-	ModifierExtension []Extension                                `json:"modifierExtension,omitempty"`
-	ResourceId        string                                     `json:"resourceId"`
-	ResourceType      ResourceType                               `json:"resourceType"`
-	Name              *string                                    `json:"name,omitempty"`
-	Description       *string                                    `json:"description,omitempty"`
-	Version           []ExampleScenarioInstanceVersion           `json:"version,omitempty"`
-	ContainedInstance []ExampleScenarioInstanceContainedInstance `json:"containedInstance,omitempty"`
+	Id                *string                                    `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                                `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                                `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	ResourceId        string                                     `bson:"resourceId" json:"resourceId"`
+	ResourceType      ResourceType                               `bson:"resourceType" json:"resourceType"`
+	Name              *string                                    `bson:"name,omitempty" json:"name,omitempty"`
+	Description       *string                                    `bson:"description,omitempty" json:"description,omitempty"`
+	Version           []ExampleScenarioInstanceVersion           `bson:"version,omitempty" json:"version,omitempty"`
+	ContainedInstance []ExampleScenarioInstanceContainedInstance `bson:"containedInstance,omitempty" json:"containedInstance,omitempty"`
 }
 type ExampleScenarioInstanceVersion struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	VersionId         string      `json:"versionId"`
-	Description       string      `json:"description"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	VersionId         string      `bson:"versionId" json:"versionId"`
+	Description       string      `bson:"description" json:"description"`
 }
 type ExampleScenarioInstanceContainedInstance struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	ResourceId        string      `json:"resourceId"`
-	VersionId         *string     `json:"versionId,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	ResourceId        string      `bson:"resourceId" json:"resourceId"`
+	VersionId         *string     `bson:"versionId,omitempty" json:"versionId,omitempty"`
 }
 type ExampleScenarioProcess struct {
-	Id                *string                      `json:"id,omitempty"`
-	Extension         []Extension                  `json:"extension,omitempty"`
-	ModifierExtension []Extension                  `json:"modifierExtension,omitempty"`
-	Title             string                       `json:"title"`
-	Description       *string                      `json:"description,omitempty"`
-	PreConditions     *string                      `json:"preConditions,omitempty"`
-	PostConditions    *string                      `json:"postConditions,omitempty"`
-	Step              []ExampleScenarioProcessStep `json:"step,omitempty"`
+	Id                *string                      `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                  `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                  `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Title             string                       `bson:"title" json:"title"`
+	Description       *string                      `bson:"description,omitempty" json:"description,omitempty"`
+	PreConditions     *string                      `bson:"preConditions,omitempty" json:"preConditions,omitempty"`
+	PostConditions    *string                      `bson:"postConditions,omitempty" json:"postConditions,omitempty"`
+	Step              []ExampleScenarioProcessStep `bson:"step,omitempty" json:"step,omitempty"`
 }
 type ExampleScenarioProcessStep struct {
-	Id                *string                                 `json:"id,omitempty"`
-	Extension         []Extension                             `json:"extension,omitempty"`
-	ModifierExtension []Extension                             `json:"modifierExtension,omitempty"`
-	Process           []ExampleScenarioProcess                `json:"process,omitempty"`
-	Pause             *bool                                   `json:"pause,omitempty"`
-	Operation         *ExampleScenarioProcessStepOperation    `json:"operation,omitempty"`
-	Alternative       []ExampleScenarioProcessStepAlternative `json:"alternative,omitempty"`
+	Id                *string                                 `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                             `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                             `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Process           []ExampleScenarioProcess                `bson:"process,omitempty" json:"process,omitempty"`
+	Pause             *bool                                   `bson:"pause,omitempty" json:"pause,omitempty"`
+	Operation         *ExampleScenarioProcessStepOperation    `bson:"operation,omitempty" json:"operation,omitempty"`
+	Alternative       []ExampleScenarioProcessStepAlternative `bson:"alternative,omitempty" json:"alternative,omitempty"`
 }
 type ExampleScenarioProcessStepOperation struct {
-	Id                *string                                   `json:"id,omitempty"`
-	Extension         []Extension                               `json:"extension,omitempty"`
-	ModifierExtension []Extension                               `json:"modifierExtension,omitempty"`
-	Number            string                                    `json:"number"`
-	Type              *string                                   `json:"type,omitempty"`
-	Name              *string                                   `json:"name,omitempty"`
-	Initiator         *string                                   `json:"initiator,omitempty"`
-	Receiver          *string                                   `json:"receiver,omitempty"`
-	Description       *string                                   `json:"description,omitempty"`
-	InitiatorActive   *bool                                     `json:"initiatorActive,omitempty"`
-	ReceiverActive    *bool                                     `json:"receiverActive,omitempty"`
-	Request           *ExampleScenarioInstanceContainedInstance `json:"request,omitempty"`
-	Response          *ExampleScenarioInstanceContainedInstance `json:"response,omitempty"`
+	Id                *string                                   `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                               `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                               `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Number            string                                    `bson:"number" json:"number"`
+	Type              *string                                   `bson:"type,omitempty" json:"type,omitempty"`
+	Name              *string                                   `bson:"name,omitempty" json:"name,omitempty"`
+	Initiator         *string                                   `bson:"initiator,omitempty" json:"initiator,omitempty"`
+	Receiver          *string                                   `bson:"receiver,omitempty" json:"receiver,omitempty"`
+	Description       *string                                   `bson:"description,omitempty" json:"description,omitempty"`
+	InitiatorActive   *bool                                     `bson:"initiatorActive,omitempty" json:"initiatorActive,omitempty"`
+	ReceiverActive    *bool                                     `bson:"receiverActive,omitempty" json:"receiverActive,omitempty"`
+	Request           *ExampleScenarioInstanceContainedInstance `bson:"request,omitempty" json:"request,omitempty"`
+	Response          *ExampleScenarioInstanceContainedInstance `bson:"response,omitempty" json:"response,omitempty"`
 }
 type ExampleScenarioProcessStepAlternative struct {
-	Id                *string                      `json:"id,omitempty"`
-	Extension         []Extension                  `json:"extension,omitempty"`
-	ModifierExtension []Extension                  `json:"modifierExtension,omitempty"`
-	Title             string                       `json:"title"`
-	Description       *string                      `json:"description,omitempty"`
-	Step              []ExampleScenarioProcessStep `json:"step,omitempty"`
+	Id                *string                      `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                  `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                  `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Title             string                       `bson:"title" json:"title"`
+	Description       *string                      `bson:"description,omitempty" json:"description,omitempty"`
+	Step              []ExampleScenarioProcessStep `bson:"step,omitempty" json:"step,omitempty"`
 }
 type OtherExampleScenario ExampleScenario
 

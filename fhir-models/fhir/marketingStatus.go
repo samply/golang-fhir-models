@@ -19,12 +19,12 @@ package fhir
 
 // MarketingStatus is documented here http://hl7.org/fhir/StructureDefinition/MarketingStatus
 type MarketingStatus struct {
-	Id                *string          `json:"id,omitempty"`
-	Extension         []Extension      `json:"extension,omitempty"`
-	ModifierExtension []Extension      `json:"modifierExtension,omitempty"`
-	Country           CodeableConcept  `json:"country"`
-	Jurisdiction      *CodeableConcept `json:"jurisdiction,omitempty"`
-	Status            CodeableConcept  `json:"status"`
-	DateRange         Period           `json:"dateRange"`
-	RestoreDate       *string          `json:"restoreDate,omitempty"`
+	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Country           CodeableConcept  `bson:"country" json:"country"`
+	Jurisdiction      *CodeableConcept `bson:"jurisdiction,omitempty" json:"jurisdiction,omitempty"`
+	Status            CodeableConcept  `bson:"status" json:"status"`
+	DateRange         Period           `bson:"dateRange" json:"dateRange"`
+	RestoreDate       *string          `bson:"restoreDate,omitempty" json:"restoreDate,omitempty"`
 }

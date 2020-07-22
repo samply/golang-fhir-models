@@ -19,11 +19,11 @@ package fhir
 
 // Expression is documented here http://hl7.org/fhir/StructureDefinition/Expression
 type Expression struct {
-	Id          *string     `json:"id,omitempty"`
-	Extension   []Extension `json:"extension,omitempty"`
-	Description *string     `json:"description,omitempty"`
-	Name        *string     `json:"name,omitempty"`
-	Language    string      `json:"language"`
-	Expression  *string     `json:"expression,omitempty"`
-	Reference   *string     `json:"reference,omitempty"`
+	Id          *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension   []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	Description *string     `bson:"description,omitempty" json:"description,omitempty"`
+	Name        *string     `bson:"name,omitempty" json:"name,omitempty"`
+	Language    string      `bson:"language" json:"language"`
+	Expression  *string     `bson:"expression,omitempty" json:"expression,omitempty"`
+	Reference   *string     `bson:"reference,omitempty" json:"reference,omitempty"`
 }

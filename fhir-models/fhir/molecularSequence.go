@@ -21,121 +21,121 @@ import "encoding/json"
 
 // MolecularSequence is documented here http://hl7.org/fhir/StructureDefinition/MolecularSequence
 type MolecularSequence struct {
-	Id                *string                             `json:"id,omitempty"`
-	Meta              *Meta                               `json:"meta,omitempty"`
-	ImplicitRules     *string                             `json:"implicitRules,omitempty"`
-	Language          *string                             `json:"language,omitempty"`
-	Text              *Narrative                          `json:"text,omitempty"`
-	Extension         []Extension                         `json:"extension,omitempty"`
-	ModifierExtension []Extension                         `json:"modifierExtension,omitempty"`
-	Identifier        []Identifier                        `json:"identifier,omitempty"`
-	Type              *string                             `json:"type,omitempty"`
-	CoordinateSystem  int                                 `json:"coordinateSystem"`
-	Patient           *Reference                          `json:"patient,omitempty"`
-	Specimen          *Reference                          `json:"specimen,omitempty"`
-	Device            *Reference                          `json:"device,omitempty"`
-	Performer         *Reference                          `json:"performer,omitempty"`
-	Quantity          *Quantity                           `json:"quantity,omitempty"`
-	ReferenceSeq      *MolecularSequenceReferenceSeq      `json:"referenceSeq,omitempty"`
-	Variant           []MolecularSequenceVariant          `json:"variant,omitempty"`
-	ObservedSeq       *string                             `json:"observedSeq,omitempty"`
-	Quality           []MolecularSequenceQuality          `json:"quality,omitempty"`
-	ReadCoverage      *int                                `json:"readCoverage,omitempty"`
-	Repository        []MolecularSequenceRepository       `json:"repository,omitempty"`
-	Pointer           []Reference                         `json:"pointer,omitempty"`
-	StructureVariant  []MolecularSequenceStructureVariant `json:"structureVariant,omitempty"`
+	Id                *string                             `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta                               `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string                             `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string                             `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative                          `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension                         `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                         `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        []Identifier                        `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Type              *string                             `bson:"type,omitempty" json:"type,omitempty"`
+	CoordinateSystem  int                                 `bson:"coordinateSystem" json:"coordinateSystem"`
+	Patient           *Reference                          `bson:"patient,omitempty" json:"patient,omitempty"`
+	Specimen          *Reference                          `bson:"specimen,omitempty" json:"specimen,omitempty"`
+	Device            *Reference                          `bson:"device,omitempty" json:"device,omitempty"`
+	Performer         *Reference                          `bson:"performer,omitempty" json:"performer,omitempty"`
+	Quantity          *Quantity                           `bson:"quantity,omitempty" json:"quantity,omitempty"`
+	ReferenceSeq      *MolecularSequenceReferenceSeq      `bson:"referenceSeq,omitempty" json:"referenceSeq,omitempty"`
+	Variant           []MolecularSequenceVariant          `bson:"variant,omitempty" json:"variant,omitempty"`
+	ObservedSeq       *string                             `bson:"observedSeq,omitempty" json:"observedSeq,omitempty"`
+	Quality           []MolecularSequenceQuality          `bson:"quality,omitempty" json:"quality,omitempty"`
+	ReadCoverage      *int                                `bson:"readCoverage,omitempty" json:"readCoverage,omitempty"`
+	Repository        []MolecularSequenceRepository       `bson:"repository,omitempty" json:"repository,omitempty"`
+	Pointer           []Reference                         `bson:"pointer,omitempty" json:"pointer,omitempty"`
+	StructureVariant  []MolecularSequenceStructureVariant `bson:"structureVariant,omitempty" json:"structureVariant,omitempty"`
 }
 type MolecularSequenceReferenceSeq struct {
-	Id                  *string          `json:"id,omitempty"`
-	Extension           []Extension      `json:"extension,omitempty"`
-	ModifierExtension   []Extension      `json:"modifierExtension,omitempty"`
-	Chromosome          *CodeableConcept `json:"chromosome,omitempty"`
-	GenomeBuild         *string          `json:"genomeBuild,omitempty"`
-	Orientation         *string          `json:"orientation,omitempty"`
-	ReferenceSeqId      *CodeableConcept `json:"referenceSeqId,omitempty"`
-	ReferenceSeqPointer *Reference       `json:"referenceSeqPointer,omitempty"`
-	ReferenceSeqString  *string          `json:"referenceSeqString,omitempty"`
-	Strand              *string          `json:"strand,omitempty"`
-	WindowStart         *int             `json:"windowStart,omitempty"`
-	WindowEnd           *int             `json:"windowEnd,omitempty"`
+	Id                  *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension           []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension   []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Chromosome          *CodeableConcept `bson:"chromosome,omitempty" json:"chromosome,omitempty"`
+	GenomeBuild         *string          `bson:"genomeBuild,omitempty" json:"genomeBuild,omitempty"`
+	Orientation         *string          `bson:"orientation,omitempty" json:"orientation,omitempty"`
+	ReferenceSeqId      *CodeableConcept `bson:"referenceSeqId,omitempty" json:"referenceSeqId,omitempty"`
+	ReferenceSeqPointer *Reference       `bson:"referenceSeqPointer,omitempty" json:"referenceSeqPointer,omitempty"`
+	ReferenceSeqString  *string          `bson:"referenceSeqString,omitempty" json:"referenceSeqString,omitempty"`
+	Strand              *string          `bson:"strand,omitempty" json:"strand,omitempty"`
+	WindowStart         *int             `bson:"windowStart,omitempty" json:"windowStart,omitempty"`
+	WindowEnd           *int             `bson:"windowEnd,omitempty" json:"windowEnd,omitempty"`
 }
 type MolecularSequenceVariant struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Start             *int        `json:"start,omitempty"`
-	End               *int        `json:"end,omitempty"`
-	ObservedAllele    *string     `json:"observedAllele,omitempty"`
-	ReferenceAllele   *string     `json:"referenceAllele,omitempty"`
-	Cigar             *string     `json:"cigar,omitempty"`
-	VariantPointer    *Reference  `json:"variantPointer,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Start             *int        `bson:"start,omitempty" json:"start,omitempty"`
+	End               *int        `bson:"end,omitempty" json:"end,omitempty"`
+	ObservedAllele    *string     `bson:"observedAllele,omitempty" json:"observedAllele,omitempty"`
+	ReferenceAllele   *string     `bson:"referenceAllele,omitempty" json:"referenceAllele,omitempty"`
+	Cigar             *string     `bson:"cigar,omitempty" json:"cigar,omitempty"`
+	VariantPointer    *Reference  `bson:"variantPointer,omitempty" json:"variantPointer,omitempty"`
 }
 type MolecularSequenceQuality struct {
-	Id                *string                      `json:"id,omitempty"`
-	Extension         []Extension                  `json:"extension,omitempty"`
-	ModifierExtension []Extension                  `json:"modifierExtension,omitempty"`
-	Type              string                       `json:"type"`
-	StandardSequence  *CodeableConcept             `json:"standardSequence,omitempty"`
-	Start             *int                         `json:"start,omitempty"`
-	End               *int                         `json:"end,omitempty"`
-	Score             *Quantity                    `json:"score,omitempty"`
-	Method            *CodeableConcept             `json:"method,omitempty"`
-	TruthTP           *string                      `json:"truthTP,omitempty"`
-	QueryTP           *string                      `json:"queryTP,omitempty"`
-	TruthFN           *string                      `json:"truthFN,omitempty"`
-	QueryFP           *string                      `json:"queryFP,omitempty"`
-	GtFP              *string                      `json:"gtFP,omitempty"`
-	Precision         *string                      `json:"precision,omitempty"`
-	Recall            *string                      `json:"recall,omitempty"`
-	FScore            *string                      `json:"fScore,omitempty"`
-	Roc               *MolecularSequenceQualityRoc `json:"roc,omitempty"`
+	Id                *string                      `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                  `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                  `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Type              string                       `bson:"type" json:"type"`
+	StandardSequence  *CodeableConcept             `bson:"standardSequence,omitempty" json:"standardSequence,omitempty"`
+	Start             *int                         `bson:"start,omitempty" json:"start,omitempty"`
+	End               *int                         `bson:"end,omitempty" json:"end,omitempty"`
+	Score             *Quantity                    `bson:"score,omitempty" json:"score,omitempty"`
+	Method            *CodeableConcept             `bson:"method,omitempty" json:"method,omitempty"`
+	TruthTP           *string                      `bson:"truthTP,omitempty" json:"truthTP,omitempty"`
+	QueryTP           *string                      `bson:"queryTP,omitempty" json:"queryTP,omitempty"`
+	TruthFN           *string                      `bson:"truthFN,omitempty" json:"truthFN,omitempty"`
+	QueryFP           *string                      `bson:"queryFP,omitempty" json:"queryFP,omitempty"`
+	GtFP              *string                      `bson:"gtFP,omitempty" json:"gtFP,omitempty"`
+	Precision         *string                      `bson:"precision,omitempty" json:"precision,omitempty"`
+	Recall            *string                      `bson:"recall,omitempty" json:"recall,omitempty"`
+	FScore            *string                      `bson:"fScore,omitempty" json:"fScore,omitempty"`
+	Roc               *MolecularSequenceQualityRoc `bson:"roc,omitempty" json:"roc,omitempty"`
 }
 type MolecularSequenceQualityRoc struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Score             []int       `json:"score,omitempty"`
-	NumTP             []int       `json:"numTP,omitempty"`
-	NumFP             []int       `json:"numFP,omitempty"`
-	NumFN             []int       `json:"numFN,omitempty"`
-	Precision         []string    `json:"precision,omitempty"`
-	Sensitivity       []string    `json:"sensitivity,omitempty"`
-	FMeasure          []string    `json:"fMeasure,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Score             []int       `bson:"score,omitempty" json:"score,omitempty"`
+	NumTP             []int       `bson:"numTP,omitempty" json:"numTP,omitempty"`
+	NumFP             []int       `bson:"numFP,omitempty" json:"numFP,omitempty"`
+	NumFN             []int       `bson:"numFN,omitempty" json:"numFN,omitempty"`
+	Precision         []string    `bson:"precision,omitempty" json:"precision,omitempty"`
+	Sensitivity       []string    `bson:"sensitivity,omitempty" json:"sensitivity,omitempty"`
+	FMeasure          []string    `bson:"fMeasure,omitempty" json:"fMeasure,omitempty"`
 }
 type MolecularSequenceRepository struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Type              string      `json:"type"`
-	Url               *string     `json:"url,omitempty"`
-	Name              *string     `json:"name,omitempty"`
-	DatasetId         *string     `json:"datasetId,omitempty"`
-	VariantsetId      *string     `json:"variantsetId,omitempty"`
-	ReadsetId         *string     `json:"readsetId,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Type              string      `bson:"type" json:"type"`
+	Url               *string     `bson:"url,omitempty" json:"url,omitempty"`
+	Name              *string     `bson:"name,omitempty" json:"name,omitempty"`
+	DatasetId         *string     `bson:"datasetId,omitempty" json:"datasetId,omitempty"`
+	VariantsetId      *string     `bson:"variantsetId,omitempty" json:"variantsetId,omitempty"`
+	ReadsetId         *string     `bson:"readsetId,omitempty" json:"readsetId,omitempty"`
 }
 type MolecularSequenceStructureVariant struct {
-	Id                *string                                 `json:"id,omitempty"`
-	Extension         []Extension                             `json:"extension,omitempty"`
-	ModifierExtension []Extension                             `json:"modifierExtension,omitempty"`
-	VariantType       *CodeableConcept                        `json:"variantType,omitempty"`
-	Exact             *bool                                   `json:"exact,omitempty"`
-	Length            *int                                    `json:"length,omitempty"`
-	Outer             *MolecularSequenceStructureVariantOuter `json:"outer,omitempty"`
-	Inner             *MolecularSequenceStructureVariantInner `json:"inner,omitempty"`
+	Id                *string                                 `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension                             `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                             `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	VariantType       *CodeableConcept                        `bson:"variantType,omitempty" json:"variantType,omitempty"`
+	Exact             *bool                                   `bson:"exact,omitempty" json:"exact,omitempty"`
+	Length            *int                                    `bson:"length,omitempty" json:"length,omitempty"`
+	Outer             *MolecularSequenceStructureVariantOuter `bson:"outer,omitempty" json:"outer,omitempty"`
+	Inner             *MolecularSequenceStructureVariantInner `bson:"inner,omitempty" json:"inner,omitempty"`
 }
 type MolecularSequenceStructureVariantOuter struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Start             *int        `json:"start,omitempty"`
-	End               *int        `json:"end,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Start             *int        `bson:"start,omitempty" json:"start,omitempty"`
+	End               *int        `bson:"end,omitempty" json:"end,omitempty"`
 }
 type MolecularSequenceStructureVariantInner struct {
-	Id                *string     `json:"id,omitempty"`
-	Extension         []Extension `json:"extension,omitempty"`
-	ModifierExtension []Extension `json:"modifierExtension,omitempty"`
-	Start             *int        `json:"start,omitempty"`
-	End               *int        `json:"end,omitempty"`
+	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Start             *int        `bson:"start,omitempty" json:"start,omitempty"`
+	End               *int        `bson:"end,omitempty" json:"end,omitempty"`
 }
 type OtherMolecularSequence MolecularSequence
 
