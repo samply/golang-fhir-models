@@ -85,7 +85,7 @@ func (code CarePlanActivityStatus) Code() string {
 	case CarePlanActivityStatusCancelled:
 		return "cancelled"
 	case CarePlanActivityStatusStopped:
-		return "Stopped"
+		return "stopped"
 	case CarePlanActivityStatusUnknown:
 		return "unknown"
 	case CarePlanActivityStatusEnteredInError:

@@ -78,7 +78,7 @@ func (code ObservationStatus) Code() string {
 	case ObservationStatusAmended:
 		return "amended"
 	case ObservationStatusCorrected:
-		return "Corrected"
+		return "corrected"
 	case ObservationStatusCancelled:
 		return "cancelled"
 	case ObservationStatusEnteredInError:

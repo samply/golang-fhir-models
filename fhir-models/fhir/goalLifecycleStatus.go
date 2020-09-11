@@ -79,11 +79,11 @@ func (code GoalLifecycleStatus) Code() string {
 	case GoalLifecycleStatusAccepted:
 		return "accepted"
 	case GoalLifecycleStatusActive:
-		return "Active"
+		return "active"
 	case GoalLifecycleStatusOnHold:
-		return "On Hold"
+		return "on-hold"
 	case GoalLifecycleStatusCompleted:
-		return "Completed"
+		return "completed"
 	case GoalLifecycleStatusCancelled:
 		return "cancelled"
 	case GoalLifecycleStatusEnteredInError:

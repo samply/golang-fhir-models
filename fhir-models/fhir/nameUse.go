@@ -79,7 +79,7 @@ func (code NameUse) Code() string {
 	case NameUseOld:
 		return "old"
 	case NameUseMaiden:
-		return "Name changed for Marriage"
+		return "maiden"
 	}
 	return "<unknown>"
 }
