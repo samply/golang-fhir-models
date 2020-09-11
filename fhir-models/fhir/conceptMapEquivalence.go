@@ -78,23 +78,23 @@ func (code ConceptMapEquivalence) Code() string {
 	case ConceptMapEquivalenceRelatedto:
 		return "relatedto"
 	case ConceptMapEquivalenceEquivalent:
-		return "Equivalent"
+		return "equivalent"
 	case ConceptMapEquivalenceEqual:
-		return "Equal"
+		return "equal"
 	case ConceptMapEquivalenceWider:
-		return "Wider"
+		return "wider"
 	case ConceptMapEquivalenceSubsumes:
-		return "Subsumes"
+		return "subsumes"
 	case ConceptMapEquivalenceNarrower:
-		return "Narrower"
+		return "narrower"
 	case ConceptMapEquivalenceSpecializes:
-		return "Specializes"
+		return "specializes"
 	case ConceptMapEquivalenceInexact:
-		return "Inexact"
+		return "inexact"
 	case ConceptMapEquivalenceUnmatched:
 		return "unmatched"
 	case ConceptMapEquivalenceDisjoint:
-		return "Disjoint"
+		return "disjoint"
 	}
 	return "<unknown>"
 }

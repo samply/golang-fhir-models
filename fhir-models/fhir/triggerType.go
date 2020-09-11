@@ -76,11 +76,11 @@ func (code TriggerType) Code() string {
 	case TriggerTypeDataChanged:
 		return "data-changed"
 	case TriggerTypeDataAdded:
-		return "Data Added"
+		return "data-added"
 	case TriggerTypeDataModified:
-		return "Data Updated"
+		return "data-modified"
 	case TriggerTypeDataRemoved:
-		return "Data Removed"
+		return "data-removed"
 	case TriggerTypeDataAccessed:
 		return "data-accessed"
 	case TriggerTypeDataAccessEnded:

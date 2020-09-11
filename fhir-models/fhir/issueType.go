@@ -141,63 +141,63 @@ func (code IssueType) Code() string {
 	case IssueTypeInvalid:
 		return "invalid"
 	case IssueTypeStructure:
-		return "Structural Issue"
+		return "structure"
 	case IssueTypeRequired:
-		return "Required element missing"
+		return "required"
 	case IssueTypeValue:
-		return "Element value invalid"
+		return "value"
 	case IssueTypeInvariant:
-		return "Validation rule failed"
+		return "invariant"
 	case IssueTypeSecurity:
 		return "security"
 	case IssueTypeLogin:
-		return "Login Required"
+		return "login"
 	case IssueTypeUnknown:
-		return "Unknown User"
+		return "unknown"
 	case IssueTypeExpired:
-		return "Session Expired"
+		return "expired"
 	case IssueTypeForbidden:
-		return "Forbidden"
+		return "forbidden"
 	case IssueTypeSuppressed:
-		return "Information  Suppressed"
+		return "suppressed"
 	case IssueTypeProcessing:
 		return "processing"
 	case IssueTypeNotSupported:
-		return "Content not supported"
+		return "not-supported"
 	case IssueTypeDuplicate:
-		return "Duplicate"
+		return "duplicate"
 	case IssueTypeMultipleMatches:
-		return "Multiple Matches"
+		return "multiple-matches"
 	case IssueTypeNotFound:
-		return "Not Found"
+		return "not-found"
 	case IssueTypeDeleted:
-		return "Deleted"
+		return "deleted"
 	case IssueTypeTooLong:
-		return "Content Too Long"
+		return "too-long"
 	case IssueTypeCodeInvalid:
-		return "Invalid Code"
+		return "code-invalid"
 	case IssueTypeExtension:
-		return "Unacceptable Extension"
+		return "extension"
 	case IssueTypeTooCostly:
-		return "Operation Too Costly"
+		return "too-costly"
 	case IssueTypeBusinessRule:
-		return "Business Rule Violation"
+		return "business-rule"
 	case IssueTypeConflict:
-		return "Edit Version Conflict"
+		return "conflict"
 	case IssueTypeTransient:
 		return "transient"
 	case IssueTypeLockError:
-		return "Lock Error"
+		return "lock-error"
 	case IssueTypeNoStore:
-		return "No Store Available"
+		return "no-store"
 	case IssueTypeException:
-		return "Exception"
+		return "exception"
 	case IssueTypeTimeout:
-		return "Timeout"
+		return "timeout"
 	case IssueTypeIncomplete:
-		return "Incomplete Results"
+		return "incomplete"
 	case IssueTypeThrottled:
-		return "Throttled"
+		return "throttled"
 	case IssueTypeInformational:
 		return "informational"
 	}

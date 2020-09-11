@@ -59,7 +59,7 @@ func (code AggregationMode) Code() string {
 	case AggregationModeReferenced:
 		return "referenced"
 	case AggregationModeBundled:
-		return "Bundled"
+		return "bundled"
 	}
 	return "<unknown>"
 }

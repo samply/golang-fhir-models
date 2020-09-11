@@ -63,13 +63,13 @@ func (code ProvenanceEntityRole) Code() string {
 	case ProvenanceEntityRoleDerivation:
 		return "derivation"
 	case ProvenanceEntityRoleRevision:
-		return "Revision"
+		return "revision"
 	case ProvenanceEntityRoleQuotation:
-		return "Quotation"
+		return "quotation"
 	case ProvenanceEntityRoleSource:
-		return "Source"
+		return "source"
 	case ProvenanceEntityRoleRemoval:
-		return "Removal"
+		return "removal"
 	}
 	return "<unknown>"
 }

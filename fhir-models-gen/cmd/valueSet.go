@@ -193,7 +193,7 @@ func codes(valueSetName string, concepts []fhir.CodeSystemConcept) func(group *j
 		for _, concept := range concepts {
 			group.Case(jen.Id(codeIdentifier(valueSetName, concept.Code))).Block(jen.Return(jen.Lit(concept.Code)))
 			if len(concept.Concept) > 0 {
-				displays(valueSetName, concept.Concept)(group)
+				codes(valueSetName, concept.Concept)(group)
 			}
 		}
 	}

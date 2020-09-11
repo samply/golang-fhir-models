@@ -81,13 +81,13 @@ func (code RequestIntent) Code() string {
 	case RequestIntentOrder:
 		return "order"
 	case RequestIntentOriginalOrder:
-		return "Original Order"
+		return "original-order"
 	case RequestIntentReflexOrder:
-		return "Reflex Order"
+		return "reflex-order"
 	case RequestIntentFillerOrder:
-		return "Filler Order"
+		return "filler-order"
 	case RequestIntentInstanceOrder:
-		return "Instance Order"
+		return "instance-order"
 	case RequestIntentOption:
 		return "option"
 	}
