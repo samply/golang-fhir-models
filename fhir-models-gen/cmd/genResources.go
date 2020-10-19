@@ -319,7 +319,8 @@ func appendGeneratorComment(file *jen.File) {
 }
 
 func appendFields(resources ResourceMap, requiredTypes map[string]bool, requiredValueSetBindings map[string]bool, file *jen.File, fields *jen.Group, parentName string, elementDefinitions []fhir.ElementDefinition, start, level int) (int, error) {
-	//fmt.Printf("appendFields parentName=%s, start=%d, level=%d\n", parentName, start, level)
+	// fmt.Printf("appendFields parentName=%s, start=%d, level=%d\n", parentName, start, level)
+
 	for i := start; i < len(elementDefinitions); i++ {
 		element := elementDefinitions[i]
 		pathParts := Split(element.Path, ".")
@@ -346,89 +347,29 @@ func appendFields(resources ResourceMap, requiredTypes map[string]bool, required
 						}
 						statement.Id(typeIdentifier).Tag(map[string]string{"json": pathParts[level] + ",omitempty", "bson": pathParts[level] + ",omitempty"})
 					}
-				// support polymorphic elements later
 				case 1:
-					statement := fields.Id(name)
+					var err error
+					i, err = addFieldStatement(resources, requiredTypes, requiredValueSetBindings, file, fields,
+						pathParts[level], parentName, elementDefinitions, i, level, element.Type[0])
 
-					switch element.Type[0].Code {
-					case "code":
-						if *element.Max == "*" {
-							statement.Op("[]")
-						} else if *element.Min == 0 {
-							statement.Op("*")
-						}
+					if err != nil {
+						return 0, err
+					}
+				default: //polymorphic type
+					name = Replace(pathParts[level], "[x]", "", -1)
+					for _, eleType := range element.Type {
+						name := name + Title(eleType.Code)
 
-						if url := requiredValueSetBinding(element); url != nil {
-							if bytes := resources["ValueSet"][*url]; bytes != nil {
-								valueSet, err := fhir.UnmarshalValueSet(bytes)
-								if err != nil {
-									return 0, err
-								}
-								if name := valueSet.Name; name != nil {
-									if !namePattern.MatchString(*name) {
-										fmt.Printf("Skip generating an enum for a ValueSet binding to `%s` because the ValueSet has a non-conforming name.\n", *name)
-										statement.Id("string")
-									} else if len(valueSet.Compose.Include) > 1 {
-										fmt.Printf("Skip generating an enum for a ValueSet binding to `%s` because the ValueSet includes more than one CodeSystem.\n", *valueSet.Name)
-										statement.Id("string")
-									} else if codeSystemUrl := canonical(valueSet.Compose.Include[0]); resources["CodeSystem"][codeSystemUrl] == nil {
-										fmt.Printf("Skip generating an enum for a ValueSet binding to `%s` because the ValueSet includes the non-existing CodeSystem with canonical URL `%s`.\n", *valueSet.Name, codeSystemUrl)
-										statement.Id("string")
-									} else {
-										requiredValueSetBindings[*url] = true
-										statement.Id(*name)
-									}
-								} else {
-									return 0, fmt.Errorf("missing name in ValueSet with canonical URL `%s`", *url)
-								}
-							} else {
-								statement.Id("string")
-							}
-						} else {
-							statement.Id("string")
-						}
-					case "Resource":
-						statement.Qual("encoding/json", "RawMessage")
-					default:
-						if *element.Max == "*" {
-							statement.Op("[]")
-						} else if *element.Min == 0 {
-							statement.Op("*")
-						}
+						var err error
+						i, err = addFieldStatement(resources, requiredTypes, requiredValueSetBindings, file, fields,
+							name, parentName, elementDefinitions, i, level, eleType)
 
-						var typeIdentifier string
-						if parentName == "Element" && name == "Id" ||
-							parentName == "Extension" && name == "Url" {
-							typeIdentifier = "string"
-						} else {
-							typeIdentifier = typeCodeToTypeIdentifier(element.Type[0].Code)
-						}
-						if typeIdentifier == "Element" || typeIdentifier == "BackboneElement" {
-							backboneElementName := parentName + name
-							statement.Id(backboneElementName)
-							var err error
-							file.Type().Id(backboneElementName).StructFunc(func(childFields *jen.Group) {
-								//var err error
-								i, err = appendFields(resources, requiredTypes, requiredValueSetBindings, file, childFields, backboneElementName, elementDefinitions, i+1, level+1)
-							})
-							if err != nil {
-								return 0, err
-							}
-							i--
-						} else {
-							if unicode.IsUpper(rune(typeIdentifier[0])) {
-								requiredTypes[typeIdentifier] = true
-							}
-							statement.Id(typeIdentifier)
+						if err != nil {
+							return 0, err
 						}
 					}
 
-					if *element.Min == 0 {
-						statement.Tag(map[string]string{"json": pathParts[level] + ",omitempty", "bson": pathParts[level] + ",omitempty"})
-					} else {
-						statement.Tag(map[string]string{"json": pathParts[level], "bson": pathParts[level]})
-					}
-				}
+				} // end of case statement
 			}
 		} else {
 			// index of the next parent sibling
@@ -436,6 +377,104 @@ func appendFields(resources ResourceMap, requiredTypes map[string]bool, required
 		}
 	}
 	return 0, nil
+}
+
+func addFieldStatement(
+	resources ResourceMap,
+	requiredTypes map[string]bool,
+	requiredValueSetBindings map[string]bool,
+	file *jen.File,
+	fields *jen.Group,
+	name string,
+	parentName string,
+	elementDefinitions []fhir.ElementDefinition,
+	elementIndex, level int,
+	elementType fhir.ElementDefinitionType,
+) (idx int, err error) {
+	fieldName := Title(name)
+	element := elementDefinitions[elementIndex]
+	statement := fields.Id(fieldName)
+
+	switch elementType.Code {
+	case "code":
+		if *element.Max == "*" {
+			statement.Op("[]")
+		} else if *element.Min == 0 {
+			statement.Op("*")
+		}
+
+		if url := requiredValueSetBinding(element); url != nil {
+			if bytes := resources["ValueSet"][*url]; bytes != nil {
+				valueSet, err := fhir.UnmarshalValueSet(bytes)
+				if err != nil {
+					return 0, err
+				}
+				if name := valueSet.Name; name != nil {
+					if !namePattern.MatchString(*name) {
+						fmt.Printf("Skip generating an enum for a ValueSet binding to `%s` because the ValueSet has a non-conforming name.\n", *name)
+						statement.Id("string")
+					} else if len(valueSet.Compose.Include) > 1 {
+						fmt.Printf("Skip generating an enum for a ValueSet binding to `%s` because the ValueSet includes more than one CodeSystem.\n", *valueSet.Name)
+						statement.Id("string")
+					} else if codeSystemUrl := canonical(valueSet.Compose.Include[0]); resources["CodeSystem"][codeSystemUrl] == nil {
+						fmt.Printf("Skip generating an enum for a ValueSet binding to `%s` because the ValueSet includes the non-existing CodeSystem with canonical URL `%s`.\n", *valueSet.Name, codeSystemUrl)
+						statement.Id("string")
+					} else {
+						requiredValueSetBindings[*url] = true
+						statement.Id(*name)
+					}
+				} else {
+					return 0, fmt.Errorf("missing name in ValueSet with canonical URL `%s`", *url)
+				}
+			} else {
+				statement.Id("string")
+			}
+		} else {
+			statement.Id("string")
+		}
+	case "Resource":
+		statement.Qual("encoding/json", "RawMessage")
+	default:
+		if *element.Max == "*" {
+			statement.Op("[]")
+		} else if *element.Min == 0 {
+			statement.Op("*")
+		}
+
+		var typeIdentifier string
+		if parentName == "Element" && fieldName == "Id" ||
+			parentName == "Extension" && fieldName == "Url" {
+			typeIdentifier = "string"
+		} else {
+			typeIdentifier = typeCodeToTypeIdentifier(elementType.Code)
+		}
+		if typeIdentifier == "Element" || typeIdentifier == "BackboneElement" {
+			backboneElementName := parentName + fieldName
+			statement.Id(backboneElementName)
+			var err error
+			file.Type().Id(backboneElementName).StructFunc(func(childFields *jen.Group) {
+				//var err error
+				elementIndex, err = appendFields(resources, requiredTypes, requiredValueSetBindings, file, childFields, backboneElementName, elementDefinitions, elementIndex+1, level+1)
+			})
+			if err != nil {
+				return 0, err
+			}
+			elementIndex--
+		} else {
+			if unicode.IsUpper(rune(typeIdentifier[0])) {
+				requiredTypes[typeIdentifier] = true
+			}
+			statement.Id(typeIdentifier)
+		}
+	}
+
+	if *element.Min == 0 {
+		statement.Tag(map[string]string{"json": name + ",omitempty", "bson": name + ",omitempty"})
+	} else {
+		statement.Tag(map[string]string{"json": name, "bson": name})
+	}
+
+	return elementIndex, err
 }
 
 func requiredValueSetBinding(elementDefinition fhir.ElementDefinition) *string {
