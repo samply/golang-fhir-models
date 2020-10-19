@@ -40,12 +40,17 @@ type Group struct {
 	Member            []GroupMember         `bson:"member,omitempty" json:"member,omitempty"`
 }
 type GroupCharacteristic struct {
-	Id                *string         `bson:"id,omitempty" json:"id,omitempty"`
-	Extension         []Extension     `bson:"extension,omitempty" json:"extension,omitempty"`
-	ModifierExtension []Extension     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
-	Code              CodeableConcept `bson:"code" json:"code"`
-	Exclude           bool            `bson:"exclude" json:"exclude"`
-	Period            *Period         `bson:"period,omitempty" json:"period,omitempty"`
+	Id                   *string         `bson:"id,omitempty" json:"id,omitempty"`
+	Extension            []Extension     `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension    []Extension     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Code                 CodeableConcept `bson:"code" json:"code"`
+	ValueCodeableConcept CodeableConcept `bson:"valueCodeableConcept" json:"valueCodeableConcept"`
+	ValueBoolean         bool            `bson:"valueBoolean" json:"valueBoolean"`
+	ValueQuantity        Quantity        `bson:"valueQuantity" json:"valueQuantity"`
+	ValueRange           Range           `bson:"valueRange" json:"valueRange"`
+	ValueReference       Reference       `bson:"valueReference" json:"valueReference"`
+	Exclude              bool            `bson:"exclude" json:"exclude"`
+	Period               *Period         `bson:"period,omitempty" json:"period,omitempty"`
 }
 type GroupMember struct {
 	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`

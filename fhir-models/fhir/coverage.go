@@ -59,6 +59,8 @@ type CoverageCostToBeneficiary struct {
 	Extension         []Extension                          `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension                          `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	Type              *CodeableConcept                     `bson:"type,omitempty" json:"type,omitempty"`
+	ValueQuantity     Quantity                             `bson:"valueQuantity" json:"valueQuantity"`
+	ValueMoney        Money                                `bson:"valueMoney" json:"valueMoney"`
 	Exception         []CoverageCostToBeneficiaryException `bson:"exception,omitempty" json:"exception,omitempty"`
 }
 type CoverageCostToBeneficiaryException struct {

@@ -36,6 +36,9 @@ type ChargeItem struct {
 	Code                   CodeableConcept       `bson:"code" json:"code"`
 	Subject                Reference             `bson:"subject" json:"subject"`
 	Context                *Reference            `bson:"context,omitempty" json:"context,omitempty"`
+	OccurrenceDateTime     *string               `bson:"occurrenceDateTime,omitempty" json:"occurrenceDateTime,omitempty"`
+	OccurrencePeriod       *Period               `bson:"occurrencePeriod,omitempty" json:"occurrencePeriod,omitempty"`
+	OccurrenceTiming       *Timing               `bson:"occurrenceTiming,omitempty" json:"occurrenceTiming,omitempty"`
 	Performer              []ChargeItemPerformer `bson:"performer,omitempty" json:"performer,omitempty"`
 	PerformingOrganization *Reference            `bson:"performingOrganization,omitempty" json:"performingOrganization,omitempty"`
 	RequestingOrganization *Reference            `bson:"requestingOrganization,omitempty" json:"requestingOrganization,omitempty"`
@@ -49,6 +52,8 @@ type ChargeItem struct {
 	EnteredDate            *string               `bson:"enteredDate,omitempty" json:"enteredDate,omitempty"`
 	Reason                 []CodeableConcept     `bson:"reason,omitempty" json:"reason,omitempty"`
 	Service                []Reference           `bson:"service,omitempty" json:"service,omitempty"`
+	ProductReference       *Reference            `bson:"productReference,omitempty" json:"productReference,omitempty"`
+	ProductCodeableConcept *CodeableConcept      `bson:"productCodeableConcept,omitempty" json:"productCodeableConcept,omitempty"`
 	Account                []Reference           `bson:"account,omitempty" json:"account,omitempty"`
 	Note                   []Annotation          `bson:"note,omitempty" json:"note,omitempty"`
 	SupportingInformation  []Reference           `bson:"supportingInformation,omitempty" json:"supportingInformation,omitempty"`

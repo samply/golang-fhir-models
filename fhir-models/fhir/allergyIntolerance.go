@@ -37,6 +37,11 @@ type AllergyIntolerance struct {
 	Code               *CodeableConcept               `bson:"code,omitempty" json:"code,omitempty"`
 	Patient            Reference                      `bson:"patient" json:"patient"`
 	Encounter          *Reference                     `bson:"encounter,omitempty" json:"encounter,omitempty"`
+	OnsetDateTime      *string                        `bson:"onsetDateTime,omitempty" json:"onsetDateTime,omitempty"`
+	OnsetAge           *Age                           `bson:"onsetAge,omitempty" json:"onsetAge,omitempty"`
+	OnsetPeriod        *Period                        `bson:"onsetPeriod,omitempty" json:"onsetPeriod,omitempty"`
+	OnsetRange         *Range                         `bson:"onsetRange,omitempty" json:"onsetRange,omitempty"`
+	OnsetString        *string                        `bson:"onsetString,omitempty" json:"onsetString,omitempty"`
 	RecordedDate       *string                        `bson:"recordedDate,omitempty" json:"recordedDate,omitempty"`
 	Recorder           *Reference                     `bson:"recorder,omitempty" json:"recorder,omitempty"`
 	Asserter           *Reference                     `bson:"asserter,omitempty" json:"asserter,omitempty"`

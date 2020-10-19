@@ -35,6 +35,8 @@ type DiagnosticReport struct {
 	Code               CodeableConcept         `bson:"code" json:"code"`
 	Subject            *Reference              `bson:"subject,omitempty" json:"subject,omitempty"`
 	Encounter          *Reference              `bson:"encounter,omitempty" json:"encounter,omitempty"`
+	EffectiveDateTime  *string                 `bson:"effectiveDateTime,omitempty" json:"effectiveDateTime,omitempty"`
+	EffectivePeriod    *Period                 `bson:"effectivePeriod,omitempty" json:"effectivePeriod,omitempty"`
 	Issued             *string                 `bson:"issued,omitempty" json:"issued,omitempty"`
 	Performer          []Reference             `bson:"performer,omitempty" json:"performer,omitempty"`
 	ResultsInterpreter []Reference             `bson:"resultsInterpreter,omitempty" json:"resultsInterpreter,omitempty"`

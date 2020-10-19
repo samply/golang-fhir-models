@@ -36,6 +36,8 @@ type ActivityDefinition struct {
 	Subtitle                     *string                          `bson:"subtitle,omitempty" json:"subtitle,omitempty"`
 	Status                       PublicationStatus                `bson:"status" json:"status"`
 	Experimental                 *bool                            `bson:"experimental,omitempty" json:"experimental,omitempty"`
+	SubjectCodeableConcept       *CodeableConcept                 `bson:"subjectCodeableConcept,omitempty" json:"subjectCodeableConcept,omitempty"`
+	SubjectReference             *Reference                       `bson:"subjectReference,omitempty" json:"subjectReference,omitempty"`
 	Date                         *string                          `bson:"date,omitempty" json:"date,omitempty"`
 	Publisher                    *string                          `bson:"publisher,omitempty" json:"publisher,omitempty"`
 	Contact                      []ContactDetail                  `bson:"contact,omitempty" json:"contact,omitempty"`
@@ -61,8 +63,16 @@ type ActivityDefinition struct {
 	Intent                       *RequestIntent                   `bson:"intent,omitempty" json:"intent,omitempty"`
 	Priority                     *RequestPriority                 `bson:"priority,omitempty" json:"priority,omitempty"`
 	DoNotPerform                 *bool                            `bson:"doNotPerform,omitempty" json:"doNotPerform,omitempty"`
+	TimingTiming                 *Timing                          `bson:"timingTiming,omitempty" json:"timingTiming,omitempty"`
+	TimingDateTime               *string                          `bson:"timingDateTime,omitempty" json:"timingDateTime,omitempty"`
+	TimingAge                    *Age                             `bson:"timingAge,omitempty" json:"timingAge,omitempty"`
+	TimingPeriod                 *Period                          `bson:"timingPeriod,omitempty" json:"timingPeriod,omitempty"`
+	TimingRange                  *Range                           `bson:"timingRange,omitempty" json:"timingRange,omitempty"`
+	TimingDuration               *Duration                        `bson:"timingDuration,omitempty" json:"timingDuration,omitempty"`
 	Location                     *Reference                       `bson:"location,omitempty" json:"location,omitempty"`
 	Participant                  []ActivityDefinitionParticipant  `bson:"participant,omitempty" json:"participant,omitempty"`
+	ProductReference             *Reference                       `bson:"productReference,omitempty" json:"productReference,omitempty"`
+	ProductCodeableConcept       *CodeableConcept                 `bson:"productCodeableConcept,omitempty" json:"productCodeableConcept,omitempty"`
 	Quantity                     *Quantity                        `bson:"quantity,omitempty" json:"quantity,omitempty"`
 	Dosage                       []Dosage                         `bson:"dosage,omitempty" json:"dosage,omitempty"`
 	BodySite                     []CodeableConcept                `bson:"bodySite,omitempty" json:"bodySite,omitempty"`

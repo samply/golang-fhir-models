@@ -22,6 +22,8 @@ type Population struct {
 	Id                     *string          `bson:"id,omitempty" json:"id,omitempty"`
 	Extension              []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension      []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	AgeRange               *Range           `bson:"ageRange,omitempty" json:"ageRange,omitempty"`
+	AgeCodeableConcept     *CodeableConcept `bson:"ageCodeableConcept,omitempty" json:"ageCodeableConcept,omitempty"`
 	Gender                 *CodeableConcept `bson:"gender,omitempty" json:"gender,omitempty"`
 	Race                   *CodeableConcept `bson:"race,omitempty" json:"race,omitempty"`
 	PhysiologicalCondition *CodeableConcept `bson:"physiologicalCondition,omitempty" json:"physiologicalCondition,omitempty"`

@@ -43,6 +43,10 @@ type ConceptMap struct {
 	Jurisdiction      []CodeableConcept `bson:"jurisdiction,omitempty" json:"jurisdiction,omitempty"`
 	Purpose           *string           `bson:"purpose,omitempty" json:"purpose,omitempty"`
 	Copyright         *string           `bson:"copyright,omitempty" json:"copyright,omitempty"`
+	SourceUri         *string           `bson:"sourceUri,omitempty" json:"sourceUri,omitempty"`
+	SourceCanonical   *string           `bson:"sourceCanonical,omitempty" json:"sourceCanonical,omitempty"`
+	TargetUri         *string           `bson:"targetUri,omitempty" json:"targetUri,omitempty"`
+	TargetCanonical   *string           `bson:"targetCanonical,omitempty" json:"targetCanonical,omitempty"`
 	Group             []ConceptMapGroup `bson:"group,omitempty" json:"group,omitempty"`
 }
 type ConceptMapGroup struct {

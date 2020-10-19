@@ -36,6 +36,8 @@ type Consent struct {
 	DateTime          *string               `bson:"dateTime,omitempty" json:"dateTime,omitempty"`
 	Performer         []Reference           `bson:"performer,omitempty" json:"performer,omitempty"`
 	Organization      []Reference           `bson:"organization,omitempty" json:"organization,omitempty"`
+	SourceAttachment  *Attachment           `bson:"sourceAttachment,omitempty" json:"sourceAttachment,omitempty"`
+	SourceReference   *Reference            `bson:"sourceReference,omitempty" json:"sourceReference,omitempty"`
 	Policy            []ConsentPolicy       `bson:"policy,omitempty" json:"policy,omitempty"`
 	PolicyRule        *CodeableConcept      `bson:"policyRule,omitempty" json:"policyRule,omitempty"`
 	Verification      []ConsentVerification `bson:"verification,omitempty" json:"verification,omitempty"`
