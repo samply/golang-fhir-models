@@ -97,6 +97,13 @@ type CodeSystemConceptProperty struct {
 	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	Code              string      `bson:"code" json:"code"`
+	ValueCode         string      `bson:"valueCode" json:"valueCode"`
+	ValueCoding       Coding      `bson:"valueCoding" json:"valueCoding"`
+	ValueString       string      `bson:"valueString" json:"valueString"`
+	ValueInteger      int         `bson:"valueInteger" json:"valueInteger"`
+	ValueBoolean      bool        `bson:"valueBoolean" json:"valueBoolean"`
+	ValueDateTime     string      `bson:"valueDateTime" json:"valueDateTime"`
+	ValueDecimal      string      `bson:"valueDecimal" json:"valueDecimal"`
 }
 type OtherCodeSystem CodeSystem
 

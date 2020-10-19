@@ -22,6 +22,9 @@ type SubstanceAmount struct {
 	Id                *string                        `bson:"id,omitempty" json:"id,omitempty"`
 	Extension         []Extension                    `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension                    `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	AmountQuantity    *Quantity                      `bson:"amountQuantity,omitempty" json:"amountQuantity,omitempty"`
+	AmountRange       *Range                         `bson:"amountRange,omitempty" json:"amountRange,omitempty"`
+	AmountString      *string                        `bson:"amountString,omitempty" json:"amountString,omitempty"`
 	AmountType        *CodeableConcept               `bson:"amountType,omitempty" json:"amountType,omitempty"`
 	AmountText        *string                        `bson:"amountText,omitempty" json:"amountText,omitempty"`
 	ReferenceRange    *SubstanceAmountReferenceRange `bson:"referenceRange,omitempty" json:"referenceRange,omitempty"`

@@ -68,6 +68,9 @@ type SubstanceReferenceInformationTarget struct {
 	Interaction       *CodeableConcept `bson:"interaction,omitempty" json:"interaction,omitempty"`
 	Organism          *CodeableConcept `bson:"organism,omitempty" json:"organism,omitempty"`
 	OrganismType      *CodeableConcept `bson:"organismType,omitempty" json:"organismType,omitempty"`
+	AmountQuantity    *Quantity        `bson:"amountQuantity,omitempty" json:"amountQuantity,omitempty"`
+	AmountRange       *Range           `bson:"amountRange,omitempty" json:"amountRange,omitempty"`
+	AmountString      *string          `bson:"amountString,omitempty" json:"amountString,omitempty"`
 	AmountType        *CodeableConcept `bson:"amountType,omitempty" json:"amountType,omitempty"`
 	Source            []Reference      `bson:"source,omitempty" json:"source,omitempty"`
 }

@@ -46,6 +46,8 @@ type MessageDefinition struct {
 	Copyright         *string                            `bson:"copyright,omitempty" json:"copyright,omitempty"`
 	Base              *string                            `bson:"base,omitempty" json:"base,omitempty"`
 	Parent            []string                           `bson:"parent,omitempty" json:"parent,omitempty"`
+	EventCoding       Coding                             `bson:"eventCoding" json:"eventCoding"`
+	EventUri          string                             `bson:"eventUri" json:"eventUri"`
 	Category          *MessageSignificanceCategory       `bson:"category,omitempty" json:"category,omitempty"`
 	Focus             []MessageDefinitionFocus           `bson:"focus,omitempty" json:"focus,omitempty"`
 	ResponseRequired  *string                            `bson:"responseRequired,omitempty" json:"responseRequired,omitempty"`

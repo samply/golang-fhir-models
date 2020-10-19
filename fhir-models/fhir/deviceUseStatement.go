@@ -33,6 +33,9 @@ type DeviceUseStatement struct {
 	Status            DeviceUseStatementStatus `bson:"status" json:"status"`
 	Subject           Reference                `bson:"subject" json:"subject"`
 	DerivedFrom       []Reference              `bson:"derivedFrom,omitempty" json:"derivedFrom,omitempty"`
+	TimingTiming      *Timing                  `bson:"timingTiming,omitempty" json:"timingTiming,omitempty"`
+	TimingPeriod      *Period                  `bson:"timingPeriod,omitempty" json:"timingPeriod,omitempty"`
+	TimingDateTime    *string                  `bson:"timingDateTime,omitempty" json:"timingDateTime,omitempty"`
 	RecordedOn        *string                  `bson:"recordedOn,omitempty" json:"recordedOn,omitempty"`
 	Source            *Reference               `bson:"source,omitempty" json:"source,omitempty"`
 	Device            Reference                `bson:"device" json:"device"`

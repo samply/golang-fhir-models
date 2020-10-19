@@ -37,6 +37,16 @@ type Condition struct {
 	BodySite           []CodeableConcept   `bson:"bodySite,omitempty" json:"bodySite,omitempty"`
 	Subject            Reference           `bson:"subject" json:"subject"`
 	Encounter          *Reference          `bson:"encounter,omitempty" json:"encounter,omitempty"`
+	OnsetDateTime      *string             `bson:"onsetDateTime,omitempty" json:"onsetDateTime,omitempty"`
+	OnsetAge           *Age                `bson:"onsetAge,omitempty" json:"onsetAge,omitempty"`
+	OnsetPeriod        *Period             `bson:"onsetPeriod,omitempty" json:"onsetPeriod,omitempty"`
+	OnsetRange         *Range              `bson:"onsetRange,omitempty" json:"onsetRange,omitempty"`
+	OnsetString        *string             `bson:"onsetString,omitempty" json:"onsetString,omitempty"`
+	AbatementDateTime  *string             `bson:"abatementDateTime,omitempty" json:"abatementDateTime,omitempty"`
+	AbatementAge       *Age                `bson:"abatementAge,omitempty" json:"abatementAge,omitempty"`
+	AbatementPeriod    *Period             `bson:"abatementPeriod,omitempty" json:"abatementPeriod,omitempty"`
+	AbatementRange     *Range              `bson:"abatementRange,omitempty" json:"abatementRange,omitempty"`
+	AbatementString    *string             `bson:"abatementString,omitempty" json:"abatementString,omitempty"`
 	RecordedDate       *string             `bson:"recordedDate,omitempty" json:"recordedDate,omitempty"`
 	Recorder           *Reference          `bson:"recorder,omitempty" json:"recorder,omitempty"`
 	Asserter           *Reference          `bson:"asserter,omitempty" json:"asserter,omitempty"`
