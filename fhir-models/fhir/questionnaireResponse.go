@@ -52,6 +52,17 @@ type QuestionnaireResponseItem struct {
 }
 type QuestionnaireResponseItemAnswer struct {
 	Id                *string                     `bson:"id,omitempty" json:"id,omitempty"`
+	valueBoolean      bool                        `bson:"valueBoolean,omitempty" json:"valueBoolean,omitempty"`
+	valueDecimal      float32                     `bson:"valueDecimal,omitempty" json:"valueDecimal,omitempty"`
+	valueInteger      int                         `bson:"valueInteger,omitempty" json:"valueInteger,omitempty"`
+	valueDate         *string                     `bson:"valueDate,omitempty" json:"valueDate,omitempty"`
+	valueDateTime     *string                     `bson:"valueDateTime,omitempty" json:"valueDateTime,omitempty"`
+	valueTime         *string                     `bson:"valueTime,omitempty" json:"valueTime,omitempty"`
+	valueString       *string                     `bson:"valueString,omitempty" json:"valueString,omitempty"`
+	valueUri          *string                     `bson:"valueUri,omitempty" json:"valueUri,omitempty"`
+	valueAttachment   []byte                      `bson:"valueAttachment,omitempty" json:"valueAttachment,omitempty"`
+	valueCoding       Coding                      `bson:"valueCoding,omitempty" json:"valueCoding,omitempty"`
+	valueReference    []Reference                 `bson:"valueReference,omitempty" json:"valueReference,omitempty"`
 	Extension         []Extension                 `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension                 `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	Item              []QuestionnaireResponseItem `bson:"item,omitempty" json:"item,omitempty"`
