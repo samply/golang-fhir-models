@@ -50,11 +50,11 @@ type Observation struct {
 	HasMember         []Reference                 `bson:"hasMember,omitempty" json:"hasMember,omitempty"`
 	DerivedFrom       []Reference                 `bson:"derivedFrom,omitempty" json:"derivedFrom,omitempty"`
 	Component         []ObservationComponent      `bson:"component,omitempty" json:"component,omitempty"`
-	valueQuantity     *Quantity                   `bson:"valueQuantity,omitempty" json:"valueQuantity,omitempty"`
-	effectiveDateTime *string                     `bson:"effectiveDateTime,omitempty" json:"effectiveDateTime,omitempty"`
-	effectivePeriod   *Period                     `bson:"effectivePeriod,omitempty" json:"effectivePeriod,omitempty"`
-	effectiveTiming   *Timing                     `bson:"effectiveTiming,omitempty" json:"effectiveTiming,omitempty"`
-	effectiveInstant  *bool                       `bson:"effectiveInstant,omitempty" json:"effectiveInstant,omitempty"`
+	ValueQuantity     *Quantity                   `bson:"valueQuantity,omitempty" json:"valueQuantity,omitempty"`
+	EffectiveDateTime *string                     `bson:"effectiveDateTime,omitempty" json:"effectiveDateTime,omitempty"`
+	EffectivePeriod   *Period                     `bson:"effectivePeriod,omitempty" json:"effectivePeriod,omitempty"`
+	EffectiveTiming   *Timing                     `bson:"effectiveTiming,omitempty" json:"effectiveTiming,omitempty"`
+	EffectiveInstant  *bool                       `bson:"effectiveInstant,omitempty" json:"effectiveInstant,omitempty"`
 }
 type ObservationReferenceRange struct {
 	Id                *string           `bson:"id,omitempty" json:"id,omitempty"`
