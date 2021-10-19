@@ -43,6 +43,31 @@ type Patient struct {
 	ManagingOrganization *Reference             `bson:"managingOrganization,omitempty" json:"managingOrganization,omitempty"`
 	Link                 []PatientLink          `bson:"link,omitempty" json:"link,omitempty"`
 }
+
+type RecarePatient struct {
+	Id                   *string                `bson:"id,omitempty" json:"id,omitempty"`
+	Meta                 *Meta                  `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules        *string                `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language             *string                `bson:"language,omitempty" json:"language,omitempty"`
+	Text                 *Narrative             `bson:"text,omitempty" json:"text,omitempty"`
+	Extension            []Extension            `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension    []Extension            `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier           []Identifier           `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Active               *bool                  `bson:"active,omitempty" json:"active,omitempty"`
+	Name                 []RecareHumanName      `bson:"name,omitempty" json:"name,omitempty"`
+	Telecom              []ContactPoint         `bson:"telecom,omitempty" json:"telecom,omitempty"`
+	Gender               *AdministrativeGender  `bson:"gender,omitempty" json:"gender,omitempty"`
+	BirthDate            *EncryptedField        `bson:"birthDate,omitempty" json:"birthDate,omitempty"`
+	Address              []Address              `bson:"address,omitempty" json:"address,omitempty"`
+	MaritalStatus        *CodeableConcept       `bson:"maritalStatus,omitempty" json:"maritalStatus,omitempty"`
+	Photo                []Attachment           `bson:"photo,omitempty" json:"photo,omitempty"`
+	Contact              []PatientContact       `bson:"contact,omitempty" json:"contact,omitempty"`
+	Communication        []PatientCommunication `bson:"communication,omitempty" json:"communication,omitempty"`
+	GeneralPractitioner  []Reference            `bson:"generalPractitioner,omitempty" json:"generalPractitioner,omitempty"`
+	ManagingOrganization *Reference             `bson:"managingOrganization,omitempty" json:"managingOrganization,omitempty"`
+	Link                 []PatientLink          `bson:"link,omitempty" json:"link,omitempty"`
+}
+
 type PatientContact struct {
 	Id                *string               `bson:"id,omitempty" json:"id,omitempty"`
 	Extension         []Extension           `bson:"extension,omitempty" json:"extension,omitempty"`
@@ -82,9 +107,29 @@ func (r Patient) MarshalJSON() ([]byte, error) {
 	})
 }
 
+type RecareOtherPatient RecarePatient
+
+func (r RecarePatient) MarshalJSON() ([]byte, error) {
+	return json.Marshal(struct {
+		RecareOtherPatient
+		ResourceType string `json:"resourceType"`
+	}{
+		RecareOtherPatient: RecareOtherPatient(r),
+		ResourceType:       "RecarePatient",
+	})
+}
+
 // UnmarshalPatient unmarshals a Patient.
 func UnmarshalPatient(b []byte) (Patient, error) {
 	var patient Patient
+	if err := json.Unmarshal(b, &patient); err != nil {
+		return patient, err
+	}
+	return patient, nil
+}
+
+func UnmarshalRecarePatient(b []byte) (RecarePatient, error) {
+	var patient RecarePatient
 	if err := json.Unmarshal(b, &patient); err != nil {
 		return patient, err
 	}
