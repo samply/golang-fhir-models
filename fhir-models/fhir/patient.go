@@ -115,7 +115,7 @@ func (r RecarePatient) MarshalJSON() ([]byte, error) {
 		ResourceType string `json:"resourceType"`
 	}{
 		RecareOtherPatient: RecareOtherPatient(r),
-		ResourceType:       "RecarePatient",
+		ResourceType:       "Patient",
 	})
 }
 

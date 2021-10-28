@@ -135,7 +135,7 @@ func (r RecareObservation) MarshalJSON() ([]byte, error) {
 		ResourceType string `json:"resourceType"`
 	}{
 		RecareOtherObservation: RecareOtherObservation(r),
-		ResourceType:           "RecareObservation",
+		ResourceType:           "Observation",
 	})
 }
 
