@@ -103,33 +103,33 @@ func (code QuestionnaireItemType) Code() string {
 	case QuestionnaireItemTypeQuestion:
 		return "question"
 	case QuestionnaireItemTypeBoolean:
-		return "Boolean"
+		return "boolean"
 	case QuestionnaireItemTypeDecimal:
-		return "Decimal"
+		return "decimal"
 	case QuestionnaireItemTypeInteger:
-		return "Integer"
+		return "integer"
 	case QuestionnaireItemTypeDate:
-		return "Date"
+		return "date"
 	case QuestionnaireItemTypeDateTime:
-		return "Date Time"
+		return "dateTime"
 	case QuestionnaireItemTypeTime:
-		return "Time"
+		return "time"
 	case QuestionnaireItemTypeString:
-		return "String"
+		return "string"
 	case QuestionnaireItemTypeText:
-		return "Text"
+		return "text"
 	case QuestionnaireItemTypeUrl:
-		return "Url"
+		return "url"
 	case QuestionnaireItemTypeChoice:
-		return "Choice"
+		return "choice"
 	case QuestionnaireItemTypeOpenChoice:
-		return "Open Choice"
+		return "open-choice"
 	case QuestionnaireItemTypeAttachment:
-		return "Attachment"
+		return "attachment"
 	case QuestionnaireItemTypeReference:
-		return "Reference"
+		return "reference"
 	case QuestionnaireItemTypeQuantity:
-		return "Quantity"
+		return "quantity"
 	}
 	return "<unknown>"
 }

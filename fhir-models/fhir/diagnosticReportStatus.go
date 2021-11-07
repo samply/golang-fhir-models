@@ -80,15 +80,15 @@ func (code DiagnosticReportStatus) Code() string {
 	case DiagnosticReportStatusPartial:
 		return "partial"
 	case DiagnosticReportStatusPreliminary:
-		return "Preliminary"
+		return "preliminary"
 	case DiagnosticReportStatusFinal:
 		return "final"
 	case DiagnosticReportStatusAmended:
 		return "amended"
 	case DiagnosticReportStatusCorrected:
-		return "Corrected"
+		return "corrected"
 	case DiagnosticReportStatusAppended:
-		return "Appended"
+		return "appended"
 	case DiagnosticReportStatusCancelled:
 		return "cancelled"
 	case DiagnosticReportStatusEnteredInError:

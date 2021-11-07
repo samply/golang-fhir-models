@@ -81,13 +81,13 @@ func (code CarePlanIntent) Code() string {
 	case CarePlanIntentOrder:
 		return "order"
 	case CarePlanIntentOriginalOrder:
-		return "Original Order"
+		return "original-order"
 	case CarePlanIntentReflexOrder:
-		return "Reflex Order"
+		return "reflex-order"
 	case CarePlanIntentFillerOrder:
-		return "Filler Order"
+		return "filler-order"
 	case CarePlanIntentInstanceOrder:
-		return "Instance Order"
+		return "instance-order"
 	case CarePlanIntentOption:
 		return "option"
 	}
