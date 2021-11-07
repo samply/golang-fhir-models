@@ -23,7 +23,7 @@ import (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:     "fhir-gen",
-	Version: "0.2.0",
+	Version: "0.2.1",
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
