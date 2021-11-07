@@ -1,4 +1,4 @@
-// Copyright 2019 The Samply Development Community
+// Copyright 2019 - 2021 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -47,7 +47,7 @@ func UnmarshalResource(b []byte) (Resource, error) {
 type ResourceMap = map[string]map[string][]byte
 
 var licenseComment = Split(Trim(`
-Copyright 2019 The Samply Development Community
+Copyright 2019 - 2021 The Samply Community
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
