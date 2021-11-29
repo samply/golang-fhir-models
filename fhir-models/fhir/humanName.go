@@ -43,7 +43,8 @@ type RecareHumanName struct {
 }
 
 type EncryptedField struct {
-	IV      string `json:"iv,omitempty"`
-	Content string `json:"content,omitempty"`
-	Algo    string `json:"algo,omitempty"`
+	IV           string `json:"iv,omitempty"`
+	Content      string `json:"content,omitempty"`
+	Algo         string `json:"algo,omitempty"`
+	SealdContent string `json:"seald_content,omitempty"`
 }
