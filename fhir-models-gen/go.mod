@@ -3,8 +3,8 @@ module github.com/samply/golang-fhir-models/fhir-models-gen
 go 1.17
 
 require (
-	github.com/dave/jennifer v1.4.1
-	github.com/spf13/cobra v1.2.1
+	github.com/dave/jennifer v1.5.0
+	github.com/spf13/cobra v1.3.0
 )
 
 require (
