@@ -25,7 +25,7 @@ import (
 	"unicode"
 
 	"github.com/dave/jennifer/jen"
-	"github.com/samply/golang-fhir-models/fhir-models-gen/fhir"
+	"github.com/recare/golang-fhir-models/fhir-models-gen/fhir"
 	"github.com/spf13/cobra"
 )
 
