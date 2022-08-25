@@ -89,3 +89,59 @@ func UnmarshalCoverage(b []byte) (Coverage, error) {
 	}
 	return coverage, nil
 }
+
+type IsipCoverage struct {
+	Id                *string                      `bson:"id,omitempty" json:"id,omitempty"`
+	Meta              *Meta                        `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules     *string                      `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language          *string                      `bson:"language,omitempty" json:"language,omitempty"`
+	Text              *Narrative                   `bson:"text,omitempty" json:"text,omitempty"`
+	Extension         []Extension                  `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension                  `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier        []Identifier                 `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Status            FinancialResourceStatusCodes `bson:"status" json:"status"`
+	Type              *CodeableConcept             `bson:"type,omitempty" json:"type,omitempty"`
+	PolicyHolder      *Reference                   `bson:"policyHolder,omitempty" json:"policyHolder,omitempty"`
+	Subscriber        *Reference                   `bson:"subscriber,omitempty" json:"subscriber,omitempty"`
+	SubscriberId      *string                      `bson:"subscriberId,omitempty" json:"subscriberId,omitempty"`
+	Beneficiary       Reference                    `bson:"beneficiary" json:"beneficiary"`
+	Dependent         *string                      `bson:"dependent,omitempty" json:"dependent,omitempty"`
+	Relationship      *CodeableConcept             `bson:"relationship,omitempty" json:"relationship,omitempty"`
+	Period            *Period                      `bson:"period,omitempty" json:"period,omitempty"`
+	Payor             []Payor                      `bson:"payor" json:"payor"`
+	Class             []CoverageClass              `bson:"class,omitempty" json:"class,omitempty"`
+	Order             *int                         `bson:"order,omitempty" json:"order,omitempty"`
+	Network           *string                      `bson:"network,omitempty" json:"network,omitempty"`
+	CostToBeneficiary []CoverageCostToBeneficiary  `bson:"costToBeneficiary,omitempty" json:"costToBeneficiary,omitempty"`
+	Subrogation       *bool                        `bson:"subrogation,omitempty" json:"subrogation,omitempty"`
+	Contract          []Reference                  `bson:"contract,omitempty" json:"contract,omitempty"`
+}
+
+type Payor struct {
+	Identifier        Identifier                 `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Display string       `bson:"display,omitempty" json:"display,omitempty"`
+
+}
+
+type OtherIsipCoverage IsipCoverage
+
+// MarshalJSON marshals the given Coverage as JSON into a byte slice
+func (r IsipCoverage) MarshalJSON() ([]byte, error) {
+	return json.Marshal(struct {
+		OtherIsipCoverage
+		ResourceType string `json:"resourceType"`
+	}{
+		OtherIsipCoverage: OtherIsipCoverage(r),
+		ResourceType:  "Coverage",
+	})
+}
+
+
+// UnmarshalCoverage unmarshals a Coverage.
+func UnmarshalIsipCoverage(b []byte) (IsipCoverage, error) {
+	var coverage IsipCoverage
+	if err := json.Unmarshal(b, &coverage); err != nil {
+		return coverage, err
+	}
+	return coverage, nil
+}

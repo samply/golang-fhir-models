@@ -34,6 +34,7 @@ type Patient struct {
 	Telecom              []ContactPoint         `bson:"telecom,omitempty" json:"telecom,omitempty"`
 	Gender               *AdministrativeGender  `bson:"gender,omitempty" json:"gender,omitempty"`
 	BirthDate            *string                `bson:"birthDate,omitempty" json:"birthDate,omitempty"`
+	BirthDateExtension   *IsipExtension         `bson:"_birthDate,omitempty" json:"_birthDate,omitempty"`
 	Address              []Address              `bson:"address,omitempty" json:"address,omitempty"`
 	MaritalStatus        *CodeableConcept       `bson:"maritalStatus,omitempty" json:"maritalStatus,omitempty"`
 	Photo                []Attachment           `bson:"photo,omitempty" json:"photo,omitempty"`
@@ -135,3 +136,12 @@ func UnmarshalRecarePatient(b []byte) (RecarePatient, error) {
 	}
 	return patient, nil
 }
+
+func UnmarshalIsipPatient(b []byte) (RecarePatient, error) {
+	var patient RecarePatient
+	if err := json.Unmarshal(b, &patient); err != nil {
+		return patient, err
+	}
+	return patient, nil
+}
+
