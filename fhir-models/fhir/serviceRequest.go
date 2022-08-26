@@ -58,6 +58,7 @@ type ServiceRequest struct {
 	Note                  []Annotation      `bson:"note,omitempty" json:"note,omitempty"`
 	PatientInstruction    *string           `bson:"patientInstruction,omitempty" json:"patientInstruction,omitempty"`
 	RelevantHistory       []Reference       `bson:"relevantHistory,omitempty" json:"relevantHistory,omitempty"`
+	OccurenceDateTime      string       	`bson:"occurenceDateTime,omitempty" json:"occurenceDateTime,omitempty"`
 }
 type OtherServiceRequest ServiceRequest
 
