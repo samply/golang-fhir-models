@@ -21,7 +21,7 @@ import "encoding/json"
 
 // Observation is documented here http://hl7.org/fhir/StructureDefinition/Observation
 type Observation struct {
-	Id                    *string                     `bson:"id,omitempty" json:"id,omitempty"`
+	Id                   *string                     `bson:"id,omitempty" json:"id,omitempty"`
 	Meta                 *Meta                       `bson:"meta,omitempty" json:"meta,omitempty"`
 	ImplicitRules        *string                     `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
 	Language             *string                     `bson:"language,omitempty" json:"language,omitempty"`
@@ -51,6 +51,7 @@ type Observation struct {
 	DerivedFrom          []Reference                 `bson:"derivedFrom,omitempty" json:"derivedFrom,omitempty"`
 	Component            []ObservationComponent      `bson:"component,omitempty" json:"component,omitempty"`
 	ValueQuantity        *Quantity                   `bson:"valueQuantity,omitempty" json:"valueQuantity,omitempty"`
+	ValueRange           *Range                      `bson:"valueRange,omitempty" json:"valueRange,omitempty"`
 	ValueCodeableConcept *ValueCodeableConcept       `bson:"valueCodeableConcept,omitempty" json:"valueCodeableConcept,omitempty"`
 	EffectiveDateTime    *string                     `bson:"effectiveDateTime,omitempty" json:"effectiveDateTime,omitempty"`
 	EffectivePeriod      *Period                     `bson:"effectivePeriod,omitempty" json:"effectivePeriod,omitempty"`
@@ -93,6 +94,7 @@ type RecareObservation struct {
 	DerivedFrom       []Reference                 `bson:"derivedFrom,omitempty" json:"derivedFrom,omitempty"`
 	Component         []ObservationComponent      `bson:"component,omitempty" json:"component,omitempty"`
 	ValueQuantity     *RecareQuantity             `bson:"valueQuantity,omitempty" json:"valueQuantity,omitempty"`
+	ValueRange        *Range                      `bson:"valueRange,omitempty" json:"valueRange,omitempty"`
 	EffectiveDateTime *string                     `bson:"effectiveDateTime,omitempty" json:"effectiveDateTime,omitempty"`
 	EffectivePeriod   *Period                     `bson:"effectivePeriod,omitempty" json:"effectivePeriod,omitempty"`
 	EffectiveTiming   *Timing                     `bson:"effectiveTiming,omitempty" json:"effectiveTiming,omitempty"`
