@@ -24,8 +24,10 @@ type HumanName struct {
 	Use       		*NameUse    	`bson:"use,omitempty" json:"use,omitempty"`
 	Text     		*string     	`bson:"text,omitempty" json:"text,omitempty"`
 	Family   		*string         `bson:"family,omitempty" json:"family,omitempty"`
+	FamilyEncrypte  *EncryptedField `bson:"family,omitempty" json:"family,omitempty"`
 	FamilyExtension *IsipExtension  `bson:"_family,omitempty" json:"_family,omitempty"`
 	Given     		[]string        `bson:"given,omitempty" json:"given,omitempty"`
+	GivenEncrypted  *EncryptedField `bson:"given,omitempty" json:"given,omitempty"`
 	GivenExtension  []IsipExtension `bson:"_given,omitempty" json:"_given,omitempty"`
 	Prefix    		[]string        `bson:"prefix,omitempty" json:"prefix,omitempty"`
 	Suffix    		[]string        `bson:"suffix,omitempty" json:"suffix,omitempty"`
