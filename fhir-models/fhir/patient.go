@@ -34,10 +34,8 @@ type Patient struct {
 	Telecom              []ContactPoint         `bson:"telecom,omitempty" json:"telecom,omitempty"`
 	Gender               *AdministrativeGender  `bson:"gender,omitempty" json:"gender,omitempty"`
 	BirthDate            *string                `bson:"birthDate,omitempty" json:"birthDate,omitempty"`
-	BirthDateEncrypted   *EncryptedField        `bson:"birthDate,omitempty" json:"birthDate,omitempty"`
 	BirthDateExtension   *IsipExtension         `bson:"_birthDate,omitempty" json:"_birthDate,omitempty"`
 	Address              []Address              `bson:"address,omitempty" json:"address,omitempty"`
-	AddressEncrypted     []RecareAddress        `bson:"address,omitempty" json:"address,omitempty"`
 	MaritalStatus        *CodeableConcept       `bson:"maritalStatus,omitempty" json:"maritalStatus,omitempty"`
 	Photo                []Attachment           `bson:"photo,omitempty" json:"photo,omitempty"`
 	Contact              []PatientContact       `bson:"contact,omitempty" json:"contact,omitempty"`
@@ -45,7 +43,8 @@ type Patient struct {
 	GeneralPractitioner  []Reference            `bson:"generalPractitioner,omitempty" json:"generalPractitioner,omitempty"`
 	ManagingOrganization *Reference             `bson:"managingOrganization,omitempty" json:"managingOrganization,omitempty"`
 	Link                 []PatientLink          `bson:"link,omitempty" json:"link,omitempty"`
-	}  
+}  
+
 
 type RecarePatient struct {
 	Id                   *string                `bson:"id,omitempty" json:"id,omitempty"`
@@ -61,6 +60,7 @@ type RecarePatient struct {
 	Telecom              []ContactPoint         `bson:"telecom,omitempty" json:"telecom,omitempty"`
 	Gender               *AdministrativeGender  `bson:"gender,omitempty" json:"gender,omitempty"`
 	BirthDate            *EncryptedField        `bson:"birthDate,omitempty" json:"birthDate,omitempty"`
+	BirthDateExtension   *IsipExtension         `bson:"_birthDate,omitempty" json:"_birthDate,omitempty"`
 	Address              []RecareAddress        `bson:"address,omitempty" json:"address,omitempty"`
 	MaritalStatus        *CodeableConcept       `bson:"maritalStatus,omitempty" json:"maritalStatus,omitempty"`
 	Photo                []Attachment           `bson:"photo,omitempty" json:"photo,omitempty"`

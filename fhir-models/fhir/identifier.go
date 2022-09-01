@@ -25,7 +25,7 @@ type Identifier struct {
 	Type           *CodeableConcept `bson:"type,omitempty" json:"type,omitempty"`
 	System         *string          `bson:"system,omitempty" json:"system,omitempty"`
 	Value          *string          `bson:"value,omitempty" json:"value,omitempty"`
-	ValueEncrypted *EncryptedField  `bson:"value,omitempty" json:"value,omitempty"`
+	ValueEncrypted *EncryptedField  `bson:"value_enrypted,omitempty" json:"value_enrypted,omitempty"`
 	Period         *Period          `bson:"period,omitempty" json:"period,omitempty"`
 	Assigner       *Reference       `bson:"assigner,omitempty" json:"assigner,omitempty"`
 }
