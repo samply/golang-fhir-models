@@ -98,7 +98,7 @@ type IsipCoverage struct {
 	Text              *Narrative                   `bson:"text,omitempty" json:"text,omitempty"`
 	Extension         []Extension                  `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension                  `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
-	Identifier        []Identifier                 `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Identifier        []IsipIdentifier             `bson:"identifier,omitempty" json:"identifier,omitempty"`
 	Status            FinancialResourceStatusCodes `bson:"status" json:"status"`
 	Type              *CodeableConcept             `bson:"type,omitempty" json:"type,omitempty"`
 	PolicyHolder      *Reference                   `bson:"policyHolder,omitempty" json:"policyHolder,omitempty"`
