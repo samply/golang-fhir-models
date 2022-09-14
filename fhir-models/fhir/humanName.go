@@ -50,6 +50,20 @@ type RecareHumanName struct {
 	Period    		*Period         `bson:"period,omitempty" json:"period,omitempty"`
 }
 
+type IsipHumanName struct {
+	Id        		*string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension 		[]Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	Use       		*NameUse         `bson:"use,omitempty" json:"use,omitempty"`
+	Text      		*string          `bson:"text,omitempty" json:"text,omitempty"`
+	Family    		*EncryptedField  `bson:"family,omitempty" json:"family,omitempty"`
+	FamilyExtension *IsipExtension   `bson:"_family,omitempty" json:"_family,omitempty"`
+	Given     		[]EncryptedField `bson:"given,omitempty" json:"given,omitempty"`
+	GivenExtension  []IsipExtension  `bson:"_given,omitempty" json:"_given,omitempty"`
+	Prefix    		[]string         `bson:"prefix,omitempty" json:"prefix,omitempty"`
+	Suffix    		[]string         `bson:"suffix,omitempty" json:"suffix,omitempty"`
+	Period    		*Period          `bson:"period,omitempty" json:"period,omitempty"`
+}
+
 type EncryptedField struct {
 	IV           string `json:"iv,omitempty"`
 	Content      string `json:"content,omitempty"`

@@ -81,7 +81,7 @@ type IsipPatient struct {
 	ModifierExtension    []Extension            `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	Identifier           []IsipIdentifier       `bson:"identifier,omitempty" json:"identifier,omitempty"`
 	Active               *bool                  `bson:"active,omitempty" json:"active,omitempty"`
-	Name                 []RecareHumanName      `bson:"name,omitempty" json:"name,omitempty"`
+	Name                 []IsipHumanName        `bson:"name,omitempty" json:"name,omitempty"`
 	Telecom              []ContactPoint         `bson:"telecom,omitempty" json:"telecom,omitempty"`
 	Gender               *AdministrativeGender  `bson:"gender,omitempty" json:"gender,omitempty"`
 	BirthDate            *EncryptedField        `bson:"birthDate,omitempty" json:"birthDate,omitempty"`
