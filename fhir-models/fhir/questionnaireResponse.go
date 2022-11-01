@@ -52,9 +52,9 @@ type QuestionnaireResponseItem struct {
 }
 type QuestionnaireResponseItemAnswer struct {
 	Id                *string                     `bson:"id,omitempty" json:"id,omitempty"`
-	ValueBoolean      bool                        `bson:"valueBoolean,omitempty" json:"valueBoolean,omitempty"`
-	ValueDecimal      float32                     `bson:"valueDecimal,omitempty" json:"valueDecimal,omitempty"`
-	ValueInteger      int                         `bson:"valueInteger,omitempty" json:"valueInteger,omitempty"`
+	ValueBoolean      *bool                       `bson:"valueBoolean,omitempty" json:"valueBoolean,omitempty"`
+	ValueDecimal      *float32                    `bson:"valueDecimal,omitempty" json:"valueDecimal,omitempty"`
+	ValueInteger      *int                        `bson:"valueInteger,omitempty" json:"valueInteger,omitempty"`
 	ValueDate         *string                     `bson:"valueDate,omitempty" json:"valueDate,omitempty"`
 	ValueDateTime     *string                     `bson:"valueDateTime,omitempty" json:"valueDateTime,omitempty"`
 	ValueTime         *string                     `bson:"valueTime,omitempty" json:"valueTime,omitempty"`
