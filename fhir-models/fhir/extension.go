@@ -19,22 +19,21 @@ package fhir
 
 // Extension is documented here http://hl7.org/fhir/StructureDefinition/Extension
 type Extension struct {
-	Id       	 *string    `bson:"id,omitempty" json:"id,omitempty"`
-	Extension 	[]Extension `bson:"extension,omitempty" json:"extension,omitempty"`
-	Url       	string      `bson:"url" json:"url"`
-	ValueString string 	  	`bson:"valueString,omitempty" json:"valueString,omitempty"`
-	ValueCode 	ValueCode   `bson:"_valueCode,omitempty" json:"_valueCode,omitempty"` 
-	ValuePeriod ValuePeriod `bson:"valuePeriod,omitempty" json:"valuePeriod,omitempty"` 
+	Id          *string      `bson:"id,omitempty" json:"id,omitempty"`
+	Extension   []Extension  `bson:"extension,omitempty" json:"extension,omitempty"`
+	Url         string       `bson:"url,omitempty" json:"url,omitempty"`
+	ValueString interface{}  `bson:"valueString,omitempty" json:"valueString,omitempty"` // can be string or encrypted field
+	ValueCode   *ValueCode   `bson:"_valueCode,omitempty" json:"_valueCode,omitempty"`
+	ValuePeriod *ValuePeriod `bson:"valuePeriod,omitempty" json:"valuePeriod,omitempty"`
 }
 
 type ValueCode struct {
-	Value  string `bson:"value,omitempty" json:"value,omitempty"` 
-	Code   string `bson:"code,omitempty" json:"code,omitempty"` 
-	System string `bson:"system,omitempty" json:"system,omitempty"` 
+	Value  string `bson:"value,omitempty" json:"value,omitempty"`
+	Code   string `bson:"code,omitempty" json:"code,omitempty"`
+	System string `bson:"system,omitempty" json:"system,omitempty"`
 }
 
-
 type ValuePeriod struct {
-	Start string `bson:"start,omitempty" json:"start,omitempty"` 
-	End	  string `bson:"end,omitempty" json:"end,omitempty"` 
+	Start string `bson:"start,omitempty" json:"start,omitempty"`
+	End   string `bson:"end,omitempty" json:"end,omitempty"`
 }

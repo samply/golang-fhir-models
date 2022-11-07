@@ -32,8 +32,6 @@ const (
 	AddressUseTemp
 	AddressUseOld
 	AddressUseBilling
-	AddressUseSearchLocation
-	AddressUseSearchDestination
 )
 
 func (code AddressUse) MarshalJSON() ([]byte, error) {
@@ -52,10 +50,6 @@ func (code *AddressUse) UnmarshalJSON(json []byte) error {
 		*code = AddressUseOld
 	case "billing":
 		*code = AddressUseBilling
-	case "searchLocation":
-		*code = AddressUseSearchLocation
-	case "searchDestination":
-		*code = AddressUseSearchDestination
 	default:
 		return fmt.Errorf("unknown AddressUse code `%s`", s)
 	}
@@ -76,10 +70,6 @@ func (code AddressUse) Code() string {
 		return "old"
 	case AddressUseBilling:
 		return "billing"
-	case AddressUseSearchLocation:
-		return "searchLocation"
-	case AddressUseSearchDestination:
-		return "searchDestination"
 	}
 	return "<unknown>"
 }
@@ -95,10 +85,6 @@ func (code AddressUse) Display() string {
 		return "Old / Incorrect"
 	case AddressUseBilling:
 		return "Billing"
-	case AddressUseSearchLocation:
-		return "Search Location"
-	case AddressUseSearchDestination:
-		return "Search Destination"
 	}
 	return "<unknown>"
 }
@@ -114,10 +100,6 @@ func (code AddressUse) Definition() string {
 		return "This address is no longer in use (or was never correct but retained for records)."
 	case AddressUseBilling:
 		return "An address to be used to send bills, invoices, receipts etc."
-	case AddressUseSearchLocation:
-		return "An address of search location (transport)."
-	case AddressUseSearchDestination:
-		return "An address of search destination (transport)."
 	}
 	return "<unknown>"
 }
