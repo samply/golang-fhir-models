@@ -28,7 +28,7 @@ type Coverage struct {
 	Text              *Narrative                   `bson:"text,omitempty" json:"text,omitempty"`
 	Extension         []Extension                  `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension                  `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
-	Identifier        []Identifier                 `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Identifier        []IsipIdentifier             `bson:"identifier,omitempty" json:"identifier,omitempty"`
 	Status            FinancialResourceStatusCodes `bson:"status" json:"status"`
 	Type              *CodeableConcept             `bson:"type,omitempty" json:"type,omitempty"`
 	PolicyHolder      *Reference                   `bson:"policyHolder,omitempty" json:"policyHolder,omitempty"`
@@ -118,9 +118,8 @@ type IsipCoverage struct {
 }
 
 type Payor struct {
-	Identifier        Identifier                 `bson:"identifier,omitempty" json:"identifier,omitempty"`
-	Display string       `bson:"display,omitempty" json:"display,omitempty"`
-
+	Identifier Identifier `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Display    string     `bson:"display,omitempty" json:"display,omitempty"`
 }
 
 type OtherIsipCoverage IsipCoverage
@@ -132,10 +131,9 @@ func (r IsipCoverage) MarshalJSON() ([]byte, error) {
 		ResourceType string `json:"resourceType"`
 	}{
 		OtherIsipCoverage: OtherIsipCoverage(r),
-		ResourceType:  "Coverage",
+		ResourceType:      "Coverage",
 	})
 }
-
 
 // UnmarshalCoverage unmarshals a Coverage.
 func UnmarshalIsipCoverage(b []byte) (IsipCoverage, error) {
