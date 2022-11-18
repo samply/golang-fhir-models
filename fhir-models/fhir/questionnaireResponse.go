@@ -61,7 +61,7 @@ type QuestionnaireResponseItemAnswer struct {
 	ValueString       *string                     `bson:"valueString,omitempty" json:"valueString,omitempty"`
 	ValueUri          *string                     `bson:"valueUri,omitempty" json:"valueUri,omitempty"`
 	ValueAttachment   []byte                      `bson:"valueAttachment,omitempty" json:"valueAttachment,omitempty"`
-	ValueCoding       Coding                      `bson:"valueCoding,omitempty" json:"valueCoding,omitempty"`
+	ValueCoding       *Coding                     `bson:"valueCoding,omitempty" json:"valueCoding,omitempty"`
 	ValueReference    []Reference                 `bson:"valueReference,omitempty" json:"valueReference,omitempty"`
 	Extension         []Extension                 `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension                 `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
