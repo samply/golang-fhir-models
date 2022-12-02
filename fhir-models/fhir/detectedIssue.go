@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -21,24 +21,26 @@ import "encoding/json"
 
 // DetectedIssue is documented here http://hl7.org/fhir/StructureDefinition/DetectedIssue
 type DetectedIssue struct {
-	Id                *string                   `bson:"id,omitempty" json:"id,omitempty"`
-	Meta              *Meta                     `bson:"meta,omitempty" json:"meta,omitempty"`
-	ImplicitRules     *string                   `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
-	Language          *string                   `bson:"language,omitempty" json:"language,omitempty"`
-	Text              *Narrative                `bson:"text,omitempty" json:"text,omitempty"`
-	Extension         []Extension               `bson:"extension,omitempty" json:"extension,omitempty"`
-	ModifierExtension []Extension               `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
-	Identifier        []Identifier              `bson:"identifier,omitempty" json:"identifier,omitempty"`
-	Status            ObservationStatus         `bson:"status" json:"status"`
-	Code              *CodeableConcept          `bson:"code,omitempty" json:"code,omitempty"`
-	Severity          *DetectedIssueSeverity    `bson:"severity,omitempty" json:"severity,omitempty"`
-	Patient           *Reference                `bson:"patient,omitempty" json:"patient,omitempty"`
-	Author            *Reference                `bson:"author,omitempty" json:"author,omitempty"`
-	Implicated        []Reference               `bson:"implicated,omitempty" json:"implicated,omitempty"`
-	Evidence          []DetectedIssueEvidence   `bson:"evidence,omitempty" json:"evidence,omitempty"`
-	Detail            *string                   `bson:"detail,omitempty" json:"detail,omitempty"`
-	Reference         *string                   `bson:"reference,omitempty" json:"reference,omitempty"`
-	Mitigation        []DetectedIssueMitigation `bson:"mitigation,omitempty" json:"mitigation,omitempty"`
+	Id                 *string                   `bson:"id,omitempty" json:"id,omitempty"`
+	Meta               *Meta                     `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules      *string                   `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language           *string                   `bson:"language,omitempty" json:"language,omitempty"`
+	Text               *Narrative                `bson:"text,omitempty" json:"text,omitempty"`
+	Extension          []Extension               `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension  []Extension               `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier         []Identifier              `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	Status             ObservationStatus         `bson:"status" json:"status"`
+	Code               *CodeableConcept          `bson:"code,omitempty" json:"code,omitempty"`
+	Severity           *DetectedIssueSeverity    `bson:"severity,omitempty" json:"severity,omitempty"`
+	Patient            *Reference                `bson:"patient,omitempty" json:"patient,omitempty"`
+	IdentifiedDateTime *string                   `bson:"identifiedDateTime,omitempty" json:"identifiedDateTime,omitempty"`
+	IdentifiedPeriod   *Period                   `bson:"identifiedPeriod,omitempty" json:"identifiedPeriod,omitempty"`
+	Author             *Reference                `bson:"author,omitempty" json:"author,omitempty"`
+	Implicated         []Reference               `bson:"implicated,omitempty" json:"implicated,omitempty"`
+	Evidence           []DetectedIssueEvidence   `bson:"evidence,omitempty" json:"evidence,omitempty"`
+	Detail             *string                   `bson:"detail,omitempty" json:"detail,omitempty"`
+	Reference          *string                   `bson:"reference,omitempty" json:"reference,omitempty"`
+	Mitigation         []DetectedIssueMitigation `bson:"mitigation,omitempty" json:"mitigation,omitempty"`
 }
 type DetectedIssueEvidence struct {
 	Id                *string           `bson:"id,omitempty" json:"id,omitempty"`

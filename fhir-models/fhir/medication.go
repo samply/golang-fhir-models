@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -38,11 +38,13 @@ type Medication struct {
 	Batch             *MedicationBatch       `bson:"batch,omitempty" json:"batch,omitempty"`
 }
 type MedicationIngredient struct {
-	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
-	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
-	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
-	IsActive          *bool       `bson:"isActive,omitempty" json:"isActive,omitempty"`
-	Strength          *Ratio      `bson:"strength,omitempty" json:"strength,omitempty"`
+	Id                  *string         `bson:"id,omitempty" json:"id,omitempty"`
+	Extension           []Extension     `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension   []Extension     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	ItemCodeableConcept CodeableConcept `bson:"itemCodeableConcept" json:"itemCodeableConcept"`
+	ItemReference       Reference       `bson:"itemReference" json:"itemReference"`
+	IsActive            *bool           `bson:"isActive,omitempty" json:"isActive,omitempty"`
+	Strength            *Ratio          `bson:"strength,omitempty" json:"strength,omitempty"`
 }
 type MedicationBatch struct {
 	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`

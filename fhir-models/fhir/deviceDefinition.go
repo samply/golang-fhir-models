@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -30,6 +30,8 @@ type DeviceDefinition struct {
 	ModifierExtension       []Extension                           `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	Identifier              []Identifier                          `bson:"identifier,omitempty" json:"identifier,omitempty"`
 	UdiDeviceIdentifier     []DeviceDefinitionUdiDeviceIdentifier `bson:"udiDeviceIdentifier,omitempty" json:"udiDeviceIdentifier,omitempty"`
+	ManufacturerString      *string                               `bson:"manufacturerString,omitempty" json:"manufacturerString,omitempty"`
+	ManufacturerReference   *Reference                            `bson:"manufacturerReference,omitempty" json:"manufacturerReference,omitempty"`
 	DeviceName              []DeviceDefinitionDeviceName          `bson:"deviceName,omitempty" json:"deviceName,omitempty"`
 	ModelNumber             *string                               `bson:"modelNumber,omitempty" json:"modelNumber,omitempty"`
 	Type                    *CodeableConcept                      `bson:"type,omitempty" json:"type,omitempty"`

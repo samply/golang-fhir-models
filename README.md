@@ -15,7 +15,6 @@ In your project, import `github.com/samply/golang-fhir-models/fhir-models/fhir` 
 
 ## TODOs
 
-* [Support Polymorphic Data Elements](https://github.com/samply/golang-fhir-models/issues/1)
 * [Support ValueSets Referring to Multiple CodeSystems](https://github.com/samply/golang-fhir-models/issues/2)
 
 ## Develop

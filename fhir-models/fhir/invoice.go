@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -53,11 +53,13 @@ type InvoiceParticipant struct {
 	Actor             Reference        `bson:"actor" json:"actor"`
 }
 type InvoiceLineItem struct {
-	Id                *string                         `bson:"id,omitempty" json:"id,omitempty"`
-	Extension         []Extension                     `bson:"extension,omitempty" json:"extension,omitempty"`
-	ModifierExtension []Extension                     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
-	Sequence          *int                            `bson:"sequence,omitempty" json:"sequence,omitempty"`
-	PriceComponent    []InvoiceLineItemPriceComponent `bson:"priceComponent,omitempty" json:"priceComponent,omitempty"`
+	Id                        *string                         `bson:"id,omitempty" json:"id,omitempty"`
+	Extension                 []Extension                     `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension         []Extension                     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Sequence                  *int                            `bson:"sequence,omitempty" json:"sequence,omitempty"`
+	ChargeItemReference       Reference                       `bson:"chargeItemReference" json:"chargeItemReference"`
+	ChargeItemCodeableConcept CodeableConcept                 `bson:"chargeItemCodeableConcept" json:"chargeItemCodeableConcept"`
+	PriceComponent            []InvoiceLineItemPriceComponent `bson:"priceComponent,omitempty" json:"priceComponent,omitempty"`
 }
 type InvoiceLineItemPriceComponent struct {
 	Id                *string                   `bson:"id,omitempty" json:"id,omitempty"`

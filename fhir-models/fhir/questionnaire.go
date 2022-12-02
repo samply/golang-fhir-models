@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -78,17 +78,45 @@ type QuestionnaireItemEnableWhen struct {
 	ModifierExtension []Extension               `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	Question          string                    `bson:"question" json:"question"`
 	Operator          QuestionnaireItemOperator `bson:"operator" json:"operator"`
+	AnswerBoolean     bool                      `bson:"answerBoolean" json:"answerBoolean"`
+	AnswerDecimal     string                    `bson:"answerDecimal" json:"answerDecimal"`
+	AnswerInteger     int                       `bson:"answerInteger" json:"answerInteger"`
+	AnswerDate        string                    `bson:"answerDate" json:"answerDate"`
+	AnswerDateTime    string                    `bson:"answerDateTime" json:"answerDateTime"`
+	AnswerTime        string                    `bson:"answerTime" json:"answerTime"`
+	AnswerString      string                    `bson:"answerString" json:"answerString"`
+	AnswerCoding      Coding                    `bson:"answerCoding" json:"answerCoding"`
+	AnswerQuantity    Quantity                  `bson:"answerQuantity" json:"answerQuantity"`
+	AnswerReference   Reference                 `bson:"answerReference" json:"answerReference"`
 }
 type QuestionnaireItemAnswerOption struct {
 	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
 	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	ValueInteger      int         `bson:"valueInteger" json:"valueInteger"`
+	ValueDate         string      `bson:"valueDate" json:"valueDate"`
+	ValueTime         string      `bson:"valueTime" json:"valueTime"`
+	ValueString       string      `bson:"valueString" json:"valueString"`
+	ValueCoding       Coding      `bson:"valueCoding" json:"valueCoding"`
+	ValueReference    Reference   `bson:"valueReference" json:"valueReference"`
 	InitialSelected   *bool       `bson:"initialSelected,omitempty" json:"initialSelected,omitempty"`
 }
 type QuestionnaireItemInitial struct {
 	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
 	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	ValueBoolean      bool        `bson:"valueBoolean" json:"valueBoolean"`
+	ValueDecimal      string      `bson:"valueDecimal" json:"valueDecimal"`
+	ValueInteger      int         `bson:"valueInteger" json:"valueInteger"`
+	ValueDate         string      `bson:"valueDate" json:"valueDate"`
+	ValueDateTime     string      `bson:"valueDateTime" json:"valueDateTime"`
+	ValueTime         string      `bson:"valueTime" json:"valueTime"`
+	ValueString       string      `bson:"valueString" json:"valueString"`
+	ValueUri          string      `bson:"valueUri" json:"valueUri"`
+	ValueAttachment   Attachment  `bson:"valueAttachment" json:"valueAttachment"`
+	ValueCoding       Coding      `bson:"valueCoding" json:"valueCoding"`
+	ValueQuantity     Quantity    `bson:"valueQuantity" json:"valueQuantity"`
+	ValueReference    Reference   `bson:"valueReference" json:"valueReference"`
 }
 type OtherQuestionnaire Questionnaire
 

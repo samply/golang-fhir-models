@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -29,6 +29,8 @@ type Provenance struct {
 	Extension         []Extension        `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension        `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	Target            []Reference        `bson:"target" json:"target"`
+	OccurredPeriod    *Period            `bson:"occurredPeriod,omitempty" json:"occurredPeriod,omitempty"`
+	OccurredDateTime  *string            `bson:"occurredDateTime,omitempty" json:"occurredDateTime,omitempty"`
 	Recorded          string             `bson:"recorded" json:"recorded"`
 	Policy            []string           `bson:"policy,omitempty" json:"policy,omitempty"`
 	Location          *Reference         `bson:"location,omitempty" json:"location,omitempty"`

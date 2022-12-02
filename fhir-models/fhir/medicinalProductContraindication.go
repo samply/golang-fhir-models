@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -37,10 +37,12 @@ type MedicinalProductContraindication struct {
 	Population            []Population                                   `bson:"population,omitempty" json:"population,omitempty"`
 }
 type MedicinalProductContraindicationOtherTherapy struct {
-	Id                      *string         `bson:"id,omitempty" json:"id,omitempty"`
-	Extension               []Extension     `bson:"extension,omitempty" json:"extension,omitempty"`
-	ModifierExtension       []Extension     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
-	TherapyRelationshipType CodeableConcept `bson:"therapyRelationshipType" json:"therapyRelationshipType"`
+	Id                        *string         `bson:"id,omitempty" json:"id,omitempty"`
+	Extension                 []Extension     `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension         []Extension     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	TherapyRelationshipType   CodeableConcept `bson:"therapyRelationshipType" json:"therapyRelationshipType"`
+	MedicationCodeableConcept CodeableConcept `bson:"medicationCodeableConcept" json:"medicationCodeableConcept"`
+	MedicationReference       Reference       `bson:"medicationReference" json:"medicationReference"`
 }
 type OtherMedicinalProductContraindication MedicinalProductContraindication
 

@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,6 +28,8 @@ type MessageHeader struct {
 	Text              *Narrative                 `bson:"text,omitempty" json:"text,omitempty"`
 	Extension         []Extension                `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension                `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	EventCoding       Coding                     `bson:"eventCoding" json:"eventCoding"`
+	EventUri          string                     `bson:"eventUri" json:"eventUri"`
 	Destination       []MessageHeaderDestination `bson:"destination,omitempty" json:"destination,omitempty"`
 	Sender            *Reference                 `bson:"sender,omitempty" json:"sender,omitempty"`
 	Enterer           *Reference                 `bson:"enterer,omitempty" json:"enterer,omitempty"`

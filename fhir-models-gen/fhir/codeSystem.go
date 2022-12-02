@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -97,6 +97,13 @@ type CodeSystemConceptProperty struct {
 	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	Code              string      `bson:"code" json:"code"`
+	ValueCode         string      `bson:"valueCode" json:"valueCode"`
+	ValueCoding       Coding      `bson:"valueCoding" json:"valueCoding"`
+	ValueString       string      `bson:"valueString" json:"valueString"`
+	ValueInteger      int         `bson:"valueInteger" json:"valueInteger"`
+	ValueBoolean      bool        `bson:"valueBoolean" json:"valueBoolean"`
+	ValueDateTime     string      `bson:"valueDateTime" json:"valueDateTime"`
+	ValueDecimal      string      `bson:"valueDecimal" json:"valueDecimal"`
 }
 type OtherCodeSystem CodeSystem
 

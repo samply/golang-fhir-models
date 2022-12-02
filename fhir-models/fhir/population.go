@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,6 +22,8 @@ type Population struct {
 	Id                     *string          `bson:"id,omitempty" json:"id,omitempty"`
 	Extension              []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension      []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	AgeRange               *Range           `bson:"ageRange,omitempty" json:"ageRange,omitempty"`
+	AgeCodeableConcept     *CodeableConcept `bson:"ageCodeableConcept,omitempty" json:"ageCodeableConcept,omitempty"`
 	Gender                 *CodeableConcept `bson:"gender,omitempty" json:"gender,omitempty"`
 	Race                   *CodeableConcept `bson:"race,omitempty" json:"race,omitempty"`
 	PhysiologicalCondition *CodeableConcept `bson:"physiologicalCondition,omitempty" json:"physiologicalCondition,omitempty"`

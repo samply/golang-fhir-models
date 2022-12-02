@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,11 @@ package fhir
 
 // UsageContext is documented here http://hl7.org/fhir/StructureDefinition/UsageContext
 type UsageContext struct {
-	Id        *string     `bson:"id,omitempty" json:"id,omitempty"`
-	Extension []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
-	Code      Coding      `bson:"code" json:"code"`
+	Id                   *string         `bson:"id,omitempty" json:"id,omitempty"`
+	Extension            []Extension     `bson:"extension,omitempty" json:"extension,omitempty"`
+	Code                 Coding          `bson:"code" json:"code"`
+	ValueCodeableConcept CodeableConcept `bson:"valueCodeableConcept" json:"valueCodeableConcept"`
+	ValueQuantity        Quantity        `bson:"valueQuantity" json:"valueQuantity"`
+	ValueRange           Range           `bson:"valueRange" json:"valueRange"`
+	ValueReference       Reference       `bson:"valueReference" json:"valueReference"`
 }

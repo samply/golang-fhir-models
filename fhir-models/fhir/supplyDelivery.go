@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -21,29 +21,34 @@ import "encoding/json"
 
 // SupplyDelivery is documented here http://hl7.org/fhir/StructureDefinition/SupplyDelivery
 type SupplyDelivery struct {
-	Id                *string                     `bson:"id,omitempty" json:"id,omitempty"`
-	Meta              *Meta                       `bson:"meta,omitempty" json:"meta,omitempty"`
-	ImplicitRules     *string                     `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
-	Language          *string                     `bson:"language,omitempty" json:"language,omitempty"`
-	Text              *Narrative                  `bson:"text,omitempty" json:"text,omitempty"`
-	Extension         []Extension                 `bson:"extension,omitempty" json:"extension,omitempty"`
-	ModifierExtension []Extension                 `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
-	Identifier        []Identifier                `bson:"identifier,omitempty" json:"identifier,omitempty"`
-	BasedOn           []Reference                 `bson:"basedOn,omitempty" json:"basedOn,omitempty"`
-	PartOf            []Reference                 `bson:"partOf,omitempty" json:"partOf,omitempty"`
-	Status            *SupplyDeliveryStatus       `bson:"status,omitempty" json:"status,omitempty"`
-	Patient           *Reference                  `bson:"patient,omitempty" json:"patient,omitempty"`
-	Type              *CodeableConcept            `bson:"type,omitempty" json:"type,omitempty"`
-	SuppliedItem      *SupplyDeliverySuppliedItem `bson:"suppliedItem,omitempty" json:"suppliedItem,omitempty"`
-	Supplier          *Reference                  `bson:"supplier,omitempty" json:"supplier,omitempty"`
-	Destination       *Reference                  `bson:"destination,omitempty" json:"destination,omitempty"`
-	Receiver          []Reference                 `bson:"receiver,omitempty" json:"receiver,omitempty"`
+	Id                 *string                     `bson:"id,omitempty" json:"id,omitempty"`
+	Meta               *Meta                       `bson:"meta,omitempty" json:"meta,omitempty"`
+	ImplicitRules      *string                     `bson:"implicitRules,omitempty" json:"implicitRules,omitempty"`
+	Language           *string                     `bson:"language,omitempty" json:"language,omitempty"`
+	Text               *Narrative                  `bson:"text,omitempty" json:"text,omitempty"`
+	Extension          []Extension                 `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension  []Extension                 `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Identifier         []Identifier                `bson:"identifier,omitempty" json:"identifier,omitempty"`
+	BasedOn            []Reference                 `bson:"basedOn,omitempty" json:"basedOn,omitempty"`
+	PartOf             []Reference                 `bson:"partOf,omitempty" json:"partOf,omitempty"`
+	Status             *SupplyDeliveryStatus       `bson:"status,omitempty" json:"status,omitempty"`
+	Patient            *Reference                  `bson:"patient,omitempty" json:"patient,omitempty"`
+	Type               *CodeableConcept            `bson:"type,omitempty" json:"type,omitempty"`
+	SuppliedItem       *SupplyDeliverySuppliedItem `bson:"suppliedItem,omitempty" json:"suppliedItem,omitempty"`
+	OccurrenceDateTime *string                     `bson:"occurrenceDateTime,omitempty" json:"occurrenceDateTime,omitempty"`
+	OccurrencePeriod   *Period                     `bson:"occurrencePeriod,omitempty" json:"occurrencePeriod,omitempty"`
+	OccurrenceTiming   *Timing                     `bson:"occurrenceTiming,omitempty" json:"occurrenceTiming,omitempty"`
+	Supplier           *Reference                  `bson:"supplier,omitempty" json:"supplier,omitempty"`
+	Destination        *Reference                  `bson:"destination,omitempty" json:"destination,omitempty"`
+	Receiver           []Reference                 `bson:"receiver,omitempty" json:"receiver,omitempty"`
 }
 type SupplyDeliverySuppliedItem struct {
-	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
-	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
-	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
-	Quantity          *Quantity   `bson:"quantity,omitempty" json:"quantity,omitempty"`
+	Id                  *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension           []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension   []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Quantity            *Quantity        `bson:"quantity,omitempty" json:"quantity,omitempty"`
+	ItemCodeableConcept *CodeableConcept `bson:"itemCodeableConcept,omitempty" json:"itemCodeableConcept,omitempty"`
+	ItemReference       *Reference       `bson:"itemReference,omitempty" json:"itemReference,omitempty"`
 }
 type OtherSupplyDelivery SupplyDelivery
 

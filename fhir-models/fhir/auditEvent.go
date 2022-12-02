@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -90,6 +90,8 @@ type AuditEventEntityDetail struct {
 	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	Type              string      `bson:"type" json:"type"`
+	ValueString       string      `bson:"valueString" json:"valueString"`
+	ValueBase64Binary string      `bson:"valueBase64Binary" json:"valueBase64Binary"`
 }
 type OtherAuditEvent AuditEvent
 

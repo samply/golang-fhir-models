@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -46,6 +46,8 @@ type MessageDefinition struct {
 	Copyright         *string                            `bson:"copyright,omitempty" json:"copyright,omitempty"`
 	Base              *string                            `bson:"base,omitempty" json:"base,omitempty"`
 	Parent            []string                           `bson:"parent,omitempty" json:"parent,omitempty"`
+	EventCoding       Coding                             `bson:"eventCoding" json:"eventCoding"`
+	EventUri          string                             `bson:"eventUri" json:"eventUri"`
 	Category          *MessageSignificanceCategory       `bson:"category,omitempty" json:"category,omitempty"`
 	Focus             []MessageDefinitionFocus           `bson:"focus,omitempty" json:"focus,omitempty"`
 	ResponseRequired  *string                            `bson:"responseRequired,omitempty" json:"responseRequired,omitempty"`

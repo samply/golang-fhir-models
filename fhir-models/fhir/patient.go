@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -34,8 +34,12 @@ type Patient struct {
 	Telecom              []ContactPoint         `bson:"telecom,omitempty" json:"telecom,omitempty"`
 	Gender               *AdministrativeGender  `bson:"gender,omitempty" json:"gender,omitempty"`
 	BirthDate            *string                `bson:"birthDate,omitempty" json:"birthDate,omitempty"`
+	DeceasedBoolean      *bool                  `bson:"deceasedBoolean,omitempty" json:"deceasedBoolean,omitempty"`
+	DeceasedDateTime     *string                `bson:"deceasedDateTime,omitempty" json:"deceasedDateTime,omitempty"`
 	Address              []Address              `bson:"address,omitempty" json:"address,omitempty"`
 	MaritalStatus        *CodeableConcept       `bson:"maritalStatus,omitempty" json:"maritalStatus,omitempty"`
+	MultipleBirthBoolean *bool                  `bson:"multipleBirthBoolean,omitempty" json:"multipleBirthBoolean,omitempty"`
+	MultipleBirthInteger *int                   `bson:"multipleBirthInteger,omitempty" json:"multipleBirthInteger,omitempty"`
 	Photo                []Attachment           `bson:"photo,omitempty" json:"photo,omitempty"`
 	Contact              []PatientContact       `bson:"contact,omitempty" json:"contact,omitempty"`
 	Communication        []PatientCommunication `bson:"communication,omitempty" json:"communication,omitempty"`

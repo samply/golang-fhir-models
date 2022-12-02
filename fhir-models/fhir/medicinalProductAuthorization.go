@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -61,6 +61,8 @@ type MedicinalProductAuthorizationProcedure struct {
 	ModifierExtension []Extension                              `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	Identifier        *Identifier                              `bson:"identifier,omitempty" json:"identifier,omitempty"`
 	Type              CodeableConcept                          `bson:"type" json:"type"`
+	DatePeriod        *Period                                  `bson:"datePeriod,omitempty" json:"datePeriod,omitempty"`
+	DateDateTime      *string                                  `bson:"dateDateTime,omitempty" json:"dateDateTime,omitempty"`
 	Application       []MedicinalProductAuthorizationProcedure `bson:"application,omitempty" json:"application,omitempty"`
 }
 type OtherMedicinalProductAuthorization MedicinalProductAuthorization

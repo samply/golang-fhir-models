@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -49,21 +49,25 @@ type SpecimenDefinitionTypeTested struct {
 	Handling           []SpecimenDefinitionTypeTestedHandling `bson:"handling,omitempty" json:"handling,omitempty"`
 }
 type SpecimenDefinitionTypeTestedContainer struct {
-	Id                *string                                         `bson:"id,omitempty" json:"id,omitempty"`
-	Extension         []Extension                                     `bson:"extension,omitempty" json:"extension,omitempty"`
-	ModifierExtension []Extension                                     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
-	Material          *CodeableConcept                                `bson:"material,omitempty" json:"material,omitempty"`
-	Type              *CodeableConcept                                `bson:"type,omitempty" json:"type,omitempty"`
-	Cap               *CodeableConcept                                `bson:"cap,omitempty" json:"cap,omitempty"`
-	Description       *string                                         `bson:"description,omitempty" json:"description,omitempty"`
-	Capacity          *Quantity                                       `bson:"capacity,omitempty" json:"capacity,omitempty"`
-	Additive          []SpecimenDefinitionTypeTestedContainerAdditive `bson:"additive,omitempty" json:"additive,omitempty"`
-	Preparation       *string                                         `bson:"preparation,omitempty" json:"preparation,omitempty"`
+	Id                    *string                                         `bson:"id,omitempty" json:"id,omitempty"`
+	Extension             []Extension                                     `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension     []Extension                                     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Material              *CodeableConcept                                `bson:"material,omitempty" json:"material,omitempty"`
+	Type                  *CodeableConcept                                `bson:"type,omitempty" json:"type,omitempty"`
+	Cap                   *CodeableConcept                                `bson:"cap,omitempty" json:"cap,omitempty"`
+	Description           *string                                         `bson:"description,omitempty" json:"description,omitempty"`
+	Capacity              *Quantity                                       `bson:"capacity,omitempty" json:"capacity,omitempty"`
+	MinimumVolumeQuantity *Quantity                                       `bson:"minimumVolumeQuantity,omitempty" json:"minimumVolumeQuantity,omitempty"`
+	MinimumVolumeString   *string                                         `bson:"minimumVolumeString,omitempty" json:"minimumVolumeString,omitempty"`
+	Additive              []SpecimenDefinitionTypeTestedContainerAdditive `bson:"additive,omitempty" json:"additive,omitempty"`
+	Preparation           *string                                         `bson:"preparation,omitempty" json:"preparation,omitempty"`
 }
 type SpecimenDefinitionTypeTestedContainerAdditive struct {
-	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
-	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
-	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Id                      *string         `bson:"id,omitempty" json:"id,omitempty"`
+	Extension               []Extension     `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension       []Extension     `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	AdditiveCodeableConcept CodeableConcept `bson:"additiveCodeableConcept" json:"additiveCodeableConcept"`
+	AdditiveReference       Reference       `bson:"additiveReference" json:"additiveReference"`
 }
 type SpecimenDefinitionTypeTestedHandling struct {
 	Id                   *string          `bson:"id,omitempty" json:"id,omitempty"`

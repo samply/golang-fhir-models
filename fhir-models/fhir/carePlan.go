@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -63,24 +63,29 @@ type CarePlanActivity struct {
 	Detail                 *CarePlanActivityDetail `bson:"detail,omitempty" json:"detail,omitempty"`
 }
 type CarePlanActivityDetail struct {
-	Id                    *string                `bson:"id,omitempty" json:"id,omitempty"`
-	Extension             []Extension            `bson:"extension,omitempty" json:"extension,omitempty"`
-	ModifierExtension     []Extension            `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
-	Kind                  *CarePlanActivityKind  `bson:"kind,omitempty" json:"kind,omitempty"`
-	InstantiatesCanonical []string               `bson:"instantiatesCanonical,omitempty" json:"instantiatesCanonical,omitempty"`
-	InstantiatesUri       []string               `bson:"instantiatesUri,omitempty" json:"instantiatesUri,omitempty"`
-	Code                  *CodeableConcept       `bson:"code,omitempty" json:"code,omitempty"`
-	ReasonCode            []CodeableConcept      `bson:"reasonCode,omitempty" json:"reasonCode,omitempty"`
-	ReasonReference       []Reference            `bson:"reasonReference,omitempty" json:"reasonReference,omitempty"`
-	Goal                  []Reference            `bson:"goal,omitempty" json:"goal,omitempty"`
-	Status                CarePlanActivityStatus `bson:"status" json:"status"`
-	StatusReason          *CodeableConcept       `bson:"statusReason,omitempty" json:"statusReason,omitempty"`
-	DoNotPerform          *bool                  `bson:"doNotPerform,omitempty" json:"doNotPerform,omitempty"`
-	Location              *Reference             `bson:"location,omitempty" json:"location,omitempty"`
-	Performer             []Reference            `bson:"performer,omitempty" json:"performer,omitempty"`
-	DailyAmount           *Quantity              `bson:"dailyAmount,omitempty" json:"dailyAmount,omitempty"`
-	Quantity              *Quantity              `bson:"quantity,omitempty" json:"quantity,omitempty"`
-	Description           *string                `bson:"description,omitempty" json:"description,omitempty"`
+	Id                     *string                `bson:"id,omitempty" json:"id,omitempty"`
+	Extension              []Extension            `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension      []Extension            `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Kind                   *CarePlanActivityKind  `bson:"kind,omitempty" json:"kind,omitempty"`
+	InstantiatesCanonical  []string               `bson:"instantiatesCanonical,omitempty" json:"instantiatesCanonical,omitempty"`
+	InstantiatesUri        []string               `bson:"instantiatesUri,omitempty" json:"instantiatesUri,omitempty"`
+	Code                   *CodeableConcept       `bson:"code,omitempty" json:"code,omitempty"`
+	ReasonCode             []CodeableConcept      `bson:"reasonCode,omitempty" json:"reasonCode,omitempty"`
+	ReasonReference        []Reference            `bson:"reasonReference,omitempty" json:"reasonReference,omitempty"`
+	Goal                   []Reference            `bson:"goal,omitempty" json:"goal,omitempty"`
+	Status                 CarePlanActivityStatus `bson:"status" json:"status"`
+	StatusReason           *CodeableConcept       `bson:"statusReason,omitempty" json:"statusReason,omitempty"`
+	DoNotPerform           *bool                  `bson:"doNotPerform,omitempty" json:"doNotPerform,omitempty"`
+	ScheduledTiming        *Timing                `bson:"scheduledTiming,omitempty" json:"scheduledTiming,omitempty"`
+	ScheduledPeriod        *Period                `bson:"scheduledPeriod,omitempty" json:"scheduledPeriod,omitempty"`
+	ScheduledString        *string                `bson:"scheduledString,omitempty" json:"scheduledString,omitempty"`
+	Location               *Reference             `bson:"location,omitempty" json:"location,omitempty"`
+	Performer              []Reference            `bson:"performer,omitempty" json:"performer,omitempty"`
+	ProductCodeableConcept *CodeableConcept       `bson:"productCodeableConcept,omitempty" json:"productCodeableConcept,omitempty"`
+	ProductReference       *Reference             `bson:"productReference,omitempty" json:"productReference,omitempty"`
+	DailyAmount            *Quantity              `bson:"dailyAmount,omitempty" json:"dailyAmount,omitempty"`
+	Quantity               *Quantity              `bson:"quantity,omitempty" json:"quantity,omitempty"`
+	Description            *string                `bson:"description,omitempty" json:"description,omitempty"`
 }
 type OtherCarePlan CarePlan
 

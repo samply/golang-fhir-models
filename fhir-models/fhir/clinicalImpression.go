@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -35,6 +35,8 @@ type ClinicalImpression struct {
 	Description              *string                           `bson:"description,omitempty" json:"description,omitempty"`
 	Subject                  Reference                         `bson:"subject" json:"subject"`
 	Encounter                *Reference                        `bson:"encounter,omitempty" json:"encounter,omitempty"`
+	EffectiveDateTime        *string                           `bson:"effectiveDateTime,omitempty" json:"effectiveDateTime,omitempty"`
+	EffectivePeriod          *Period                           `bson:"effectivePeriod,omitempty" json:"effectivePeriod,omitempty"`
 	Date                     *string                           `bson:"date,omitempty" json:"date,omitempty"`
 	Assessor                 *Reference                        `bson:"assessor,omitempty" json:"assessor,omitempty"`
 	Previous                 *Reference                        `bson:"previous,omitempty" json:"previous,omitempty"`

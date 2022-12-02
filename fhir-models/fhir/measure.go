@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -36,6 +36,8 @@ type Measure struct {
 	Subtitle                        *string                   `bson:"subtitle,omitempty" json:"subtitle,omitempty"`
 	Status                          PublicationStatus         `bson:"status" json:"status"`
 	Experimental                    *bool                     `bson:"experimental,omitempty" json:"experimental,omitempty"`
+	SubjectCodeableConcept          *CodeableConcept          `bson:"subjectCodeableConcept,omitempty" json:"subjectCodeableConcept,omitempty"`
+	SubjectReference                *Reference                `bson:"subjectReference,omitempty" json:"subjectReference,omitempty"`
 	Date                            *string                   `bson:"date,omitempty" json:"date,omitempty"`
 	Publisher                       *string                   `bson:"publisher,omitempty" json:"publisher,omitempty"`
 	Contact                         []ContactDetail           `bson:"contact,omitempty" json:"contact,omitempty"`

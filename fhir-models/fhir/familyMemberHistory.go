@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -38,7 +38,18 @@ type FamilyMemberHistory struct {
 	Name                  *string                        `bson:"name,omitempty" json:"name,omitempty"`
 	Relationship          CodeableConcept                `bson:"relationship" json:"relationship"`
 	Sex                   *CodeableConcept               `bson:"sex,omitempty" json:"sex,omitempty"`
+	BornPeriod            *Period                        `bson:"bornPeriod,omitempty" json:"bornPeriod,omitempty"`
+	BornDate              *string                        `bson:"bornDate,omitempty" json:"bornDate,omitempty"`
+	BornString            *string                        `bson:"bornString,omitempty" json:"bornString,omitempty"`
+	AgeAge                *Age                           `bson:"ageAge,omitempty" json:"ageAge,omitempty"`
+	AgeRange              *Range                         `bson:"ageRange,omitempty" json:"ageRange,omitempty"`
+	AgeString             *string                        `bson:"ageString,omitempty" json:"ageString,omitempty"`
 	EstimatedAge          *bool                          `bson:"estimatedAge,omitempty" json:"estimatedAge,omitempty"`
+	DeceasedBoolean       *bool                          `bson:"deceasedBoolean,omitempty" json:"deceasedBoolean,omitempty"`
+	DeceasedAge           *Age                           `bson:"deceasedAge,omitempty" json:"deceasedAge,omitempty"`
+	DeceasedRange         *Range                         `bson:"deceasedRange,omitempty" json:"deceasedRange,omitempty"`
+	DeceasedDate          *string                        `bson:"deceasedDate,omitempty" json:"deceasedDate,omitempty"`
+	DeceasedString        *string                        `bson:"deceasedString,omitempty" json:"deceasedString,omitempty"`
 	ReasonCode            []CodeableConcept              `bson:"reasonCode,omitempty" json:"reasonCode,omitempty"`
 	ReasonReference       []Reference                    `bson:"reasonReference,omitempty" json:"reasonReference,omitempty"`
 	Note                  []Annotation                   `bson:"note,omitempty" json:"note,omitempty"`
@@ -51,6 +62,10 @@ type FamilyMemberHistoryCondition struct {
 	Code               CodeableConcept  `bson:"code" json:"code"`
 	Outcome            *CodeableConcept `bson:"outcome,omitempty" json:"outcome,omitempty"`
 	ContributedToDeath *bool            `bson:"contributedToDeath,omitempty" json:"contributedToDeath,omitempty"`
+	OnsetAge           *Age             `bson:"onsetAge,omitempty" json:"onsetAge,omitempty"`
+	OnsetRange         *Range           `bson:"onsetRange,omitempty" json:"onsetRange,omitempty"`
+	OnsetPeriod        *Period          `bson:"onsetPeriod,omitempty" json:"onsetPeriod,omitempty"`
+	OnsetString        *string          `bson:"onsetString,omitempty" json:"onsetString,omitempty"`
 	Note               []Annotation     `bson:"note,omitempty" json:"note,omitempty"`
 }
 type OtherFamilyMemberHistory FamilyMemberHistory

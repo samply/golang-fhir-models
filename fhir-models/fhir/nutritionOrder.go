@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -101,6 +101,8 @@ type NutritionOrderEnteralFormulaAdministration struct {
 	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	Schedule          *Timing     `bson:"schedule,omitempty" json:"schedule,omitempty"`
 	Quantity          *Quantity   `bson:"quantity,omitempty" json:"quantity,omitempty"`
+	RateQuantity      *Quantity   `bson:"rateQuantity,omitempty" json:"rateQuantity,omitempty"`
+	RateRatio         *Ratio      `bson:"rateRatio,omitempty" json:"rateRatio,omitempty"`
 }
 type OtherNutritionOrder NutritionOrder
 

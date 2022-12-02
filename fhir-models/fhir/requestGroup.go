@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -60,6 +60,12 @@ type RequestGroupAction struct {
 	Documentation       []RelatedArtifact                 `bson:"documentation,omitempty" json:"documentation,omitempty"`
 	Condition           []RequestGroupActionCondition     `bson:"condition,omitempty" json:"condition,omitempty"`
 	RelatedAction       []RequestGroupActionRelatedAction `bson:"relatedAction,omitempty" json:"relatedAction,omitempty"`
+	TimingDateTime      *string                           `bson:"timingDateTime,omitempty" json:"timingDateTime,omitempty"`
+	TimingAge           *Age                              `bson:"timingAge,omitempty" json:"timingAge,omitempty"`
+	TimingPeriod        *Period                           `bson:"timingPeriod,omitempty" json:"timingPeriod,omitempty"`
+	TimingDuration      *Duration                         `bson:"timingDuration,omitempty" json:"timingDuration,omitempty"`
+	TimingRange         *Range                            `bson:"timingRange,omitempty" json:"timingRange,omitempty"`
+	TimingTiming        *Timing                           `bson:"timingTiming,omitempty" json:"timingTiming,omitempty"`
 	Participant         []Reference                       `bson:"participant,omitempty" json:"participant,omitempty"`
 	Type                *CodeableConcept                  `bson:"type,omitempty" json:"type,omitempty"`
 	GroupingBehavior    *ActionGroupingBehavior           `bson:"groupingBehavior,omitempty" json:"groupingBehavior,omitempty"`
@@ -83,6 +89,8 @@ type RequestGroupActionRelatedAction struct {
 	ModifierExtension []Extension            `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	ActionId          string                 `bson:"actionId" json:"actionId"`
 	Relationship      ActionRelationshipType `bson:"relationship" json:"relationship"`
+	OffsetDuration    *Duration              `bson:"offsetDuration,omitempty" json:"offsetDuration,omitempty"`
+	OffsetRange       *Range                 `bson:"offsetRange,omitempty" json:"offsetRange,omitempty"`
 }
 type OtherRequestGroup RequestGroup
 

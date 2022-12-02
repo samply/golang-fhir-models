@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -35,6 +35,8 @@ type DiagnosticReport struct {
 	Code               CodeableConcept         `bson:"code" json:"code"`
 	Subject            *Reference              `bson:"subject,omitempty" json:"subject,omitempty"`
 	Encounter          *Reference              `bson:"encounter,omitempty" json:"encounter,omitempty"`
+	EffectiveDateTime  *string                 `bson:"effectiveDateTime,omitempty" json:"effectiveDateTime,omitempty"`
+	EffectivePeriod    *Period                 `bson:"effectivePeriod,omitempty" json:"effectivePeriod,omitempty"`
 	Issued             *string                 `bson:"issued,omitempty" json:"issued,omitempty"`
 	Performer          []Reference             `bson:"performer,omitempty" json:"performer,omitempty"`
 	ResultsInterpreter []Reference             `bson:"resultsInterpreter,omitempty" json:"resultsInterpreter,omitempty"`

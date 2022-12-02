@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -46,6 +46,8 @@ type BiologicallyDerivedProductCollection struct {
 	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	Collector         *Reference  `bson:"collector,omitempty" json:"collector,omitempty"`
 	Source            *Reference  `bson:"source,omitempty" json:"source,omitempty"`
+	CollectedDateTime *string     `bson:"collectedDateTime,omitempty" json:"collectedDateTime,omitempty"`
+	CollectedPeriod   *Period     `bson:"collectedPeriod,omitempty" json:"collectedPeriod,omitempty"`
 }
 type BiologicallyDerivedProductProcessing struct {
 	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
@@ -54,12 +56,16 @@ type BiologicallyDerivedProductProcessing struct {
 	Description       *string          `bson:"description,omitempty" json:"description,omitempty"`
 	Procedure         *CodeableConcept `bson:"procedure,omitempty" json:"procedure,omitempty"`
 	Additive          *Reference       `bson:"additive,omitempty" json:"additive,omitempty"`
+	TimeDateTime      *string          `bson:"timeDateTime,omitempty" json:"timeDateTime,omitempty"`
+	TimePeriod        *Period          `bson:"timePeriod,omitempty" json:"timePeriod,omitempty"`
 }
 type BiologicallyDerivedProductManipulation struct {
 	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
 	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	Description       *string     `bson:"description,omitempty" json:"description,omitempty"`
+	TimeDateTime      *string     `bson:"timeDateTime,omitempty" json:"timeDateTime,omitempty"`
+	TimePeriod        *Period     `bson:"timePeriod,omitempty" json:"timePeriod,omitempty"`
 }
 type BiologicallyDerivedProductStorage struct {
 	Id                *string                                 `bson:"id,omitempty" json:"id,omitempty"`

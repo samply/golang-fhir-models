@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -46,6 +46,10 @@ type ImmunizationRecommendationRecommendation struct {
 	DateCriterion                []ImmunizationRecommendationRecommendationDateCriterion `bson:"dateCriterion,omitempty" json:"dateCriterion,omitempty"`
 	Description                  *string                                                 `bson:"description,omitempty" json:"description,omitempty"`
 	Series                       *string                                                 `bson:"series,omitempty" json:"series,omitempty"`
+	DoseNumberPositiveInt        *int                                                    `bson:"doseNumberPositiveInt,omitempty" json:"doseNumberPositiveInt,omitempty"`
+	DoseNumberString             *string                                                 `bson:"doseNumberString,omitempty" json:"doseNumberString,omitempty"`
+	SeriesDosesPositiveInt       *int                                                    `bson:"seriesDosesPositiveInt,omitempty" json:"seriesDosesPositiveInt,omitempty"`
+	SeriesDosesString            *string                                                 `bson:"seriesDosesString,omitempty" json:"seriesDosesString,omitempty"`
 	SupportingImmunization       []Reference                                             `bson:"supportingImmunization,omitempty" json:"supportingImmunization,omitempty"`
 	SupportingPatientInformation []Reference                                             `bson:"supportingPatientInformation,omitempty" json:"supportingPatientInformation,omitempty"`
 }

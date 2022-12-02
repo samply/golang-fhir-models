@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -43,6 +43,10 @@ type ConceptMap struct {
 	Jurisdiction      []CodeableConcept `bson:"jurisdiction,omitempty" json:"jurisdiction,omitempty"`
 	Purpose           *string           `bson:"purpose,omitempty" json:"purpose,omitempty"`
 	Copyright         *string           `bson:"copyright,omitempty" json:"copyright,omitempty"`
+	SourceUri         *string           `bson:"sourceUri,omitempty" json:"sourceUri,omitempty"`
+	SourceCanonical   *string           `bson:"sourceCanonical,omitempty" json:"sourceCanonical,omitempty"`
+	TargetUri         *string           `bson:"targetUri,omitempty" json:"targetUri,omitempty"`
+	TargetCanonical   *string           `bson:"targetCanonical,omitempty" json:"targetCanonical,omitempty"`
 	Group             []ConceptMapGroup `bson:"group,omitempty" json:"group,omitempty"`
 }
 type ConceptMapGroup struct {

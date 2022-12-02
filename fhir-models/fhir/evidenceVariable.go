@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -57,14 +57,24 @@ type EvidenceVariable struct {
 	Characteristic    []EvidenceVariableCharacteristic `bson:"characteristic" json:"characteristic"`
 }
 type EvidenceVariableCharacteristic struct {
-	Id                *string        `bson:"id,omitempty" json:"id,omitempty"`
-	Extension         []Extension    `bson:"extension,omitempty" json:"extension,omitempty"`
-	ModifierExtension []Extension    `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
-	Description       *string        `bson:"description,omitempty" json:"description,omitempty"`
-	UsageContext      []UsageContext `bson:"usageContext,omitempty" json:"usageContext,omitempty"`
-	Exclude           *bool          `bson:"exclude,omitempty" json:"exclude,omitempty"`
-	TimeFromStart     *Duration      `bson:"timeFromStart,omitempty" json:"timeFromStart,omitempty"`
-	GroupMeasure      *GroupMeasure  `bson:"groupMeasure,omitempty" json:"groupMeasure,omitempty"`
+	Id                           *string           `bson:"id,omitempty" json:"id,omitempty"`
+	Extension                    []Extension       `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension            []Extension       `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Description                  *string           `bson:"description,omitempty" json:"description,omitempty"`
+	DefinitionReference          Reference         `bson:"definitionReference" json:"definitionReference"`
+	DefinitionCanonical          string            `bson:"definitionCanonical" json:"definitionCanonical"`
+	DefinitionCodeableConcept    CodeableConcept   `bson:"definitionCodeableConcept" json:"definitionCodeableConcept"`
+	DefinitionExpression         Expression        `bson:"definitionExpression" json:"definitionExpression"`
+	DefinitionDataRequirement    DataRequirement   `bson:"definitionDataRequirement" json:"definitionDataRequirement"`
+	DefinitionTriggerDefinition  TriggerDefinition `bson:"definitionTriggerDefinition" json:"definitionTriggerDefinition"`
+	UsageContext                 []UsageContext    `bson:"usageContext,omitempty" json:"usageContext,omitempty"`
+	Exclude                      *bool             `bson:"exclude,omitempty" json:"exclude,omitempty"`
+	ParticipantEffectiveDateTime *string           `bson:"participantEffectiveDateTime,omitempty" json:"participantEffectiveDateTime,omitempty"`
+	ParticipantEffectivePeriod   *Period           `bson:"participantEffectivePeriod,omitempty" json:"participantEffectivePeriod,omitempty"`
+	ParticipantEffectiveDuration *Duration         `bson:"participantEffectiveDuration,omitempty" json:"participantEffectiveDuration,omitempty"`
+	ParticipantEffectiveTiming   *Timing           `bson:"participantEffectiveTiming,omitempty" json:"participantEffectiveTiming,omitempty"`
+	TimeFromStart                *Duration         `bson:"timeFromStart,omitempty" json:"timeFromStart,omitempty"`
+	GroupMeasure                 *GroupMeasure     `bson:"groupMeasure,omitempty" json:"groupMeasure,omitempty"`
 }
 type OtherEvidenceVariable EvidenceVariable
 

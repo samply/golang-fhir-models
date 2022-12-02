@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -37,9 +37,14 @@ type DeviceRequest struct {
 	Status                *RequestStatus           `bson:"status,omitempty" json:"status,omitempty"`
 	Intent                RequestIntent            `bson:"intent" json:"intent"`
 	Priority              *RequestPriority         `bson:"priority,omitempty" json:"priority,omitempty"`
+	CodeReference         Reference                `bson:"codeReference" json:"codeReference"`
+	CodeCodeableConcept   CodeableConcept          `bson:"codeCodeableConcept" json:"codeCodeableConcept"`
 	Parameter             []DeviceRequestParameter `bson:"parameter,omitempty" json:"parameter,omitempty"`
 	Subject               Reference                `bson:"subject" json:"subject"`
 	Encounter             *Reference               `bson:"encounter,omitempty" json:"encounter,omitempty"`
+	OccurrenceDateTime    *string                  `bson:"occurrenceDateTime,omitempty" json:"occurrenceDateTime,omitempty"`
+	OccurrencePeriod      *Period                  `bson:"occurrencePeriod,omitempty" json:"occurrencePeriod,omitempty"`
+	OccurrenceTiming      *Timing                  `bson:"occurrenceTiming,omitempty" json:"occurrenceTiming,omitempty"`
 	AuthoredOn            *string                  `bson:"authoredOn,omitempty" json:"authoredOn,omitempty"`
 	Requester             *Reference               `bson:"requester,omitempty" json:"requester,omitempty"`
 	PerformerType         *CodeableConcept         `bson:"performerType,omitempty" json:"performerType,omitempty"`
@@ -52,10 +57,14 @@ type DeviceRequest struct {
 	RelevantHistory       []Reference              `bson:"relevantHistory,omitempty" json:"relevantHistory,omitempty"`
 }
 type DeviceRequestParameter struct {
-	Id                *string          `bson:"id,omitempty" json:"id,omitempty"`
-	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
-	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
-	Code              *CodeableConcept `bson:"code,omitempty" json:"code,omitempty"`
+	Id                   *string          `bson:"id,omitempty" json:"id,omitempty"`
+	Extension            []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension    []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Code                 *CodeableConcept `bson:"code,omitempty" json:"code,omitempty"`
+	ValueCodeableConcept *CodeableConcept `bson:"valueCodeableConcept,omitempty" json:"valueCodeableConcept,omitempty"`
+	ValueQuantity        *Quantity        `bson:"valueQuantity,omitempty" json:"valueQuantity,omitempty"`
+	ValueRange           *Range           `bson:"valueRange,omitempty" json:"valueRange,omitempty"`
+	ValueBoolean         *bool            `bson:"valueBoolean,omitempty" json:"valueBoolean,omitempty"`
 }
 type OtherDeviceRequest DeviceRequest
 

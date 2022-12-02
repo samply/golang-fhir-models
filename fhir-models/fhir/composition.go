@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -57,6 +57,8 @@ type CompositionRelatesTo struct {
 	Extension         []Extension              `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension              `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	Code              DocumentRelationshipType `bson:"code" json:"code"`
+	TargetIdentifier  Identifier               `bson:"targetIdentifier" json:"targetIdentifier"`
+	TargetReference   Reference                `bson:"targetReference" json:"targetReference"`
 }
 type CompositionEvent struct {
 	Id                *string           `bson:"id,omitempty" json:"id,omitempty"`

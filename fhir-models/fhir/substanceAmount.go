@@ -1,4 +1,4 @@
-// Copyright 2019 - 2021 The Samply Community
+// Copyright 2019 - 2022 The Samply Community
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,6 +22,9 @@ type SubstanceAmount struct {
 	Id                *string                        `bson:"id,omitempty" json:"id,omitempty"`
 	Extension         []Extension                    `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension                    `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	AmountQuantity    *Quantity                      `bson:"amountQuantity,omitempty" json:"amountQuantity,omitempty"`
+	AmountRange       *Range                         `bson:"amountRange,omitempty" json:"amountRange,omitempty"`
+	AmountString      *string                        `bson:"amountString,omitempty" json:"amountString,omitempty"`
 	AmountType        *CodeableConcept               `bson:"amountType,omitempty" json:"amountType,omitempty"`
 	AmountText        *string                        `bson:"amountText,omitempty" json:"amountText,omitempty"`
 	ReferenceRange    *SubstanceAmountReferenceRange `bson:"referenceRange,omitempty" json:"referenceRange,omitempty"`
