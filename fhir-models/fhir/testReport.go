@@ -33,7 +33,7 @@ type TestReport struct {
 	Status            TestReportStatus        `bson:"status" json:"status"`
 	TestScript        Reference               `bson:"testScript" json:"testScript"`
 	Result            TestReportResult        `bson:"result" json:"result"`
-	Score             *string                 `bson:"score,omitempty" json:"score,omitempty"`
+	Score             *json.Number            `bson:"score,omitempty" json:"score,omitempty"`
 	Tester            *string                 `bson:"tester,omitempty" json:"tester,omitempty"`
 	Issued            *string                 `bson:"issued,omitempty" json:"issued,omitempty"`
 	Participant       []TestReportParticipant `bson:"participant,omitempty" json:"participant,omitempty"`

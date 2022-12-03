@@ -129,7 +129,7 @@ type ContractTermOfferAnswer struct {
 	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	ValueBoolean      bool        `bson:"valueBoolean" json:"valueBoolean"`
-	ValueDecimal      string      `bson:"valueDecimal" json:"valueDecimal"`
+	ValueDecimal      json.Number `bson:"valueDecimal" json:"valueDecimal"`
 	ValueInteger      int         `bson:"valueInteger" json:"valueInteger"`
 	ValueDate         string      `bson:"valueDate" json:"valueDate"`
 	ValueDateTime     string      `bson:"valueDateTime" json:"valueDateTime"`
@@ -179,8 +179,8 @@ type ContractTermAssetValuedItem struct {
 	EffectiveTime         *string          `bson:"effectiveTime,omitempty" json:"effectiveTime,omitempty"`
 	Quantity              *Quantity        `bson:"quantity,omitempty" json:"quantity,omitempty"`
 	UnitPrice             *Money           `bson:"unitPrice,omitempty" json:"unitPrice,omitempty"`
-	Factor                *string          `bson:"factor,omitempty" json:"factor,omitempty"`
-	Points                *string          `bson:"points,omitempty" json:"points,omitempty"`
+	Factor                *json.Number     `bson:"factor,omitempty" json:"factor,omitempty"`
+	Points                *json.Number     `bson:"points,omitempty" json:"points,omitempty"`
 	Net                   *Money           `bson:"net,omitempty" json:"net,omitempty"`
 	Payment               *string          `bson:"payment,omitempty" json:"payment,omitempty"`
 	PaymentDate           *string          `bson:"paymentDate,omitempty" json:"paymentDate,omitempty"`

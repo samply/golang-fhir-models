@@ -101,7 +101,7 @@ type StructureMapGroupRuleSource struct {
 	DefaultValueCode                *string                     `bson:"defaultValueCode,omitempty" json:"defaultValueCode,omitempty"`
 	DefaultValueDate                *string                     `bson:"defaultValueDate,omitempty" json:"defaultValueDate,omitempty"`
 	DefaultValueDateTime            *string                     `bson:"defaultValueDateTime,omitempty" json:"defaultValueDateTime,omitempty"`
-	DefaultValueDecimal             *string                     `bson:"defaultValueDecimal,omitempty" json:"defaultValueDecimal,omitempty"`
+	DefaultValueDecimal             *json.Number                `bson:"defaultValueDecimal,omitempty" json:"defaultValueDecimal,omitempty"`
 	DefaultValueId                  *string                     `bson:"defaultValueId,omitempty" json:"defaultValueId,omitempty"`
 	DefaultValueInstant             *string                     `bson:"defaultValueInstant,omitempty" json:"defaultValueInstant,omitempty"`
 	DefaultValueInteger             *int                        `bson:"defaultValueInteger,omitempty" json:"defaultValueInteger,omitempty"`
@@ -173,7 +173,7 @@ type StructureMapGroupRuleTargetParameter struct {
 	ValueString       string      `bson:"valueString" json:"valueString"`
 	ValueBoolean      bool        `bson:"valueBoolean" json:"valueBoolean"`
 	ValueInteger      int         `bson:"valueInteger" json:"valueInteger"`
-	ValueDecimal      string      `bson:"valueDecimal" json:"valueDecimal"`
+	ValueDecimal      json.Number `bson:"valueDecimal" json:"valueDecimal"`
 }
 type StructureMapGroupRuleDependent struct {
 	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`

@@ -72,7 +72,7 @@ type BiologicallyDerivedProductStorage struct {
 	Extension         []Extension                             `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension                             `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	Description       *string                                 `bson:"description,omitempty" json:"description,omitempty"`
-	Temperature       *string                                 `bson:"temperature,omitempty" json:"temperature,omitempty"`
+	Temperature       *json.Number                            `bson:"temperature,omitempty" json:"temperature,omitempty"`
 	Scale             *BiologicallyDerivedProductStorageScale `bson:"scale,omitempty" json:"scale,omitempty"`
 	Duration          *Period                                 `bson:"duration,omitempty" json:"duration,omitempty"`
 }

@@ -103,7 +103,7 @@ type CodeSystemConceptProperty struct {
 	ValueInteger      int         `bson:"valueInteger" json:"valueInteger"`
 	ValueBoolean      bool        `bson:"valueBoolean" json:"valueBoolean"`
 	ValueDateTime     string      `bson:"valueDateTime" json:"valueDateTime"`
-	ValueDecimal      string      `bson:"valueDecimal" json:"valueDecimal"`
+	ValueDecimal      json.Number `bson:"valueDecimal" json:"valueDecimal"`
 }
 type OtherCodeSystem CodeSystem
 

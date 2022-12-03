@@ -102,17 +102,17 @@ type ValueSetExpansion struct {
 	Contains          []ValueSetExpansionContains  `bson:"contains,omitempty" json:"contains,omitempty"`
 }
 type ValueSetExpansionParameter struct {
-	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
-	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
-	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
-	Name              string      `bson:"name" json:"name"`
-	ValueString       *string     `bson:"valueString,omitempty" json:"valueString,omitempty"`
-	ValueBoolean      *bool       `bson:"valueBoolean,omitempty" json:"valueBoolean,omitempty"`
-	ValueInteger      *int        `bson:"valueInteger,omitempty" json:"valueInteger,omitempty"`
-	ValueDecimal      *string     `bson:"valueDecimal,omitempty" json:"valueDecimal,omitempty"`
-	ValueUri          *string     `bson:"valueUri,omitempty" json:"valueUri,omitempty"`
-	ValueCode         *string     `bson:"valueCode,omitempty" json:"valueCode,omitempty"`
-	ValueDateTime     *string     `bson:"valueDateTime,omitempty" json:"valueDateTime,omitempty"`
+	Id                *string      `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension  `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension  `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Name              string       `bson:"name" json:"name"`
+	ValueString       *string      `bson:"valueString,omitempty" json:"valueString,omitempty"`
+	ValueBoolean      *bool        `bson:"valueBoolean,omitempty" json:"valueBoolean,omitempty"`
+	ValueInteger      *int         `bson:"valueInteger,omitempty" json:"valueInteger,omitempty"`
+	ValueDecimal      *json.Number `bson:"valueDecimal,omitempty" json:"valueDecimal,omitempty"`
+	ValueUri          *string      `bson:"valueUri,omitempty" json:"valueUri,omitempty"`
+	ValueCode         *string      `bson:"valueCode,omitempty" json:"valueCode,omitempty"`
+	ValueDateTime     *string      `bson:"valueDateTime,omitempty" json:"valueDateTime,omitempty"`
 }
 type ValueSetExpansionContains struct {
 	Id                *string                                    `bson:"id,omitempty" json:"id,omitempty"`

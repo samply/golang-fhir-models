@@ -67,7 +67,7 @@ type InvoiceLineItemPriceComponent struct {
 	ModifierExtension []Extension               `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	Type              InvoicePriceComponentType `bson:"type" json:"type"`
 	Code              *CodeableConcept          `bson:"code,omitempty" json:"code,omitempty"`
-	Factor            *string                   `bson:"factor,omitempty" json:"factor,omitempty"`
+	Factor            *json.Number              `bson:"factor,omitempty" json:"factor,omitempty"`
 	Amount            *Money                    `bson:"amount,omitempty" json:"amount,omitempty"`
 }
 type OtherInvoice Invoice

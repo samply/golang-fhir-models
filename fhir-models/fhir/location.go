@@ -47,12 +47,12 @@ type Location struct {
 	Endpoint               []Reference                `bson:"endpoint,omitempty" json:"endpoint,omitempty"`
 }
 type LocationPosition struct {
-	Id                *string     `bson:"id,omitempty" json:"id,omitempty"`
-	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
-	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
-	Longitude         string      `bson:"longitude" json:"longitude"`
-	Latitude          string      `bson:"latitude" json:"latitude"`
-	Altitude          *string     `bson:"altitude,omitempty" json:"altitude,omitempty"`
+	Id                *string      `bson:"id,omitempty" json:"id,omitempty"`
+	Extension         []Extension  `bson:"extension,omitempty" json:"extension,omitempty"`
+	ModifierExtension []Extension  `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
+	Longitude         json.Number  `bson:"longitude" json:"longitude"`
+	Latitude          json.Number  `bson:"latitude" json:"latitude"`
+	Altitude          *json.Number `bson:"altitude,omitempty" json:"altitude,omitempty"`
 }
 type LocationHoursOfOperation struct {
 	Id                *string      `bson:"id,omitempty" json:"id,omitempty"`

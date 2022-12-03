@@ -79,7 +79,7 @@ type QuestionnaireItemEnableWhen struct {
 	Question          string                    `bson:"question" json:"question"`
 	Operator          QuestionnaireItemOperator `bson:"operator" json:"operator"`
 	AnswerBoolean     bool                      `bson:"answerBoolean" json:"answerBoolean"`
-	AnswerDecimal     string                    `bson:"answerDecimal" json:"answerDecimal"`
+	AnswerDecimal     json.Number               `bson:"answerDecimal" json:"answerDecimal"`
 	AnswerInteger     int                       `bson:"answerInteger" json:"answerInteger"`
 	AnswerDate        string                    `bson:"answerDate" json:"answerDate"`
 	AnswerDateTime    string                    `bson:"answerDateTime" json:"answerDateTime"`
@@ -106,7 +106,7 @@ type QuestionnaireItemInitial struct {
 	Extension         []Extension `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	ValueBoolean      bool        `bson:"valueBoolean" json:"valueBoolean"`
-	ValueDecimal      string      `bson:"valueDecimal" json:"valueDecimal"`
+	ValueDecimal      json.Number `bson:"valueDecimal" json:"valueDecimal"`
 	ValueInteger      int         `bson:"valueInteger" json:"valueInteger"`
 	ValueDate         string      `bson:"valueDate" json:"valueDate"`
 	ValueDateTime     string      `bson:"valueDateTime" json:"valueDateTime"`

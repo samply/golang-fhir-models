@@ -72,7 +72,7 @@ type ClaimResponseItemAdjudication struct {
 	Category          CodeableConcept  `bson:"category" json:"category"`
 	Reason            *CodeableConcept `bson:"reason,omitempty" json:"reason,omitempty"`
 	Amount            *Money           `bson:"amount,omitempty" json:"amount,omitempty"`
-	Value             *string          `bson:"value,omitempty" json:"value,omitempty"`
+	Value             *json.Number     `bson:"value,omitempty" json:"value,omitempty"`
 }
 type ClaimResponseItemDetail struct {
 	Id                *string                            `bson:"id,omitempty" json:"id,omitempty"`
@@ -109,7 +109,7 @@ type ClaimResponseAddItem struct {
 	LocationReference       *Reference                      `bson:"locationReference,omitempty" json:"locationReference,omitempty"`
 	Quantity                *Quantity                       `bson:"quantity,omitempty" json:"quantity,omitempty"`
 	UnitPrice               *Money                          `bson:"unitPrice,omitempty" json:"unitPrice,omitempty"`
-	Factor                  *string                         `bson:"factor,omitempty" json:"factor,omitempty"`
+	Factor                  *json.Number                    `bson:"factor,omitempty" json:"factor,omitempty"`
 	Net                     *Money                          `bson:"net,omitempty" json:"net,omitempty"`
 	BodySite                *CodeableConcept                `bson:"bodySite,omitempty" json:"bodySite,omitempty"`
 	SubSite                 []CodeableConcept               `bson:"subSite,omitempty" json:"subSite,omitempty"`
@@ -125,7 +125,7 @@ type ClaimResponseAddItemDetail struct {
 	Modifier          []CodeableConcept                     `bson:"modifier,omitempty" json:"modifier,omitempty"`
 	Quantity          *Quantity                             `bson:"quantity,omitempty" json:"quantity,omitempty"`
 	UnitPrice         *Money                                `bson:"unitPrice,omitempty" json:"unitPrice,omitempty"`
-	Factor            *string                               `bson:"factor,omitempty" json:"factor,omitempty"`
+	Factor            *json.Number                          `bson:"factor,omitempty" json:"factor,omitempty"`
 	Net               *Money                                `bson:"net,omitempty" json:"net,omitempty"`
 	NoteNumber        []int                                 `bson:"noteNumber,omitempty" json:"noteNumber,omitempty"`
 	Adjudication      []ClaimResponseItemAdjudication       `bson:"adjudication,omitempty" json:"adjudication,omitempty"`
@@ -139,7 +139,7 @@ type ClaimResponseAddItemDetailSubDetail struct {
 	Modifier          []CodeableConcept               `bson:"modifier,omitempty" json:"modifier,omitempty"`
 	Quantity          *Quantity                       `bson:"quantity,omitempty" json:"quantity,omitempty"`
 	UnitPrice         *Money                          `bson:"unitPrice,omitempty" json:"unitPrice,omitempty"`
-	Factor            *string                         `bson:"factor,omitempty" json:"factor,omitempty"`
+	Factor            *json.Number                    `bson:"factor,omitempty" json:"factor,omitempty"`
 	Net               *Money                          `bson:"net,omitempty" json:"net,omitempty"`
 	NoteNumber        []int                           `bson:"noteNumber,omitempty" json:"noteNumber,omitempty"`
 	Adjudication      []ClaimResponseItemAdjudication `bson:"adjudication,omitempty" json:"adjudication,omitempty"`

@@ -48,7 +48,7 @@ type ObservationDefinitionQuantitativeDetails struct {
 	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	CustomaryUnit     *CodeableConcept `bson:"customaryUnit,omitempty" json:"customaryUnit,omitempty"`
 	Unit              *CodeableConcept `bson:"unit,omitempty" json:"unit,omitempty"`
-	ConversionFactor  *string          `bson:"conversionFactor,omitempty" json:"conversionFactor,omitempty"`
+	ConversionFactor  *json.Number     `bson:"conversionFactor,omitempty" json:"conversionFactor,omitempty"`
 	DecimalPrecision  *int             `bson:"decimalPrecision,omitempty" json:"decimalPrecision,omitempty"`
 }
 type ObservationDefinitionQualifiedInterval struct {

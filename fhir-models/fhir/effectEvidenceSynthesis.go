@@ -86,7 +86,7 @@ type EffectEvidenceSynthesisEffectEstimate struct {
 	Description       *string                                                  `bson:"description,omitempty" json:"description,omitempty"`
 	Type              *CodeableConcept                                         `bson:"type,omitempty" json:"type,omitempty"`
 	VariantState      *CodeableConcept                                         `bson:"variantState,omitempty" json:"variantState,omitempty"`
-	Value             *string                                                  `bson:"value,omitempty" json:"value,omitempty"`
+	Value             *json.Number                                             `bson:"value,omitempty" json:"value,omitempty"`
 	UnitOfMeasure     *CodeableConcept                                         `bson:"unitOfMeasure,omitempty" json:"unitOfMeasure,omitempty"`
 	PrecisionEstimate []EffectEvidenceSynthesisEffectEstimatePrecisionEstimate `bson:"precisionEstimate,omitempty" json:"precisionEstimate,omitempty"`
 }
@@ -95,9 +95,9 @@ type EffectEvidenceSynthesisEffectEstimatePrecisionEstimate struct {
 	Extension         []Extension      `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension      `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	Type              *CodeableConcept `bson:"type,omitempty" json:"type,omitempty"`
-	Level             *string          `bson:"level,omitempty" json:"level,omitempty"`
-	From              *string          `bson:"from,omitempty" json:"from,omitempty"`
-	To                *string          `bson:"to,omitempty" json:"to,omitempty"`
+	Level             *json.Number     `bson:"level,omitempty" json:"level,omitempty"`
+	From              *json.Number     `bson:"from,omitempty" json:"from,omitempty"`
+	To                *json.Number     `bson:"to,omitempty" json:"to,omitempty"`
 }
 type EffectEvidenceSynthesisCertainty struct {
 	Id                    *string                                                 `bson:"id,omitempty" json:"id,omitempty"`
