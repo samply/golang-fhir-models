@@ -32,6 +32,7 @@ type ParametersParameter struct {
 	Extension         []Extension           `bson:"extension,omitempty" json:"extension,omitempty"`
 	ModifierExtension []Extension           `bson:"modifierExtension,omitempty" json:"modifierExtension,omitempty"`
 	Name              string                `bson:"name" json:"name"`
+	ValueString       *string               `bson:"valueString,omitempty" json:"valueString,omitempty"`
 	Resource          json.RawMessage       `bson:"resource,omitempty" json:"resource,omitempty"`
 	Part              []ParametersParameter `bson:"part,omitempty" json:"part,omitempty"`
 }
