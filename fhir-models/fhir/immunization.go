@@ -34,6 +34,7 @@ type Immunization struct {
 	VaccineCode        CodeableConcept               `bson:"vaccineCode" json:"vaccineCode"`
 	Patient            Reference                     `bson:"patient" json:"patient"`
 	Encounter          *Reference                    `bson:"encounter,omitempty" json:"encounter,omitempty"`
+	OccurrenceDateTime *string                       `bson:"occurrenceDateTime,omitempty" json:"occurrenceDateTime,omitempty"`
 	Recorded           *string                       `bson:"recorded,omitempty" json:"recorded,omitempty"`
 	PrimarySource      *bool                         `bson:"primarySource,omitempty" json:"primarySource,omitempty"`
 	ReportOrigin       *CodeableConcept              `bson:"reportOrigin,omitempty" json:"reportOrigin,omitempty"`
