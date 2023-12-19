@@ -33,6 +33,7 @@ type Patient struct {
 	Name                 []HumanName            `bson:"name,omitempty" json:"name,omitempty"`
 	Telecom              []ContactPoint         `bson:"telecom,omitempty" json:"telecom,omitempty"`
 	Gender               *AdministrativeGender  `bson:"gender,omitempty" json:"gender,omitempty"`
+	GenderExtension      *IsipExtension         `bson:"_gender,omitempty" json:"_gender,omitempty"`
 	BirthDate            *string                `bson:"birthDate,omitempty" json:"birthDate,omitempty"`
 	BirthDateExtension   *IsipExtension         `bson:"_birthDate,omitempty" json:"_birthDate,omitempty"`
 	Address              []Address              `bson:"address,omitempty" json:"address,omitempty"`
@@ -43,8 +44,7 @@ type Patient struct {
 	GeneralPractitioner  []Reference            `bson:"generalPractitioner,omitempty" json:"generalPractitioner,omitempty"`
 	ManagingOrganization *Reference             `bson:"managingOrganization,omitempty" json:"managingOrganization,omitempty"`
 	Link                 []PatientLink          `bson:"link,omitempty" json:"link,omitempty"`
-}  
-
+}
 
 type RecarePatient struct {
 	Id                   *string                `bson:"id,omitempty" json:"id,omitempty"`
@@ -84,6 +84,7 @@ type IsipPatient struct {
 	Name                 []RecareHumanName      `bson:"name,omitempty" json:"name,omitempty"`
 	Telecom              []ContactPoint         `bson:"telecom,omitempty" json:"telecom,omitempty"`
 	Gender               *AdministrativeGender  `bson:"gender,omitempty" json:"gender,omitempty"`
+	GenderExtension      *IsipExtension         `bson:"_gender,omitempty" json:"_gender,omitempty"`
 	BirthDate            *EncryptedField        `bson:"birthDate,omitempty" json:"birthDate,omitempty"`
 	BirthDateExtension   *IsipExtension         `bson:"_birthDate,omitempty" json:"_birthDate,omitempty"`
 	Address              []RecareAddress        `bson:"address,omitempty" json:"address,omitempty"`
@@ -155,7 +156,7 @@ func (r IsipPatient) MarshalJSON() ([]byte, error) {
 		ResourceType string `json:"resourceType"`
 	}{
 		IsipOtherPatient: IsipOtherPatient(r),
-		ResourceType:       "Patient",
+		ResourceType:     "Patient",
 	})
 }
 
@@ -183,4 +184,3 @@ func UnmarshalIsipPatient(b []byte) (RecarePatient, error) {
 	}
 	return patient, nil
 }
-
