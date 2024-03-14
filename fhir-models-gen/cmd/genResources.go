@@ -415,6 +415,8 @@ func appendFields(resources ResourceMap, requiredTypes map[string]bool, required
 								return 0, err
 							}
 							i--
+						} else if typeIdentifier == "decimal" {
+							statement.Qual("encoding/json", "Number")
 						} else {
 							if unicode.IsUpper(rune(typeIdentifier[0])) {
 								requiredTypes[typeIdentifier] = true
@@ -461,8 +463,6 @@ func typeCodeToTypeIdentifier(typeCode string) string {
 	case "date":
 		return "string"
 	case "dateTime":
-		return "string"
-	case "decimal":
 		return "string"
 	case "id":
 		return "string"
